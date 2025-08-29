@@ -1,0 +1,27 @@
+import json
+
+from dataclasses import dataclass
+
+
+@dataclass
+class Event:
+    cmd: str
+    cmd_group: int
+    cmd_id: int
+    cmd_name: str
+
+
+class EventManager:
+    def __init__(self, event_file: str):
+        self.events: dict[str, Event] = {}
+        self.load_events(event_file)
+
+    def load_events(self, event_file: str):
+        with open(event_file, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            for event_data in data:
+                event = Event(**event_data)
+                self.events[event.cmd_name] = event
+
+    def get_event(self, cmd_name: str) -> Event | None:
+        return self.events.get(cmd_name)

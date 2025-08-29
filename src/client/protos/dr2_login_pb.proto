@@ -1,0 +1,132 @@
+syntax = "proto2";
+package dr2_login_pb;
+
+// From: PB_SERVER
+message pb_server {
+  required int32  id        = 1;
+  required string ip        = 2;
+  required int32  port      = 3;
+  required string name      = 4;
+  required int32  status    = 5;
+  required string language  = 6;
+  optional string nickname  = 7;
+}
+
+// From: PB_SERVER_LOGIN
+message pb_server_login {
+  required int32  sid       = 1;
+  required string sname     = 2;
+  optional string pname     = 3;
+  optional int32  plogo     = 4;
+  optional int32  plv       = 5;
+  optional int32  flag      = 6;
+  optional int32  uid       = 7;
+  optional int32  border    = 8;
+  optional int32  login_cd  = 9;
+}
+
+// echo
+message pbreq_echo  { required int32 echo = 1; }
+message pbrsp_echo  { required int32 echo = 2; } // field number is 2 in the source
+
+message pbreq_pub {
+  required int32 language = 1;
+  required int32 vsn      = 2;
+}
+message pbrsp_pub {
+  required sint32 status   = 1;
+  optional int32  language = 2;
+  optional int32  vsn      = 3;
+  optional string pub      = 4;
+}
+
+// registration
+message pbreq_reg {
+  optional string rdid       = 1; // advertising id
+  optional string appversion = 2;
+  optional string osversion  = 3;
+  optional string env        = 4;
+}
+message pbrsp_reg {
+  required sint32 status   = 1;
+  optional int32  uid      = 2;
+  optional string account  = 3;
+  optional string password = 4;
+}
+
+// account verification
+message pbreq_salt { required string account = 1; }
+message pbrsp_salt {
+  required sint32 status = 1;
+  optional string  salt  = 2;
+  optional int32   uid   = 3;
+  optional uint32  flag  = 4;
+  optional uint32  cd    = 5;
+}
+
+// account login
+message pbreq_login {
+  required string checksum  = 1;
+  optional string idfa      = 2;
+  optional string keychain  = 3;
+  optional string idfv      = 4;
+  optional string env       = 5;
+}
+message pbrsp_login {
+  required sint32  status    = 1;
+  optional string  session   = 2;
+  optional int32   sid       = 3;
+  optional bool    is_formal = 4;
+  optional int32   uid       = 5;
+  optional string  createTs  = 6;
+}
+
+// third-party login
+message pbreq_thirdlogin {
+  required string platform = 1;
+  optional string jsonStr  = 2;
+}
+message pbrsp_thirdlogin {
+  required sint32 status   = 1;
+  optional string  session = 2;
+  optional int32   sid     = 3;
+  optional int32   uid     = 4;
+  optional string  createTs= 5;
+  optional string  ext     = 6;
+  optional int32   mid     = 7;
+  optional uint32  flag    = 8;
+  optional uint32  cd      = 9;
+}
+
+message pbreq_servers_login {
+  optional int32  uid      = 1;
+  optional string authcode = 2;
+}
+message pbrsp_servers_login {
+  repeated pb_server_login servers       = 1;
+  optional int32           recent_sid    = 2;
+  optional int32           status        = 3;
+  repeated pb_server_login g_servers     = 4;
+  optional int32           g_recent_sid  = 5;
+  optional int32           uid           = 6;
+  optional string          account       = 7;
+  optional string          password      = 8;
+  optional bool            is_formal     = 9;
+}
+
+// Play Games Services
+message pbreq_pgs_login {
+  required string authcode = 1;
+  optional string idfa     = 2;
+  optional string keychain = 3;
+  optional string idfv     = 4;
+  optional string env      = 5;
+}
+message pbrsp_pgs_login {
+  required sint32 status   = 1;
+  optional string  session = 2;
+  optional int32   sid     = 3;
+  optional bool    is_formal = 4;
+  optional int32   uid     = 5;
+  optional string  createTs= 6;
+}

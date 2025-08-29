@@ -1,0 +1,7 @@
+include README.md
+include LICENSE
+include src/client/protos/dr2_login_pb.proto
+recursive-include src/client/assets *
+exclude *.pyc
+exclude __pycache__/
+exclude .gitkeep

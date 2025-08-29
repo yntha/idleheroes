@@ -1,0 +1,4544 @@
+[
+  {
+    "cmd": "echo",
+    "cmd_group": 1,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_1_1"
+  },
+  {
+    "cmd": "pub",
+    "cmd_group": 1,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_1_2"
+  },
+  {
+    "cmd": "reg",
+    "cmd_group": 2,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_2_1"
+  },
+  {
+    "cmd": "salt",
+    "cmd_group": 2,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_2_2"
+  },
+  {
+    "cmd": "login",
+    "cmd_group": 2,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_2_3"
+  },
+  {
+    "cmd": "thirdlogin",
+    "cmd_group": 2,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_2_4"
+  },
+  {
+    "cmd": "servers_login",
+    "cmd_group": 2,
+    "cmd_type": 5,
+    "cmd_name": "EVENT_CMD_2_5"
+  },
+  {
+    "cmd": "auth",
+    "cmd_group": 3,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_3_1"
+  },
+  {
+    "cmd": "sync",
+    "cmd_group": 3,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_3_2"
+  },
+  {
+    "cmd": "up",
+    "cmd_group": 3,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_3_3"
+  },
+  {
+    "cmd": "bind",
+    "cmd_group": 3,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_3_4"
+  },
+  {
+    "cmd": "change_password",
+    "cmd_group": 3,
+    "cmd_type": 5,
+    "cmd_name": "EVENT_CMD_3_5"
+  },
+  {
+    "cmd": "servers",
+    "cmd_group": 3,
+    "cmd_type": 6,
+    "cmd_name": "EVENT_CMD_3_6"
+  },
+  {
+    "cmd": "player",
+    "cmd_group": 3,
+    "cmd_type": 7,
+    "cmd_name": "EVENT_CMD_3_7"
+  },
+  {
+    "cmd": "change_name",
+    "cmd_group": 3,
+    "cmd_type": 8,
+    "cmd_name": "EVENT_CMD_3_8"
+  },
+  {
+    "cmd": "change_logo",
+    "cmd_group": 3,
+    "cmd_type": 9,
+    "cmd_name": "EVENT_CMD_3_9"
+  },
+  {
+    "cmd": "rate_us",
+    "cmd_group": 3,
+    "cmd_type": 10,
+    "cmd_name": "EVENT_CMD_3_10"
+  },
+  {
+    "cmd": "video_ad",
+    "cmd_group": 3,
+    "cmd_type": 11,
+    "cmd_name": "EVENT_CMD_3_11"
+  },
+  {
+    "cmd": "cdkey",
+    "cmd_group": 3,
+    "cmd_type": 13,
+    "cmd_name": "EVENT_CMD_3_13"
+  },
+  {
+    "cmd": "lpub",
+    "cmd_group": 3,
+    "cmd_type": 14,
+    "cmd_name": "EVENT_CMD_3_14"
+  },
+  {
+    "cmd": "change_border",
+    "cmd_group": 3,
+    "cmd_type": 15,
+    "cmd_name": "EVENT_CMD_3_15"
+  },
+  {
+    "cmd": "upgrade_border",
+    "cmd_group": 3,
+    "cmd_type": 16,
+    "cmd_name": "EVENT_CMD_3_16"
+  },
+  {
+    "cmd": "flag_webgame",
+    "cmd_group": 3,
+    "cmd_type": 17,
+    "cmd_name": "EVENT_CMD_3_17"
+  },
+  {
+    "cmd": "smsg",
+    "cmd_group": 3,
+    "cmd_type": 18,
+    "cmd_name": "EVENT_CMD_3_18"
+  },
+  {
+    "cmd": "audit",
+    "cmd_group": 3,
+    "cmd_type": 19,
+    "cmd_name": "EVENT_CMD_3_19"
+  },
+  {
+    "cmd": "change_birthday",
+    "cmd_group": 3,
+    "cmd_type": 20,
+    "cmd_name": "EVENT_CMD_3_20"
+  },
+  {
+    "cmd": "one_click",
+    "cmd_group": 3,
+    "cmd_type": 21,
+    "cmd_name": "EVENT_CMD_3_21"
+  },
+  {
+    "cmd": "one_click_sync",
+    "cmd_group": 3,
+    "cmd_type": 22,
+    "cmd_name": "EVENT_CMD_3_22"
+  },
+  {
+    "cmd": "one_click_store",
+    "cmd_group": 3,
+    "cmd_type": 23,
+    "cmd_name": "EVENT_CMD_3_23"
+  },
+  {
+    "cmd": "captcha",
+    "cmd_group": 3,
+    "cmd_type": 25,
+    "cmd_name": "EVENT_CMD_3_25"
+  },
+  {
+    "cmd": "trash",
+    "cmd_group": 3,
+    "cmd_type": 30,
+    "cmd_name": "EVENT_CMD_3_30"
+  },
+  {
+    "cmd": "resume",
+    "cmd_group": 3,
+    "cmd_type": 31,
+    "cmd_name": "EVENT_CMD_3_31"
+  },
+  {
+    "cmd": "gacha",
+    "cmd_group": 4,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_4_1"
+  },
+  {
+    "cmd": "wear",
+    "cmd_group": 4,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_4_2"
+  },
+  {
+    "cmd": "hero_decompose",
+    "cmd_group": 4,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_4_3"
+  },
+  {
+    "cmd": "hero_merge",
+    "cmd_group": 4,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_4_4"
+  },
+  {
+    "cmd": "hero_up",
+    "cmd_group": 4,
+    "cmd_type": 5,
+    "cmd_name": "EVENT_CMD_4_5"
+  },
+  {
+    "cmd": "hero_lock",
+    "cmd_group": 4,
+    "cmd_type": 6,
+    "cmd_name": "EVENT_CMD_4_6"
+  },
+  {
+    "cmd": "hero_mix",
+    "cmd_group": 4,
+    "cmd_type": 7,
+    "cmd_name": "EVENT_CMD_4_7"
+  },
+  {
+    "cmd": "jade_on",
+    "cmd_group": 4,
+    "cmd_type": 8,
+    "cmd_name": "EVENT_CMD_4_8"
+  },
+  {
+    "cmd": "jade_up",
+    "cmd_group": 4,
+    "cmd_type": 9,
+    "cmd_name": "EVENT_CMD_4_9"
+  },
+  {
+    "cmd": "jade_change",
+    "cmd_group": 4,
+    "cmd_type": 10,
+    "cmd_name": "EVENT_CMD_4_10"
+  },
+  {
+    "cmd": "jade_ok",
+    "cmd_group": 4,
+    "cmd_type": 11,
+    "cmd_name": "EVENT_CMD_4_11"
+  },
+  {
+    "cmd": "buy_hlimit",
+    "cmd_group": 4,
+    "cmd_type": 12,
+    "cmd_name": "EVENT_CMD_4_12"
+  },
+  {
+    "cmd": "transform_hero",
+    "cmd_group": 4,
+    "cmd_type": 13,
+    "cmd_name": "EVENT_CMD_4_13"
+  },
+  {
+    "cmd": "transform_ok",
+    "cmd_group": 4,
+    "cmd_type": 14,
+    "cmd_name": "EVENT_CMD_4_14"
+  },
+  {
+    "cmd": "hero_wake",
+    "cmd_group": 4,
+    "cmd_type": 15,
+    "cmd_name": "EVENT_CMD_4_15"
+  },
+  {
+    "cmd": "hero_change",
+    "cmd_group": 4,
+    "cmd_type": 16,
+    "cmd_name": "EVENT_CMD_4_16"
+  },
+  {
+    "cmd": "hero_skin_mix",
+    "cmd_group": 4,
+    "cmd_type": 17,
+    "cmd_name": "EVENT_CMD_4_17"
+  },
+  {
+    "cmd": "hero_skin_wear",
+    "cmd_group": 4,
+    "cmd_type": 18,
+    "cmd_name": "EVENT_CMD_4_18"
+  },
+  {
+    "cmd": "hero_skin_off",
+    "cmd_group": 4,
+    "cmd_type": 19,
+    "cmd_name": "EVENT_CMD_4_19"
+  },
+  {
+    "cmd": "shield_change",
+    "cmd_group": 4,
+    "cmd_type": 20,
+    "cmd_name": "EVENT_CMD_4_20"
+  },
+  {
+    "cmd": "hero_skin_visit",
+    "cmd_group": 4,
+    "cmd_type": 21,
+    "cmd_name": "EVENT_CMD_4_21"
+  },
+  {
+    "cmd": "hero_skin_breakdown",
+    "cmd_group": 4,
+    "cmd_type": 22,
+    "cmd_name": "EVENT_CMD_4_22"
+  },
+  {
+    "cmd": "hero_talen",
+    "cmd_group": 4,
+    "cmd_type": 23,
+    "cmd_name": "EVENT_CMD_4_23"
+  },
+  {
+    "cmd": "hero_talenop",
+    "cmd_group": 4,
+    "cmd_type": 24,
+    "cmd_name": "EVENT_CMD_4_24"
+  },
+  {
+    "cmd": "hero_return",
+    "cmd_group": 4,
+    "cmd_type": 25,
+    "cmd_name": "EVENT_CMD_4_25"
+  },
+  {
+    "cmd": "hero_skin_limitmix",
+    "cmd_group": 4,
+    "cmd_type": 26,
+    "cmd_name": "EVENT_CMD_4_26"
+  },
+  {
+    "cmd": "hero_skin_up",
+    "cmd_group": 4,
+    "cmd_type": 27,
+    "cmd_name": "EVENT_CMD_4_27"
+  },
+  {
+    "cmd": "hero_ticket",
+    "cmd_group": 4,
+    "cmd_type": 28,
+    "cmd_name": "EVENT_CMD_4_28"
+  },
+  {
+    "cmd": "jade_unlock",
+    "cmd_group": 4,
+    "cmd_type": 29,
+    "cmd_name": "EVENT_CMD_4_29"
+  },
+  {
+    "cmd": "jade_used",
+    "cmd_group": 4,
+    "cmd_type": 30,
+    "cmd_name": "EVENT_CMD_4_30"
+  },
+  {
+    "cmd": "auto_lvup",
+    "cmd_group": 4,
+    "cmd_type": 31,
+    "cmd_name": "EVENT_CMD_4_31"
+  },
+  {
+    "cmd": "up_star",
+    "cmd_group": 4,
+    "cmd_type": 32,
+    "cmd_name": "EVENT_CMD_4_32"
+  },
+  {
+    "cmd": "gacha_choose",
+    "cmd_group": 4,
+    "cmd_type": 36,
+    "cmd_name": "EVENT_CMD_4_36"
+  },
+  {
+    "cmd": "sact_rank",
+    "cmd_group": 36,
+    "cmd_type": 10,
+    "cmd_name": "EVENT_CMD_36_10"
+  },
+  {
+    "cmd": "sact_ranklist",
+    "cmd_group": 36,
+    "cmd_type": 11,
+    "cmd_name": "EVENT_CMD_36_11"
+  },
+  {
+    "cmd": "sact_game_open",
+    "cmd_group": 36,
+    "cmd_type": 12,
+    "cmd_name": "EVENT_CMD_36_12"
+  },
+  {
+    "cmd": "sact_game_sync",
+    "cmd_group": 36,
+    "cmd_type": 13,
+    "cmd_name": "EVENT_CMD_36_13"
+  },
+  {
+    "cmd": "qlt_star",
+    "cmd_group": 4,
+    "cmd_type": 41,
+    "cmd_name": "EVENT_CMD_4_41"
+  },
+  {
+    "cmd": "qlt_change",
+    "cmd_group": 4,
+    "cmd_type": 42,
+    "cmd_name": "EVENT_CMD_4_42"
+  },
+  {
+    "cmd": "qlt_refresh",
+    "cmd_group": 4,
+    "cmd_type": 43,
+    "cmd_name": "EVENT_CMD_4_43"
+  },
+  {
+    "cmd": "qlt_refresh_ok",
+    "cmd_group": 4,
+    "cmd_type": 44,
+    "cmd_name": "EVENT_CMD_4_44"
+  },
+  {
+    "cmd": "qlt_claim",
+    "cmd_group": 4,
+    "cmd_type": 45,
+    "cmd_name": "EVENT_CMD_4_45"
+  },
+  {
+    "cmd": "qlt_sync",
+    "cmd_group": 4,
+    "cmd_type": 46,
+    "cmd_name": "EVENT_CMD_4_46"
+  },
+  {
+    "cmd": "qlt_up",
+    "cmd_group": 4,
+    "cmd_type": 47,
+    "cmd_name": "EVENT_CMD_4_47"
+  },
+  {
+    "cmd": "batch_qlt_star",
+    "cmd_group": 4,
+    "cmd_type": 48,
+    "cmd_name": "EVENT_CMD_4_48"
+  },
+  {
+    "cmd": "tree_up",
+    "cmd_group": 4,
+    "cmd_type": 51,
+    "cmd_name": "EVENT_CMD_4_51"
+  },
+  {
+    "cmd": "merge_tequip",
+    "cmd_group": 4,
+    "cmd_type": 52,
+    "cmd_name": "EVENT_CMD_4_52"
+  },
+  {
+    "cmd": "up_tequip",
+    "cmd_group": 4,
+    "cmd_type": 53,
+    "cmd_name": "EVENT_CMD_4_53"
+  },
+  {
+    "cmd": "tequip_wear",
+    "cmd_group": 4,
+    "cmd_type": 54,
+    "cmd_name": "EVENT_CMD_4_54"
+  },
+  {
+    "cmd": "tequip_off",
+    "cmd_group": 4,
+    "cmd_type": 55,
+    "cmd_name": "EVENT_CMD_4_55"
+  },
+  {
+    "cmd": "super_break",
+    "cmd_group": 4,
+    "cmd_type": 56,
+    "cmd_name": "EVENT_CMD_4_56"
+  },
+  {
+    "cmd": "transform_choose",
+    "cmd_group": 4,
+    "cmd_type": 57,
+    "cmd_name": "EVENT_CMD_4_57"
+  },
+  {
+    "cmd": "faith_up",
+    "cmd_group": 4,
+    "cmd_type": 58,
+    "cmd_name": "EVENT_CMD_4_58"
+  },
+  {
+    "cmd": "faith_lv",
+    "cmd_group": 4,
+    "cmd_type": 59,
+    "cmd_name": "EVENT_CMD_4_59"
+  },
+  {
+    "cmd": "faith_skill",
+    "cmd_group": 4,
+    "cmd_type": 60,
+    "cmd_name": "EVENT_CMD_4_60"
+  },
+  {
+    "cmd": "faith_return",
+    "cmd_group": 4,
+    "cmd_type": 61,
+    "cmd_name": "EVENT_CMD_4_61"
+  },
+  {
+    "cmd": "energy_resolve",
+    "cmd_group": 4,
+    "cmd_type": 62,
+    "cmd_name": "EVENT_CMD_4_62"
+  },
+  {
+    "cmd": "energy_hero",
+    "cmd_group": 4,
+    "cmd_type": 63,
+    "cmd_name": "EVENT_CMD_4_63"
+  },
+  {
+    "cmd": "op_mail",
+    "cmd_group": 5,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_5_1"
+  },
+  {
+    "cmd": "send_mail",
+    "cmd_group": 5,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_5_2"
+  },
+  {
+    "cmd": "sell",
+    "cmd_group": 6,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_6_1"
+  },
+  {
+    "cmd": "midas",
+    "cmd_group": 6,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_6_2"
+  },
+  {
+    "cmd": "enchant",
+    "cmd_group": 6,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_6_3"
+  },
+  {
+    "cmd": "up_treasure",
+    "cmd_group": 6,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_6_4"
+  },
+  {
+    "cmd": "equip_merge",
+    "cmd_group": 6,
+    "cmd_type": 5,
+    "cmd_name": "EVENT_CMD_6_5"
+  },
+  {
+    "cmd": "exchange_act",
+    "cmd_group": 6,
+    "cmd_type": 6,
+    "cmd_name": "EVENT_CMD_6_6"
+  },
+  {
+    "cmd": "open_gift",
+    "cmd_group": 6,
+    "cmd_type": 7,
+    "cmd_name": "EVENT_CMD_6_7"
+  },
+  {
+    "cmd": "dwarf",
+    "cmd_group": 6,
+    "cmd_type": 8,
+    "cmd_name": "EVENT_CMD_6_8"
+  },
+  {
+    "cmd": "equip_resolve",
+    "cmd_group": 6,
+    "cmd_type": 9,
+    "cmd_name": "EVENT_CMD_6_9"
+  },
+  {
+    "cmd": "equip_soul",
+    "cmd_group": 6,
+    "cmd_type": 10,
+    "cmd_name": "EVENT_CMD_6_10"
+  },
+  {
+    "cmd": "equip_soul_ok",
+    "cmd_group": 6,
+    "cmd_type": 11,
+    "cmd_name": "EVENT_CMD_6_11"
+  },
+  {
+    "cmd": "equip_soul_sync",
+    "cmd_group": 6,
+    "cmd_type": 12,
+    "cmd_name": "EVENT_CMD_6_12"
+  },
+  {
+    "cmd": "dwarf_change",
+    "cmd_group": 6,
+    "cmd_type": 13,
+    "cmd_name": "EVENT_CMD_6_13"
+  },
+  {
+    "cmd": "exchange_skin",
+    "cmd_group": 6,
+    "cmd_type": 14,
+    "cmd_name": "EVENT_CMD_6_14"
+  },
+  {
+    "cmd": "collect_sync",
+    "cmd_group": 6,
+    "cmd_type": 15,
+    "cmd_name": "EVENT_CMD_6_15"
+  },
+  {
+    "cmd": "collect_summon",
+    "cmd_group": 6,
+    "cmd_type": 16,
+    "cmd_name": "EVENT_CMD_6_16"
+  },
+  {
+    "cmd": "collect_up",
+    "cmd_group": 6,
+    "cmd_type": 17,
+    "cmd_name": "EVENT_CMD_6_17"
+  },
+  {
+    "cmd": "collect_handler",
+    "cmd_group": 6,
+    "cmd_type": 18,
+    "cmd_name": "EVENT_CMD_6_18"
+  },
+  {
+    "cmd": "collect_reward",
+    "cmd_group": 6,
+    "cmd_type": 19,
+    "cmd_name": "EVENT_CMD_6_19"
+  },
+  {
+    "cmd": "collect_goods_rank",
+    "cmd_group": 6,
+    "cmd_type": 20,
+    "cmd_name": "EVENT_CMD_6_20"
+  },
+  {
+    "cmd": "collect_select",
+    "cmd_group": 6,
+    "cmd_type": 21,
+    "cmd_name": "EVENT_CMD_6_21"
+  },
+  {
+    "cmd": "collect_set_show",
+    "cmd_group": 6,
+    "cmd_type": 22,
+    "cmd_name": "EVENT_CMD_6_22"
+  },
+  {
+    "cmd": "items_exchange",
+    "cmd_group": 6,
+    "cmd_type": 23,
+    "cmd_name": "EVENT_CMD_6_23"
+  },
+  {
+    "cmd": "sync_chat",
+    "cmd_group": 7,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_7_1"
+  },
+  {
+    "cmd": "chat",
+    "cmd_group": 7,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_7_2"
+  },
+  {
+    "cmd": "cunit",
+    "cmd_group": 7,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_7_3"
+  },
+  {
+    "cmd": "block_chat",
+    "cmd_group": 7,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_7_4"
+  },
+  {
+    "cmd": "hide_vip",
+    "cmd_group": 7,
+    "cmd_type": 5,
+    "cmd_name": "EVENT_CMD_7_5"
+  },
+  {
+    "cmd": "translate",
+    "cmd_group": 7,
+    "cmd_type": 6,
+    "cmd_name": "EVENT_CMD_7_6"
+  },
+  {
+    "cmd": "chat_setting",
+    "cmd_group": 7,
+    "cmd_type": 7,
+    "cmd_name": "EVENT_CMD_7_7"
+  },
+  {
+    "cmd": "resolve_block_chat",
+    "cmd_group": 7,
+    "cmd_type": 8,
+    "cmd_name": "EVENT_CMD_7_8"
+  },
+  {
+    "cmd": "get_block_chat",
+    "cmd_group": 7,
+    "cmd_type": 9,
+    "cmd_name": "EVENT_CMD_7_9"
+  },
+  {
+    "cmd": "sync_recruit",
+    "cmd_group": 7,
+    "cmd_type": 10,
+    "cmd_name": "EVENT_CMD_7_10"
+  },
+  {
+    "cmd": "report",
+    "cmd_group": 7,
+    "cmd_type": 12,
+    "cmd_name": "EVENT_CMD_7_12"
+  },
+  {
+    "cmd": "bmarket_pull",
+    "cmd_group": 8,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_8_1"
+  },
+  {
+    "cmd": "bmarket_buy",
+    "cmd_group": 8,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_8_2"
+  },
+  {
+    "cmd": "hook_init",
+    "cmd_group": 9,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_9_1"
+  },
+  {
+    "cmd": "hook_change",
+    "cmd_group": 9,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_9_2"
+  },
+  {
+    "cmd": "hook_ask",
+    "cmd_group": 9,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_9_3"
+  },
+  {
+    "cmd": "hook_reward",
+    "cmd_group": 9,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_9_4"
+  },
+  {
+    "cmd": "hook_heroes",
+    "cmd_group": 9,
+    "cmd_type": 5,
+    "cmd_name": "EVENT_CMD_9_5"
+  },
+  {
+    "cmd": "test_fight",
+    "cmd_group": 9,
+    "cmd_type": 6,
+    "cmd_name": "EVENT_CMD_9_6"
+  },
+  {
+    "cmd": "pve",
+    "cmd_group": 9,
+    "cmd_type": 7,
+    "cmd_name": "EVENT_CMD_9_7"
+  },
+  {
+    "cmd": "st_pve",
+    "cmd_group": 9,
+    "cmd_type": 8,
+    "cmd_name": "EVENT_CMD_9_8"
+  },
+  {
+    "cmd": "hook_select_item",
+    "cmd_group": 9,
+    "cmd_type": 9,
+    "cmd_name": "EVENT_CMD_9_9"
+  },
+  {
+    "cmd": "dare_fight",
+    "cmd_group": 9,
+    "cmd_type": 10,
+    "cmd_name": "EVENT_CMD_9_10"
+  },
+  {
+    "cmd": "sync_brave",
+    "cmd_group": 9,
+    "cmd_type": 11,
+    "cmd_name": "EVENT_CMD_9_11"
+  },
+  {
+    "cmd": "brave_fight",
+    "cmd_group": 9,
+    "cmd_type": 12,
+    "cmd_name": "EVENT_CMD_9_12"
+  },
+  {
+    "cmd": "brave_pull",
+    "cmd_group": 9,
+    "cmd_type": 13,
+    "cmd_name": "EVENT_CMD_9_13"
+  },
+  {
+    "cmd": "brave_node",
+    "cmd_group": 9,
+    "cmd_type": 14,
+    "cmd_name": "EVENT_CMD_9_14"
+  },
+  {
+    "cmd": "pve_rank",
+    "cmd_group": 9,
+    "cmd_type": 15,
+    "cmd_name": "EVENT_CMD_9_15"
+  },
+  {
+    "cmd": "st_hard_fight",
+    "cmd_group": 9,
+    "cmd_type": 25,
+    "cmd_name": "EVENT_CMD_9_25"
+  },
+  {
+    "cmd": "st_hard_ranklist",
+    "cmd_group": 9,
+    "cmd_type": 26,
+    "cmd_name": "EVENT_CMD_9_26"
+  },
+  {
+    "cmd": "st_hard_clean",
+    "cmd_group": 9,
+    "cmd_type": 27,
+    "cmd_name": "EVENT_CMD_9_27"
+  },
+  {
+    "cmd": "iboss_sync1",
+    "cmd_group": 9,
+    "cmd_type": 30,
+    "cmd_name": "EVENT_CMD_9_30"
+  },
+  {
+    "cmd": "iboss_sync2",
+    "cmd_group": 9,
+    "cmd_type": 31,
+    "cmd_name": "EVENT_CMD_9_31"
+  },
+  {
+    "cmd": "iboss_rank",
+    "cmd_group": 9,
+    "cmd_type": 32,
+    "cmd_name": "EVENT_CMD_9_32"
+  },
+  {
+    "cmd": "iboss_start",
+    "cmd_group": 9,
+    "cmd_type": 33,
+    "cmd_name": "EVENT_CMD_9_33"
+  },
+  {
+    "cmd": "iboss_fight",
+    "cmd_group": 9,
+    "cmd_type": 34,
+    "cmd_name": "EVENT_CMD_9_34"
+  },
+  {
+    "cmd": "iboss_settle",
+    "cmd_group": 9,
+    "cmd_type": 35,
+    "cmd_name": "EVENT_CMD_9_35"
+  },
+  {
+    "cmd": "gt_sync1",
+    "cmd_group": 9,
+    "cmd_type": 40,
+    "cmd_name": "EVENT_CMD_9_40"
+  },
+  {
+    "cmd": "gt_sync2",
+    "cmd_group": 9,
+    "cmd_type": 41,
+    "cmd_name": "EVENT_CMD_9_41"
+  },
+  {
+    "cmd": "gt_node",
+    "cmd_group": 9,
+    "cmd_type": 42,
+    "cmd_name": "EVENT_CMD_9_42"
+  },
+  {
+    "cmd": "gt_fight",
+    "cmd_group": 9,
+    "cmd_type": 43,
+    "cmd_name": "EVENT_CMD_9_43"
+  },
+  {
+    "cmd": "gt_logs",
+    "cmd_group": 9,
+    "cmd_type": 44,
+    "cmd_name": "EVENT_CMD_9_44"
+  },
+  {
+    "cmd": "gt_video",
+    "cmd_group": 9,
+    "cmd_type": 45,
+    "cmd_name": "EVENT_CMD_9_45"
+  },
+  {
+    "cmd": "gt_ask",
+    "cmd_group": 9,
+    "cmd_type": 46,
+    "cmd_name": "EVENT_CMD_9_46"
+  },
+  {
+    "cmd": "gt_reward",
+    "cmd_group": 9,
+    "cmd_type": 47,
+    "cmd_name": "EVENT_CMD_9_47"
+  },
+  {
+    "cmd": "gt_buy",
+    "cmd_group": 9,
+    "cmd_type": 48,
+    "cmd_name": "EVENT_CMD_9_48"
+  },
+  {
+    "cmd": "frd_sync",
+    "cmd_group": 10,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_10_1"
+  },
+  {
+    "cmd": "frd_op",
+    "cmd_group": 10,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_10_2"
+  },
+  {
+    "cmd": "frd_love",
+    "cmd_group": 10,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_10_3"
+  },
+  {
+    "cmd": "frd_notify",
+    "cmd_group": 10,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_10_4"
+  },
+  {
+    "cmd": "frd_pk",
+    "cmd_group": 10,
+    "cmd_type": 5,
+    "cmd_name": "EVENT_CMD_10_5"
+  },
+  {
+    "cmd": "frd_advise",
+    "cmd_group": 10,
+    "cmd_type": 6,
+    "cmd_name": "EVENT_CMD_10_6"
+  },
+  {
+    "cmd": "pull_casino",
+    "cmd_group": 11,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_11_1"
+  },
+  {
+    "cmd": "casino_msg",
+    "cmd_group": 11,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_11_2"
+  },
+  {
+    "cmd": "casino_draw",
+    "cmd_group": 11,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_11_3"
+  },
+  {
+    "cmd": "casino_buy",
+    "cmd_group": 11,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_11_4"
+  },
+  {
+    "cmd": "lmarket_pull",
+    "cmd_group": 12,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_12_1"
+  },
+  {
+    "cmd": "lmarket_buy",
+    "cmd_group": 12,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_12_2"
+  },
+  {
+    "cmd": "guild_sync",
+    "cmd_group": 13,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_13_1"
+  },
+  {
+    "cmd": "guild_rank",
+    "cmd_group": 13,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_13_2"
+  },
+  {
+    "cmd": "glog",
+    "cmd_group": 13,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_13_3"
+  },
+  {
+    "cmd": "guild_create",
+    "cmd_group": 13,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_13_4"
+  },
+  {
+    "cmd": "guild_notice",
+    "cmd_group": 13,
+    "cmd_type": 5,
+    "cmd_name": "EVENT_CMD_13_5"
+  },
+  {
+    "cmd": "guild_flag",
+    "cmd_group": 13,
+    "cmd_type": 6,
+    "cmd_name": "EVENT_CMD_13_6"
+  },
+  {
+    "cmd": "guild_name",
+    "cmd_group": 13,
+    "cmd_type": 7,
+    "cmd_name": "EVENT_CMD_13_7"
+  },
+  {
+    "cmd": "guild_dismiss",
+    "cmd_group": 13,
+    "cmd_type": 8,
+    "cmd_name": "EVENT_CMD_13_8"
+  },
+  {
+    "cmd": "guild_apply",
+    "cmd_group": 13,
+    "cmd_type": 9,
+    "cmd_name": "EVENT_CMD_13_9"
+  },
+  {
+    "cmd": "guild_leave",
+    "cmd_group": 13,
+    "cmd_type": 10,
+    "cmd_name": "EVENT_CMD_13_10"
+  },
+  {
+    "cmd": "guild_sign",
+    "cmd_group": 13,
+    "cmd_type": 11,
+    "cmd_name": "EVENT_CMD_13_11"
+  },
+  {
+    "cmd": "guild_recommend",
+    "cmd_group": 13,
+    "cmd_type": 12,
+    "cmd_name": "EVENT_CMD_13_12"
+  },
+  {
+    "cmd": "guild_search",
+    "cmd_group": 13,
+    "cmd_type": 13,
+    "cmd_name": "EVENT_CMD_13_13"
+  },
+  {
+    "cmd": "guild_appliers",
+    "cmd_group": 13,
+    "cmd_type": 14,
+    "cmd_name": "EVENT_CMD_13_14"
+  },
+  {
+    "cmd": "gmember_opt",
+    "cmd_group": 13,
+    "cmd_type": 15,
+    "cmd_name": "EVENT_CMD_13_15"
+  },
+  {
+    "cmd": "gboss_sync",
+    "cmd_group": 13,
+    "cmd_type": 16,
+    "cmd_name": "EVENT_CMD_13_16"
+  },
+  {
+    "cmd": "gboss_rank",
+    "cmd_group": 13,
+    "cmd_type": 17,
+    "cmd_name": "EVENT_CMD_13_17"
+  },
+  {
+    "cmd": "gboss_fight",
+    "cmd_group": 13,
+    "cmd_type": 18,
+    "cmd_name": "EVENT_CMD_13_18"
+  },
+  {
+    "cmd": "gskl_sync",
+    "cmd_group": 13,
+    "cmd_type": 19,
+    "cmd_name": "EVENT_CMD_13_19"
+  },
+  {
+    "cmd": "gskl_up",
+    "cmd_group": 13,
+    "cmd_type": 20,
+    "cmd_name": "EVENT_CMD_13_20"
+  },
+  {
+    "cmd": "gmill_sync",
+    "cmd_group": 13,
+    "cmd_type": 21,
+    "cmd_name": "EVENT_CMD_13_21"
+  },
+  {
+    "cmd": "gmill_order",
+    "cmd_group": 13,
+    "cmd_type": 22,
+    "cmd_name": "EVENT_CMD_13_22"
+  },
+  {
+    "cmd": "gmill_uporder",
+    "cmd_group": 13,
+    "cmd_type": 23,
+    "cmd_name": "EVENT_CMD_13_23"
+  },
+  {
+    "cmd": "gmill_start",
+    "cmd_group": 13,
+    "cmd_type": 24,
+    "cmd_name": "EVENT_CMD_13_24"
+  },
+  {
+    "cmd": "gmill_claim",
+    "cmd_group": 13,
+    "cmd_type": 25,
+    "cmd_name": "EVENT_CMD_13_25"
+  },
+  {
+    "cmd": "gmill_olog",
+    "cmd_group": 13,
+    "cmd_type": 26,
+    "cmd_name": "EVENT_CMD_13_26"
+  },
+  {
+    "cmd": "donate_sync",
+    "cmd_group": 13,
+    "cmd_type": 27,
+    "cmd_name": "EVENT_CMD_13_27"
+  },
+  {
+    "cmd": "donate_up",
+    "cmd_group": 13,
+    "cmd_type": 28,
+    "cmd_name": "EVENT_CMD_13_28"
+  },
+  {
+    "cmd": "donate_log",
+    "cmd_group": 13,
+    "cmd_type": 29,
+    "cmd_name": "EVENT_CMD_13_29"
+  },
+  {
+    "cmd": "gmill_donaterank",
+    "cmd_group": 13,
+    "cmd_type": 30,
+    "cmd_name": "EVENT_CMD_13_30"
+  },
+  {
+    "cmd": "gskl_reset",
+    "cmd_group": 13,
+    "cmd_type": 31,
+    "cmd_name": "EVENT_CMD_13_31"
+  },
+  {
+    "cmd": "gfire_sync",
+    "cmd_group": 13,
+    "cmd_type": 34,
+    "cmd_name": "EVENT_CMD_13_34"
+  },
+  {
+    "cmd": "gfire_reg",
+    "cmd_group": 13,
+    "cmd_type": 35,
+    "cmd_name": "EVENT_CMD_13_35"
+  },
+  {
+    "cmd": "gfire_fight",
+    "cmd_group": 13,
+    "cmd_type": 36,
+    "cmd_name": "EVENT_CMD_13_36"
+  },
+  {
+    "cmd": "gfire_rank",
+    "cmd_group": 13,
+    "cmd_type": 37,
+    "cmd_name": "EVENT_CMD_13_37"
+  },
+  {
+    "cmd": "gfire_donate_rank",
+    "cmd_group": 13,
+    "cmd_type": 38,
+    "cmd_name": "EVENT_CMD_13_38"
+  },
+  {
+    "cmd": "gve_sync",
+    "cmd_group": 13,
+    "cmd_type": 38,
+    "cmd_name": "EVENT_CMD_13_38"
+  },
+  {
+    "cmd": "gve_rank",
+    "cmd_group": 13,
+    "cmd_type": 39,
+    "cmd_name": "EVENT_CMD_13_39"
+  },
+  {
+    "cmd": "gve_fight",
+    "cmd_group": 13,
+    "cmd_type": 40,
+    "cmd_name": "EVENT_CMD_13_40"
+  },
+  {
+    "cmd": "gve_task",
+    "cmd_group": 13,
+    "cmd_type": 41,
+    "cmd_name": "EVENT_CMD_13_41"
+  },
+  {
+    "cmd": "gve_claim",
+    "cmd_group": 13,
+    "cmd_type": 42,
+    "cmd_name": "EVENT_CMD_13_42"
+  },
+  {
+    "cmd": "gve_map_claim",
+    "cmd_group": 13,
+    "cmd_type": 43,
+    "cmd_name": "EVENT_CMD_13_43"
+  },
+  {
+    "cmd": "gvm_sync_world",
+    "cmd_group": 13,
+    "cmd_type": 44,
+    "cmd_name": "EVENT_CMD_13_44"
+  },
+  {
+    "cmd": "gvm_fight_sync",
+    "cmd_group": 13,
+    "cmd_type": 45,
+    "cmd_name": "EVENT_CMD_13_45"
+  },
+  {
+    "cmd": "gvm_fight",
+    "cmd_group": 13,
+    "cmd_type": 46,
+    "cmd_name": "EVENT_CMD_13_46"
+  },
+  {
+    "cmd": "gvm_select",
+    "cmd_group": 13,
+    "cmd_type": 47,
+    "cmd_name": "EVENT_CMD_13_47"
+  },
+  {
+    "cmd": "gvm_map_sync",
+    "cmd_group": 13,
+    "cmd_type": 48,
+    "cmd_name": "EVENT_CMD_13_48"
+  },
+  {
+    "cmd": "gvm_task_claim",
+    "cmd_group": 13,
+    "cmd_type": 49,
+    "cmd_name": "EVENT_CMD_13_49"
+  },
+  {
+    "cmd": "gvm_up_stone",
+    "cmd_group": 13,
+    "cmd_type": 50,
+    "cmd_name": "EVENT_CMD_13_50"
+  },
+  {
+    "cmd": "gvm_sell_stone",
+    "cmd_group": 13,
+    "cmd_type": 51,
+    "cmd_name": "EVENT_CMD_13_51"
+  },
+  {
+    "cmd": "gvm_up_hero",
+    "cmd_group": 13,
+    "cmd_type": 52,
+    "cmd_name": "EVENT_CMD_13_52"
+  },
+  {
+    "cmd": "gvm_rank",
+    "cmd_group": 13,
+    "cmd_type": 53,
+    "cmd_name": "EVENT_CMD_13_53"
+  },
+  {
+    "cmd": "gvm_reset_map",
+    "cmd_group": 13,
+    "cmd_type": 54,
+    "cmd_name": "EVENT_CMD_13_54"
+  },
+  {
+    "cmd": "gvm_sweep",
+    "cmd_group": 13,
+    "cmd_type": 55,
+    "cmd_name": "EVENT_CMD_13_55"
+  },
+  {
+    "cmd": "trial",
+    "cmd_group": 14,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_14_1"
+  },
+  {
+    "cmd": "trial_rank",
+    "cmd_group": 14,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_14_2"
+  },
+  {
+    "cmd": "trial_fight",
+    "cmd_group": 14,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_14_3"
+  },
+  {
+    "cmd": "trial_video",
+    "cmd_group": 14,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_14_4"
+  },
+  {
+    "cmd": "trial_tl",
+    "cmd_group": 14,
+    "cmd_type": 5,
+    "cmd_name": "EVENT_CMD_14_5"
+  },
+  {
+    "cmd": "dream_fight",
+    "cmd_group": 14,
+    "cmd_type": 6,
+    "cmd_name": "EVENT_CMD_14_6"
+  },
+  {
+    "cmd": "dream_rank",
+    "cmd_group": 14,
+    "cmd_type": 7,
+    "cmd_name": "EVENT_CMD_14_7"
+  },
+  {
+    "cmd": "dream_reset",
+    "cmd_group": 14,
+    "cmd_type": 8,
+    "cmd_name": "EVENT_CMD_14_8"
+  },
+  {
+    "cmd": "dream_diff",
+    "cmd_group": 14,
+    "cmd_type": 9,
+    "cmd_name": "EVENT_CMD_14_9"
+  },
+  {
+    "cmd": "dream_reward",
+    "cmd_group": 14,
+    "cmd_type": 10,
+    "cmd_name": "EVENT_CMD_14_10"
+  },
+  {
+    "cmd": "dream_buy",
+    "cmd_group": 14,
+    "cmd_type": 11,
+    "cmd_name": "EVENT_CMD_14_11"
+  },
+  {
+    "cmd": "dream_sync",
+    "cmd_group": 14,
+    "cmd_type": 12,
+    "cmd_name": "EVENT_CMD_14_12"
+  },
+  {
+    "cmd": "dream_sel_buf",
+    "cmd_group": 14,
+    "cmd_type": 13,
+    "cmd_name": "EVENT_CMD_14_13"
+  },
+  {
+    "cmd": "pvp_sync",
+    "cmd_group": 15,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_15_1"
+  },
+  {
+    "cmd": "pvp_camp",
+    "cmd_group": 15,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_15_2"
+  },
+  {
+    "cmd": "pvp_refresh",
+    "cmd_group": 15,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_15_3"
+  },
+  {
+    "cmd": "pvp_fight",
+    "cmd_group": 15,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_15_4"
+  },
+  {
+    "cmd": "plogs",
+    "cmd_group": 15,
+    "cmd_type": 5,
+    "cmd_name": "EVENT_CMD_15_5"
+  },
+  {
+    "cmd": "pvp_rank",
+    "cmd_group": 15,
+    "cmd_type": 6,
+    "cmd_name": "EVENT_CMD_15_6"
+  },
+  {
+    "cmd": "video",
+    "cmd_group": 15,
+    "cmd_type": 7,
+    "cmd_name": "EVENT_CMD_15_7"
+  },
+  {
+    "cmd": "pvp_ticket",
+    "cmd_group": 15,
+    "cmd_type": 8,
+    "cmd_name": "EVENT_CMD_15_8"
+  },
+  {
+    "cmd": "pmarket",
+    "cmd_group": 15,
+    "cmd_type": 9,
+    "cmd_name": "EVENT_CMD_15_9"
+  },
+  {
+    "cmd": "pmarket_buy",
+    "cmd_group": 15,
+    "cmd_type": 10,
+    "cmd_name": "EVENT_CMD_15_10"
+  },
+  {
+    "cmd": "joinpvp_sync",
+    "cmd_group": 15,
+    "cmd_type": 11,
+    "cmd_name": "EVENT_CMD_15_11"
+  },
+  {
+    "cmd": "p3p_sync",
+    "cmd_group": 15,
+    "cmd_type": 12,
+    "cmd_name": "EVENT_CMD_15_12"
+  },
+  {
+    "cmd": "p3p_camp",
+    "cmd_group": 15,
+    "cmd_type": 13,
+    "cmd_name": "EVENT_CMD_15_13"
+  },
+  {
+    "cmd": "p3p_match",
+    "cmd_group": 15,
+    "cmd_type": 14,
+    "cmd_name": "EVENT_CMD_15_14"
+  },
+  {
+    "cmd": "p3p_fight",
+    "cmd_group": 15,
+    "cmd_type": 15,
+    "cmd_name": "EVENT_CMD_15_15"
+  },
+  {
+    "cmd": "p3p_honor",
+    "cmd_group": 15,
+    "cmd_type": 16,
+    "cmd_name": "EVENT_CMD_15_16"
+  },
+  {
+    "cmd": "p3p_logs",
+    "cmd_group": 15,
+    "cmd_type": 17,
+    "cmd_name": "EVENT_CMD_15_17"
+  },
+  {
+    "cmd": "p3p_video",
+    "cmd_group": 15,
+    "cmd_type": 18,
+    "cmd_name": "EVENT_CMD_15_18"
+  },
+  {
+    "cmd": "p3p_info",
+    "cmd_group": 15,
+    "cmd_type": 19,
+    "cmd_name": "EVENT_CMD_15_19"
+  },
+  {
+    "cmd": "fpk_camp",
+    "cmd_group": 15,
+    "cmd_type": 20,
+    "cmd_name": "EVENT_CMD_15_20"
+  },
+  {
+    "cmd": "spvp_sync",
+    "cmd_group": 15,
+    "cmd_type": 21,
+    "cmd_name": "EVENT_CMD_15_21"
+  },
+  {
+    "cmd": "spvp_camp",
+    "cmd_group": 15,
+    "cmd_type": 22,
+    "cmd_name": "EVENT_CMD_15_22"
+  },
+  {
+    "cmd": "spvp_rank",
+    "cmd_group": 15,
+    "cmd_type": 23,
+    "cmd_name": "EVENT_CMD_15_23"
+  },
+  {
+    "cmd": "spvp_fight",
+    "cmd_group": 15,
+    "cmd_type": 24,
+    "cmd_name": "EVENT_CMD_15_24"
+  },
+  {
+    "cmd": "spvp_revive",
+    "cmd_group": 15,
+    "cmd_type": 25,
+    "cmd_name": "EVENT_CMD_15_25"
+  },
+  {
+    "cmd": "spvp_match",
+    "cmd_group": 15,
+    "cmd_type": 26,
+    "cmd_name": "EVENT_CMD_15_26"
+  },
+  {
+    "cmd": "spvp_plunder",
+    "cmd_group": 15,
+    "cmd_type": 27,
+    "cmd_name": "EVENT_CMD_15_27"
+  },
+  {
+    "cmd": "spvp_settle",
+    "cmd_group": 15,
+    "cmd_type": 28,
+    "cmd_name": "EVENT_CMD_15_28"
+  },
+  {
+    "cmd": "spvp_def",
+    "cmd_group": 15,
+    "cmd_type": 29,
+    "cmd_name": "EVENT_CMD_15_29"
+  },
+  {
+    "cmd": "spvp_last_rank",
+    "cmd_group": 15,
+    "cmd_type": 30,
+    "cmd_name": "EVENT_CMD_15_30"
+  },
+  {
+    "cmd": "spvp_info",
+    "cmd_group": 15,
+    "cmd_type": 31,
+    "cmd_name": "EVENT_CMD_15_31"
+  },
+  {
+    "cmd": "htask",
+    "cmd_group": 16,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_16_1"
+  },
+  {
+    "cmd": "htask_start",
+    "cmd_group": 16,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_16_2"
+  },
+  {
+    "cmd": "htask_speedup",
+    "cmd_group": 16,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_16_3"
+  },
+  {
+    "cmd": "htask_rec",
+    "cmd_group": 16,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_16_4"
+  },
+  {
+    "cmd": "htask_gem",
+    "cmd_group": 16,
+    "cmd_type": 5,
+    "cmd_name": "EVENT_CMD_16_5"
+  },
+  {
+    "cmd": "htask_lock",
+    "cmd_group": 16,
+    "cmd_type": 6,
+    "cmd_name": "EVENT_CMD_16_6"
+  },
+  {
+    "cmd": "htask_add",
+    "cmd_group": 16,
+    "cmd_type": 7,
+    "cmd_name": "EVENT_CMD_16_7"
+  },
+  {
+    "cmd": "htask_auto",
+    "cmd_group": 16,
+    "cmd_type": 8,
+    "cmd_name": "EVENT_CMD_16_8"
+  },
+  {
+    "cmd": "achieve",
+    "cmd_group": 17,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_17_1"
+  },
+  {
+    "cmd": "achieve_claim",
+    "cmd_group": 17,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_17_2"
+  },
+  {
+    "cmd": "achievie_attention",
+    "cmd_group": 17,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_17_3"
+  },
+  {
+    "cmd": "pay",
+    "cmd_group": 18,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_18_1"
+  },
+  {
+    "cmd": "fpay",
+    "cmd_group": 18,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_18_2"
+  },
+  {
+    "cmd": "pay2",
+    "cmd_group": 18,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_18_3"
+  },
+  {
+    "cmd": "gorder",
+    "cmd_group": 18,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_18_4"
+  },
+  {
+    "cmd": "gpay",
+    "cmd_group": 18,
+    "cmd_type": 5,
+    "cmd_name": "EVENT_CMD_18_5"
+  },
+  {
+    "cmd": "chpay",
+    "cmd_group": 18,
+    "cmd_type": 6,
+    "cmd_name": "EVENT_CMD_18_6"
+  },
+  {
+    "cmd": "amznpay",
+    "cmd_group": 18,
+    "cmd_type": 7,
+    "cmd_name": "EVENT_CMD_18_7"
+  },
+  {
+    "cmd": "oneforum",
+    "cmd_group": 18,
+    "cmd_type": 10,
+    "cmd_name": "EVENT_CMD_18_10"
+  },
+  {
+    "cmd": "gpay2",
+    "cmd_group": 18,
+    "cmd_type": 11,
+    "cmd_name": "EVENT_CMD_18_11"
+  },
+  {
+    "cmd": "voucher",
+    "cmd_group": 18,
+    "cmd_type": 12,
+    "cmd_name": "EVENT_CMD_18_12"
+  },
+  {
+    "cmd": "storeinfo",
+    "cmd_group": 18,
+    "cmd_type": 13,
+    "cmd_name": "EVENT_CMD_18_13"
+  },
+  {
+    "cmd": "hmarket_buy",
+    "cmd_group": 19,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_19_1"
+  },
+  {
+    "cmd": "hmarket_sync",
+    "cmd_group": 19,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_19_2"
+  },
+  {
+    "cmd": "brave_market_buy",
+    "cmd_group": 19,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_19_3"
+  },
+  {
+    "cmd": "brave_market_sync",
+    "cmd_group": 19,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_19_4"
+  },
+  {
+    "cmd": "hmarket_refresh",
+    "cmd_group": 19,
+    "cmd_type": 5,
+    "cmd_name": "EVENT_CMD_19_5"
+  },
+  {
+    "cmd": "alogin",
+    "cmd_group": 20,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_20_1"
+  },
+  {
+    "cmd": "task_claim",
+    "cmd_group": 20,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_20_2"
+  },
+  {
+    "cmd": "online_claim",
+    "cmd_group": 20,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_20_3"
+  },
+  {
+    "cmd": "fun_info",
+    "cmd_group": 20,
+    "cmd_type": 5,
+    "cmd_name": "EVENT_CMD_20_5"
+  },
+  {
+    "cmd": "puz_sync",
+    "cmd_group": 21,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_21_1"
+  },
+  {
+    "cmd": "puz_buy",
+    "cmd_group": 21,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_21_2"
+  },
+  {
+    "cmd": "puz_fill",
+    "cmd_group": 21,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_21_3"
+  },
+  {
+    "cmd": "puz_tear",
+    "cmd_group": 21,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_21_4"
+  },
+  {
+    "cmd": "puz_sure",
+    "cmd_group": 21,
+    "cmd_type": 5,
+    "cmd_name": "EVENT_CMD_21_5"
+  },
+  {
+    "cmd": "puz_coin",
+    "cmd_group": 21,
+    "cmd_type": 6,
+    "cmd_name": "EVENT_CMD_21_6"
+  },
+  {
+    "cmd": "puz_wipe",
+    "cmd_group": 21,
+    "cmd_type": 7,
+    "cmd_name": "EVENT_CMD_21_7"
+  },
+  {
+    "cmd": "gmarket_buy",
+    "cmd_group": 22,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_22_1"
+  },
+  {
+    "cmd": "gmarket_sync",
+    "cmd_group": 22,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_22_2"
+  },
+  {
+    "cmd": "gmarket_refresh",
+    "cmd_group": 22,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_22_3"
+  },
+  {
+    "cmd": "gmarket_exchange",
+    "cmd_group": 22,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_22_4"
+  },
+  {
+    "cmd": "frd_boss_st",
+    "cmd_group": 23,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_23_1"
+  },
+  {
+    "cmd": "frd_boss_search",
+    "cmd_group": 23,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_23_2"
+  },
+  {
+    "cmd": "frd_boss_fight",
+    "cmd_group": 23,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_23_3"
+  },
+  {
+    "cmd": "frd_boss_static",
+    "cmd_group": 23,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_23_4"
+  },
+  {
+    "cmd": "frd_boss_rank",
+    "cmd_group": 23,
+    "cmd_type": 5,
+    "cmd_name": "EVENT_CMD_23_5"
+  },
+  {
+    "cmd": "fboss_notify",
+    "cmd_group": 23,
+    "cmd_type": 6,
+    "cmd_name": "EVENT_CMD_23_6"
+  },
+  {
+    "cmd": "fboss_batch",
+    "cmd_group": 23,
+    "cmd_type": 7,
+    "cmd_name": "EVENT_CMD_23_7"
+  },
+  {
+    "cmd": "town_sync",
+    "cmd_group": 23,
+    "cmd_type": 8,
+    "cmd_name": "EVENT_CMD_23_8"
+  },
+  {
+    "cmd": "town_reg",
+    "cmd_group": 23,
+    "cmd_type": 9,
+    "cmd_name": "EVENT_CMD_23_9"
+  },
+  {
+    "cmd": "town_claim",
+    "cmd_group": 23,
+    "cmd_type": 10,
+    "cmd_name": "EVENT_CMD_23_10"
+  },
+  {
+    "cmd": "merge_treasure",
+    "cmd_group": 6,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_6_3"
+  },
+  {
+    "cmd": "guild_fight_sync",
+    "cmd_group": 24,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_24_1"
+  },
+  {
+    "cmd": "guild_fight_camp",
+    "cmd_group": 24,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_24_2"
+  },
+  {
+    "cmd": "guild_fight_lineup",
+    "cmd_group": 24,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_24_3"
+  },
+  {
+    "cmd": "guild_fight_reg",
+    "cmd_group": 24,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_24_4"
+  },
+  {
+    "cmd": "guild_fight_rank",
+    "cmd_group": 24,
+    "cmd_type": 5,
+    "cmd_name": "EVENT_CMD_24_5"
+  },
+  {
+    "cmd": "guild_fight_logs",
+    "cmd_group": 24,
+    "cmd_type": 6,
+    "cmd_name": "EVENT_CMD_24_6"
+  },
+  {
+    "cmd": "guild_fight_log",
+    "cmd_group": 24,
+    "cmd_type": 7,
+    "cmd_name": "EVENT_CMD_24_7"
+  },
+  {
+    "cmd": "guild_fight_video",
+    "cmd_group": 24,
+    "cmd_type": 8,
+    "cmd_name": "EVENT_CMD_24_8"
+  },
+  {
+    "cmd": "guild_fight_sync_2",
+    "cmd_group": 24,
+    "cmd_type": 9,
+    "cmd_name": "EVENT_CMD_24_9"
+  },
+  {
+    "cmd": "guild_fight_macth",
+    "cmd_group": 24,
+    "cmd_type": 10,
+    "cmd_name": "EVENT_CMD_24_10"
+  },
+  {
+    "cmd": "guild_fight_fight",
+    "cmd_group": 24,
+    "cmd_type": 11,
+    "cmd_name": "EVENT_CMD_24_11"
+  },
+  {
+    "cmd": "ngw_sync",
+    "cmd_group": 24,
+    "cmd_type": 12,
+    "cmd_name": "EVENT_CMD_24_12"
+  },
+  {
+    "cmd": "ngw_rank",
+    "cmd_group": 24,
+    "cmd_type": 13,
+    "cmd_name": "EVENT_CMD_24_13"
+  },
+  {
+    "cmd": "ngw_camp",
+    "cmd_group": 24,
+    "cmd_type": 14,
+    "cmd_name": "EVENT_CMD_24_14"
+  },
+  {
+    "cmd": "ngw_shold",
+    "cmd_group": 24,
+    "cmd_type": 15,
+    "cmd_name": "EVENT_CMD_24_15"
+  },
+  {
+    "cmd": "ngw_fight",
+    "cmd_group": 24,
+    "cmd_type": 16,
+    "cmd_name": "EVENT_CMD_24_16"
+  },
+  {
+    "cmd": "ngw_lup",
+    "cmd_group": 24,
+    "cmd_type": 18,
+    "cmd_name": "EVENT_CMD_24_18"
+  },
+  {
+    "cmd": "ngw_setup",
+    "cmd_group": 24,
+    "cmd_type": 19,
+    "cmd_name": "EVENT_CMD_24_19"
+  },
+  {
+    "cmd": "ngw_buy",
+    "cmd_group": 24,
+    "cmd_type": 21,
+    "cmd_name": "EVENT_CMD_24_21"
+  },
+  {
+    "cmd": "ngw_info",
+    "cmd_group": 24,
+    "cmd_type": 22,
+    "cmd_name": "EVENT_CMD_24_22"
+  },
+  {
+    "cmd": "ngw_video",
+    "cmd_group": 24,
+    "cmd_type": 23,
+    "cmd_name": "EVENT_CMD_24_23"
+  },
+  {
+    "cmd": "ngw_sweep",
+    "cmd_group": 24,
+    "cmd_type": 24,
+    "cmd_name": "EVENT_CMD_24_24"
+  },
+  {
+    "cmd": "cgw_sync",
+    "cmd_group": 24,
+    "cmd_type": 30,
+    "cmd_name": "EVENT_CMD_24_30"
+  },
+  {
+    "cmd": "cgw_team",
+    "cmd_group": 24,
+    "cmd_type": 31,
+    "cmd_name": "EVENT_CMD_24_31"
+  },
+  {
+    "cmd": "cgw_reg",
+    "cmd_group": 24,
+    "cmd_type": 32,
+    "cmd_name": "EVENT_CMD_24_32"
+  },
+  {
+    "cmd": "cgw_honor",
+    "cmd_group": 24,
+    "cmd_type": 33,
+    "cmd_name": "EVENT_CMD_24_33"
+  },
+  {
+    "cmd": "cgw_record",
+    "cmd_group": 24,
+    "cmd_type": 34,
+    "cmd_name": "EVENT_CMD_24_34"
+  },
+  {
+    "cmd": "cgw_race",
+    "cmd_group": 24,
+    "cmd_type": 35,
+    "cmd_name": "EVENT_CMD_24_35"
+  },
+  {
+    "cmd": "cgw_log",
+    "cmd_group": 24,
+    "cmd_type": 36,
+    "cmd_name": "EVENT_CMD_24_36"
+  },
+  {
+    "cmd": "gpvp_sync",
+    "cmd_group": 26,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_26_1"
+  },
+  {
+    "cmd": "gpvp_set_camp",
+    "cmd_group": 26,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_26_2"
+  },
+  {
+    "cmd": "create_gpvpteam",
+    "cmd_group": 26,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_26_3"
+  },
+  {
+    "cmd": "dismiss_gpvpteam",
+    "cmd_group": 26,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_26_4"
+  },
+  {
+    "cmd": "gpvp_match",
+    "cmd_group": 26,
+    "cmd_type": 5,
+    "cmd_name": "EVENT_CMD_26_5"
+  },
+  {
+    "cmd": "submit_gpvpteam",
+    "cmd_group": 26,
+    "cmd_type": 7,
+    "cmd_name": "EVENT_CMD_26_7"
+  },
+  {
+    "cmd": "gpvp_leaderop",
+    "cmd_group": 26,
+    "cmd_type": 8,
+    "cmd_name": "EVENT_CMD_26_8"
+  },
+  {
+    "cmd": "gpvp_friendslist",
+    "cmd_group": 26,
+    "cmd_type": 9,
+    "cmd_name": "EVENT_CMD_26_9"
+  },
+  {
+    "cmd": "gpvpteam_notify",
+    "cmd_group": 26,
+    "cmd_type": 10,
+    "cmd_name": "EVENT_CMD_26_10"
+  },
+  {
+    "cmd": "gpvp_invitelist",
+    "cmd_group": 26,
+    "cmd_type": 11,
+    "cmd_name": "EVENT_CMD_26_11"
+  },
+  {
+    "cmd": "gpvp_refresh",
+    "cmd_group": 26,
+    "cmd_type": 12,
+    "cmd_name": "EVENT_CMD_26_12"
+  },
+  {
+    "cmd": "gpvp_mbrop",
+    "cmd_group": 26,
+    "cmd_type": 13,
+    "cmd_name": "EVENT_CMD_26_13"
+  },
+  {
+    "cmd": "gpvp_ranklist",
+    "cmd_group": 26,
+    "cmd_type": 14,
+    "cmd_name": "EVENT_CMD_26_14"
+  },
+  {
+    "cmd": "change_gpvpteam",
+    "cmd_group": 26,
+    "cmd_type": 15,
+    "cmd_name": "EVENT_CMD_26_15"
+  },
+  {
+    "cmd": "gpvp_applylist",
+    "cmd_group": 26,
+    "cmd_type": 16,
+    "cmd_name": "EVENT_CMD_26_16"
+  },
+  {
+    "cmd": "gpvp_mbr",
+    "cmd_group": 26,
+    "cmd_type": 17,
+    "cmd_name": "EVENT_CMD_26_17"
+  },
+  {
+    "cmd": "gpvp_grp",
+    "cmd_group": 26,
+    "cmd_type": 18,
+    "cmd_name": "EVENT_CMD_26_18"
+  },
+  {
+    "cmd": "gpvp_fight",
+    "cmd_group": 26,
+    "cmd_type": 19,
+    "cmd_name": "EVENT_CMD_26_19"
+  },
+  {
+    "cmd": "gpvp_logs",
+    "cmd_group": 26,
+    "cmd_type": 20,
+    "cmd_name": "EVENT_CMD_26_20"
+  },
+  {
+    "cmd": "gpvp_wlog",
+    "cmd_group": 26,
+    "cmd_type": 21,
+    "cmd_name": "EVENT_CMD_26_21"
+  },
+  {
+    "cmd": "gpvp_video",
+    "cmd_group": 26,
+    "cmd_type": 22,
+    "cmd_name": "EVENT_CMD_26_22"
+  },
+  {
+    "cmd": "pet_op",
+    "cmd_group": 27,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_27_1"
+  },
+  {
+    "cmd": "bboss_buy",
+    "cmd_group": 29,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_29_2"
+  },
+  {
+    "cmd": "bboss_syn",
+    "cmd_group": 29,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_29_1"
+  },
+  {
+    "cmd": "bboss_fight",
+    "cmd_group": 29,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_29_3"
+  },
+  {
+    "cmd": "bboss_batch",
+    "cmd_group": 29,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_29_4"
+  },
+  {
+    "cmd": "spk_sync",
+    "cmd_group": 28,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_28_1"
+  },
+  {
+    "cmd": "spk_camp",
+    "cmd_group": 28,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_28_2"
+  },
+  {
+    "cmd": "spk_fight",
+    "cmd_group": 28,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_28_3"
+  },
+  {
+    "cmd": "spk_buf",
+    "cmd_group": 28,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_28_4"
+  },
+  {
+    "cmd": "spk_rank",
+    "cmd_group": 28,
+    "cmd_type": 5,
+    "cmd_name": "EVENT_CMD_28_5"
+  },
+  {
+    "cmd": "spk_buy",
+    "cmd_group": 28,
+    "cmd_type": 6,
+    "cmd_name": "EVENT_CMD_28_6"
+  },
+  {
+    "cmd": "island_sync",
+    "cmd_group": 30,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_30_1"
+  },
+  {
+    "cmd": "island_tower",
+    "cmd_group": 30,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_30_2"
+  },
+  {
+    "cmd": "island_op",
+    "cmd_group": 30,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_30_3"
+  },
+  {
+    "cmd": "island_land",
+    "cmd_group": 30,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_30_4"
+  },
+  {
+    "cmd": "island_box",
+    "cmd_group": 30,
+    "cmd_type": 5,
+    "cmd_name": "EVENT_CMD_30_5"
+  },
+  {
+    "cmd": "island_npc",
+    "cmd_group": 30,
+    "cmd_type": 6,
+    "cmd_name": "EVENT_CMD_30_6"
+  },
+  {
+    "cmd": "island_boss",
+    "cmd_group": 30,
+    "cmd_type": 7,
+    "cmd_name": "EVENT_CMD_30_7"
+  },
+  {
+    "cmd": "island_fight",
+    "cmd_group": 30,
+    "cmd_type": 8,
+    "cmd_name": "EVENT_CMD_30_8"
+  },
+  {
+    "cmd": "island_buy",
+    "cmd_group": 30,
+    "cmd_type": 9,
+    "cmd_name": "EVENT_CMD_30_9"
+  },
+  {
+    "cmd": "island_batch",
+    "cmd_group": 30,
+    "cmd_type": 10,
+    "cmd_name": "EVENT_CMD_30_10"
+  },
+  {
+    "cmd": "island_sweep",
+    "cmd_group": 30,
+    "cmd_type": 11,
+    "cmd_name": "EVENT_CMD_30_11"
+  },
+  {
+    "cmd": "island_bget",
+    "cmd_group": 30,
+    "cmd_type": 12,
+    "cmd_name": "EVENT_CMD_30_12"
+  },
+  {
+    "cmd": "island_iboat_sync",
+    "cmd_group": 30,
+    "cmd_type": 13,
+    "cmd_name": "EVENT_CMD_30_13"
+  },
+  {
+    "cmd": "island_iboat_start",
+    "cmd_group": 30,
+    "cmd_type": 14,
+    "cmd_name": "EVENT_CMD_30_14"
+  },
+  {
+    "cmd": "island_iboat_xp",
+    "cmd_group": 30,
+    "cmd_type": 15,
+    "cmd_name": "EVENT_CMD_30_15"
+  },
+  {
+    "cmd": "island_iboat_xpop",
+    "cmd_group": 30,
+    "cmd_type": 16,
+    "cmd_name": "EVENT_CMD_30_16"
+  },
+  {
+    "cmd": "island_iboat_shop",
+    "cmd_group": 30,
+    "cmd_type": 17,
+    "cmd_name": "EVENT_CMD_30_17"
+  },
+  {
+    "cmd": "island_iboat_buy",
+    "cmd_group": 30,
+    "cmd_type": 18,
+    "cmd_name": "EVENT_CMD_30_18"
+  },
+  {
+    "cmd": "island_iboat_arm",
+    "cmd_group": 30,
+    "cmd_type": 19,
+    "cmd_name": "EVENT_CMD_30_19"
+  },
+  {
+    "cmd": "island_iboat_skl",
+    "cmd_group": 30,
+    "cmd_type": 20,
+    "cmd_name": "EVENT_CMD_30_20"
+  },
+  {
+    "cmd": "island_iboat_name",
+    "cmd_group": 30,
+    "cmd_type": 21,
+    "cmd_name": "EVENT_CMD_30_21"
+  },
+  {
+    "cmd": "island_iboat_fsync",
+    "cmd_group": 30,
+    "cmd_type": 22,
+    "cmd_name": "EVENT_CMD_30_22"
+  },
+  {
+    "cmd": "island_iboat_fpro",
+    "cmd_group": 30,
+    "cmd_type": 23,
+    "cmd_name": "EVENT_CMD_30_23"
+  },
+  {
+    "cmd": "island_iboat_use",
+    "cmd_group": 30,
+    "cmd_type": 24,
+    "cmd_name": "EVENT_CMD_30_24"
+  },
+  {
+    "cmd": "live_sync",
+    "cmd_group": 30,
+    "cmd_type": 25,
+    "cmd_name": "EVENT_CMD_30_25"
+  },
+  {
+    "cmd": "op_block",
+    "cmd_group": 30,
+    "cmd_type": 26,
+    "cmd_name": "EVENT_CMD_30_26"
+  },
+  {
+    "cmd": "op_build",
+    "cmd_group": 30,
+    "cmd_type": 27,
+    "cmd_name": "EVENT_CMD_30_27"
+  },
+  {
+    "cmd": "living",
+    "cmd_group": 30,
+    "cmd_type": 28,
+    "cmd_name": "EVENT_CMD_30_28"
+  },
+  {
+    "cmd": "sync_buildings",
+    "cmd_group": 30,
+    "cmd_type": 29,
+    "cmd_name": "EVENT_CMD_30_29"
+  },
+  {
+    "cmd": "hland_build",
+    "cmd_group": 30,
+    "cmd_type": 30,
+    "cmd_name": "EVENT_CMD_30_30"
+  },
+  {
+    "cmd": "building_up",
+    "cmd_group": 30,
+    "cmd_type": 31,
+    "cmd_name": "EVENT_CMD_30_31"
+  },
+  {
+    "cmd": "building_change_skin",
+    "cmd_group": 30,
+    "cmd_type": 32,
+    "cmd_name": "EVENT_CMD_30_32"
+  },
+  {
+    "cmd": "fun_collect",
+    "cmd_group": 30,
+    "cmd_type": 33,
+    "cmd_name": "EVENT_CMD_30_33"
+  },
+  {
+    "cmd": "fun_up_skill",
+    "cmd_group": 30,
+    "cmd_type": 34,
+    "cmd_name": "EVENT_CMD_30_34"
+  },
+  {
+    "cmd": "stove_buy",
+    "cmd_group": 30,
+    "cmd_type": 40,
+    "cmd_name": "EVENT_CMD_30_40"
+  },
+  {
+    "cmd": "stove_harvest",
+    "cmd_group": 30,
+    "cmd_type": 36,
+    "cmd_name": "EVENT_CMD_30_36"
+  },
+  {
+    "cmd": "open_land",
+    "cmd_group": 30,
+    "cmd_type": 35,
+    "cmd_name": "EVENT_CMD_30_35"
+  },
+  {
+    "cmd": "collect_rank",
+    "cmd_group": 30,
+    "cmd_type": 38,
+    "cmd_name": "EVENT_CMD_30_38"
+  },
+  {
+    "cmd": "collect_lv",
+    "cmd_group": 30,
+    "cmd_type": 39,
+    "cmd_name": "EVENT_CMD_30_39"
+  },
+  {
+    "cmd": "reset_skill",
+    "cmd_group": 30,
+    "cmd_type": 41,
+    "cmd_name": "EVENT_CMD_30_41"
+  },
+  {
+    "cmd": "hland_visit",
+    "cmd_group": 30,
+    "cmd_type": 42,
+    "cmd_name": "EVENT_CMD_30_42"
+  },
+  {
+    "cmd": "hland_search",
+    "cmd_group": 30,
+    "cmd_type": 43,
+    "cmd_name": "EVENT_CMD_30_43"
+  },
+  {
+    "cmd": "hland_rec",
+    "cmd_group": 30,
+    "cmd_type": 44,
+    "cmd_name": "EVENT_CMD_30_44"
+  },
+  {
+    "cmd": "hland_like",
+    "cmd_group": 30,
+    "cmd_type": 45,
+    "cmd_name": "EVENT_CMD_30_45"
+  },
+  {
+    "cmd": "hland_rank",
+    "cmd_group": 30,
+    "cmd_type": 46,
+    "cmd_name": "EVENT_CMD_30_46"
+  },
+  {
+    "cmd": "hland_log",
+    "cmd_group": 30,
+    "cmd_type": 47,
+    "cmd_name": "EVENT_CMD_30_47"
+  },
+  {
+    "cmd": "hland_template_sync",
+    "cmd_group": 30,
+    "cmd_type": 48,
+    "cmd_name": "EVENT_CMD_30_48"
+  },
+  {
+    "cmd": "hland_template_save",
+    "cmd_group": 30,
+    "cmd_type": 49,
+    "cmd_name": "EVENT_CMD_30_49"
+  },
+  {
+    "cmd": "hland_template_rename",
+    "cmd_group": 30,
+    "cmd_type": 50,
+    "cmd_name": "EVENT_CMD_30_50"
+  },
+  {
+    "cmd": "hland_template_use",
+    "cmd_group": 30,
+    "cmd_type": 51,
+    "cmd_name": "EVENT_CMD_30_51"
+  },
+  {
+    "cmd": "hland_visible",
+    "cmd_group": 30,
+    "cmd_type": 52,
+    "cmd_name": "EVENT_CMD_30_52"
+  },
+  {
+    "cmd": "hland_recmd",
+    "cmd_group": 30,
+    "cmd_type": 53,
+    "cmd_name": "EVENT_CMD_30_53"
+  },
+  {
+    "cmd": "hteam_sync",
+    "cmd_group": 30,
+    "cmd_type": 60,
+    "cmd_name": "EVENT_CMD_30_60"
+  },
+  {
+    "cmd": "refresh_hteam",
+    "cmd_group": 30,
+    "cmd_type": 61,
+    "cmd_name": "EVENT_CMD_30_61"
+  },
+  {
+    "cmd": "create_hteam",
+    "cmd_group": 30,
+    "cmd_type": 62,
+    "cmd_name": "EVENT_CMD_30_62"
+  },
+  {
+    "cmd": "dismiss_hteam",
+    "cmd_group": 30,
+    "cmd_type": 63,
+    "cmd_name": "EVENT_CMD_30_63"
+  },
+  {
+    "cmd": "join_hteam",
+    "cmd_group": 30,
+    "cmd_type": 64,
+    "cmd_name": "EVENT_CMD_30_64"
+  },
+  {
+    "cmd": "bjoin_hteam",
+    "cmd_group": 30,
+    "cmd_type": 65,
+    "cmd_name": "EVENT_CMD_30_65"
+  },
+  {
+    "cmd": "quit_hteam",
+    "cmd_group": 30,
+    "cmd_type": 66,
+    "cmd_name": "EVENT_CMD_30_66"
+  },
+  {
+    "cmd": "invite_hteam",
+    "cmd_group": 30,
+    "cmd_type": 67,
+    "cmd_name": "EVENT_CMD_30_67"
+  },
+  {
+    "cmd": "search_hteam",
+    "cmd_group": 30,
+    "cmd_type": 68,
+    "cmd_name": "EVENT_CMD_30_68"
+  },
+  {
+    "cmd": "hteam_clear_invite",
+    "cmd_group": 30,
+    "cmd_type": 69,
+    "cmd_name": "EVENT_CMD_30_69"
+  },
+  {
+    "cmd": "home_skin_exchange",
+    "cmd_group": 30,
+    "cmd_type": 71,
+    "cmd_name": "EVENT_CMD_30_71"
+  },
+  {
+    "cmd": "home_one_skin",
+    "cmd_group": 30,
+    "cmd_type": 72,
+    "cmd_name": "EVENT_CMD_30_72"
+  },
+  {
+    "cmd": "pull_stove",
+    "cmd_group": 30,
+    "cmd_type": 73,
+    "cmd_name": "EVENT_CMD_30_73"
+  },
+  {
+    "cmd": "beat_nien",
+    "cmd_group": 31,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_31_1"
+  },
+  {
+    "cmd": "idcard_verify",
+    "cmd_group": 32,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_32_1"
+  },
+  {
+    "cmd": "sealland_sync",
+    "cmd_group": 9,
+    "cmd_type": 16,
+    "cmd_name": "EVENT_CMD_9_16"
+  },
+  {
+    "cmd": "sealland_challenge_buy",
+    "cmd_group": 9,
+    "cmd_type": 17,
+    "cmd_name": "EVENT_CMD_9_17"
+  },
+  {
+    "cmd": "sealland_fight",
+    "cmd_group": 9,
+    "cmd_type": 18,
+    "cmd_name": "EVENT_CMD_9_18"
+  },
+  {
+    "cmd": "sealland_reward",
+    "cmd_group": 9,
+    "cmd_type": 19,
+    "cmd_name": "EVENT_CMD_9_19"
+  },
+  {
+    "cmd": "sealland_sweep_buy",
+    "cmd_group": 9,
+    "cmd_type": 20,
+    "cmd_name": "EVENT_CMD_9_20"
+  },
+  {
+    "cmd": "sealland_market_buy",
+    "cmd_group": 9,
+    "cmd_type": 21,
+    "cmd_name": "EVENT_CMD_9_21"
+  },
+  {
+    "cmd": "brave_sweep",
+    "cmd_group": 9,
+    "cmd_type": 22,
+    "cmd_name": "EVENT_CMD_9_22"
+  },
+  {
+    "cmd": "dare_sweep",
+    "cmd_group": 9,
+    "cmd_type": 23,
+    "cmd_name": "EVENT_CMD_9_23"
+  },
+  {
+    "cmd": "monthmarket_buy",
+    "cmd_group": 33,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_33_1"
+  },
+  {
+    "cmd": "monthmarket_sync",
+    "cmd_group": 33,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_33_2"
+  },
+  {
+    "cmd": "activity",
+    "cmd_group": 31,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_31_2"
+  },
+  {
+    "cmd": "activity_sign",
+    "cmd_group": 31,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_31_3"
+  },
+  {
+    "cmd": "activity_grid",
+    "cmd_group": 31,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_31_4"
+  },
+  {
+    "cmd": "activity_skim",
+    "cmd_group": 31,
+    "cmd_type": 5,
+    "cmd_name": "EVENT_CMD_31_5"
+  },
+  {
+    "cmd": "maze_open",
+    "cmd_group": 31,
+    "cmd_type": 20,
+    "cmd_name": "EVENT_CMD_31_20"
+  },
+  {
+    "cmd": "maze_change_hero",
+    "cmd_group": 31,
+    "cmd_type": 21,
+    "cmd_name": "EVENT_CMD_31_21"
+  },
+  {
+    "cmd": "maze_open2",
+    "cmd_group": 31,
+    "cmd_type": 22,
+    "cmd_name": "EVENT_CMD_31_22"
+  },
+  {
+    "cmd": "maze_buy",
+    "cmd_group": 31,
+    "cmd_type": 23,
+    "cmd_name": "EVENT_CMD_31_23"
+  },
+  {
+    "cmd": "maze_sync",
+    "cmd_group": 31,
+    "cmd_type": 24,
+    "cmd_name": "EVENT_CMD_31_24"
+  },
+  {
+    "cmd": "maze_break",
+    "cmd_group": 31,
+    "cmd_type": 25,
+    "cmd_name": "EVENT_CMD_31_25"
+  },
+  {
+    "cmd": "fetch_sact",
+    "cmd_group": 31,
+    "cmd_type": 26,
+    "cmd_name": "EVENT_CMD_31_26"
+  },
+  {
+    "cmd": "maze_batch",
+    "cmd_group": 31,
+    "cmd_type": 27,
+    "cmd_name": "EVENT_CMD_31_27"
+  },
+  {
+    "cmd": "act_choose",
+    "cmd_group": 31,
+    "cmd_type": 37,
+    "cmd_name": "EVENT_CMD_31_37"
+  },
+  {
+    "cmd": "act_reward",
+    "cmd_group": 31,
+    "cmd_type": 38,
+    "cmd_name": "EVENT_CMD_31_38"
+  },
+  {
+    "cmd": "act_qstar",
+    "cmd_group": 31,
+    "cmd_type": 39,
+    "cmd_name": "EVENT_CMD_31_39"
+  },
+  {
+    "cmd": "act_reward2",
+    "cmd_group": 31,
+    "cmd_type": 40,
+    "cmd_name": "EVENT_CMD_31_40"
+  },
+  {
+    "cmd": "art_merge",
+    "cmd_group": 31,
+    "cmd_type": 41,
+    "cmd_name": "EVENT_CMD_31_41"
+  },
+  {
+    "cmd": "sact_exchange",
+    "cmd_group": 36,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_36_1"
+  },
+  {
+    "cmd": "sact_open",
+    "cmd_group": 36,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_36_2"
+  },
+  {
+    "cmd": "sact_buy_score",
+    "cmd_group": 36,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_36_3"
+  },
+  {
+    "cmd": "sact_choose",
+    "cmd_group": 36,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_36_4"
+  },
+  {
+    "cmd": "sact_socks",
+    "cmd_group": 36,
+    "cmd_type": 5,
+    "cmd_name": "EVENT_CMD_36_5"
+  },
+  {
+    "cmd": "sact_sact_coin",
+    "cmd_group": 36,
+    "cmd_type": 6,
+    "cmd_name": "EVENT_CMD_36_6"
+  },
+  {
+    "cmd": "sact_topic",
+    "cmd_group": 36,
+    "cmd_type": 7,
+    "cmd_name": "EVENT_CMD_36_7"
+  },
+  {
+    "cmd": "sact_get_reward",
+    "cmd_group": 36,
+    "cmd_type": 8,
+    "cmd_name": "EVENT_CMD_36_8"
+  },
+  {
+    "cmd": "sact_choose_reward",
+    "cmd_group": 36,
+    "cmd_type": 9,
+    "cmd_name": "EVENT_CMD_36_9"
+  },
+  {
+    "cmd": "sact_hero_star",
+    "cmd_group": 36,
+    "cmd_type": 10,
+    "cmd_name": "EVENT_CMD_36_10"
+  },
+  {
+    "cmd": "sact_plant",
+    "cmd_group": 36,
+    "cmd_type": 11,
+    "cmd_name": "EVENT_CMD_36_11"
+  },
+  {
+    "cmd": "sact_rabbit",
+    "cmd_group": 36,
+    "cmd_type": 12,
+    "cmd_name": "EVENT_CMD_36_12"
+  },
+  {
+    "cmd": "sact_rabbit_reward",
+    "cmd_group": 36,
+    "cmd_type": 13,
+    "cmd_name": "EVENT_CMD_36_13"
+  },
+  {
+    "cmd": "sact_put",
+    "cmd_group": 36,
+    "cmd_type": 13,
+    "cmd_name": "EVENT_CMD_36_13"
+  },
+  {
+    "cmd": "sact_spell_mirror",
+    "cmd_group": 36,
+    "cmd_type": 10,
+    "cmd_name": "EVENT_CMD_36_10"
+  },
+  {
+    "cmd": "sact_fish",
+    "cmd_group": 36,
+    "cmd_type": 14,
+    "cmd_name": "EVENT_CMD_36_14"
+  },
+  {
+    "cmd": "act_fish_rank",
+    "cmd_group": 36,
+    "cmd_type": 15,
+    "cmd_name": "EVENT_CMD_36_15"
+  },
+  {
+    "cmd": "act_wood_qte",
+    "cmd_group": 36,
+    "cmd_type": 16,
+    "cmd_name": "EVENT_CMD_36_16"
+  },
+  {
+    "cmd": "act_wood_rank",
+    "cmd_group": 36,
+    "cmd_type": 17,
+    "cmd_name": "EVENT_CMD_36_17"
+  },
+  {
+    "cmd": "sact_pk",
+    "cmd_group": 36,
+    "cmd_type": 16,
+    "cmd_name": "EVENT_CMD_36_16"
+  },
+  {
+    "cmd": "sact_ghost",
+    "cmd_group": 36,
+    "cmd_type": 17,
+    "cmd_name": "EVENT_CMD_36_17"
+  },
+  {
+    "cmd": "sact_call",
+    "cmd_group": 36,
+    "cmd_type": 18,
+    "cmd_name": "EVENT_CMD_36_18"
+  },
+  {
+    "cmd": "sact_select",
+    "cmd_group": 36,
+    "cmd_type": 19,
+    "cmd_name": "EVENT_CMD_36_19"
+  },
+  {
+    "cmd": "growup_buy",
+    "cmd_group": 31,
+    "cmd_type": 34,
+    "cmd_name": "EVENT_CMD_31_34"
+  },
+  {
+    "cmd": "growup_choose",
+    "cmd_group": 31,
+    "cmd_type": 35,
+    "cmd_name": "EVENT_CMD_31_35"
+  },
+  {
+    "cmd": "growup_claim",
+    "cmd_group": 31,
+    "cmd_type": 36,
+    "cmd_name": "EVENT_CMD_31_36"
+  },
+  {
+    "cmd": "sact_fight",
+    "cmd_group": 36,
+    "cmd_type": 41,
+    "cmd_name": "EVENT_CMD_36_41"
+  },
+  {
+    "cmd": "sact_fight_rank",
+    "cmd_group": 36,
+    "cmd_type": 42,
+    "cmd_name": "EVENT_CMD_36_42"
+  },
+  {
+    "cmd": "hero_log",
+    "cmd_group": 37,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_37_1"
+  },
+  {
+    "cmd": "brave_open",
+    "cmd_group": 38,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_38_1"
+  },
+  {
+    "cmd": "brave_altar",
+    "cmd_group": 38,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_38_2"
+  },
+  {
+    "cmd": "brave_buy",
+    "cmd_group": 38,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_38_3"
+  },
+  {
+    "cmd": "brave_shop",
+    "cmd_group": 38,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_38_4"
+  },
+  {
+    "cmd": "brave_shop_buy",
+    "cmd_group": 38,
+    "cmd_type": 5,
+    "cmd_name": "EVENT_CMD_38_5"
+  },
+  {
+    "cmd": "wpvp_sync",
+    "cmd_group": 39,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_39_1"
+  },
+  {
+    "cmd": "wpvp_honor",
+    "cmd_group": 39,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_39_2"
+  },
+  {
+    "cmd": "wpvp_daily",
+    "cmd_group": 39,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_39_3"
+  },
+  {
+    "cmd": "wpvp_match",
+    "cmd_group": 39,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_39_4"
+  },
+  {
+    "cmd": "wpvp_camp",
+    "cmd_group": 39,
+    "cmd_type": 5,
+    "cmd_name": "EVENT_CMD_39_5"
+  },
+  {
+    "cmd": "wpvp_fight",
+    "cmd_group": 39,
+    "cmd_type": 6,
+    "cmd_name": "EVENT_CMD_39_6"
+  },
+  {
+    "cmd": "wpvp_like",
+    "cmd_group": 39,
+    "cmd_type": 7,
+    "cmd_name": "EVENT_CMD_39_7"
+  },
+  {
+    "cmd": "wpvp_info",
+    "cmd_group": 39,
+    "cmd_type": 8,
+    "cmd_name": "EVENT_CMD_39_8"
+  },
+  {
+    "cmd": "wpvp_zone",
+    "cmd_group": 39,
+    "cmd_type": 9,
+    "cmd_name": "EVENT_CMD_39_9"
+  },
+  {
+    "cmd": "wpvp_loger1",
+    "cmd_group": 39,
+    "cmd_type": 10,
+    "cmd_name": "EVENT_CMD_39_10"
+  },
+  {
+    "cmd": "wpvp_log1",
+    "cmd_group": 39,
+    "cmd_type": 11,
+    "cmd_name": "EVENT_CMD_39_11"
+  },
+  {
+    "cmd": "wpvp_video1",
+    "cmd_group": 39,
+    "cmd_type": 12,
+    "cmd_name": "EVENT_CMD_39_12"
+  },
+  {
+    "cmd": "wpvp_log2",
+    "cmd_group": 39,
+    "cmd_type": 13,
+    "cmd_name": "EVENT_CMD_39_13"
+  },
+  {
+    "cmd": "wpvp_video2",
+    "cmd_group": 39,
+    "cmd_type": 14,
+    "cmd_name": "EVENT_CMD_39_14"
+  },
+  {
+    "cmd": "tutorial",
+    "cmd_group": 40,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_40_1"
+  },
+  {
+    "cmd": "ract_receive",
+    "cmd_group": 41,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_41_1"
+  },
+  {
+    "cmd": "ract_power",
+    "cmd_group": 41,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_41_2"
+  },
+  {
+    "cmd": "task_convert",
+    "cmd_group": 20,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_20_4"
+  },
+  {
+    "cmd": "fetch_activity",
+    "cmd_group": 31,
+    "cmd_type": 6,
+    "cmd_name": "EVENT_CMD_31_6"
+  },
+  {
+    "cmd": "star_store",
+    "cmd_group": 31,
+    "cmd_type": 7,
+    "cmd_name": "EVENT_CMD_31_7"
+  },
+  {
+    "cmd": "monopoly_dice",
+    "cmd_group": 31,
+    "cmd_type": 10,
+    "cmd_name": "EVENT_CMD_31_10"
+  },
+  {
+    "cmd": "buy_dice",
+    "cmd_group": 31,
+    "cmd_type": 11,
+    "cmd_name": "EVENT_CMD_31_11"
+  },
+  {
+    "cmd": "youtuber_refresh",
+    "cmd_group": 31,
+    "cmd_type": 14,
+    "cmd_name": "EVENT_CMD_31_14"
+  },
+  {
+    "cmd": "forge_back",
+    "cmd_group": 31,
+    "cmd_type": 15,
+    "cmd_name": "EVENT_CMD_31_15"
+  },
+  {
+    "cmd": "gold_card",
+    "cmd_group": 31,
+    "cmd_type": 16,
+    "cmd_name": "EVENT_CMD_31_16"
+  },
+  {
+    "cmd": "chick",
+    "cmd_group": 31,
+    "cmd_type": 17,
+    "cmd_name": "EVENT_CMD_31_17"
+  },
+  {
+    "cmd": "limit_gift_activate",
+    "cmd_group": 31,
+    "cmd_type": 18,
+    "cmd_name": "EVENT_CMD_31_18"
+  },
+  {
+    "cmd": "follow",
+    "cmd_group": 31,
+    "cmd_type": 19,
+    "cmd_name": "EVENT_CMD_31_19"
+  },
+  {
+    "cmd": "htask_commit",
+    "cmd_group": 31,
+    "cmd_type": 30,
+    "cmd_name": "EVENT_CMD_31_30"
+  },
+  {
+    "cmd": "birthday_gift",
+    "cmd_group": 31,
+    "cmd_type": 31,
+    "cmd_name": "EVENT_CMD_31_31"
+  },
+  {
+    "cmd": "extra_spring",
+    "cmd_group": 31,
+    "cmd_type": 32,
+    "cmd_name": "EVENT_CMD_31_32"
+  },
+  {
+    "cmd": "extra_relay_pkg",
+    "cmd_group": 31,
+    "cmd_type": 33,
+    "cmd_name": "EVENT_CMD_31_33"
+  },
+  {
+    "cmd": "re_sync",
+    "cmd_group": 34,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_34_1"
+  },
+  {
+    "cmd": "re_code",
+    "cmd_group": 34,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_34_2"
+  },
+  {
+    "cmd": "re_bind",
+    "cmd_group": 34,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_34_3"
+  },
+  {
+    "cmd": "re_claim",
+    "cmd_group": 34,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_34_4"
+  },
+  {
+    "cmd": "forge_artifact",
+    "cmd_group": 31,
+    "cmd_type": 8,
+    "cmd_name": "EVENT_CMD_31_8"
+  },
+  {
+    "cmd": "crack_artifact",
+    "cmd_group": 31,
+    "cmd_type": 9,
+    "cmd_name": "EVENT_CMD_31_9"
+  },
+  {
+    "cmd": "hero_forever",
+    "cmd_group": 31,
+    "cmd_type": 12,
+    "cmd_name": "EVENT_CMD_31_12"
+  },
+  {
+    "cmd": "activity_remove",
+    "cmd_group": 31,
+    "cmd_type": 42,
+    "cmd_name": "EVENT_CMD_31_42"
+  },
+  {
+    "cmd": "activity_desk_sync",
+    "cmd_group": 31,
+    "cmd_type": 43,
+    "cmd_name": "EVENT_CMD_31_43"
+  },
+  {
+    "cmd": "activity_desk_draw",
+    "cmd_group": 31,
+    "cmd_type": 44,
+    "cmd_name": "EVENT_CMD_31_44"
+  },
+  {
+    "cmd": "activity_desk_fight",
+    "cmd_group": 31,
+    "cmd_type": 45,
+    "cmd_name": "EVENT_CMD_31_45"
+  },
+  {
+    "cmd": "activity_desk_rank",
+    "cmd_group": 31,
+    "cmd_type": 46,
+    "cmd_name": "EVENT_CMD_31_46"
+  },
+  {
+    "cmd": "activity_desk_fun",
+    "cmd_group": 31,
+    "cmd_type": 47,
+    "cmd_name": "EVENT_CMD_31_47"
+  },
+  {
+    "cmd": "activity_desk_sweep",
+    "cmd_group": 31,
+    "cmd_type": 48,
+    "cmd_name": "EVENT_CMD_31_48"
+  },
+  {
+    "cmd": "st_sync",
+    "cmd_group": 42,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_42_1"
+  },
+  {
+    "cmd": "st_summon",
+    "cmd_group": 42,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_42_2"
+  },
+  {
+    "cmd": "st_schange",
+    "cmd_group": 42,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_42_3"
+  },
+  {
+    "cmd": "st_msync",
+    "cmd_group": 42,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_42_4"
+  },
+  {
+    "cmd": "st_rank",
+    "cmd_group": 42,
+    "cmd_type": 5,
+    "cmd_name": "EVENT_CMD_42_5"
+  },
+  {
+    "cmd": "st_hforge",
+    "cmd_group": 42,
+    "cmd_type": 6,
+    "cmd_name": "EVENT_CMD_42_6"
+  },
+  {
+    "cmd": "st_hattrup",
+    "cmd_group": 42,
+    "cmd_type": 7,
+    "cmd_name": "EVENT_CMD_42_7"
+  },
+  {
+    "cmd": "st_hattrchange",
+    "cmd_group": 42,
+    "cmd_type": 8,
+    "cmd_name": "EVENT_CMD_42_8"
+  },
+  {
+    "cmd": "st_hattractivate",
+    "cmd_group": 42,
+    "cmd_type": 9,
+    "cmd_name": "EVENT_CMD_42_9"
+  },
+  {
+    "cmd": "st_vsync",
+    "cmd_group": 42,
+    "cmd_type": 10,
+    "cmd_name": "EVENT_CMD_42_10"
+  },
+  {
+    "cmd": "st_vsync2",
+    "cmd_group": 42,
+    "cmd_type": 11,
+    "cmd_name": "EVENT_CMD_42_11"
+  },
+  {
+    "cmd": "st_vevent",
+    "cmd_group": 42,
+    "cmd_type": 12,
+    "cmd_name": "EVENT_CMD_42_12"
+  },
+  {
+    "cmd": "st_vdiff",
+    "cmd_group": 42,
+    "cmd_type": 13,
+    "cmd_name": "EVENT_CMD_42_13"
+  },
+  {
+    "cmd": "st_heartresolve",
+    "cmd_group": 42,
+    "cmd_type": 14,
+    "cmd_name": "EVENT_CMD_42_14"
+  },
+  {
+    "cmd": "st_vwipe",
+    "cmd_group": 42,
+    "cmd_type": 15,
+    "cmd_name": "EVENT_CMD_42_15"
+  },
+  {
+    "cmd": "st_vuseitem",
+    "cmd_group": 42,
+    "cmd_type": 16,
+    "cmd_name": "EVENT_CMD_42_16"
+  },
+  {
+    "cmd": "st_esync",
+    "cmd_group": 42,
+    "cmd_type": 17,
+    "cmd_name": "EVENT_CMD_42_17"
+  },
+  {
+    "cmd": "st_ebuy",
+    "cmd_group": 42,
+    "cmd_type": 18,
+    "cmd_name": "EVENT_CMD_42_18"
+  },
+  {
+    "cmd": "st_euse",
+    "cmd_group": 42,
+    "cmd_type": 19,
+    "cmd_name": "EVENT_CMD_42_19"
+  },
+  {
+    "cmd": "st_efight",
+    "cmd_group": 42,
+    "cmd_type": 20,
+    "cmd_name": "EVENT_CMD_42_20"
+  },
+  {
+    "cmd": "st_erank1",
+    "cmd_group": 42,
+    "cmd_type": 21,
+    "cmd_name": "EVENT_CMD_42_21"
+  },
+  {
+    "cmd": "st_erank2",
+    "cmd_group": 42,
+    "cmd_type": 22,
+    "cmd_name": "EVENT_CMD_42_22"
+  },
+  {
+    "cmd": "st_eget",
+    "cmd_group": 42,
+    "cmd_type": 23,
+    "cmd_name": "EVENT_CMD_42_23"
+  },
+  {
+    "cmd": "st_eopen",
+    "cmd_group": 42,
+    "cmd_type": 24,
+    "cmd_name": "EVENT_CMD_42_24"
+  },
+  {
+    "cmd": "st_async",
+    "cmd_group": 42,
+    "cmd_type": 25,
+    "cmd_name": "EVENT_CMD_42_25"
+  },
+  {
+    "cmd": "st_erefresh",
+    "cmd_group": 42,
+    "cmd_type": 26,
+    "cmd_name": "EVENT_CMD_42_26"
+  },
+  {
+    "cmd": "st_hattrreset",
+    "cmd_group": 42,
+    "cmd_type": 27,
+    "cmd_name": "EVENT_CMD_42_27"
+  },
+  {
+    "cmd": "st_tback",
+    "cmd_group": 42,
+    "cmd_type": 28,
+    "cmd_name": "EVENT_CMD_42_28"
+  },
+  {
+    "cmd": "st_changenight",
+    "cmd_group": 42,
+    "cmd_type": 29,
+    "cmd_name": "EVENT_CMD_42_29"
+  },
+  {
+    "cmd": "st_starresolve",
+    "cmd_group": 42,
+    "cmd_type": 30,
+    "cmd_name": "EVENT_CMD_42_30"
+  },
+  {
+    "cmd": "st_ssync",
+    "cmd_group": 42,
+    "cmd_type": 36,
+    "cmd_name": "EVENT_CMD_42_36"
+  },
+  {
+    "cmd": "st_slvup",
+    "cmd_group": 42,
+    "cmd_type": 37,
+    "cmd_name": "EVENT_CMD_42_37"
+  },
+  {
+    "cmd": "st_ssweep",
+    "cmd_group": 42,
+    "cmd_type": 38,
+    "cmd_name": "EVENT_CMD_42_38"
+  },
+  {
+    "cmd": "st_ssklup",
+    "cmd_group": 42,
+    "cmd_type": 39,
+    "cmd_name": "EVENT_CMD_42_39"
+  },
+  {
+    "cmd": "st_sstore",
+    "cmd_group": 42,
+    "cmd_type": 40,
+    "cmd_name": "EVENT_CMD_42_40"
+  },
+  {
+    "cmd": "st_sbuy",
+    "cmd_group": 42,
+    "cmd_type": 41,
+    "cmd_name": "EVENT_CMD_42_41"
+  },
+  {
+    "cmd": "st_smap_unlock",
+    "cmd_group": 42,
+    "cmd_type": 42,
+    "cmd_name": "EVENT_CMD_42_42"
+  },
+  {
+    "cmd": "st_smap_sync",
+    "cmd_group": 42,
+    "cmd_type": 43,
+    "cmd_name": "EVENT_CMD_42_43"
+  },
+  {
+    "cmd": "st_scell_unlock",
+    "cmd_group": 42,
+    "cmd_type": 44,
+    "cmd_name": "EVENT_CMD_42_44"
+  },
+  {
+    "cmd": "st_scell_disp",
+    "cmd_group": 42,
+    "cmd_type": 45,
+    "cmd_name": "EVENT_CMD_42_45"
+  },
+  {
+    "cmd": "st_scell_fight",
+    "cmd_group": 42,
+    "cmd_type": 46,
+    "cmd_name": "EVENT_CMD_42_46"
+  },
+  {
+    "cmd": "st_smap_sett",
+    "cmd_group": 42,
+    "cmd_type": 47,
+    "cmd_name": "EVENT_CMD_42_47"
+  },
+  {
+    "cmd": "st_smap_team",
+    "cmd_group": 42,
+    "cmd_type": 48,
+    "cmd_name": "EVENT_CMD_42_48"
+  },
+  {
+    "cmd": "st_smap_rank",
+    "cmd_group": 42,
+    "cmd_type": 49,
+    "cmd_name": "EVENT_CMD_42_49"
+  },
+  {
+    "cmd": "st_smap_mbr",
+    "cmd_group": 42,
+    "cmd_type": 50,
+    "cmd_name": "EVENT_CMD_42_50"
+  },
+  {
+    "cmd": "st_sclick",
+    "cmd_group": 42,
+    "cmd_type": 51,
+    "cmd_name": "EVENT_CMD_42_51"
+  },
+  {
+    "cmd": "spet_reset",
+    "cmd_group": 42,
+    "cmd_type": 53,
+    "cmd_name": "EVENT_CMD_42_53"
+  },
+  {
+    "cmd": "spet_breed",
+    "cmd_group": 42,
+    "cmd_type": 54,
+    "cmd_name": "EVENT_CMD_42_54"
+  },
+  {
+    "cmd": "stower_bover",
+    "cmd_group": 42,
+    "cmd_type": 55,
+    "cmd_name": "EVENT_CMD_42_55"
+  },
+  {
+    "cmd": "stower_lucky",
+    "cmd_group": 42,
+    "cmd_type": 56,
+    "cmd_name": "EVENT_CMD_42_56"
+  },
+  {
+    "cmd": "stower_sure",
+    "cmd_group": 42,
+    "cmd_type": 57,
+    "cmd_name": "EVENT_CMD_42_57"
+  },
+  {
+    "cmd": "stower_cookie",
+    "cmd_group": 42,
+    "cmd_type": 58,
+    "cmd_name": "EVENT_CMD_42_58"
+  },
+  {
+    "cmd": "dice_sweep",
+    "cmd_group": 31,
+    "cmd_type": 13,
+    "cmd_name": "EVENT_CMD_31_13"
+  },
+  {
+    "cmd": "stower_sync",
+    "cmd_group": 42,
+    "cmd_type": 31,
+    "cmd_name": "EVENT_CMD_42_31"
+  },
+  {
+    "cmd": "stower_up",
+    "cmd_group": 42,
+    "cmd_type": 32,
+    "cmd_name": "EVENT_CMD_42_32"
+  },
+  {
+    "cmd": "stower_hatch",
+    "cmd_group": 42,
+    "cmd_type": 33,
+    "cmd_name": "EVENT_CMD_42_33"
+  },
+  {
+    "cmd": "stower_hover",
+    "cmd_group": 42,
+    "cmd_type": 34,
+    "cmd_name": "EVENT_CMD_42_34"
+  },
+  {
+    "cmd": "spet_up",
+    "cmd_group": 42,
+    "cmd_type": 35,
+    "cmd_name": "EVENT_CMD_42_35"
+  },
+  {
+    "cmd": "st_hchange",
+    "cmd_group": 42,
+    "cmd_type": 52,
+    "cmd_name": "EVENT_CMD_42_52"
+  },
+  {
+    "cmd": "ntask_sync",
+    "cmd_group": 43,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_43_1"
+  },
+  {
+    "cmd": "ntask_claim",
+    "cmd_group": 43,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_43_2"
+  },
+  {
+    "cmd": "ntask_market",
+    "cmd_group": 43,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_43_3"
+  },
+  {
+    "cmd": "ntask_market_buy",
+    "cmd_group": 43,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_43_4"
+  },
+  {
+    "cmd": "team_info",
+    "cmd_group": 44,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_44_1"
+  },
+  {
+    "cmd": "team_change_name",
+    "cmd_group": 44,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_44_2"
+  },
+  {
+    "cmd": "team_unlock",
+    "cmd_group": 44,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_44_3"
+  },
+  {
+    "cmd": "team_save",
+    "cmd_group": 44,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_44_4"
+  },
+  {
+    "cmd": "shop_sync",
+    "cmd_group": 45,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_45_1"
+  },
+  {
+    "cmd": "shop_show_sync",
+    "cmd_group": 45,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_45_2"
+  },
+  {
+    "cmd": "shop_update_cart",
+    "cmd_group": 45,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_45_3"
+  },
+  {
+    "cmd": "shop_get_price",
+    "cmd_group": 45,
+    "cmd_type": 5,
+    "cmd_name": "EVENT_CMD_45_5"
+  },
+  {
+    "cmd": "shop_update_status",
+    "cmd_group": 45,
+    "cmd_type": 6,
+    "cmd_name": "EVENT_CMD_45_6"
+  },
+  {
+    "cmd": "shop_history",
+    "cmd_group": 45,
+    "cmd_type": 7,
+    "cmd_name": "EVENT_CMD_45_7"
+  },
+  {
+    "cmd": "shop_finish_good",
+    "cmd_group": 45,
+    "cmd_type": 9,
+    "cmd_name": "EVENT_CMD_45_9"
+  },
+  {
+    "cmd": "give_sync",
+    "cmd_group": 45,
+    "cmd_type": 10,
+    "cmd_name": "EVENT_CMD_45_10"
+  },
+  {
+    "cmd": "give_search",
+    "cmd_group": 45,
+    "cmd_type": 11,
+    "cmd_name": "EVENT_CMD_45_11"
+  },
+  {
+    "cmd": "give_link",
+    "cmd_group": 45,
+    "cmd_type": 12,
+    "cmd_name": "EVENT_CMD_45_12"
+  },
+  {
+    "cmd": "give_response_link",
+    "cmd_group": 45,
+    "cmd_type": 13,
+    "cmd_name": "EVENT_CMD_45_13"
+  },
+  {
+    "cmd": "give_send",
+    "cmd_group": 45,
+    "cmd_type": 14,
+    "cmd_name": "EVENT_CMD_45_14"
+  },
+  {
+    "cmd": "give_response_give",
+    "cmd_group": 45,
+    "cmd_type": 15,
+    "cmd_name": "EVENT_CMD_45_15"
+  },
+  {
+    "cmd": "give_log",
+    "cmd_group": 45,
+    "cmd_type": 16,
+    "cmd_name": "EVENT_CMD_45_16"
+  },
+  {
+    "cmd": "qlt_return",
+    "cmd_group": 45,
+    "cmd_type": 18,
+    "cmd_name": "EVENT_CMD_45_18"
+  },
+  {
+    "cmd": "mall_booth_open",
+    "cmd_group": 45,
+    "cmd_type": 19,
+    "cmd_name": "EVENT_CMD_45_19"
+  },
+  {
+    "cmd": "mall_change_pwd",
+    "cmd_group": 45,
+    "cmd_type": 20,
+    "cmd_name": "EVENT_CMD_45_20"
+  },
+  {
+    "cmd": "mall_pwd_auth",
+    "cmd_group": 45,
+    "cmd_type": 21,
+    "cmd_name": "EVENT_CMD_45_21"
+  },
+  {
+    "cmd": "mall_grade",
+    "cmd_group": 45,
+    "cmd_type": 22,
+    "cmd_name": "EVENT_CMD_45_22"
+  },
+  {
+    "cmd": "mall_exchange",
+    "cmd_group": 45,
+    "cmd_type": 23,
+    "cmd_name": "EVENT_CMD_45_23"
+  },
+  {
+    "cmd": "qlt_pvp_camp",
+    "cmd_group": 46,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_46_1"
+  },
+  {
+    "cmd": "qlt_pvp_sync",
+    "cmd_group": 46,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_46_2"
+  },
+  {
+    "cmd": "qlt_pvp_refresh",
+    "cmd_group": 46,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_46_3"
+  },
+  {
+    "cmd": "qlt_pvp_select_skill",
+    "cmd_group": 46,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_46_4"
+  },
+  {
+    "cmd": "qlt_pvp_shop_sync",
+    "cmd_group": 46,
+    "cmd_type": 5,
+    "cmd_name": "EVENT_CMD_46_5"
+  },
+  {
+    "cmd": "qlt_pvp_shop_buy",
+    "cmd_group": 46,
+    "cmd_type": 6,
+    "cmd_name": "EVENT_CMD_46_6"
+  },
+  {
+    "cmd": "qlt_pvp_rank",
+    "cmd_group": 46,
+    "cmd_type": 7,
+    "cmd_name": "EVENT_CMD_46_7"
+  },
+  {
+    "cmd": "qlt_pvp_last_rank",
+    "cmd_group": 46,
+    "cmd_type": 8,
+    "cmd_name": "EVENT_CMD_46_8"
+  },
+  {
+    "cmd": "qlt_pvp_vit_buy",
+    "cmd_group": 46,
+    "cmd_type": 9,
+    "cmd_name": "EVENT_CMD_46_9"
+  },
+  {
+    "cmd": "qlt_pvp_fight",
+    "cmd_group": 46,
+    "cmd_type": 10,
+    "cmd_name": "EVENT_CMD_46_10"
+  },
+  {
+    "cmd": "qlt_pvp_like",
+    "cmd_group": 46,
+    "cmd_type": 11,
+    "cmd_name": "EVENT_CMD_46_11"
+  },
+  {
+    "cmd": "qlt_pvp_logs",
+    "cmd_group": 46,
+    "cmd_type": 12,
+    "cmd_name": "EVENT_CMD_46_12"
+  },
+  {
+    "cmd": "qlt_pvp_video",
+    "cmd_group": 46,
+    "cmd_type": 13,
+    "cmd_name": "EVENT_CMD_46_13"
+  },
+  {
+    "cmd": "power_pve_sync",
+    "cmd_group": 47,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_47_1"
+  },
+  {
+    "cmd": "power_pve_last_rank",
+    "cmd_group": 47,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_47_2"
+  },
+  {
+    "cmd": "power_pve_role_rank",
+    "cmd_group": 47,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_47_3"
+  },
+  {
+    "cmd": "power_pve_power_rank",
+    "cmd_group": 47,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_47_4"
+  },
+  {
+    "cmd": "power_pve_sync2",
+    "cmd_group": 47,
+    "cmd_type": 5,
+    "cmd_name": "EVENT_CMD_47_5"
+  },
+  {
+    "cmd": "power_pve_dot_degree_log",
+    "cmd_group": 47,
+    "cmd_type": 6,
+    "cmd_name": "EVENT_CMD_47_6"
+  },
+  {
+    "cmd": "power_pve_fight",
+    "cmd_group": 47,
+    "cmd_type": 7,
+    "cmd_name": "EVENT_CMD_47_7"
+  },
+  {
+    "cmd": "power_pve_buy",
+    "cmd_group": 47,
+    "cmd_type": 8,
+    "cmd_name": "EVENT_CMD_47_8"
+  },
+  {
+    "cmd": "power_pve_apply",
+    "cmd_group": 47,
+    "cmd_type": 9,
+    "cmd_name": "EVENT_CMD_47_9"
+  },
+  {
+    "cmd": "power_pve_select_power",
+    "cmd_group": 47,
+    "cmd_type": 10,
+    "cmd_name": "EVENT_CMD_47_10"
+  },
+  {
+    "cmd": "power_pve_look",
+    "cmd_group": 47,
+    "cmd_type": 11,
+    "cmd_name": "EVENT_CMD_47_11"
+  },
+  {
+    "cmd": "power_pve_donate",
+    "cmd_group": 47,
+    "cmd_type": 12,
+    "cmd_name": "EVENT_CMD_47_12"
+  },
+  {
+    "cmd": "power_pve_source_lv",
+    "cmd_group": 47,
+    "cmd_type": 13,
+    "cmd_name": "EVENT_CMD_47_13"
+  },
+  {
+    "cmd": "power_pve_source_get",
+    "cmd_group": 47,
+    "cmd_type": 14,
+    "cmd_name": "EVENT_CMD_47_14"
+  },
+  {
+    "cmd": "power_pve_tmp_save",
+    "cmd_group": 47,
+    "cmd_type": 15,
+    "cmd_name": "EVENT_CMD_47_15"
+  },
+  {
+    "cmd": "power_pve_tmp_use",
+    "cmd_group": 47,
+    "cmd_type": 16,
+    "cmd_name": "EVENT_CMD_47_16"
+  },
+  {
+    "cmd": "power_pve_season_reward",
+    "cmd_group": 47,
+    "cmd_type": 17,
+    "cmd_name": "EVENT_CMD_47_17"
+  },
+  {
+    "cmd": "power_pve_claim",
+    "cmd_group": 47,
+    "cmd_type": 18,
+    "cmd_name": "EVENT_CMD_47_18"
+  },
+  {
+    "cmd": "power_pve_monster",
+    "cmd_group": 47,
+    "cmd_type": 19,
+    "cmd_name": "EVENT_CMD_47_19"
+  },
+  {
+    "cmd": "power_pve_dot",
+    "cmd_group": 47,
+    "cmd_type": 20,
+    "cmd_name": "EVENT_CMD_47_20"
+  },
+  {
+    "cmd": "power_pve_skill",
+    "cmd_group": 47,
+    "cmd_type": 21,
+    "cmd_name": "EVENT_CMD_47_21"
+  },
+  {
+    "cmd": "power_pve_look_down",
+    "cmd_group": 47,
+    "cmd_type": 22,
+    "cmd_name": "EVENT_CMD_47_22"
+  },
+  {
+    "cmd": "power_pve_task",
+    "cmd_group": 47,
+    "cmd_type": 23,
+    "cmd_name": "EVENT_CMD_47_23"
+  },
+  {
+    "cmd": "power_pve_dot_reward",
+    "cmd_group": 47,
+    "cmd_type": 24,
+    "cmd_name": "EVENT_CMD_47_24"
+  },
+  {
+    "cmd": "power_pve_defence_info",
+    "cmd_group": 47,
+    "cmd_type": 25,
+    "cmd_name": "EVENT_CMD_47_25"
+  },
+  {
+    "cmd": "power_pve_manager",
+    "cmd_group": 47,
+    "cmd_type": 26,
+    "cmd_name": "EVENT_CMD_47_26"
+  },
+  {
+    "cmd": "power_pve_power_log",
+    "cmd_group": 47,
+    "cmd_type": 27,
+    "cmd_name": "EVENT_CMD_47_27"
+  },
+  {
+    "cmd": "power_pve_notice",
+    "cmd_group": 47,
+    "cmd_type": 28,
+    "cmd_name": "EVENT_CMD_47_28"
+  },
+  {
+    "cmd": "power_pve_claim_reward",
+    "cmd_group": 47,
+    "cmd_type": 29,
+    "cmd_name": "EVENT_CMD_47_29"
+  },
+  {
+    "cmd": "power_pve_chat",
+    "cmd_group": 47,
+    "cmd_type": 30,
+    "cmd_name": "EVENT_CMD_47_30"
+  },
+  {
+    "cmd": "sgame_sync",
+    "cmd_group": 48,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_48_1"
+  },
+  {
+    "cmd": "sgame_play_start",
+    "cmd_group": 48,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_48_2"
+  },
+  {
+    "cmd": "sgame_play_end",
+    "cmd_group": 48,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_48_3"
+  },
+  {
+    "cmd": "sgame_reward",
+    "cmd_group": 48,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_48_4"
+  },
+  {
+    "cmd": "sgame_rank",
+    "cmd_group": 48,
+    "cmd_type": 4,
+    "cmd_name": "EVENT_CMD_48_4"
+  },
+  {
+    "cmd": "sgame_rank",
+    "cmd_group": 48,
+    "cmd_type": 5,
+    "cmd_name": "EVENT_CMD_48_5"
+  },
+  {
+    "cmd": "sgame_skl",
+    "cmd_group": 48,
+    "cmd_type": 6,
+    "cmd_name": "EVENT_CMD_48_6"
+  },
+  {
+    "cmd": "sgame_skl_reset",
+    "cmd_group": 48,
+    "cmd_type": 7,
+    "cmd_name": "EVENT_CMD_48_7"
+  },
+  {
+    "cmd": "sgame_defend_sync",
+    "cmd_group": 48,
+    "cmd_type": 8,
+    "cmd_name": "EVENT_CMD_48_8"
+  },
+  {
+    "cmd": "sgame_exchange",
+    "cmd_group": 48,
+    "cmd_type": 9,
+    "cmd_name": "EVENT_CMD_48_9"
+  },
+  {
+    "cmd": "mgame_sync",
+    "cmd_group": 48,
+    "cmd_type": 10,
+    "cmd_name": "EVENT_CMD_48_10"
+  },
+  {
+    "cmd": "mgame_move",
+    "cmd_group": 48,
+    "cmd_type": 11,
+    "cmd_name": "EVENT_CMD_48_11"
+  },
+  {
+    "cmd": "mgame_sell",
+    "cmd_group": 48,
+    "cmd_type": 12,
+    "cmd_name": "EVENT_CMD_48_12"
+  },
+  {
+    "cmd": "mgame_buy_bag",
+    "cmd_group": 48,
+    "cmd_type": 13,
+    "cmd_name": "EVENT_CMD_48_13"
+  },
+  {
+    "cmd": "mgame_use",
+    "cmd_group": 48,
+    "cmd_type": 14,
+    "cmd_name": "EVENT_CMD_48_14"
+  },
+  {
+    "cmd": "mgame_vit_buy",
+    "cmd_group": 48,
+    "cmd_type": 15,
+    "cmd_name": "EVENT_CMD_48_15"
+  },
+  {
+    "cmd": "mgame_task",
+    "cmd_group": 48,
+    "cmd_type": 16,
+    "cmd_name": "EVENT_CMD_48_16"
+  },
+  {
+    "cmd": "mgame_exchange",
+    "cmd_group": 48,
+    "cmd_type": 17,
+    "cmd_name": "EVENT_CMD_48_17"
+  },
+  {
+    "cmd": "mgame_match",
+    "cmd_group": 48,
+    "cmd_type": 18,
+    "cmd_name": "EVENT_CMD_48_18"
+  },
+  {
+    "cmd": "mgame_play",
+    "cmd_group": 48,
+    "cmd_type": 19,
+    "cmd_name": "EVENT_CMD_48_19"
+  },
+  {
+    "cmd": "mgame_up",
+    "cmd_group": 48,
+    "cmd_type": 20,
+    "cmd_name": "EVENT_CMD_48_20"
+  },
+  {
+    "cmd": "mgame_thaw",
+    "cmd_group": 48,
+    "cmd_type": 21,
+    "cmd_name": "EVENT_CMD_48_21"
+  },
+  {
+    "cmd": "mgame_love",
+    "cmd_group": 48,
+    "cmd_type": 22,
+    "cmd_name": "EVENT_CMD_48_22"
+  },
+  {
+    "cmd": "mgame_love_out",
+    "cmd_group": 48,
+    "cmd_type": 23,
+    "cmd_name": "EVENT_CMD_48_23"
+  },
+  {
+    "cmd": "flora_sync",
+    "cmd_group": 48,
+    "cmd_type": 25,
+    "cmd_name": "EVENT_CMD_48_25"
+  },
+  {
+    "cmd": "flora_space",
+    "cmd_group": 48,
+    "cmd_type": 26,
+    "cmd_name": "EVENT_CMD_48_26"
+  },
+  {
+    "cmd": "flora_play",
+    "cmd_group": 48,
+    "cmd_type": 27,
+    "cmd_name": "EVENT_CMD_48_27"
+  },
+  {
+    "cmd": "flora_space_exchange",
+    "cmd_group": 48,
+    "cmd_type": 28,
+    "cmd_name": "EVENT_CMD_48_28"
+  },
+  {
+    "cmd": "flora_map",
+    "cmd_group": 48,
+    "cmd_type": 29,
+    "cmd_name": "EVENT_CMD_48_29"
+  },
+  {
+    "cmd": "flora_reward",
+    "cmd_group": 48,
+    "cmd_type": 30,
+    "cmd_name": "EVENT_CMD_48_30"
+  },
+  {
+    "cmd": "world_sync",
+    "cmd_group": 49,
+    "cmd_type": 1,
+    "cmd_name": "EVENT_CMD_49_1"
+  },
+  {
+    "cmd": "world_op",
+    "cmd_group": 49,
+    "cmd_type": 2,
+    "cmd_name": "EVENT_CMD_49_2"
+  },
+  {
+    "cmd": "world_apply",
+    "cmd_group": 49,
+    "cmd_type": 3,
+    "cmd_name": "EVENT_CMD_49_3"
+  },
+  {
+    "cmd": "world_collect",
+    "cmd_group": 49,
+    "cmd_type": 5,
+    "cmd_name": "EVENT_CMD_49_5"
+  },
+  {
+    "cmd": "world_product",
+    "cmd_group": 49,
+    "cmd_type": 6,
+    "cmd_name": "EVENT_CMD_49_6"
+  },
+  {
+    "cmd": "world_product_grid",
+    "cmd_group": 49,
+    "cmd_type": 7,
+    "cmd_name": "EVENT_CMD_49_7"
+  },
+  {
+    "cmd": "world_mall_sync",
+    "cmd_group": 49,
+    "cmd_type": 8,
+    "cmd_name": "EVENT_CMD_49_8"
+  },
+  {
+    "cmd": "world_mall_up",
+    "cmd_group": 49,
+    "cmd_type": 9,
+    "cmd_name": "EVENT_CMD_49_9"
+  },
+  {
+    "cmd": "world_mall_down",
+    "cmd_group": 49,
+    "cmd_type": 10,
+    "cmd_name": "EVENT_CMD_49_10"
+  },
+  {
+    "cmd": "world_mall_grid",
+    "cmd_group": 49,
+    "cmd_type": 11,
+    "cmd_name": "EVENT_CMD_49_11"
+  },
+  {
+    "cmd": "world_pk_match",
+    "cmd_group": 49,
+    "cmd_type": 12,
+    "cmd_name": "EVENT_CMD_49_12"
+  },
+  {
+    "cmd": "world_pk",
+    "cmd_group": 49,
+    "cmd_type": 13,
+    "cmd_name": "EVENT_CMD_49_13"
+  },
+  {
+    "cmd": "world_pk_log",
+    "cmd_group": 49,
+    "cmd_type": 14,
+    "cmd_name": "EVENT_CMD_49_14"
+  },
+  {
+    "cmd": "world_pk_rank",
+    "cmd_group": 49,
+    "cmd_type": 15,
+    "cmd_name": "EVENT_CMD_49_15"
+  },
+  {
+    "cmd": "world_cele_sync",
+    "cmd_group": 49,
+    "cmd_type": 16,
+    "cmd_name": "EVENT_CMD_49_16"
+  },
+  {
+    "cmd": "world_cele_op",
+    "cmd_group": 49,
+    "cmd_type": 17,
+    "cmd_name": "EVENT_CMD_49_17"
+  },
+  {
+    "cmd": "bworld_sync",
+    "cmd_group": 49,
+    "cmd_type": 31,
+    "cmd_name": "EVENT_CMD_49_31"
+  },
+  {
+    "cmd": "bworld_set_team",
+    "cmd_group": 49,
+    "cmd_type": 32,
+    "cmd_name": "EVENT_CMD_49_32"
+  },
+  {
+    "cmd": "bworld_build_op",
+    "cmd_group": 49,
+    "cmd_type": 33,
+    "cmd_name": "EVENT_CMD_49_33"
+  },
+  {
+    "cmd": "bworld_build_move",
+    "cmd_group": 49,
+    "cmd_type": 34,
+    "cmd_name": "EVENT_CMD_49_34"
+  },
+  {
+    "cmd": "bworld_resource",
+    "cmd_group": 49,
+    "cmd_type": 35,
+    "cmd_name": "EVENT_CMD_49_35"
+  },
+  {
+    "cmd": "bworld_op",
+    "cmd_group": 49,
+    "cmd_type": 36,
+    "cmd_name": "EVENT_CMD_49_36"
+  },
+  {
+    "cmd": "bworld_small_sync",
+    "cmd_group": 49,
+    "cmd_type": 37,
+    "cmd_name": "EVENT_CMD_49_37"
+  },
+  {
+    "cmd": "bworld_video",
+    "cmd_group": 49,
+    "cmd_type": 38,
+    "cmd_name": "EVENT_CMD_49_38"
+  },
+  {
+    "cmd": "bworld_station",
+    "cmd_group": 49,
+    "cmd_type": 39,
+    "cmd_name": "EVENT_CMD_49_39"
+  },
+  {
+    "cmd": "bworld_chat",
+    "cmd_group": 49,
+    "cmd_type": 40,
+    "cmd_name": "EVENT_CMD_49_40"
+  },
+  {
+    "cmd": "bworld_chat_log",
+    "cmd_group": 49,
+    "cmd_type": 41,
+    "cmd_name": "EVENT_CMD_49_41"
+  },
+  {
+    "cmd": "bworld_walk",
+    "cmd_group": 49,
+    "cmd_type": 42,
+    "cmd_name": "EVENT_CMD_49_42"
+  },
+  {
+    "cmd": "bworld_pinfo",
+    "cmd_group": 49,
+    "cmd_type": 43,
+    "cmd_name": "EVENT_CMD_49_43"
+  },
+  {
+    "cmd": "bworld_ship_back",
+    "cmd_group": 49,
+    "cmd_type": 44,
+    "cmd_name": "EVENT_CMD_49_44"
+  },
+  {
+    "cmd": "bworld_buy_act",
+    "cmd_group": 49,
+    "cmd_type": 45,
+    "cmd_name": "EVENT_CMD_49_45"
+  },
+  {
+    "cmd": "bworld_member",
+    "cmd_group": 49,
+    "cmd_type": 46,
+    "cmd_name": "EVENT_CMD_49_46"
+  },
+  {
+    "cmd": "bworld_exit",
+    "cmd_group": 49,
+    "cmd_type": 47,
+    "cmd_name": "EVENT_CMD_49_47"
+  },
+  {
+    "cmd": "bworld_join",
+    "cmd_group": 49,
+    "cmd_type": 48,
+    "cmd_name": "EVENT_CMD_49_48"
+  },
+  {
+    "cmd": "bworld_sinfo",
+    "cmd_group": 49,
+    "cmd_type": 49,
+    "cmd_name": "EVENT_CMD_49_49"
+  },
+  {
+    "cmd": "bworld_chat_sync",
+    "cmd_group": 49,
+    "cmd_type": 50,
+    "cmd_name": "EVENT_CMD_49_50"
+  },
+  {
+    "cmd": "bworld_hps",
+    "cmd_group": 49,
+    "cmd_type": 51,
+    "cmd_name": "EVENT_CMD_49_51"
+  },
+  {
+    "cmd": "bworld_skill",
+    "cmd_group": 49,
+    "cmd_type": 52,
+    "cmd_name": "EVENT_CMD_49_52"
+  }
+]
