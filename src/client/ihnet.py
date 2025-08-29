@@ -2,14 +2,19 @@ import asyncio
 import os
 import struct
 
+from collections.abc import Callable, Awaitable
+
 from client.constants import CONFIG_PROTOCOL_HEADER_EXCEPT_FIRST_LEN
-from client.events import EventManager
+from client.events import EventManager, Event
 from client.protobuf.dr2_login_pb2 import (
     pbreq_salt as PBReqSalt,  # type: ignore[attr-defined]
     pbrsp_salt as PBRspSalt,  # type: ignore[attr-defined]
     pbreq_echo as PBReqEcho,  # type: ignore[attr-defined]
     pbrsp_echo as PBRspEcho,  # type: ignore[attr-defined]
 )
+
+
+OnRcvCallback = Callable[[bytes], Awaitable[None]]
 
 
 class IHNetClient:
@@ -46,7 +51,18 @@ class IHNetClient:
         self.writer.write(data)
         await self.writer.drain()
 
-    async def receive(self, n: int) -> bytes:
+    async def submit(self, event: Event, payload: bytes, callback: OnRcvCallback | None = None, buffer_size: int = -1):
+        packet = self._build_packet(event.cmd_group, event.cmd_id, self.sid, payload)
+        await self.send(packet)
+
+        rcv_data = await self.receive(buffer_size)
+
+        if len(rcv_data) == 0:
+            raise ConnectionError("Connection unexpectedly closed by server.")
+
+        await callback(rcv_data) if callback else None
+
+    async def receive(self, n: int = -1) -> bytes:
         if not self.reader:
             raise ConnectionError("Not connected to server.")
-        return await asyncio.wait_for(self.reader.readexactly(n), timeout=self.timeout)
+        return await asyncio.wait_for(self.reader.read(n), timeout=self.timeout)
