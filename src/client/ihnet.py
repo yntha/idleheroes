@@ -85,9 +85,9 @@ class IHNetClient:
             raise RuntimeError(f"Unroutable frame: cmd_type={frame.cmd_type} cmd_id={frame.cmd_id}")
 
     async def submit(self, event: Event, payload: bytes, buffer_size: int = -1) -> bytes:
-        packet = self._build_packet(event.cmd_group, event.cmd_id, self.sid, payload)
+        packet = self._build_packet(event.cmd_group, event.cmd_type, self.sid, payload)
         loop = asyncio.get_running_loop()
-        key = (event.cmd_group, event.cmd_id)
+        key = (event.cmd_group, event.cmd_type)
         fut: asyncio.Future[bytes] = loop.create_future()
 
         self._waiters[key] = fut

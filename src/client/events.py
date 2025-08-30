@@ -7,7 +7,7 @@ from dataclasses import dataclass
 class Event:
     cmd: str
     cmd_group: int
-    cmd_id: int
+    cmd_type: int
     cmd_name: str
 
 
