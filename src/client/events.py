@@ -23,5 +23,5 @@ class EventManager:
                 event = Event(**event_data)
                 self.events[event.cmd_name] = event
 
-    def get_event(self, cmd_name: str) -> Event | None:
-        return self.events.get(cmd_name)
+    def get_event(self, cmd_name: str) -> Event:
+        return self.events[cmd_name]
