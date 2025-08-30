@@ -39,13 +39,13 @@ class IHNetClient:
     async def create_from_config(cls) -> IHNetClient:
         self = cls()
 
-        await self.connect(self.client_config.host, self.client_config.port)
+        await self.connect(self.client_config.gateway_host, self.client_config.gateway_port)
         self._router_task = asyncio.create_task(self._router_loop())
 
         return self
 
     async def connect(self, host: str, port: int):
-        await self.tcp_client.connect(host, port, self.client_config.timeout)
+        await self.tcp_client.connect(host, port, self.client_config.conn_timeout)
 
     async def disconnect(self):
         if self._router_task is not None:
@@ -95,7 +95,7 @@ class IHNetClient:
         await self.tcp_client.send(packet)
 
         try:
-            return await asyncio.wait_for(fut, timeout=self.client_config.timeout)
+            return await asyncio.wait_for(fut, timeout=self.client_config.conn_timeout)
         finally:
             self._waiters.pop(key, None)
 

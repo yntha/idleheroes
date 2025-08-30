@@ -11,9 +11,9 @@ CONFIG_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."
 
 @dataclass
 class ClientConfig:
-    host: str
-    port: int
-    timeout: float
+    gateway_host: str
+    gateway_port: int
+    conn_timeout: float
 
     @classmethod
     def get(cls) -> ClientConfig:
@@ -32,9 +32,9 @@ class ClientConfig:
     @classmethod
     def get_default(cls) -> ClientConfig:
         return cls(
-            host="adgp.gate-dhgames.com",
-            port=5000,
-            timeout=10.0,
+            gateway_host="adgp.gate-dhgames.com",
+            gateway_port=5000,
+            conn_timeout=10.0,
         )
 
     def save(self):
