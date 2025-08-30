@@ -18,4 +18,7 @@ setup(
         'Operating System :: OS Independent',
     ],
     python_requires='>=3.11',
+    entry_points={
+        'console_scripts': ['ih-client=client.app:cli_entry',],
+    },
 )
