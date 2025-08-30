@@ -40,6 +40,8 @@ class ClientConfig:
     def save(self):
         config_path = os.path.join(CONFIG_DIR, "config.json")
 
+        os.makedirs(CONFIG_DIR, exist_ok=True)
+
         with open(config_path, "w", encoding="utf-8") as f:
             json.dump(asdict(self), f, indent=4)
 
@@ -72,6 +74,8 @@ class AccountConfig:
 
     def save(self):
         config_path = os.path.join(CONFIG_DIR, "account.json")
+
+        os.makedirs(CONFIG_DIR, exist_ok=True)
 
         with open(config_path, "w", encoding="utf-8") as f:
             json.dump(asdict(self), f, indent=4)
