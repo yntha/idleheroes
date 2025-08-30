@@ -9,14 +9,16 @@ from client.constants import CONFIG_PROTOCOL_HEADER_EXCEPT_FIRST_LEN
 from client.events import EventManager, Event
 from client.protobuf import dr2_login_pb_pb2 as login_pb
 from client.net.tcpclient import TCPClient, Frame
+from client.config import ClientConfig, AccountConfig
 
 
 class IHNetClient:
-    def __init__(self, timeout: float = 10.0):
-        self.timeout = timeout  # timeout used for all network operations
+    def __init__(self):
         _client_src_dir = os.path.dirname(os.path.abspath(__file__))
         self.event_manager = EventManager(os.path.join(_client_src_dir, "assets", "events.json"))
         self.tcp_client = TCPClient()
+        self.account_config = AccountConfig.get()
+        self.client_config = ClientConfig.get()
 
         self.sid = 0
         self.echo_count = 1
@@ -33,8 +35,17 @@ class IHNetClient:
 
         return self
 
+    @classmethod
+    async def create_from_config(cls) -> IHNetClient:
+        self = cls()
+
+        await self.connect(self.client_config.host, self.client_config.port)
+        self._router_task = asyncio.create_task(self._router_loop())
+
+        return self
+
     async def connect(self, host: str, port: int):
-        await self.tcp_client.connect(host, port, self.timeout)
+        await self.tcp_client.connect(host, port, self.client_config.timeout)
 
     async def disconnect(self):
         if self._router_task is not None:
@@ -84,7 +95,7 @@ class IHNetClient:
         await self.tcp_client.send(packet)
 
         try:
-            return await asyncio.wait_for(fut, timeout=self.timeout)
+            return await asyncio.wait_for(fut, timeout=self.client_config.timeout)
         finally:
             self._waiters.pop(key, None)
 
