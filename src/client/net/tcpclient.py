@@ -98,17 +98,17 @@ class TCPClient:
 
     def _process_rx(self):
         out = []
-        view = memoryview(self._rx)
+        buf = self._rx
         offset = 0
 
-        while len(view) - offset >= CONFIG_PROTOCOL_HEADER_LEN_RECV:
-            rcv_len = struct.unpack_from(">H", view, offset)[0]
+        while len(buf) - offset >= CONFIG_PROTOCOL_HEADER_LEN_RECV:
+            rcv_len = struct.unpack_from(">H", buf, offset)[0]
             total_len = rcv_len + CONFIG_PROTOCOL_HEADER_FIRST_FIELD_LEN
 
-            if len(view) - offset < total_len:
+            if len(buf) - offset < total_len:
                 break  # wait for more data; incomplete frame
 
-            frame = bytes(view[offset:offset + total_len])
+            frame = bytes(buf[offset:offset + total_len])
             offset += total_len
 
             rcv_type = self._decode_type(frame[2])
