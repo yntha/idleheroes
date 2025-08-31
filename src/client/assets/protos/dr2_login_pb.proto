@@ -27,7 +27,7 @@ message pb_server_login {
 
 // echo
 message pbreq_echo  { required int32 echo = 1; }
-message pbrsp_echo  { required int32 echo = 2; } // field number is 2 in the source
+message pbrsp_echo  { required int32 echo = 1; } // field number is 2 in the source
 
 message pbreq_pub {
   required int32 language = 1;
