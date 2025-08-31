@@ -11,3 +11,5 @@ python -m pip install --user -U https://github.com/yntha/idleheroes.git
 # run
 ih-client
 ```
+
+The client is still a work in progress, and more features will be added over time. For now all it does is send echo requests to the server to demonstrate connectivity.
