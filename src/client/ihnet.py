@@ -25,6 +25,7 @@ class IHNetClient:
         self._waiters: dict[tuple[int, int], asyncio.Future[bytes]] = {}
         self._streams: dict[tuple[int, int], asyncio.Queue[Frame]] = {}
         self._router_task: asyncio.Task | None = None
+        self._router_started = asyncio.Event()
 
     @classmethod
     async def create(cls, host: str, port: int, timeout: float = 10.0) -> IHNetClient:
@@ -32,6 +33,7 @@ class IHNetClient:
 
         await self.connect(host, port)
         self._router_task = asyncio.create_task(self._router_loop())
+        await self._router_started.wait()
 
         return self
 
@@ -41,6 +43,7 @@ class IHNetClient:
 
         await self.connect(self.client_config.gateway_host, self.client_config.gateway_port)
         self._router_task = asyncio.create_task(self._router_loop())
+        await self._router_started.wait()
 
         return self
 
@@ -68,6 +71,7 @@ class IHNetClient:
         return struct.pack(">HBBH", after_len, group & 0xFF, cmd & 0xFF, sid & 0xFFFF) + payload
 
     async def _router_loop(self):
+        self._router_started.set()
         while True:
             frame = await self.tcp_client.message_queue.get()
             key_waiter = (frame.cmd_type, frame.cmd_id)
