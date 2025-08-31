@@ -8,9 +8,10 @@ async def main():
     client = await IHNetClient.create_from_config()
 
     try:
-        echo: pbrsp_echo = await client.echo()
-
-        print(f"Echo response: {echo.echo}")
+        print("Sending 5 echo requests...")
+        for i in range(5):
+            echo = await client.echo()
+            print(f"Echo response {i+1}: echo={echo.echo}")
     finally:
         await client.disconnect()
 
