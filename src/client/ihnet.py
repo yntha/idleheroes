@@ -113,7 +113,7 @@ class IHNetClient:
 
         rsp_data = await self.submit(event, payload.SerializeToString())
         rsp = login_pb.pbrsp_echo()
-        rsp.ParseFromString(rsp_data[CONFIG_PROTOCOL_HEADER_EXCEPT_FIRST_LEN:])
+        rsp.ParseFromString(rsp_data)
 
         self.echo_count += 1
         self.sid = _sid
