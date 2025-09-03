@@ -11,6 +11,10 @@ async def main():
         for i in range(5):
             echo = await client.echo()
             print(f"Echo response {i+1}: echo={echo.echo}")
+
+        print("\nRequesting salt...")
+        salt = await client.salt()
+        print(f"Salt response: status={salt.status} salt='{salt.salt}' uid={salt.uid} flag={salt.flag} cd={salt.cd}")
     finally:
         await client.disconnect()
 

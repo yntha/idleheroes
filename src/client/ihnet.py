@@ -119,3 +119,13 @@ class IHNetClient:
         self.sid = _sid
 
         return rsp
+
+    async def salt(self) -> login_pb.pbrsp_salt:
+        event = self.event_manager.get_event("EVENT_CMD_2_2")
+        payload = login_pb.pbreq_salt(account=self.account_config.account)
+
+        rsp_data = await self.submit(event, payload.SerializeToString())
+        rsp = login_pb.pbrsp_salt()
+        rsp.ParseFromString(rsp_data)
+
+        return rsp
