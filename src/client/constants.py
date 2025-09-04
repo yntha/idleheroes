@@ -1,5 +1,9 @@
 from enum import IntEnum, StrEnum
 
+
+ADVERTISING_ID = "4f1d752c-e7ab-4d5c-b028-4a3b5a416246"
+MD5_SECRET = "rwmkxhgi6;578i650"
+
 GAME_CD = "1001"
 APP_CHANNEL = "GOOGLEPLAY"
 TEST_ENTRY_ENABLE = False

@@ -5,7 +5,9 @@ import os
 import struct
 import contextlib
 
-from client.constants import CONFIG_PROTOCOL_HEADER_EXCEPT_FIRST_LEN
+from hashlib import md5
+
+from client.constants import CONFIG_PROTOCOL_HEADER_EXCEPT_FIRST_LEN, ADVERTISING_ID, MD5_SECRET
 from client.events import EventManager, Event
 from client.protobuf import dr2_login_pb_pb2 as login_pb
 from client.net.tcpclient import TCPClient, Frame
@@ -129,3 +131,38 @@ class IHNetClient:
         rsp.ParseFromString(rsp_data)
 
         return rsp
+
+    async def reg(self) -> login_pb.pbrsp_reg:
+        event = self.event_manager.get_event("EVENT_CMD_2_1")
+        payload = login_pb.pbreq_reg(
+            rdid=ADVERTISING_ID,
+        )
+
+        rsp_data = await self.submit(event, payload.SerializeToString())
+        rsp = login_pb.pbrsp_reg()
+        rsp.ParseFromString(rsp_data)
+
+        return rsp
+
+    async def login(self, salt: str) -> login_pb.pbrsp_login:
+        event = self.event_manager.get_event("EVENT_CMD_2_3")
+        password = md5(self.account_config.password.encode("utf-8")).hexdigest()
+        password_md5 = md5((salt + MD5_SECRET + password).encode("utf-8")).hexdigest()
+        _sid = self.sid
+        self.sid = 0
+
+        payload = login_pb.pbreq_login(
+            checksum=password_md5,
+            idfa=ADVERTISING_ID,
+            keychain="",
+            idfv=""
+        )
+
+        rsp_data = await self.submit(event, payload.SerializeToString())
+        rsp = login_pb.pbrsp_login()
+        rsp.ParseFromString(rsp_data)
+
+        self.sid = _sid
+
+        return rsp
+
