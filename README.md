@@ -16,3 +16,4 @@ ih-client
 - Email & password login
 - Server pinging (echo)
 - Guest account registration
+- Account authentication
