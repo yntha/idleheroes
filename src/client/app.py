@@ -25,6 +25,16 @@ async def main():
         print("\nLogging in...")
         login = await client.login(salt.salt)
         print(f"Login response: {MessageToJson(login)}")
+
+        print("\nAuthenticating...")
+        auth = await client.auth(login.uid, login.session)
+        print(f"Auth response: {MessageToJson(auth)}")
+
+        if auth.status == 0:
+            print("\nAuthentication successful!")
+        else:
+            print("\nAuthentication failed!")
+
     finally:
         await client.disconnect()
 
