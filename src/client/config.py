@@ -14,6 +14,7 @@ class ClientConfig:
     gateway_host: str
     gateway_port: int
     conn_timeout: float
+    debug: bool
 
     @classmethod
     def get(cls) -> ClientConfig:
@@ -35,6 +36,7 @@ class ClientConfig:
             gateway_host="adgp.gate-dhgames.com",
             gateway_port=5000,
             conn_timeout=10.0,
+            debug=False,
         )
 
     def save(self):
