@@ -4,14 +4,16 @@ import asyncio
 import os
 import struct
 import contextlib
+import json
 
 from hashlib import md5
+from pathlib import Path
 
 from client.constants import CONFIG_PROTOCOL_HEADER_EXCEPT_FIRST_LEN, ADVERTISING_ID, MD5_SECRET
 from client.events import EventManager, Event
-from client.protobuf import dr2_login_pb_pb2 as login_pb
+from client.protobuf import dr2_login_pb_pb2 as login_pb, dr2_logic_pb_pb2 as logic_pb
 from client.net.tcpclient import TCPClient, Frame
-from client.config import ClientConfig, AccountConfig
+from client.config import ClientConfig, AccountConfig, CONFIG_DIR
 
 
 class IHNetClient:
@@ -148,7 +150,6 @@ class IHNetClient:
         event = self.event_manager.get_event("EVENT_CMD_2_3")
         password = md5(self.account_config.password.encode("utf-8")).hexdigest()
         password_md5 = md5((salt + MD5_SECRET + password).encode("utf-8")).hexdigest()
-        _sid = self.sid
         self.sid = 0
 
         payload = login_pb.pbreq_login(
@@ -162,7 +163,31 @@ class IHNetClient:
         rsp = login_pb.pbrsp_login()
         rsp.ParseFromString(rsp_data)
 
-        self.sid = _sid
+        self.sid = rsp.sid
 
         return rsp
 
+    def _get_env_info(self) -> dict:
+        env_data = Path(os.path.join(CONFIG_DIR, "env.json")).read_text()
+        env_info = json.loads(env_data)
+
+        return env_info
+
+    async def auth(self, uid: int, session: str) -> logic_pb.pbrsp_auth:
+        env_info = self._get_env_info()
+        tracking_ids = "{}"  # don't track me
+
+        event = self.event_manager.get_event("EVENT_CMD_3_1")
+        payload = logic_pb.pbreq_auth(
+            uid=uid,
+            session=session,
+            env=json.dumps(env_info),
+            ids=tracking_ids,
+            support_zip=1,
+        )
+
+        rsp_data = await self.submit(event, payload.SerializeToString())
+        rsp = logic_pb.pbrsp_auth()
+        rsp.ParseFromString(rsp_data)
+
+        return rsp
