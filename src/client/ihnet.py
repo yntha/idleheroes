@@ -51,6 +51,12 @@ class IHNetClient:
 
         return self
 
+    def get_account(self) -> AccountConfig:
+        return self.account_config
+
+    def set_account(self, account: AccountConfig):
+        self.account_config = account
+
     async def connect(self, host: str, port: int):
         await self.tcp_client.connect(host, port, self.client_config.conn_timeout)
 

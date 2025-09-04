@@ -6,6 +6,13 @@ from client.ihnet import IHNetClient
 
 async def main():
     client = await IHNetClient.create_from_config()
+    account = client.get_account()
+
+    if not account.account or not account.password:
+        print("Account details are incomplete or missing. Please set up your account:")
+
+        account.account = input("Account: ").strip()
+        account.password = input("Password: ").strip()
 
     try:
         # print("Sending 5 echo requests...")
