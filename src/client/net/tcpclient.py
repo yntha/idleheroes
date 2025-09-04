@@ -8,6 +8,8 @@ from client.constants import (
     CONFIG_PROTOCOL_HEADER_LEN_RECV,
     CONFIG_PROTOCOL_HEADER_FIRST_FIELD_LEN
 )
+from client.utils import Utils
+from client.config import ClientConfig
 
 
 # constants
@@ -27,7 +29,9 @@ class Frame:
 
 
 class TCPClient:
-    def __init__(self):
+    def __init__(self, config: ClientConfig):
+        self.config = config
+
         self.host: str | None = None
         self.port: int | None = None
         self.reader: asyncio.StreamReader | None = None
@@ -70,6 +74,10 @@ class TCPClient:
     async def send(self, data: bytes):
         if not self._is_connected.is_set() or self.writer is None:
             raise ConnectionError("Not connected to server.")
+
+        if self.config.debug:
+            print(f"Sending {len(data)} bytes:\n{Utils.hexdump(data)}\n")
+
         self.writer.write(data)
         await self.writer.drain()
 
@@ -80,6 +88,10 @@ class TCPClient:
                     raise ConnectionError("Not connected to server.")
 
                 chunk = await self.reader.read(4096)
+
+                if self.config.debug:
+                    print(f"Received {len(chunk)} bytes:\n{Utils.hexdump(chunk)}\n")
+
                 if len(chunk) == 0:
                     raise ConnectionError("Connection unexpectedly closed by server.")
 

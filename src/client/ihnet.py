@@ -16,9 +16,9 @@ class IHNetClient:
     def __init__(self):
         _client_src_dir = os.path.dirname(os.path.abspath(__file__))
         self.event_manager = EventManager(os.path.join(_client_src_dir, "assets", "events.json"))
-        self.tcp_client = TCPClient()
         self.account_config = AccountConfig.get()
         self.client_config = ClientConfig.get()
+        self.tcp_client = TCPClient(self.client_config)
 
         self.sid = 0
         self.echo_count = 1
