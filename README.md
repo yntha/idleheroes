@@ -4,12 +4,42 @@ A Python client for interacting with the Idle Heroes game using an account of yo
 
 ## Usage
 This client is designed to be used as a library in your own Python scripts, but it also provides a command-line interface (CLI) for basic operations:
-```bash
+```
 # installation
 python -m pip install --user -U https://github.com/yntha/idleheroes.git
 
 # run
-ih-client
+$ ih-client
+Requesting salt... Success!
+Logging in... Success!
+Authenticating... Success!
+
+# debug output
+$ ih-client --debug
+Requesting salt...
+Sending 30 bytes:
+====   0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F
+0000  00 1c 02 02 00 00 0a 16 78 78 78 78 78 78 78 78    ........xxxxxxxx
+0010  78 78 78 78 78 78 78 78 78 78 78 78 78 78          xxxxxxxxxxxxxx
+
+
+Received 49 bytes:
+====   0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F
+0000  00 2f 02 02 08 00 12 20 78 78 78 78 78 78 78 78    ./..... xxxxxxxx
+0010  78 78 78 78 78 78 78 78 78 78 78 78 78 78 78 78    xxxxxxxxxxxxxxxx
+0020  78 78 78 78 78 78 78 78 18 ff ff ff ff 20 00 28    xxxxxxxx...." .(
+0030  00                                                 .
+
+
+Salt response: {
+  "status": 0,
+  "salt": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "uid": xxxxxxxx,
+  "flag": 0,
+  "cd": 0
+}
+Logging in...
+Sending 82 bytes:
 ```
 
 ## Features

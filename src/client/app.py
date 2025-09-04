@@ -1,6 +1,7 @@
 import asyncio
 
 from typing import Any
+from argparse import ArgumentParser
 
 from google.protobuf.json_format import MessageToJson
 from client.ihnet import IHNetClient
@@ -79,6 +80,15 @@ async def main():
 
 
 def cli_entry():
+    parser = ArgumentParser(description="Idle Heroes Python Client")
+    parser.add_argument(
+        "-d", "--debug", action="store_true", help="Enable debug output"
+    )
+
+    args = parser.parse_args()
+    global DEBUG
+    DEBUG = args.debug
+
     asyncio.run(main())
 
 

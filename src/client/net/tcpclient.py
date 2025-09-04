@@ -76,7 +76,7 @@ class TCPClient:
             raise ConnectionError("Not connected to server.")
 
         if self.config.debug:
-            print(f"Sending {len(data)} bytes:\n{Utils.hexdump(data)}\n")
+            print(f"\nSending {len(data)} bytes:\n{Utils.hexdump(data)}\n")
 
         self.writer.write(data)
         await self.writer.drain()
@@ -90,7 +90,7 @@ class TCPClient:
                 chunk = await self.reader.read(4096)
 
                 if self.config.debug:
-                    print(f"Received {len(chunk)} bytes:\n{Utils.hexdump(chunk)}\n")
+                    print(f"\nReceived {len(chunk)} bytes:\n{Utils.hexdump(chunk)}\n")
 
                 if len(chunk) == 0:
                     raise ConnectionError("Connection unexpectedly closed by server.")
