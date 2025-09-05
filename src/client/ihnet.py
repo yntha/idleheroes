@@ -76,6 +76,10 @@ class IHNetClient:
 
         await self.tcp_client.disconnect()
 
+        # save configs
+        self.account_config.save()
+        self.client_config.save()
+
     def _build_packet(self, group: int, cmd: int, sid: int, payload: bytes) -> bytes:
         after_len = CONFIG_PROTOCOL_HEADER_EXCEPT_FIRST_LEN + len(payload)
         return struct.pack(">HBBH", after_len, group & 0xFF, cmd & 0xFF, sid & 0xFFFF) + payload
