@@ -217,3 +217,4 @@ __marimo__/
 config/
 tools/asset_updater.py
 .dev
+.update
