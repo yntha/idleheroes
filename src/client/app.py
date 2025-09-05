@@ -51,7 +51,7 @@ async def main():
             print_result(salt)
 
         if salt.status != 0:
-            return
+            raise RuntimeError("Salt request failed.")
 
         print("Logging in...", end="")
         login = await client.login(salt.salt)
@@ -62,7 +62,7 @@ async def main():
             print_result(login)
 
         if login.status != 0:
-            return
+            raise RuntimeError("Login failed.")
 
         print("Authenticating...", end="")
         auth = await client.auth(login.uid, login.session)
@@ -73,7 +73,7 @@ async def main():
             print_result(auth)
 
         if auth.status != 0:
-            return
+            raise RuntimeError("Authentication failed.")
 
         print("Checking for updates...", end="")
         up = await client.up()
@@ -84,12 +84,14 @@ async def main():
             print_result(up)
 
         if up.status != 0:
-            return
+            raise RuntimeError("Update check failed.")
 
         if config.version != up.vsn:
             print(f"Updating version {config.version} -> {up.vsn}")
             await client.update_version()
 
+    except Exception as e:
+        print(f"Error: {e}")
     finally:
         await client.disconnect()
 
