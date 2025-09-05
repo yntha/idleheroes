@@ -9,7 +9,12 @@ import json
 from hashlib import md5
 from pathlib import Path
 
-from client.constants import CONFIG_PROTOCOL_HEADER_EXCEPT_FIRST_LEN, ADVERTISING_ID, MD5_SECRET
+from client.constants import (
+    CONFIG_PROTOCOL_HEADER_EXCEPT_FIRST_LEN,
+    ADVERTISING_ID,
+    MD5_SECRET,
+    PACKAGE_NAME
+)
 from client.events import EventManager, Event
 from client.protobuf import dr2_login_pb_pb2 as login_pb, dr2_logic_pb_pb2 as logic_pb
 from client.net.tcpclient import TCPClient, Frame
@@ -30,6 +35,7 @@ class IHNetClient:
         self._streams: dict[tuple[int, int], asyncio.Queue[Frame]] = {}
         self._router_task: asyncio.Task | None = None
         self._router_started = asyncio.Event()
+        self._latest_version: str = self.client_config.version
 
     @classmethod
     async def create(cls, host: str, port: int, timeout: float = 10.0) -> IHNetClient:
@@ -199,5 +205,26 @@ class IHNetClient:
         rsp_data = await self.submit(event, payload.SerializeToString())
         rsp = logic_pb.pbrsp_auth()
         rsp.ParseFromString(rsp_data)
+
+        return rsp
+
+    async def update_version(self):
+        if self._latest_version != self.client_config.version:
+            self.client_config.version = self._latest_version
+            self.client_config.save()
+
+    async def up(self) -> logic_pb.pbrsp_up:
+        event = self.event_manager.get_event("EVENT_CMD_3_3")
+        payload = logic_pb.pbreq_up(
+            vsn=self.client_config.version,
+            packagename=PACKAGE_NAME
+        )
+
+        rsp_data = await self.submit(event, payload.SerializeToString())
+        rsp = logic_pb.pbrsp_up()
+        rsp.ParseFromString(rsp_data)
+
+        if rsp.status == 0:
+            self._latest_version = rsp.vsn
 
         return rsp

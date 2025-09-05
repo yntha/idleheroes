@@ -16,6 +16,7 @@ class ClientConfig:
     gateway_port: int
     conn_timeout: float
     debug: bool
+    version: str
 
     @classmethod
     def get(cls) -> ClientConfig:
@@ -38,6 +39,7 @@ class ClientConfig:
             gateway_port=5000,
             conn_timeout=10.0,
             debug=False,
+            version="1.34.0",
         )
 
     def save(self):

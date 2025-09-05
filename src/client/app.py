@@ -72,6 +72,18 @@ async def main():
         else:
             print_result(auth)
 
+        print("Checking for updates...", end="")
+        up = await client.up()
+
+        if config.debug:
+            print(f"\nUpdate response: {MessageToJson(up)}")
+        else:
+            print_result(up)
+
+        if config.version != up.vsn:
+            print(f"Updating version {config.version} -> {up.vsn}")
+            await client.update_version()
+
         if auth.status != 0:
             return
 
