@@ -72,6 +72,9 @@ async def main():
         else:
             print_result(auth)
 
+        if auth.status != 0:
+            return
+
         print("Checking for updates...", end="")
         up = await client.up()
 
@@ -80,12 +83,12 @@ async def main():
         else:
             print_result(up)
 
+        if up.status != 0:
+            return
+
         if config.version != up.vsn:
             print(f"Updating version {config.version} -> {up.vsn}")
             await client.update_version()
-
-        if auth.status != 0:
-            return
 
     finally:
         await client.disconnect()
