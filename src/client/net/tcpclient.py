@@ -97,6 +97,7 @@ class TCPClient:
 
                 self._rx.extend(chunk)
 
+                # _process_rx will yield an empty list if no complete frames are available yet
                 for frame in self._process_rx():
                     await self.message_queue.put(frame)
             except Exception as e:
