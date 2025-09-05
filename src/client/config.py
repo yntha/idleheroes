@@ -4,10 +4,11 @@ import json
 import os
 
 from dataclasses import dataclass, asdict
+from client.constants import ROOT_DIR
 
 
 # ../../config
-CONFIG_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "config")
+CONFIG_DIR = os.path.join(ROOT_DIR, "config")
 
 
 @dataclass

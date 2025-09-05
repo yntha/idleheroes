@@ -1,10 +1,12 @@
 import asyncio
+import os.path
 
 from typing import Any
 from argparse import ArgumentParser
 
 from google.protobuf.json_format import MessageToJson
 from client.ihnet import IHNetClient
+from client.constants import ROOT_DIR
 
 
 # enable debug output
@@ -22,7 +24,12 @@ def print_result(message: Any):
         print(f" Failed! (status={message.status})")
 
 
+def _check_dev_file() -> bool:
+    dev_file = os.path.join(ROOT_DIR, ".dev")
+    return os.path.exists(dev_file)
+
 async def main():
+    is_developer = _check_dev_file()
     client = await IHNetClient.create_from_config()
     account = client.get_account()
     config = client.client_config
@@ -94,6 +101,14 @@ async def main():
             print(f"New version available: {config.version} -> {up.vsn}")
             print(f"Download the latest resources from GitHub: https://github.com/yntha/idleheroes/releases/download/{up.vsn}/ihres_{up.vsn}.zip")
             print("If the new version is not yet available on GitHub, please be patient and check back later.")
+
+            if is_developer:
+                update_file = os.path.join(ROOT_DIR, ".update")
+
+                with open(update_file, "w", encoding="utf-8") as f:
+                    f.write(MessageToJson(up))
+
+                print(f"Wrote update info to {update_file}")
 
         print("Synchronizing game state...", end="")
         sync = await client.sync()
