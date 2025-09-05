@@ -86,14 +86,14 @@ async def main():
             print(f"\nUpdate response: {MessageToJson(up)}")
         else:
             print_result(up)
-            print(f"Update: {MessageToJson(up)}")
 
         if up.status != 0:
             raise ClientAppError("Update check failed.")
 
         if config.version != up.vsn:
-            print(f"Updating version {config.version} -> {up.vsn}")
-            await client.update_version()
+            print(f"New version available: {config.version} -> {up.vsn}")
+            print(f"Download the latest resources from GitHub: https://github.com/yntha/idleheroes/releases/download/{up.vsn}/ihres_{up.vsn}.zip")
+            print("If the new version is not yet available on GitHub, please be patient and check back later.")
 
         print("Synchronizing game state...", end="")
         sync = await client.sync()
