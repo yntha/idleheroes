@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 class Utils:
     @staticmethod
     def hexdump(data: bytes,
@@ -76,3 +78,73 @@ class Utils:
             dump += '\n'
 
         return dump.strip()
+
+    @classmethod
+    def _read_varint(cls, b: bytes, i: int) -> tuple[int, int]:
+        shift = 0
+        val = 0
+
+        while True:
+            if i >= len(b):
+                raise EOFError(f"Truncated varint at {i}")
+
+            byte = b[i]
+            i += 1
+            val |= (byte & 0x7F) << shift
+
+            if (byte & 0x80) == 0:
+                return val, i
+
+            shift += 7
+
+            if shift > 70:
+                raise ValueError(f"Malformed varint at {i}")
+
+    @classmethod
+    def scan_wire(cls, b: bytes) -> str:
+        out = [f"bytes={len(b)}"]
+        i = 0
+
+        while i < len(b):
+            try:
+                key, i2 = cls._read_varint(b, i)
+            except Exception as e:
+                out.append(f"ERR key at {i}: {e}")
+                break
+
+            field = key >> 3
+            wtype = key & 7
+            i = i2
+
+            try:
+                if wtype == 0:
+                    val, i = cls._read_varint(b, i)
+                    out.append(f"@{i2:04d} f={field} wt=VARINT v={val}")
+                elif wtype == 1:
+                    if i + 8 > len(b):
+                        raise EOFError(f"Need 8 bytes, have {len(b) - i}")
+
+                    out.append(f"@{i2:04d} f={field} wt=FIXED64 {b[i : i + 8].hex()}")
+                    i += 8
+                elif wtype == 2:
+                    l, i = cls._read_varint(b, i)  # noqa: E741
+                    if i + l > len(b):
+                        raise EOFError(f"len={l}, have {len(b) - i}")
+
+                    seg = b[i : i + l]
+                    out.append(f"@{i2:04d} f={field} wt=LEN len={l} head={seg[:16].hex()}")
+                    i += l
+                elif wtype == 5:
+                    if i + 4 > len(b):
+                        raise EOFError(f"need 4 bytes, have {len(b) - i}")
+
+                    out.append(f"@{i2:04d} f={field} wt=FIXED32 {b[i : i + 4].hex()}")
+                    i += 4
+                else:
+                    out.append(f"@{i2:04d} f={field} wt={wtype} (unsupported)")
+                    break
+            except Exception as e:
+                out.append(f"ERR value at {i}: {e}")
+                break
+
+        return "\n".join(out)
