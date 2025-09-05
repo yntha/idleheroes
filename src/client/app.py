@@ -86,6 +86,7 @@ async def main():
             print(f"\nUpdate response: {MessageToJson(up)}")
         else:
             print_result(up)
+            print(f"Update: {MessageToJson(up)}")
 
         if up.status != 0:
             raise ClientAppError("Update check failed.")
