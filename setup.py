@@ -11,6 +11,7 @@ setup(
     package_dir={'': 'src'},
     install_requires=[
         'protobuf',
+        "aiohttp"
     ],
     classifiers=[
         'Programming Language :: Python :: 3',
