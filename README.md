@@ -13,6 +13,8 @@ $ ih-client
 Requesting salt... Success!
 Logging in... Success!
 Authenticating... Success!
+Checking for updates... Success!
+Updating version 1.34.0 -> 1.34.115
 
 # debug output
 $ ih-client --debug
@@ -47,3 +49,4 @@ Sending 82 bytes:
 - Server pinging (echo)
 - Guest account registration
 - Account authentication
+- Version update checking
