@@ -119,6 +119,9 @@ class TCPClient:
             total_len = rcv_len + CONFIG_PROTOCOL_HEADER_FIRST_FIELD_LEN
 
             if len(buf) - offset < total_len:
+                if self.config.debug:
+                    print(f"Frame incomplete: need {total_len} bytes, have {len(buf) - offset} bytes.")
+
                 break  # wait for more data; incomplete frame
 
             frame = bytes(buf[offset:offset + total_len])
@@ -137,6 +140,9 @@ class TCPClient:
 
             payload = frame[CONFIG_PROTOCOL_HEADER_LEN_RECV:]
             out.append(Frame(cmd_type=rcv_type, cmd_id=rcv_id, payload=payload, raw=frame))
+
+            if self.config.debug:
+                print(f"Received frame: type={rcv_type} id={rcv_id} len={len(payload) + CONFIG_PROTOCOL_HEADER_LEN_RECV}")
 
         # remove processed data from buffer
         if offset > 0:
