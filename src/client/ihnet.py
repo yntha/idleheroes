@@ -198,8 +198,7 @@ class IHNetClient:
             uid=uid,
             session=session,
             env=json.dumps(env_info),
-            ids=tracking_ids,
-            support_zip=1,
+            ids=tracking_ids
         )
 
         rsp_data = await self.submit(event, payload.SerializeToString())
