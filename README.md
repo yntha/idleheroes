@@ -1,6 +1,6 @@
 # Idle Heroes Client
 
-A Python client for interacting with the Idle Heroes game using an account of your choice.
+A Python client for interacting with the official Idle Heroes game using an account of your choice.
 
 ## Usage
 This client is designed to be used as a library in your own Python scripts, but it also provides a command-line interface (CLI) for basic operations:
@@ -50,3 +50,9 @@ Sending 82 bytes:
 - Guest account registration
 - Account authentication
 - Version update checking
+
+## Assets
+The official Idle Heroes assets are encrypted and include the source code for the game client. This client distributes only the decrypted resource assets to provide a better experience, but not the decrypted game client code due to ethical and legal considerations. The decrypted assets are provided as a downloadable zip file in the [Releases](https://github.com/yntha/idleheroes/releases) section and are updated with each new game version.
+
+## Contact
+For questions or support, please open an [issue](https://github.com/yntha/idleheroes/issues). For direct contact, you can reach me on Discord `@kilozz` or Telegram `@neosophaux`.
