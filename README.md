@@ -52,6 +52,7 @@ Sending 82 bytes:
 - Guest account registration
 - Account authentication
 - Version update checking
+- Game state synchronization
 
 ## Assets
 The official Idle Heroes assets are encrypted and include the source code for the game client. This client distributes only the decrypted resource assets to provide a better experience, but not the decrypted game client code due to ethical and legal considerations. The decrypted assets are provided as a downloadable zip file in the [Releases](https://github.com/yntha/idleheroes/releases) section and are updated with each new game version.
