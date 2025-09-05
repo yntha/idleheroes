@@ -90,6 +90,16 @@ async def main():
             print(f"Updating version {config.version} -> {up.vsn}")
             await client.update_version()
 
+        print("Synchronizing game state...", end="")
+        sync = await client.sync()
+
+        if config.debug:
+            print(f"\nSync response: {MessageToJson(sync)}")
+        else:
+            print_result(sync)
+
+        if sync.status != 0:
+            raise RuntimeError("Sync failed.")
     except Exception as e:
         print(f"Error: {e}")
     finally:

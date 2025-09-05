@@ -228,3 +228,17 @@ class IHNetClient:
             self._latest_version = rsp.vsn
 
         return rsp
+
+    async def sync(self) -> logic_pb.pbrsp_sync:
+        event = self.event_manager.get_event("EVENT_CMD_3_2")
+        payload = logic_pb.pbreq_sync(
+            idfa=ADVERTISING_ID,
+            keychain="",
+            idfv=""
+        )
+
+        rsp_data = await self.submit(event, payload.SerializeToString())
+        rsp = logic_pb.pbrsp_sync()
+        rsp.ParseFromString(rsp_data)
+
+        return rsp
