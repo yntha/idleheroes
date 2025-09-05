@@ -11,6 +11,10 @@ from client.ihnet import IHNetClient
 DEBUG = False
 
 
+class ClientAppError(Exception):
+    pass
+
+
 def print_result(message: Any):
     if message.status == 0:
         print(" Success!")
@@ -51,7 +55,7 @@ async def main():
             print_result(salt)
 
         if salt.status != 0:
-            raise RuntimeError("Salt request failed.")
+            raise ClientAppError("Salt request failed.")
 
         print("Logging in...", end="")
         login = await client.login(salt.salt)
@@ -62,7 +66,7 @@ async def main():
             print_result(login)
 
         if login.status != 0:
-            raise RuntimeError("Login failed.")
+            raise ClientAppError("Login failed.")
 
         print("Authenticating...", end="")
         auth = await client.auth(login.uid, login.session)
@@ -73,7 +77,7 @@ async def main():
             print_result(auth)
 
         if auth.status != 0:
-            raise RuntimeError("Authentication failed.")
+            raise ClientAppError("Authentication failed.")
 
         print("Checking for updates...", end="")
         up = await client.up()
@@ -84,7 +88,7 @@ async def main():
             print_result(up)
 
         if up.status != 0:
-            raise RuntimeError("Update check failed.")
+            raise ClientAppError("Update check failed.")
 
         if config.version != up.vsn:
             print(f"Updating version {config.version} -> {up.vsn}")
@@ -99,8 +103,8 @@ async def main():
             print_result(sync)
 
         if sync.status != 0:
-            raise RuntimeError("Sync failed.")
-    except Exception as e:
+            raise ClientAppError("Sync failed.")
+    except ClientAppError as e:
         print(f"Error: {e}")
     finally:
         await client.disconnect()
