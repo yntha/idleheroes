@@ -36,6 +36,10 @@ ASSIGN_STR_RE = re.compile(r'^([A-Z0-9_]+)\.([a-z_]+)\s*=\s*"([^"]*)"\s*$', re.M
 ASSIGN_INT_RE = re.compile(r'^([A-Z0-9_]+)\.([a-z_]+)\s*=\s*([0-9]+)\s*$', re.M)
 ASSIGN_BOOL_RE= re.compile(r'^([A-Z0-9_]+)\.([a-z_]+)\s*=\s*(true|false)\s*$', re.M)
 ASSIGN_MSGTYPE_RE = re.compile(r'^([A-Z0-9_]+)\.message_type\s*=\s*([A-Z0-9_]+)\s*$', re.M)
+REQUIRE_RE = re.compile(r'^\s*local\s+([A-Z0-9_]+)\s*=\s*require\("([^"]+)"\)\s*$', re.M)
+ASSIGN_MSGTYPE_XMODULE_RE = re.compile(  # for cross-module references
+    r'^([A-Z0-9_]+)\.message_type\s*=\s*([A-Z0-9_]+)\.([A-Z0-9_]+)\s*$', re.M
+)
 MSG_NAME_RE = re.compile(r'^([A-Z0-9_]+)\.name\s*=\s*"([^"]+)"\s*$', re.M)
 INSTANTIATE_RE = re.compile(r'^([a-z0-9_]+)\s*=\s*protobuf\.Message\(([A-Z0-9_]+)\)\s*$', re.M)
 FIELDS_LIST_RE = re.compile(
@@ -43,6 +47,15 @@ FIELDS_LIST_RE = re.compile(
     re.M | re.S
 )
 MODULE_RE = re.compile(r'module\("([^"]+)"\)')
+
+
+def parse_requires(lua_text: str):
+    return {m.group(1): m.group(2) for m in REQUIRE_RE.finditer(lua_text)}
+
+
+def guess_message_name_from_symbol(sym: str) -> str:
+    return sym.lower()
+
 
 def parse_lua(lua_text: str):
     m = MODULE_RE.search(lua_text)
@@ -68,6 +81,9 @@ def parse_lua(lua_text: str):
     for m in ASSIGN_MSGTYPE_RE.finditer(lua_text):
         var, msgtype_var = m.group(1), m.group(2)
         field_attrs[var]["message_type_var"] = msgtype_var
+    for m in ASSIGN_MSGTYPE_XMODULE_RE.finditer(lua_text):
+        fv, alias, sym = m.group(1), m.group(2), m.group(3)
+        field_attrs[fv]["message_type_external"] = (alias, sym)
 
     msg_fields_order = OrderedDict()
     for m in FIELDS_LIST_RE.finditer(lua_text):
@@ -76,12 +92,30 @@ def parse_lua(lua_text: str):
         names = [s.strip() for s in inner.split(",") if s.strip()]
         msg_fields_order[msg_var] = names
 
-    return package, msg_vars, msg_var_to_name, field_attrs, msg_fields_order
+    require_map = parse_requires(lua_text)
 
-def lua_to_proto(package, msg_vars, msg_var_to_name, field_attrs, msg_fields_order):
+    return package, msg_vars, msg_var_to_name, field_attrs, msg_fields_order, require_map
+
+
+def lua_to_proto(package, msg_vars, msg_var_to_name, field_attrs, msg_fields_order, require_map):
     out = []
     out.append('syntax = "proto2";')
     out.append(f'package {package};\n')
+
+    imports_needed = set()
+    for msg_var, field_var_list in msg_fields_order.items():
+        for fv in field_var_list:
+            attrs = field_attrs.get(fv, {})
+            if attrs.get("type") == 11 and "message_type_external" in attrs:
+                alias, _ = attrs["message_type_external"]
+                pkg = require_map.get(alias)
+                if pkg:
+                    imports_needed.add(pkg)
+
+    for pkg in sorted(imports_needed):
+        out.append(f'import "{pkg}.proto";')
+    if imports_needed:
+        out.append("")
 
     def msg_canonical_name(msg_var):
         return msg_var_to_name.get(msg_var, msg_var.lower())
@@ -107,11 +141,20 @@ def lua_to_proto(package, msg_vars, msg_var_to_name, field_attrs, msg_fields_ord
             else:
                 base = TYPE_MAP.get(ftype_num, "string")
                 if base == "message":
-                    mt_var = attrs.get("message_type_var")
-                    if mt_var:
-                        base_type = msg_canonical_name(mt_var)
+                    xref = attrs.get("message_type_external")
+                    if xref:
+                        alias, sym = xref
+                        ext_pkg = require_map.get(alias)
+                        if ext_pkg:
+                            base_type = f"{ext_pkg}.{guess_message_name_from_symbol(sym)}"
+                        else:
+                            base_type = guess_message_name_from_symbol(sym)
                     else:
-                        base_type = "bytes"
+                        mt_var = attrs.get("message_type_var")
+                        if mt_var:
+                            base_type = msg_canonical_name(mt_var)
+                        else:
+                            base_type = "bytes"
                 elif base == "enum":
                     base_type = "int32"
                 else:
@@ -120,6 +163,7 @@ def lua_to_proto(package, msg_vars, msg_var_to_name, field_attrs, msg_fields_ord
             out.append(f"  {label} {base_type} {fname} = {fnum};")
         out.append("}\n")
     return "\n".join(out)
+
 
 def main():
     ap = argparse.ArgumentParser()
@@ -130,12 +174,13 @@ def main():
     lua_path = pathlib.Path(args.lua_file)
     lua_text = lua_path.read_text(encoding="utf-8", errors="ignore")
 
-    package, msg_vars, msg_var_to_name, field_attrs, msg_fields_order = parse_lua(lua_text)
-    proto_text = lua_to_proto(package, msg_vars, msg_var_to_name, field_attrs, msg_fields_order)
+    package, msg_vars, msg_var_to_name, field_attrs, msg_fields_order, require_map = parse_lua(lua_text)
+    proto_text = lua_to_proto(package, msg_vars, msg_var_to_name, field_attrs, msg_fields_order, require_map)
 
     out_path = pathlib.Path(args.out) if args.out else lua_path.with_suffix(".proto")
     out_path.write_text(proto_text, encoding="utf-8")
     print(f"Wrote {out_path}")
+
 
 if __name__ == "__main__":
     main()

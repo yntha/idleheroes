@@ -1,0 +1,1813 @@
+syntax = "proto2";
+package dr2_comm_pb;
+
+message pb_player {
+  required string name = 1;
+  required int32 logo = 2;
+  optional int32 gid = 3;
+  optional string gname = 4;
+  optional int32 border = 5;
+  optional int32 glv = 6;
+  optional string country = 7;
+  optional string sds = 8;
+  optional string city = 9;
+}
+
+message pb_server {
+  required int32 sid = 1;
+  required string sname = 2;
+  optional string pname = 3;
+  optional int32 plogo = 4;
+  optional int32 plv = 5;
+  optional int32 flag = 6;
+  optional int32 uid = 7;
+  optional int32 border = 8;
+  optional int32 login_cd = 9;
+}
+
+message pb_item {
+  required int32 id = 1;
+  required int64 num = 2;
+}
+
+message pb_equip {
+  required int32 id = 1;
+  required uint32 num = 2;
+  optional int32 eid = 3;
+  optional int32 hid = 4;
+}
+
+message pb_bag {
+  repeated pb_item items = 1;
+  repeated pb_equip equips = 2;
+}
+
+message pb_hero_qlc {
+  optional int32 lv = 1;
+  optional int32 atk = 2;
+  optional int32 hp = 3;
+  optional int32 spd = 4;
+  optional int64 attr_idx = 5;
+  optional int32 time = 6;
+  optional int32 cd = 7;
+  optional int32 exp = 8;
+  optional int32 energy = 9;
+  optional int64 qbit = 10;
+}
+
+message pb_hero_qlt {
+  optional pb_hero_qlc qlc = 1;
+  repeated pb_hero_qlc qlcs = 2;
+  optional int64 attr_idx = 3;
+}
+
+message pb_tree {
+  optional int32 lv = 1;
+  optional int32 blv = 2;
+  repeated int32 bra = 3;
+}
+
+message pb_hero {
+  required int32 hid = 1;
+  required int32 id = 2;
+  required int32 lv = 3;
+  required int32 star = 4;
+  optional int32 flag = 5;
+  repeated pb_equip equips = 6;
+  optional int32 wake = 7;
+  repeated int32 jade = 8;
+  optional bool visit = 9;
+  repeated int32 skill_id = 10;
+  repeated pb_sattr sattrs = 11;
+  optional pb_hero_qlt qlt = 12;
+  optional pb_tree tree = 13;
+  optional pb_faith faith = 14;
+}
+
+message pb_faith {
+  optional int32 lv = 1;
+  repeated int32 skill = 2;
+}
+
+message pb_sattr {
+  optional int32 id = 1;
+  optional int32 attr = 2;
+  optional int32 value = 3;
+}
+
+message pb_dup {
+  optional int32 id = 1;
+  repeated int32 bids = 2;
+  optional int32 sts = 3;
+  optional int32 mid = 4;
+  optional int32 rid = 5;
+  optional int32 skip = 6;
+}
+
+message pb_embr {
+  optional int32 uid = 1;
+  optional int32 lv = 2;
+  optional int32 status = 3;
+  optional string stime = 4;
+  optional int32 logo = 5;
+  optional string name = 6;
+  optional int32 border = 7;
+  optional int32 id = 8;
+}
+
+message pb_scell {
+  optional int32 pos = 1;
+  optional int32 status = 2;
+  optional int32 id = 3;
+  repeated int32 ids1 = 4;
+  repeated int32 ids2 = 5;
+}
+
+message pb_sbuilding {
+  optional sint32 lv = 1;
+  optional sint32 cd = 2;
+  optional sint32 num = 3;
+}
+
+message pb_sscell {
+  optional int32 pos = 1;
+  optional int32 status = 2;
+  optional int32 id = 3;
+  optional int32 boss_id = 4;
+  repeated int32 boss_hp = 5;
+  optional pb_pmbr mbr = 6;
+  optional int32 hid = 7;
+  optional int32 cd = 8;
+  optional int32 lv = 9;
+  optional int32 add = 10;
+  optional int32 times = 11;
+  optional int32 rid = 12;
+  optional int32 wake = 13;
+  optional int32 rlv = 14;
+  optional int32 rqlv = 15;
+}
+
+message pb_ssevent {
+  optional int32 id = 1;
+  optional int32 num = 2;
+  optional int32 lv_item = 3;
+  optional int32 score = 4;
+  optional int32 num2 = 5;
+  repeated pb_bag reward = 6;
+}
+
+message pb_sssweep {
+  optional int32 pos = 1;
+  optional int32 hid = 2;
+}
+
+message pb_gacha {
+  required int32 item = 1;
+  required int32 gem = 2;
+  optional int32 id = 3;
+  optional int32 act = 4;
+  optional int32 cd = 5;
+}
+
+message pb_mail {
+  required int32 mid = 1;
+  required int32 id = 2;
+  optional int64 uid = 3;
+  required int32 flag = 4;
+  required int32 send_time = 5;
+  optional string title = 6;
+  optional string from = 7;
+  optional string content = 8;
+  optional string content_o = 9;
+  optional pb_bag affix = 10;
+}
+
+message pb_cunit {
+  required int32 id = 1;
+  optional int32 lv = 2;
+  optional int32 star = 3;
+  optional int64 power = 4;
+  optional int64 hp = 5;
+  optional int32 atk = 6;
+  optional int32 armor = 7;
+  optional int32 spd = 8;
+  optional int32 wake = 9;
+  optional int32 skin = 10;
+  optional int32 stl = 11;
+  optional int32 qlv = 12;
+  optional pb_tree tree = 13;
+  optional int32 core = 14;
+  optional int32 faith_lv = 15;
+}
+
+message pb_chat {
+  optional int64 uid = 1;
+  optional int32 logo = 2;
+  optional int32 lv = 3;
+  optional int32 vip = 4;
+  optional string name = 5;
+  optional int32 type = 6;
+  optional string text = 7;
+  optional int32 time = 8;
+  optional int32 share_id = 9;
+  optional int32 hero_id = 10;
+  optional int32 final_rank = 11;
+  optional int32 gid = 12;
+  optional string gname = 13;
+  optional int32 glv = 14;
+  optional string gmsg = 15;
+  optional int32 gFight = 16;
+  optional int32 border = 17;
+  optional pb_hteam hteam = 18;
+  optional string country = 19;
+  optional string sds = 20;
+  optional string city = 21;
+  optional int64 emblem = 22;
+}
+
+message pb_upfile {
+  required string md5 = 1;
+  required string path = 2;
+}
+
+message pb_good {
+  required int32 id = 1;
+  required int32 type = 2;
+  required int32 count = 3;
+  required int32 excel_id = 4;
+  optional int32 bought = 5;
+}
+
+message pb_onepay {
+  required string tid = 1;
+  optional string txid = 2;
+  optional string tdate = 3;
+}
+
+message pb_hook {
+  required sint32 status = 1;
+  optional int32 hook_stage = 2;
+  optional int32 boss_cd = 3;
+  optional int32 poker_cd = 4;
+  optional pb_bag reward = 5;
+  optional int32 pve_stage = 6;
+  optional pb_bag extra = 7;
+  repeated pb_item ids = 8;
+  optional uint32 hard_stage = 9;
+}
+
+message pb_frd {
+  required int32 logo = 1;
+  required string name = 2;
+  required int32 lv = 3;
+  optional int32 flag = 4;
+  optional int64 uid = 5;
+  optional int32 last = 6;
+  optional int64 power = 7;
+  optional int32 border = 8;
+  optional string country = 9;
+  optional string sds = 10;
+  optional string city = 11;
+  optional int64 emblem = 12;
+  optional int64 mgame = 13;
+}
+
+message pb_friend {
+  repeated pb_frd friends = 1;
+  required int32 love = 2;
+  required int32 cd = 3;
+  repeated pb_frd apply = 4;
+  repeated pb_frd recmd = 5;
+}
+
+message pb_casino_item {
+  required int32 type = 1;
+  required int32 id = 2;
+  required int32 count = 3;
+  optional int32 cool = 4;
+  optional int32 limitBuy = 5;
+  optional int32 weight = 6;
+}
+
+message pb_casino_msg {
+  required string name = 1;
+  required int32 type = 2;
+  required int32 id = 3;
+  required int32 count = 4;
+}
+
+message pb_gmember {
+  required int64 uid = 1;
+  required string name = 2;
+  optional int32 lv = 3;
+  optional int32 logo = 4;
+  optional int32 last = 5;
+  optional int32 title = 6;
+  optional int64 power = 7;
+  optional int32 gfight = 8;
+  optional int32 border = 9;
+  optional int32 cwar = 10;
+  optional string country = 11;
+  optional string sds = 12;
+  optional string city = 13;
+  optional int64 emblem = 14;
+  optional int32 cur_live = 15;
+  optional int32 last_live = 16;
+  optional int32 mgame = 17;
+}
+
+message pb_guild {
+  required int32 id = 1;
+  required string name = 2;
+  required int32 logo = 3;
+  required int32 exp = 4;
+  optional string notice = 5;
+  optional int64 power = 6;
+  optional int32 rank = 7;
+  optional int32 members = 8;
+  optional string pname = 9;
+  optional int32 dismiss_cd = 10;
+  optional int32 flag = 11;
+}
+
+message pb_glog {
+  required int32 type = 1;
+  optional int32 time = 2;
+  optional string obj_name = 3;
+  optional string do_name = 4;
+}
+
+message pb_unit {
+  optional int32 hid = 1;
+  optional int32 id = 2;
+  optional int32 pos = 3;
+  optional int32 lv = 4;
+  optional int32 star = 5;
+  optional int32 energy = 6;
+  optional int32 hpp = 7;
+  optional int32 wake = 8;
+  optional int32 skin = 9;
+  optional int32 stl = 10;
+  optional int32 flag = 11;
+  optional int32 ex2 = 12;
+  optional int32 core = 13;
+  optional int32 cele = 14;
+  repeated int32 bra = 15;
+  optional int32 faith_lv = 16;
+}
+
+message pb_strial {
+  required int32 id = 1;
+  required int32 tl = 2;
+  required int32 cd = 3;
+}
+
+message pb_trial {
+  required int32 logo = 1;
+  required int32 lv = 2;
+  required string name = 3;
+  optional int64 power = 4;
+  optional int32 stage = 5;
+  optional pb_evideo video = 6;
+  optional int32 border = 7;
+  optional int64 uid = 8;
+}
+
+message pb_plog {
+  required pb_pmbr rival = 1;
+  required bool atk = 2;
+  required bool win = 3;
+  repeated int32 vid = 4;
+  required int32 time = 5;
+  required int32 score = 6;
+  repeated bool wins = 7;
+}
+
+message pb_p3plog {
+  optional pb_p3pmbr def = 1;
+  optional bool atk = 2;
+  optional bool win = 3;
+  optional int32 vid = 4;
+  optional int32 time = 5;
+  optional int32 score = 6;
+}
+
+message pb_pmbr {
+  optional string name = 1;
+  optional int64 uid = 2;
+  optional int32 lv = 3;
+  optional int32 logo = 4;
+  optional int32 score = 5;
+  optional int64 power = 6;
+  optional int32 rank = 7;
+  optional string gname = 8;
+  optional int32 trank = 9;
+  optional int32 tscore = 10;
+  repeated pb_unit camp = 11;
+  optional int32 win = 12;
+  optional int32 fight = 13;
+  optional int32 sid = 14;
+  optional int32 border = 15;
+  optional int32 ptype = 16;
+  optional int64 emblem = 17;
+}
+
+message pb_p3pmbr {
+  optional string name = 1;
+  optional int64 uid = 2;
+  optional int32 lv = 3;
+  optional int32 logo = 4;
+  optional int32 lbox = 5;
+  optional int64 power = 6;
+  optional int32 rank = 7;
+  optional int32 score = 8;
+  repeated pb_unit camp = 9;
+  optional int64 emblem = 10;
+}
+
+message pb_smbr {
+  optional string name = 1;
+  optional int64 uid = 2;
+  optional int32 lv = 3;
+  optional int32 logo = 4;
+  optional int32 lbox = 5;
+  optional int32 score = 6;
+  optional int32 like = 7;
+  optional string cluster = 8;
+  optional string udk = 9;
+  optional string gname = 10;
+  repeated pb_unit camp = 11;
+  repeated int32 skls = 12;
+  optional sint64 power = 13;
+  repeated sint32 hide = 14;
+  optional int64 emblem = 15;
+  repeated sint32 fire = 16;
+}
+
+message pb_smbrs {
+  repeated pb_smbr mbrs = 1;
+  optional int32 score = 2;
+  optional int32 rank = 3;
+  optional int32 like = 4;
+}
+
+message pb_template {
+  optional int32 id = 1;
+  optional string name = 2;
+  repeated pb_buildings buildings = 3;
+  repeated pb_room rooms = 4;
+}
+
+message pb_pvp {
+  required int32 id = 1;
+  required sint32 status = 2;
+  optional pb_pmbr self = 3;
+  optional int32 season_cd = 4;
+  optional int32 daily_cd = 5;
+}
+
+message pb_wpvp {
+  required int32 wid = 1;
+  optional int32 flag = 2;
+  optional int32 cd = 3;
+}
+
+message pb_wmbr {
+  optional int64 uid = 1;
+  optional string gname = 2;
+  optional int32 score = 3;
+  optional string name = 4;
+  optional int32 logo = 5;
+  optional int32 lv = 6;
+  optional int64 power = 7;
+  optional int32 lbox = 8;
+  optional int32 like = 9;
+  optional bool king = 10;
+  optional int32 num = 11;
+  optional int64 emblem = 12;
+}
+
+message pb_link {
+  optional int32 cd = 1;
+  optional int32 win = 2;
+  optional int64 vid = 3;
+}
+
+message pb_wlog {
+  optional int64 vid = 1;
+  repeated pb_unit atk = 2;
+  repeated pb_unit def = 3;
+  required bool win = 4;
+}
+
+message pb_wvideo {
+  repeated pb_unit atk = 1;
+  repeated pb_unit def = 2;
+  repeated bytes frames = 3;
+  repeated pb_hurts hurts = 4;
+  required bool win = 5;
+}
+
+message pb_wscore {
+  required sint32 score = 1;
+  required sint32 delta = 2;
+  optional bool king = 3;
+}
+
+message pb_wcamp {
+  repeated pb_unit camp = 1;
+}
+
+message pb_wloger {
+  required int64 vid = 1;
+  optional pb_wmbr mbr = 2;
+  optional int32 time = 3;
+  optional bool atk = 4;
+  optional bool win = 5;
+  optional sint32 delta = 6;
+}
+
+message pb_pvideo {
+  optional int32 id = 1;
+  optional pb_pmbr atk = 2;
+  optional pb_pmbr def = 3;
+  required bool win = 4;
+  repeated bytes frames = 5;
+  optional sint32 ascore = 6;
+  optional sint32 dscore = 7;
+  optional sint32 adelta = 8;
+  optional sint32 ddelta = 9;
+  repeated pb_hurts hurts = 10;
+  repeated pb_bag rewards = 11;
+  optional int32 select = 12;
+}
+
+message pb_p3pvideo {
+  optional pb_p3pmbr atk = 1;
+  optional pb_p3pmbr def = 2;
+  required bool win = 3;
+  repeated bytes frames = 4;
+  repeated pb_hurts hurts = 5;
+  optional sint32 ascore = 6;
+  optional sint32 dscore = 7;
+  optional sint32 adelta = 8;
+  optional sint32 ddelta = 9;
+  repeated pb_bag rewards = 10;
+  optional int32 select = 11;
+}
+
+message pb_htask_info {
+  optional int32 tid = 1;
+  repeated int32 hids = 2;
+  repeated int32 heads = 3;
+}
+
+message pb_htask_cond {
+  required int32 type = 1;
+  optional int32 faction = 2;
+}
+
+message pb_htask_sync {
+  required int32 cd = 1;
+  repeated pb_htask tasks = 2;
+}
+
+message pb_htask {
+  required int32 tid = 1;
+  required int32 id = 2;
+  optional int32 cd = 3;
+  repeated pb_unit heroes = 4;
+  optional pb_bag reward = 5;
+  repeated pb_htask_cond conds = 6;
+  optional int64 power = 7;
+  optional int32 lock = 8;
+  required int32 nameid = 9;
+  repeated int32 heads = 10;
+}
+
+message pb_evideo {
+  repeated bytes frames = 1;
+  optional bool win = 2;
+  optional pb_bag reward = 3;
+  repeated pb_unit camp = 4;
+  repeated pb_hurts hurts = 5;
+}
+
+message pb_hurts {
+  required int32 pos = 1;
+  required int64 value = 2;
+  optional int64 heal = 3;
+  optional bool alive = 4;
+}
+
+message pb_alogin {
+  required string flag = 1;
+  optional int32 cd = 2;
+  optional int32 idx = 3;
+  optional int32 num = 4;
+  optional int32 cd2 = 5;
+  optional int32 first = 6;
+}
+
+message pb_act {
+  required uint32 id = 1;
+  optional int32 status = 2;
+  optional uint32 cd = 3;
+  optional int32 limits = 4;
+  optional int32 read = 5;
+  optional uint32 next = 6;
+  optional int32 loop = 7;
+  optional int32 bomb = 8;
+  optional pb_monopoly monopoly = 9;
+  optional string code = 10;
+  optional int32 limits2 = 11;
+  optional int32 bir = 12;
+  optional pb_kvs kv = 13;
+  repeated pb_growup grow = 14;
+  repeated int32 remove = 15;
+}
+
+message pb_qstar {
+  optional int64 uid = 1;
+  optional string name = 2;
+  optional int32 logo = 3;
+  optional int64 score = 4;
+}
+
+message pb_monopoly {
+  required int32 pos = 1;
+  repeated int32 lv = 2;
+  optional int32 next_event = 3;
+  optional int32 star = 4;
+}
+
+message pb_monopoly_step {
+  required int32 id = 1;
+  repeated pb_item reward = 2;
+  optional int32 star = 3;
+  optional int32 event = 4;
+  repeated int32 cards = 5;
+  optional int32 op_id = 6;
+}
+
+message pb_dice_sweep {
+  optional int32 type = 1;
+  repeated pb_monopoly_step steps = 2;
+  optional int32 num1 = 3;
+  optional int32 num2 = 4;
+}
+
+message pb_sact_item {
+  required uint32 id = 1;
+  optional uint32 cd = 2;
+  optional int32 bomb = 3;
+  optional int32 limits = 4;
+  optional uint32 next = 5;
+  repeated pb_sact_maze maze = 6;
+  optional uint32 spec = 7;
+  repeated pb_kv log = 8;
+  repeated uint32 reward = 11;
+}
+
+message pb_rabbit {
+  optional int32 type = 1;
+  repeated pb_kv poses = 3;
+}
+
+message pb_ract_item {
+  required uint32 id = 1;
+  repeated uint32 rewards = 2;
+  repeated pb_item item = 3;
+  optional int32 day = 4;
+  optional int32 cd = 5;
+}
+
+message pb_sact_maze {
+  required int64 pos = 1;
+  optional int32 id = 2;
+  optional pb_bag rewards = 3;
+  optional int32 num = 4;
+  repeated pb_ceil ceils = 5;
+}
+
+message pb_sact_log {
+  optional int32 time = 1;
+  optional int32 result = 2;
+}
+
+message pb_ceil {
+  optional int32 id = 1;
+  optional int32 type = 2;
+  optional pb_bag rewards = 3;
+  optional int32 cd = 4;
+}
+
+message pb_mact {
+  required uint32 cd = 1;
+  repeated pb_item war = 2;
+  repeated pb_item htask = 3;
+  repeated pb_item hmerge = 4;
+  optional int32 space_st = 5;
+  repeated pb_item brave = 6;
+  optional int32 status = 7;
+  repeated pb_item hmerge2 = 8;
+  repeated pb_item high_casino = 9;
+}
+
+message pb_task {
+  required int32 id = 1;
+  required int32 count = 2;
+  required int32 is_claim = 3;
+}
+
+message pb_online {
+  required int32 id = 1;
+  optional int32 cd = 2;
+}
+
+message pb_sachieve {
+  repeated int32 num = 1;
+  repeated int32 id = 2;
+  repeated int32 curnum = 3;
+}
+
+message pb_hmarket {
+  required int32 id = 1;
+  optional int32 num = 2;
+  optional int32 cd = 3;
+}
+
+message pb_gmarket {
+  required int32 id = 1;
+  optional int32 num = 2;
+  optional int32 gid = 3;
+}
+
+message pb_gvrank {
+  required int64 uid = 1;
+  optional string name = 2;
+  optional int32 lv = 3;
+  optional int32 logo = 4;
+  required int64 hurt = 5;
+  optional pb_bag reward = 6;
+  optional int32 border = 7;
+}
+
+message pb_gvrank_donate {
+  required string name = 1;
+  required int32 lv = 2;
+  required int32 logo = 3;
+  optional int32 num = 4;
+}
+
+message pb_bboss {
+  required int32 uid = 1;
+  optional string name = 2;
+  optional int32 lv = 3;
+  optional int32 logo = 4;
+  required uint64 hurt = 5;
+  optional int32 sid = 6;
+}
+
+message pb_gskl {
+  required int32 id = 1;
+  required int32 lv = 2;
+}
+
+message pb_bunit {
+  optional int32 hid = 1;
+  optional int32 id = 2;
+  optional int32 lv = 3;
+  optional int32 star = 4;
+  optional int32 hpp = 5;
+  optional int32 pos = 6;
+  optional int32 wake = 7;
+  optional int32 revive = 8;
+  optional int32 skin = 9;
+  optional int32 flag = 10;
+  optional int32 qlv = 11;
+  optional int32 core = 12;
+  optional int32 faith_lv = 13;
+}
+
+message pb_benemy {
+  required int32 logo = 1;
+  required int32 lv = 2;
+  required string name = 3;
+  required int64 power = 4;
+  required int32 sid = 5;
+  repeated pb_bunit camp = 6;
+  optional int32 border = 7;
+}
+
+message pb_ngwshold {
+  optional int32 left = 1;
+  optional int32 total = 2;
+  repeated pb_ngwbuff buffs = 3;
+  optional int64 power = 4;
+}
+
+message pb_ngwrank {
+  optional int32 gid = 1;
+  optional int32 score = 2;
+  optional int32 seg = 3;
+  optional int32 time = 4;
+  optional int32 logo = 5;
+  optional string name = 6;
+  optional int64 power = 7;
+}
+
+message pb_ngwprank {
+  optional int64 uid = 1;
+  optional string name = 2;
+  optional int32 lv = 3;
+  optional int32 logo = 4;
+  optional int32 lbox = 5;
+  optional string gname = 6;
+  optional int32 score = 7;
+  optional int32 time = 8;
+  optional int64 power = 9;
+  repeated int32 daily = 10;
+}
+
+message pb_ngwbuff {
+  optional int32 id = 1;
+  optional int32 num = 2;
+}
+
+message pb_ngwmbr {
+  optional int32 idx = 1;
+  optional int32 logo = 2;
+  optional string gname = 3;
+  optional int64 power = 4;
+  optional int32 lv = 5;
+  optional int32 lbox = 6;
+  repeated pb_unit unit = 7;
+  optional int64 uid = 8;
+  optional int32 gid = 9;
+  optional int32 win = 10;
+}
+
+message pb_clink {
+  optional int32 cd = 1;
+  optional int32 atk = 2;
+  optional int32 def = 3;
+  optional int32 win = 4;
+  optional int64 vid = 5;
+}
+
+message pb_cgw_info {
+  optional int32 id = 1;
+  optional int32 logo = 2;
+  optional int64 power = 3;
+  optional string name = 4;
+}
+
+message pb_cgw_mbr {
+  optional int64 uid = 1;
+  optional int32 logo = 2;
+  optional int32 lv = 3;
+  optional int32 lbox = 4;
+  optional string name = 5;
+  repeated pb_unit camp = 6;
+}
+
+message pb_cgw_record {
+  optional int32 gid = 1;
+  optional int32 logo = 2;
+  optional int32 vid = 3;
+  optional int32 cd = 4;
+  optional int32 flag = 5;
+  optional int64 power = 6;
+  optional string name = 7;
+  optional bool atk = 8;
+  optional bool win = 9;
+  optional int64 spower = 10;
+}
+
+message pb_cgw_log {
+  optional pb_cgw_mbr atk = 1;
+  optional pb_cgw_mbr def = 2;
+  optional bool win = 3;
+}
+
+message pb_ngw_sweep {
+  optional int32 status = 1;
+  optional int32 id = 2;
+  optional int32 destroy = 3;
+}
+
+message pb_cd {
+  required int32 id = 1;
+  required int32 cd = 2;
+}
+
+message pb_gpvpteam {
+  optional int32 leader = 1;
+  repeated pb_pmbr mbrs = 2;
+  optional int32 sid = 3;
+  optional int32 score = 4;
+  optional int32 rank = 5;
+  optional int64 power = 6;
+  optional string name = 7;
+  optional int64 need_power = 8;
+  optional string password = 9;
+  optional int32 id = 10;
+  optional bool reg = 11;
+  optional int32 enegy = 12;
+  optional int32 enggy_cd = 13;
+}
+
+message pb_gpvplog {
+  required int32 log_id = 1;
+  required pb_gpvpteam enemy = 2;
+  optional sint32 score = 3;
+  optional bool win = 4;
+  optional int32 time = 5;
+}
+
+message pb_gpvp_wlog {
+  required pb_gpvpteam atk = 1;
+  required pb_gpvpteam def = 2;
+  repeated bool wins = 3;
+  repeated int32 vids = 4;
+}
+
+message pb_pet {
+  required int32 id = 1;
+  required int32 lv = 2;
+  required int32 star = 3;
+  repeated int32 skl = 4;
+}
+
+message pb_spkunit {
+  optional pb_unit base = 1;
+  repeated pb_item buf = 2;
+}
+
+message pb_spkmbr {
+  required int32 uid = 1;
+  required int32 lv = 2;
+  required int32 wave = 3;
+  required int32 time = 4;
+  required int32 logo = 5;
+  required string name = 6;
+  optional int32 border = 7;
+}
+
+message pb_holy {
+  required int32 id = 1;
+  required int32 pos = 2;
+  optional int32 val = 3;
+}
+
+message pb_mine {
+  required int32 id = 1;
+  required int32 pos = 2;
+  required int32 val = 3;
+}
+
+message pb_land {
+  required int32 id = 1;
+  required int32 pos = 2;
+  optional int32 cd = 3;
+  optional int32 cdk = 4;
+  optional bool dead = 5;
+}
+
+message pb_vit {
+  required int32 vit = 1;
+  optional int32 buy = 2;
+}
+
+message pb_ievent {
+  required int32 id = 1;
+  optional int32 cd = 2;
+  optional string ext = 3;
+  optional int32 sid = 4;
+  optional pb_bag reward = 5;
+}
+
+message pb_iadt {
+  optional int32 dist = 1;
+  repeated pb_ievent mevts = 2;
+  repeated pb_ievent pevts = 3;
+  optional int32 vit = 4;
+  optional int32 vitcd = 5;
+  optional pb_bag reward = 6;
+  optional int32 rt = 7;
+  optional int32 num = 8;
+}
+
+message pb_iboat {
+  optional string name = 1;
+  optional int32 exp = 2;
+  optional int32 arm = 3;
+  optional int32 spd = 4;
+  repeated int32 skls = 5;
+}
+
+message pb_ipro {
+  optional int32 id = 1;
+  optional int32 num = 2;
+  optional int32 cd = 3;
+}
+
+message pb_locale {
+  optional string country = 1;
+  optional string iso = 2;
+  optional string city = 3;
+}
+
+message pb_sact {
+  repeated pb_sact_item acts = 1;
+}
+
+message pb_ract {
+  repeated pb_ract_item acts = 1;
+  optional int32 show = 2;
+}
+
+message pb_brave_box {
+  required int32 id = 1;
+}
+
+message pb_brave_buff {
+  required int32 id = 1;
+  required int32 num = 2;
+}
+
+message pb_re_sync {
+  optional int32 role = 1;
+  optional int32 gift_id = 2;
+  optional int32 back_gift = 3;
+  optional int32 bind_times = 4;
+  optional int32 help_times = 5;
+  optional int32 back_cd = 6;
+  optional int32 bind = 7;
+  repeated pb_re_task s_tasks = 8;
+  repeated pb_re_task h_tasks = 9;
+  optional int32 cd = 10;
+  optional int32 cd2 = 11;
+  repeated pb_re_apply applys = 12;
+  optional string code = 13;
+  repeated pb_re_bind_player players = 14;
+}
+
+message pb_re_bind_player {
+  optional int32 logo = 1;
+  optional int32 uid = 2;
+  optional string name = 3;
+  optional int32 bind = 4;
+}
+
+message pb_re_apply {
+  required int32 logo = 1;
+  optional int64 uid = 2;
+  optional string name = 3;
+  optional int32 cd = 4;
+}
+
+message pb_re_task {
+  required int32 id = 1;
+  optional int32 num1 = 2;
+  optional int32 num2 = 3;
+}
+
+message pb_vbuff {
+  optional int32 id = 1;
+  optional int32 type = 2;
+}
+
+message pb_stele {
+  optional int32 hook = 1;
+  optional int32 solo = 2;
+  optional int32 crush = 3;
+  optional int32 tower = 4;
+  repeated int32 sealland = 5;
+  optional int32 st = 6;
+}
+
+message pb_midas {
+  required int32 type = 1;
+  required int32 cd = 2;
+  required int32 index = 3;
+}
+
+message pb_gve {
+  optional int32 id = 1;
+  optional int32 exp = 2;
+  repeated int32 record = 3;
+  optional int32 fight = 4;
+}
+
+message pb_gve_rank {
+  optional int32 id = 1;
+  optional string name = 2;
+  optional int32 exp = 3;
+  optional int32 texp = 4;
+}
+
+message pb_act_block {
+  optional int32 pos = 1;
+  optional sint32 eventid = 2;
+}
+
+message pb_act_maze {
+  optional int32 floor = 1;
+  repeated pb_act_block events = 2;
+  optional int32 heroid = 3;
+  optional int32 skill = 4;
+  optional int32 skill_lv = 5;
+  optional int32 change = 6;
+  optional int32 treasures = 7;
+  optional int32 buff = 8;
+  optional int32 type = 9;
+  optional int32 pos = 10;
+  optional int32 buy_num = 11;
+  optional bool get_frag = 12;
+}
+
+message pb_ntask {
+  required int32 id = 1;
+  required int64 count = 2;
+  required int32 status = 3;
+  repeated pb_nextra extra = 4;
+}
+
+message pb_nextra {
+  repeated int32 id = 1;
+}
+
+message pb_nt_sync {
+  required sint32 type = 1;
+  repeated int64 value = 2;
+}
+
+message pb_room {
+  optional int32 id = 1;
+  optional int32 pos = 2;
+  optional int32 skinid = 3;
+  optional int32 hid = 4;
+}
+
+message pb_home_land {
+  optional int32 land_id = 1;
+  optional string name = 2;
+  repeated pb_room rooms = 3;
+  optional int32 owner = 4;
+}
+
+message pb_block {
+  optional int32 type = 1;
+  optional int32 from = 2;
+  optional int32 to = 3;
+}
+
+message pb_living {
+  optional int32 type = 1;
+  optional int32 hid = 2;
+}
+
+message pb_buildings {
+  required int32 id = 1;
+  required int32 pos = 2;
+  required int32 skinid = 3;
+  optional int32 collect_time = 4;
+  optional int32 store = 5;
+}
+
+message pb_home_roomer {
+  optional int32 room_id = 1;
+  optional int32 hid = 2;
+  optional int32 skinid = 3;
+}
+
+message pb_home_heroes {
+  optional int32 hid = 1;
+  optional int32 land_id = 2;
+  repeated pb_home_roomer roomers = 3;
+}
+
+message pb_coll {
+  optional int32 type = 1;
+  optional int32 score = 2;
+  optional int32 lv = 3;
+}
+
+message pb_stove {
+  optional int32 id = 1;
+  optional int32 num = 2;
+  optional int32 cd = 3;
+  optional int32 qid = 4;
+}
+
+message pb_stove_buy {
+  required int32 id = 1;
+  required int32 num = 2;
+}
+
+message pb_gvm_stone {
+  optional int32 bid = 1;
+  required int32 id = 2;
+  repeated int32 num = 3;
+  optional int32 pos = 4;
+}
+
+message pb_gvm_map {
+  required int32 id = 1;
+  optional int32 buff_num = 3;
+}
+
+message pb_gvm_map_node {
+  required int32 id = 1;
+  required int32 state = 2;
+  optional int32 cfg_id = 3;
+  repeated int32 hps = 4;
+}
+
+message pb_gvm_rank {
+  optional int32 gid = 1;
+  optional int64 score = 2;
+  optional int32 time = 4;
+  optional int32 logo = 5;
+  optional string name = 6;
+  optional int32 member = 8;
+  optional int64 exp = 9;
+}
+
+message pb_match {
+  required sint32 idx = 1;
+  optional string name = 2;
+  optional int64 uid = 3;
+  optional int32 lv = 6;
+  optional int32 logo = 4;
+  optional int32 lbox = 5;
+  optional int32 win = 7;
+  repeated pb_match_hero heroes = 8;
+  optional int64 power = 9;
+}
+
+message pb_match_hero {
+  required int32 pos = 1;
+  required int32 id = 2;
+  optional int32 lv = 3;
+  optional int32 stl = 4;
+  optional int32 flag = 5;
+  repeated pb_equip equips = 6;
+  optional int32 wake = 7;
+  repeated int32 skill_id = 8;
+  optional pb_attr attr = 9;
+  optional int32 skin = 10;
+  optional int32 qlv = 11;
+  optional int32 tree_flag = 12;
+  optional int32 core = 13;
+  optional int32 times = 14;
+  optional int32 use = 15;
+  optional int32 faith_lv = 16;
+}
+
+message pb_pvp_accounts {
+  required int32 score = 1;
+  required int32 win = 2;
+}
+
+message pb_attr {
+  optional int32 atk = 1;
+  optional int64 hp = 2;
+  optional int32 arm = 3;
+  optional int32 spd = 4;
+  optional int32 sklP = 5;
+  optional int32 hit = 6;
+  optional int32 miss = 7;
+  optional int32 crit = 8;
+  optional int32 critTime = 9;
+  optional int32 brk = 10;
+  optional int32 free = 11;
+  optional int32 decDmg = 12;
+  optional int32 trueAtk = 13;
+}
+
+message pb_gvm_mbr {
+  optional string name = 1;
+  optional int64 uid = 2;
+  optional int32 lv = 3;
+  optional int32 logo = 4;
+  optional int32 lbox = 5;
+  repeated string scores = 6;
+  optional int64 score = 7;
+}
+
+message pb_up_star {
+  required int32 id = 1;
+  repeated int32 hid = 2;
+}
+
+message pb_fun {
+  required int32 open = 1;
+  required int32 cd = 2;
+  optional int32 id = 3;
+}
+
+message hland_change_skin {
+  required int32 skin = 1;
+  required int32 pos = 2;
+}
+
+message pb_hland_log {
+  optional string name = 1;
+  optional int64 uid = 2;
+  optional int32 lv = 3;
+  optional int32 logo = 4;
+  optional int32 lbox = 5;
+  optional int32 type = 6;
+  optional int64 time = 7;
+}
+
+message pb_hmbr {
+  optional string name = 1;
+  optional int64 uid = 2;
+  optional int32 lv = 3;
+  optional int32 logo = 4;
+  optional int32 lbox = 5;
+  repeated int32 item_ids = 6;
+}
+
+message pb_hteam {
+  optional string id = 1;
+  optional int64 leader = 2;
+  optional int32 type = 3;
+  repeated pb_hmbr mbr = 4;
+  optional int32 cd = 5;
+  optional bool shape = 6;
+  repeated int64 invites = 7;
+}
+
+message pb_team_info {
+  required int32 id = 1;
+  optional string name = 2;
+  repeated pb_team_hero heroes = 3;
+  optional int32 petid = 4;
+  optional int32 flag = 5;
+}
+
+message pb_team_hero {
+  required int32 pos = 1;
+  required int32 hid = 2;
+  repeated pb_equip equips = 3;
+  repeated int32 skill_id = 4;
+  repeated pb_sattr sattrs = 5;
+  optional int32 flag = 6;
+  repeated int32 faith_skill = 7;
+}
+
+message good {
+  optional int32 good_id = 1;
+  optional int32 hero_id = 2;
+  optional pb_hero_qlc qlt = 3;
+  optional int64 price = 4;
+  optional int64 del_price = 5;
+  optional int32 state = 6;
+  optional int32 cd = 7;
+  optional int32 rprice = 8;
+  optional pb_give_role seller = 9;
+  optional pb_give_role buyer = 10;
+}
+
+message mall_log {
+  optional int32 time = 1;
+  optional int32 heroid = 2;
+  optional pb_hero_qlc qlt = 3;
+  optional int32 price = 4;
+  optional int32 type = 5;
+  optional int32 status = 6;
+  optional int32 goodid = 7;
+  optional pb_give_role user = 8;
+}
+
+message pb_kv {
+  optional int32 k = 1;
+  optional int32 v = 2;
+}
+
+message pb_kvs {
+  repeated int32 k = 1;
+  repeated int32 v = 2;
+  repeated int32 v2 = 3;
+  repeated int32 v3 = 4;
+}
+
+message pb_kv2 {
+  optional int32 k = 1;
+  optional int32 v = 2;
+  optional int32 v2 = 3;
+  optional int32 v3 = 4;
+  optional int32 v4 = 5;
+  optional int32 v5 = 6;
+}
+
+message pb_growup {
+  optional int32 id = 1;
+  optional int32 index = 2;
+  optional int32 claim = 3;
+}
+
+message pb_puzzle {
+  optional int32 id = 1;
+  optional int32 next = 2;
+  optional int32 cur = 3;
+  repeated pb_kv pos = 4;
+  repeated int32 bag = 5;
+  optional int32 num = 6;
+  optional int32 ring = 7;
+  optional int32 siz = 8;
+}
+
+message pb_give_role {
+  required int64 uid64 = 1;
+  required string channel = 2;
+  required int32 lv = 3;
+  optional int32 lbox = 4;
+  required string name = 5;
+  required int32 logo = 6;
+}
+
+message pb_give_order {
+  optional int64 id = 1;
+  optional uint32 type = 2;
+  optional int32 num = 3;
+  optional uint32 status = 4;
+  optional pb_give_role role = 5;
+  optional int32 cd = 6;
+}
+
+message pb_give_log {
+  optional string name = 1;
+  optional int32 num = 2;
+  optional int32 tax = 3;
+  optional int64 time = 4;
+}
+
+message pb_qlt_pvp_enemy {
+  optional sint32 idx = 1;
+  optional int32 logo = 2;
+  optional string name = 3;
+  optional string cluster = 4;
+  optional int32 lv = 5;
+  optional int32 lbox = 6;
+  repeated pb_unit camp = 7;
+  repeated sint32 skls = 8;
+  repeated sint32 hide = 9;
+  optional int64 uid = 10;
+  optional int64 power = 11;
+  optional int32 is_fight = 12;
+  optional string gname = 13;
+}
+
+message pb_qloger {
+  required int64 vid = 1;
+  optional pb_smbr a_mbr = 2;
+  optional pb_smbr d_mbr = 3;
+  optional int32 time = 4;
+  optional bool win = 5;
+  optional sint32 delta = 6;
+  repeated sint32 a_skls = 7;
+  repeated sint32 d_skls = 8;
+}
+
+message pb_qvideo {
+  repeated pb_unit atk = 1;
+  repeated pb_unit def = 2;
+  repeated bytes frames = 3;
+  repeated pb_hurts hurts = 4;
+  required bool win = 5;
+}
+
+message pb_qlog {
+  repeated pb_qvideo video = 1;
+  optional pb_smbr a_mbr = 2;
+  optional pb_smbr d_mbr = 3;
+  optional int32 time = 4;
+  optional bool win = 5;
+  optional sint32 delta = 6;
+  repeated sint32 a_skls = 7;
+  repeated sint32 d_skls = 8;
+}
+
+message power_rank {
+  optional uint32 id = 1;
+  optional pb_give_role player = 2;
+  optional int32 score = 3;
+  optional int32 live = 4;
+}
+
+message power_task {
+  required uint32 id = 1;
+  optional uint32 type = 2;
+  optional int32 cd = 3;
+  optional int32 num = 4;
+  optional uint32 dot_id = 5;
+  optional uint32 flag = 6;
+  optional uint32 excel_id = 7;
+}
+
+message dot_info {
+  optional uint32 id = 1;
+  optional uint32 power_id = 2;
+  optional int32 degree = 3;
+  optional int32 max = 4;
+  optional uint32 status = 5;
+  optional int32 item = 6;
+  repeated pb_item buff = 7;
+  optional int32 tmp_id = 8;
+  repeated int32 skill = 9;
+  optional int32 cd = 10;
+  optional int32 cd2 = 11;
+  optional int32 cd3 = 12;
+  optional int32 cd4 = 13;
+  optional int32 cd5 = 14;
+  optional pb_kvs dot = 15;
+}
+
+message dot_log {
+  optional uint32 type = 1;
+  optional int32 degree = 2;
+  optional string time = 3;
+  optional int32 id = 4;
+  optional int32 add = 5;
+}
+
+message power_monster {
+  required int32 id = 1;
+  repeated pb_unit camp = 2;
+  repeated int32 buff = 3;
+}
+
+message power_skill {
+  required int32 id = 1;
+  optional string name = 2;
+  repeated int32 skill = 3;
+  optional int32 cd = 4;
+}
+
+message power_manager {
+  optional string udk = 1;
+  optional string cluster = 2;
+  optional int64 uid = 3;
+}
+
+message stower_breed {
+  required sint32 id = 1;
+  required sint32 pid1 = 2;
+  required sint32 pid2 = 3;
+  required int32 cd = 4;
+  required sint32 egg = 5;
+}
+
+message stower_lucky {
+  required sint32 id = 1;
+  repeated sint32 ratio = 2;
+}
+
+message power_log {
+  optional uint32 type = 1;
+  optional int32 job = 2;
+  optional string time = 3;
+  optional string name = 4;
+  optional int32 point = 5;
+  optional int32 buff = 6;
+}
+
+message pb_iboss {
+  optional uint32 bossid = 1;
+  optional int64 tscore = 2;
+  optional uint32 cd = 3;
+  optional int64 score = 4;
+  optional int32 hp = 5;
+  optional bool full = 6;
+}
+
+message pb_iboss_rank {
+  optional int32 logo = 1;
+  optional int64 uid = 2;
+  optional int64 score = 3;
+  optional string name = 4;
+  optional int32 lbox = 5;
+}
+
+message pb_mgame_map {
+  optional sint32 id = 1;
+  optional sint32 status = 2;
+  optional sint32 prop_id = 3;
+}
+
+message pb_mgame_prop {
+  optional sint32 id = 1;
+  optional sint32 cfg_id = 2;
+  optional sint32 cd = 3;
+  optional sint32 num = 4;
+  optional sint32 time = 5;
+  optional sint32 map_id = 6;
+  optional sint32 map_status = 7;
+}
+
+message pb_gt_node {
+  optional pb_smbr mbr = 1;
+  optional int32 cd = 2;
+  optional int64 power = 3;
+}
+
+message pb_gt_mbr {
+  optional int32 logo = 1;
+  optional int32 mlogo = 2;
+  optional int32 lv = 3;
+}
+
+message pb_gt_log {
+  optional pb_gt_mbr left = 1;
+  optional pb_gt_mbr right = 2;
+  optional bool atk = 3;
+  optional bool win = 4;
+  optional int64 vid = 5;
+  optional int32 cd = 6;
+  optional int32 mapid = 7;
+}
+
+message pb_gvideo {
+  repeated pb_unit atk = 1;
+  repeated pb_unit def = 2;
+  repeated bytes frames = 3;
+  repeated pb_hurts hurts = 4;
+  required bool win = 5;
+  optional uint32 teamid = 6;
+}
+
+message pb_hstar {
+  optional int64 uid = 1;
+  optional string name = 2;
+  optional int32 logo = 3;
+  optional uint32 score = 4;
+}
+
+message pb_world_build {
+  optional uint32 id = 1;
+  optional uint32 bid = 2;
+  optional uint32 state = 3;
+  repeated pb_kv2 res = 4;
+  optional uint32 buy_num = 5;
+}
+
+message pb_world_mall_item {
+  optional string orderid = 1;
+  optional pb_item cost = 2;
+  optional pb_item item = 3;
+  optional uint32 state = 4;
+  optional uint32 cd = 5;
+}
+
+message pb_bworld_brief {
+  optional uint32 key = 1;
+  optional string name = 2;
+  optional int64 group_id = 3;
+  optional uint32 id_cfg = 4;
+  optional uint32 teamid = 5;
+  repeated uint32 hps = 6;
+  optional string udk = 7;
+  optional uint32 color = 8;
+  optional uint32 monster_id = 9;
+  repeated pb_cele_buf bufs = 10;
+}
+
+message pb_bworld_moudle {
+  optional uint32 key = 1;
+  optional uint32 id_cfg = 2;
+  optional uint32 cd = 3;
+  optional uint32 count = 4;
+  optional uint32 mbr_num = 5;
+  repeated pb_item material = 6;
+  optional pb_bworld_monster monster = 7;
+  repeated pb_cele_buf bufs = 8;
+}
+
+message pb_bworld_build {
+  optional int64 count = 1;
+  repeated pb_smbr miner = 2;
+  optional uint32 cd = 3;
+  repeated pb_item rewards = 4;
+  optional uint32 id_cfg = 5;
+  repeated pb_item rewards2 = 6;
+}
+
+message pb_bworld_monster {
+  optional int64 hpp = 1;
+  optional int64 cd = 2;
+  repeated pb_smbr rank = 3;
+  repeated uint32 soldiers = 4;
+  optional uint32 buff_idx = 5;
+  optional uint32 monster_id = 6;
+}
+
+message pb_bworld_team {
+  optional sint32 teamid = 1;
+  repeated pb_unit camp = 2;
+  repeated uint32 vits = 3;
+  optional uint32 key = 4;
+  optional int64 world_id = 5;
+  repeated uint32 soldiers = 6;
+  repeated uint32 back_soldiers = 7;
+  repeated uint32 skill_count = 8;
+}
+
+message pb_bworld {
+  optional int64 world_id = 1;
+  optional uint32 id_cfg = 2;
+  repeated pb_bworld_brief briefs = 3;
+  optional uint32 key = 4;
+  optional uint32 idx = 5;
+  optional uint32 world_lv = 6;
+  optional uint32 complete = 7;
+  optional uint32 boss_id = 8;
+  repeated uint32 team_cd = 9;
+  optional bytes tag = 10;
+  repeated pb_cele_buf bufs = 11;
+}
+
+message pb_bworld_log {
+  optional uint32 type = 1;
+  optional int32 logo = 2;
+  optional int32 border = 3;
+  optional int32 lv = 4;
+  optional string name = 5;
+  optional int32 time = 6;
+  optional bool win = 7;
+  optional int32 bid = 8;
+  optional int32 mid = 9;
+  optional pb_bag reward = 10;
+  optional int32 map_id = 11;
+  optional int32 monster_id = 12;
+  optional string gname = 13;
+  optional int64 uid = 14;
+  optional int32 rank = 15;
+}
+
+message pb_bworld_video {
+  repeated bytes frames = 1;
+  optional bool win = 2;
+  optional pb_bag reward = 3;
+  repeated pb_unit atk = 4;
+  repeated pb_unit def = 5;
+  repeated pb_hurts hurts = 6;
+  repeated int32 hpps = 7;
+  optional int32 stage = 8;
+  optional pb_bworld_result result = 9;
+}
+
+message pb_bworld_result {
+  repeated uint32 num = 1;
+  repeated uint32 cost = 2;
+  optional uint32 score = 3;
+  optional uint32 progress = 4;
+  optional uint32 boss_hp = 5;
+}
+
+message pb_cele {
+  optional uint32 id_god = 1;
+  optional uint32 id_way = 2;
+  repeated pb_kv2 task_up = 3;
+  repeated pb_kv2 task_trans = 4;
+  optional uint32 hid = 5;
+  repeated pb_kv2 hid_map = 6;
+  repeated uint32 task_world = 7;
+  repeated uint32 skill_count = 8;
+}
+
+message pb_desk_hero {
+  required uint32 id = 1;
+  repeated uint32 hero = 2;
+  repeated uint32 back = 3;
+  repeated pb_desk_log log = 4;
+}
+
+message pb_desk_log {
+  required uint32 id = 1;
+  repeated pb_kv hero = 2;
+  optional int32 new = 3;
+  optional int32 index = 4;
+}
+
+message pb_cele_buf {
+  optional uint32 id = 1;
+  optional uint32 cd = 2;
+  optional uint32 cd_shield = 3;
+  optional uint32 color = 4;
+  optional uint32 count = 5;
+  optional uint32 key = 6;
+  optional uint32 lv = 7;
+}
+
+message pb_ret {
+  repeated uint32 num = 1;
+  optional uint32 cd = 2;
+  repeated uint32 ids = 3;
+  repeated pb_bag rewards = 4;
+}

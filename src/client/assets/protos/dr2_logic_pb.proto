@@ -1,6 +1,8 @@
 syntax = "proto2";
 package dr2_logic_pb;
 
+import "dr2_comm_pb.proto";
+
 message pbreq_auth {
   required string session = 1;
   optional int32 uid = 2;
@@ -41,78 +43,78 @@ message pbrsp_resume {
 
 message pbrsp_sync {
   required sint32 status = 1;
-  optional bytes player = 2;
-  optional bytes bag = 3;
-  repeated bytes heroes = 4;
-  optional bytes gacha = 5;
+  optional dr2_comm_pb.pb_player player = 2;
+  optional dr2_comm_pb.pb_bag bag = 3;
+  repeated dr2_comm_pb.pb_hero heroes = 4;
+  optional dr2_comm_pb.pb_gacha gacha = 5;
   repeated int32 hero_ids = 6;
-  repeated bytes mails = 7;
+  repeated dr2_comm_pb.pb_mail mails = 7;
   optional int32 midas_cd = 8;
-  optional bytes hook = 9;
+  optional dr2_comm_pb.pb_hook hook = 9;
   optional int32 midas_crstcd = 10;
   repeated int32 pay_num = 11;
   optional int32 tutorial = 12;
-  optional bytes friends = 13;
-  optional bytes trial = 14;
-  optional bytes alogin = 15;
-  repeated bytes acts = 16;
-  optional bytes achieve = 17;
-  repeated bytes tasks = 18;
+  optional dr2_comm_pb.pb_friend friends = 13;
+  optional dr2_comm_pb.pb_strial trial = 14;
+  optional dr2_comm_pb.pb_alogin alogin = 15;
+  repeated dr2_comm_pb.pb_act acts = 16;
+  optional dr2_comm_pb.pb_sachieve achieve = 17;
+  repeated dr2_comm_pb.pb_task tasks = 18;
   optional int32 task_cd = 19;
-  optional bytes online = 20;
+  optional dr2_comm_pb.pb_online online = 20;
   optional int32 midas_flag = 21;
   optional int32 web_flag = 22;
   optional int32 video_ad = 23;
-  repeated bytes limitacts = 24;
-  optional bytes htask = 26;
+  repeated dr2_comm_pb.pb_act limitacts = 24;
+  optional dr2_comm_pb.pb_htask_sync htask = 26;
   optional int32 buy_hlimit = 27;
   optional int32 space_gacha = 28;
-  repeated bytes cds = 29;
+  repeated dr2_comm_pb.pb_cd cds = 29;
   optional int32 final_rank = 30;
   optional bool hide_vip = 31;
   optional int32 tutorial2 = 32;
-  repeated bytes pets = 33;
+  repeated dr2_comm_pb.pb_pet pets = 33;
   optional int32 reddot = 34;
-  repeated bytes gskls = 35;
+  repeated dr2_comm_pb.pb_gskl gskls = 35;
   optional int32 subscribed = 36;
-  repeated bytes skin = 37;
+  repeated dr2_comm_pb.pb_item skin = 37;
   optional int32 gsklcode = 38;
   optional int32 chatblocks = 39;
-  optional bytes locale = 40;
-  optional bytes mact = 41;
+  optional dr2_comm_pb.pb_locale locale = 40;
+  optional dr2_comm_pb.pb_mact mact = 41;
   optional int32 audit = 42;
-  optional bytes sact = 43;
+  optional dr2_comm_pb.pb_sact sact = 43;
   optional int32 off_card = 44;
   optional int32 video_cd = 45;
-  optional bytes ract = 46;
+  optional dr2_comm_pb.pb_ract ract = 46;
   optional int32 use_hitem = 47;
-  optional bytes re_sync = 48;
-  repeated bytes new_midas = 49;
-  optional bytes stele = 50;
+  optional dr2_comm_pb.pb_re_sync re_sync = 48;
+  repeated dr2_comm_pb.pb_midas new_midas = 49;
+  optional dr2_comm_pb.pb_stele stele = 50;
   optional string token = 51;
   optional int32 stower_lv = 52;
   repeated int32 spet_ids = 53;
   repeated int32 skin_ids = 54;
-  repeated bytes home_heroes = 55;
+  repeated dr2_comm_pb.pb_home_heroes home_heroes = 55;
   repeated int32 coll_lv = 56;
   repeated int64 like = 57;
   repeated int64 care = 58;
   repeated int32 hteam_bag = 59;
-  repeated bytes qlt_tasks = 60;
-  repeated bytes give = 61;
+  repeated dr2_comm_pb.pb_task qlt_tasks = 60;
+  repeated dr2_comm_pb.pb_give_order give = 61;
   optional int32 qscore = 62;
   optional sint32 mall_pwd = 63;
   optional sint32 qlt_pvp_market = 64;
-  repeated bytes stower_lucky = 65;
-  repeated bytes coll = 66;
+  repeated dr2_comm_pb.stower_lucky stower_lucky = 65;
+  repeated dr2_comm_pb.pb_kv coll = 66;
   optional int32 brave = 67;
   optional int32 transform_num = 68;
-  repeated bytes transform_choose = 69;
+  repeated dr2_comm_pb.pb_kv transform_choose = 69;
   optional int32 god_lv = 70;
   optional int32 energy = 71;
   optional bool gt_over = 72;
-  repeated bytes cele = 73;
-  optional bytes ret = 74;
+  repeated dr2_comm_pb.pb_cele cele = 73;
+  optional dr2_comm_pb.pb_ret ret = 74;
 }
 
 message pbreq_up {
@@ -125,7 +127,7 @@ message pbrsp_up {
   required string vsn = 2;
   required int32 lv = 3;
   optional string prefix = 4;
-  repeated bytes files = 5;
+  repeated dr2_comm_pb.pb_upfile files = 5;
   optional string upList = 6;
   optional int32 thcount = 7;
   optional string appurl = 8;
@@ -154,7 +156,7 @@ message pbreq_servers {
 }
 
 message pbrsp_servers {
-  repeated bytes servers = 1;
+  repeated dr2_comm_pb.pb_server servers = 1;
   optional int32 mid = 2;
 }
 
@@ -166,7 +168,7 @@ message pbreq_player {
 message pbrsp_player {
   optional int32 gid = 1;
   optional string gname = 2;
-  repeated bytes heroes = 3;
+  repeated dr2_comm_pb.pb_unit heroes = 3;
   optional int64 power = 4;
   optional int32 report = 5;
 }
@@ -227,13 +229,13 @@ message pbrsp_change_head_border {
 message pbreq_upgrade_head_border {
   required int32 border = 1;
   optional uint32 num = 2;
-  repeated bytes equips = 3;
+  repeated dr2_comm_pb.pb_equip equips = 3;
 }
 
 message pbrsp_upgrade_head_border {
   required sint32 status = 1;
   optional int32 num = 2;
-  optional bytes equip = 3;
+  optional dr2_comm_pb.pb_equip equip = 3;
 }
 
 message pbreq_flag_webgame {
@@ -243,7 +245,7 @@ message pbreq_flag_webgame {
 message pbrsp_flag_webgame {
   required sint32 status = 1;
   optional int32 flag = 2;
-  optional bytes reward = 3;
+  optional dr2_comm_pb.pb_bag reward = 3;
 }
 
 message pbreq_smsg {
@@ -322,14 +324,14 @@ message pbreq_gacha {
 
 message pbrsp_gacha {
   required sint32 status = 1;
-  repeated bytes heroes = 2;
-  repeated bytes items = 3;
+  repeated dr2_comm_pb.pb_hero heroes = 2;
+  repeated dr2_comm_pb.pb_item items = 3;
   optional int32 gem = 4;
 }
 
 message pbreq_wear {
   required int32 hid = 1;
-  repeated bytes equips = 2;
+  repeated dr2_comm_pb.pb_equip equips = 2;
 }
 
 message pbrsp_wear {
@@ -342,16 +344,16 @@ message pbreq_hero_decompose {
 
 message pbrsp_hero_decompose {
   required int32 status = 1;
-  repeated bytes items = 2;
+  repeated dr2_comm_pb.pb_item items = 2;
 }
 
 message pbreq_hero_merge {
-  required bytes item = 1;
+  required dr2_comm_pb.pb_item item = 1;
 }
 
 message pbrsp_hero_merge {
   required sint32 status = 1;
-  repeated bytes heroes = 2;
+  repeated dr2_comm_pb.pb_hero heroes = 2;
 }
 
 message pbreq_hero_up {
@@ -381,7 +383,7 @@ message pbreq_hero_mix {
 
 message pbrsp_hero_mix {
   required sint32 status = 1;
-  optional bytes hero = 2;
+  optional dr2_comm_pb.pb_hero hero = 2;
 }
 
 message pbreq_jade_on {
@@ -464,8 +466,8 @@ message pbreq_hero_change {
 
 message pbrsp_hero_change {
   required sint32 status = 1;
-  repeated bytes heroes = 2;
-  repeated bytes items = 3;
+  repeated dr2_comm_pb.pb_hero heroes = 2;
+  repeated dr2_comm_pb.pb_item items = 3;
 }
 
 message pbreq_hero_skin_mix {
@@ -475,7 +477,7 @@ message pbreq_hero_skin_mix {
 
 message pbrsp_hero_skin_mix {
   required sint32 status = 1;
-  repeated bytes skin = 2;
+  repeated dr2_comm_pb.pb_equip skin = 2;
 }
 
 message pbreq_hero_skin_wear {
@@ -502,7 +504,7 @@ message pbreq_shield_change {
 
 message pbrsp_shield_change {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_hero_skin_visit {
@@ -546,8 +548,8 @@ message pbreq_hero_return {
 
 message pbrsp_hero_return {
   required int32 status = 1;
-  repeated bytes heroes = 2;
-  repeated bytes items = 3;
+  repeated dr2_comm_pb.pb_hero heroes = 2;
+  repeated dr2_comm_pb.pb_item items = 3;
 }
 
 message pbreq_hero_skin_limitmix {
@@ -605,17 +607,17 @@ message pbreq_auto_lvup {
 
 message pbrsp_auto_lvup {
   required int32 status = 1;
-  repeated bytes costs = 2;
+  repeated dr2_comm_pb.pb_item costs = 2;
 }
 
 message pbreq_up_star {
-  repeated bytes up = 1;
+  repeated dr2_comm_pb.pb_up_star up = 1;
   required int32 star = 2;
 }
 
 message pbrsp_up_star {
   required int32 status = 1;
-  optional bytes rewards = 2;
+  optional dr2_comm_pb.pb_bag rewards = 2;
 }
 
 message pbreq_gacha_choose {
@@ -633,12 +635,12 @@ message pbreq_qlt_star {
 
 message pbrsp_qlt_star {
   required sint32 status = 1;
-  optional bytes qlc = 2;
+  optional dr2_comm_pb.pb_hero_qlc qlc = 2;
 }
 
 message pbreq_qlt_change {
   optional int32 hid = 1;
-  optional bytes qlc = 2;
+  optional dr2_comm_pb.pb_hero_qlc qlc = 2;
   optional int32 self_hid = 3;
 }
 
@@ -680,7 +682,7 @@ message pbrsp_qlt_sync {
 
 message pbreq_qlt_up {
   optional int32 hid = 1;
-  optional bytes qlc = 2;
+  optional dr2_comm_pb.pb_hero_qlc qlc = 2;
   optional int32 type = 3;
   repeated int32 hids = 4;
   optional bool is_cur = 5;
@@ -688,8 +690,8 @@ message pbreq_qlt_up {
 
 message pbrsp_qlt_up {
   required sint32 status = 1;
-  optional bytes qlc = 2;
-  repeated bytes item = 3;
+  optional dr2_comm_pb.pb_hero_qlc qlc = 2;
+  repeated dr2_comm_pb.pb_item item = 3;
 }
 
 message pbreq_batch_qlt_star {
@@ -699,7 +701,7 @@ message pbreq_batch_qlt_star {
 
 message pbrsp_batch_qlt_star {
   required sint32 status = 1;
-  repeated bytes qlcs = 2;
+  repeated dr2_comm_pb.pb_hero_qlc qlcs = 2;
 }
 
 message pbreq_tree_up {
@@ -711,7 +713,7 @@ message pbreq_tree_up {
 
 message pbrsp_tree_up {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_merge_tequip {
@@ -759,7 +761,7 @@ message pbrsp_hero_sbreak {
 }
 
 message pbreq_transform_choose {
-  repeated bytes choose = 1;
+  repeated dr2_comm_pb.pb_kv choose = 1;
 }
 
 message pbrsp_transform_choose {
@@ -773,7 +775,7 @@ message pbreq_faith_up {
 
 message pbrsp_faith_up {
   required sint32 status = 1;
-  optional bytes faith = 2;
+  optional dr2_comm_pb.pb_faith faith = 2;
 }
 
 message pbreq_faith_lv {
@@ -798,7 +800,7 @@ message pbreq_faith_return {
 
 message pbrsp_faith_return {
   required sint32 status = 1;
-  repeated bytes item = 2;
+  repeated dr2_comm_pb.pb_item item = 2;
 }
 
 message pbreq_energy_resolve {
@@ -807,13 +809,13 @@ message pbreq_energy_resolve {
 
 message pbrsp_energy_resolve {
   required sint32 status = 1;
-  repeated bytes item = 2;
+  repeated dr2_comm_pb.pb_item item = 2;
   optional int32 energy = 3;
 }
 
 message pbreq_energy_hero {
   optional sint32 hid = 1;
-  optional bytes qlc = 2;
+  optional dr2_comm_pb.pb_hero_qlc qlc = 2;
   optional sint32 energy = 3;
 }
 
@@ -831,7 +833,7 @@ message pbreq_op_mail {
 
 message pbrsp_op_mail {
   required sint32 status = 1;
-  optional bytes affix = 2;
+  optional dr2_comm_pb.pb_bag affix = 2;
 }
 
 message pbreq_send_mail {
@@ -846,13 +848,13 @@ message pbrsp_send_mail {
 }
 
 message pbreq_sell {
-  repeated bytes items = 1;
-  repeated bytes equips = 2;
+  repeated dr2_comm_pb.pb_item items = 1;
+  repeated dr2_comm_pb.pb_equip equips = 2;
 }
 
 message pbrsp_sell {
   required sint32 status = 1;
-  optional bytes item = 2;
+  optional dr2_comm_pb.pb_item item = 2;
 }
 
 message pbreq_midas {
@@ -864,17 +866,17 @@ message pbrsp_midas {
 }
 
 message pbreq_merge_treasure {
-  required bytes item = 1;
+  required dr2_comm_pb.pb_item item = 1;
 }
 
 message pbrsp_merge_treasure {
   required sint32 status = 1;
-  repeated bytes equip = 2;
+  repeated dr2_comm_pb.pb_equip equip = 2;
 }
 
 message pbreq_up_treasure {
   required int32 id = 1;
-  repeated bytes source = 2;
+  repeated dr2_comm_pb.pb_item source = 2;
   optional int32 hid = 3;
 }
 
@@ -900,7 +902,7 @@ message pbreq_exchange_act {
 
 message pbrsp_exchange_act {
   required sint32 status = 1;
-  optional bytes affix = 2;
+  optional dr2_comm_pb.pb_bag affix = 2;
 }
 
 message pbreq_open_gift {
@@ -911,7 +913,7 @@ message pbreq_open_gift {
 
 message pbrsp_open_gift {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_dwarf {
@@ -922,16 +924,16 @@ message pbreq_dwarf {
 
 message pbrsp_dwarf {
   required sint32 status = 1;
-  repeated bytes reward = 2;
+  repeated dr2_comm_pb.pb_equip reward = 2;
 }
 
 message pbreq_equip_resolve {
-  repeated bytes equips = 1;
+  repeated dr2_comm_pb.pb_equip equips = 1;
 }
 
 message pbrsp_equip_resolve {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_item reward = 2;
 }
 
 message pbreq_equip_soul {
@@ -952,7 +954,7 @@ message pbreq_equip_soul_ok {
 
 message pbrsp_equip_soul_ok {
   required sint32 status = 1;
-  optional bytes equip = 2;
+  optional dr2_comm_pb.pb_equip equip = 2;
 }
 
 message pbreq_equip_soul_sync {
@@ -968,13 +970,13 @@ message pbrsp_equip_soul_sync {
 
 message pbreq_dwarf_change {
   required int32 id = 1;
-  repeated bytes src = 2;
+  repeated dr2_comm_pb.pb_equip src = 2;
   optional int32 dst = 3;
 }
 
 message pbrsp_dwarf_change {
   required sint32 status = 1;
-  repeated bytes reward = 2;
+  repeated dr2_comm_pb.pb_equip reward = 2;
 }
 
 message pbreq_exchange_skin {
@@ -992,9 +994,9 @@ message pbreq_collect_sync {
 
 message pbrsp_collect_sync {
   required sint32 status = 1;
-  optional bytes data = 2;
-  repeated bytes bag = 3;
-  repeated bytes summon = 4;
+  optional dr2_comm_pb.pb_kvs data = 2;
+  repeated dr2_comm_pb.pb_kv bag = 3;
+  repeated dr2_comm_pb.pb_kv2 summon = 4;
   optional int64 emblem = 5;
 }
 
@@ -1005,12 +1007,12 @@ message pbreq_collect_summon {
 
 message pbrsp_collect_summon {
   required sint32 status = 1;
-  repeated bytes reward = 2;
+  repeated dr2_comm_pb.pb_kv2 reward = 2;
   repeated sint32 count = 3;
 }
 
 message pbreq_collect_up {
-  repeated bytes id_lv = 1;
+  repeated dr2_comm_pb.pb_kv id_lv = 1;
 }
 
 message pbrsp_collect_up {
@@ -1018,13 +1020,13 @@ message pbrsp_collect_up {
 }
 
 message pbreq_collect_handler {
-  repeated bytes coll = 1;
+  repeated dr2_comm_pb.pb_item coll = 1;
   optional sint32 type = 2;
 }
 
 message pbrsp_collect_handler {
   required sint32 status = 1;
-  repeated bytes reward = 2;
+  repeated dr2_comm_pb.pb_item reward = 2;
 }
 
 message pbreq_collect_reward {
@@ -1034,7 +1036,7 @@ message pbreq_collect_reward {
 
 message pbrsp_collect_reward {
   required sint32 status = 1;
-  optional bytes rewards = 2;
+  optional dr2_comm_pb.pb_bag rewards = 2;
 }
 
 message pbreq_collect_goods_rank {
@@ -1042,7 +1044,7 @@ message pbreq_collect_goods_rank {
 
 message pbrsp_collect_goods_rank {
   required sint32 status = 1;
-  optional bytes rank = 2;
+  optional dr2_comm_pb.pb_smbrs rank = 2;
 }
 
 message pbreq_collect_select {
@@ -1076,7 +1078,7 @@ message pbreq_sync_chat {
 }
 
 message pbrsp_sync_chat {
-  repeated bytes msgs = 1;
+  repeated dr2_comm_pb.pb_chat msgs = 1;
 }
 
 message pbreq_chat {
@@ -1096,7 +1098,7 @@ message pbreq_cunit {
 
 message pbrsp_cunit {
   required sint32 status = 1;
-  optional bytes unit = 2;
+  optional dr2_comm_pb.pb_cunit unit = 2;
 }
 
 message pbreq_block_chat {
@@ -1146,14 +1148,14 @@ message pbreq_get_block_chat {
 
 message pbrsp_get_block_chat {
   required int32 status = 1;
-  repeated bytes frds = 2;
+  repeated dr2_comm_pb.pb_frd frds = 2;
 }
 
 message pbreq_sync_recruit {
 }
 
 message pbrsp_sync_recruit {
-  repeated bytes msgs = 1;
+  repeated dr2_comm_pb.pb_chat msgs = 1;
 }
 
 message pbreq_report {
@@ -1174,7 +1176,7 @@ message pbrsp_bmarket_pull {
   required sint32 status = 1;
   required int32 cd = 2;
   repeated int32 buy = 3;
-  repeated bytes good = 4;
+  repeated dr2_comm_pb.pb_good good = 4;
 }
 
 message pbreq_bmarket_buy {
@@ -1183,14 +1185,14 @@ message pbreq_bmarket_buy {
 
 message pbrsp_bmarket_buy {
   required sint32 status = 1;
-  optional bytes bag = 2;
+  optional dr2_comm_pb.pb_bag bag = 2;
 }
 
 message pbreq_hook_init {
 }
 
 message pbrsp_hook_init {
-  required bytes hook = 1;
+  required dr2_comm_pb.pb_hook hook = 1;
 }
 
 message pbreq_hook_change {
@@ -1199,7 +1201,7 @@ message pbreq_hook_change {
 
 message pbrsp_hook_change {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
   optional int32 boss_cd = 3;
 }
 
@@ -1208,7 +1210,7 @@ message pbreq_hook_ask {
 
 message pbrsp_hook_ask {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_hook_reward {
@@ -1217,11 +1219,11 @@ message pbreq_hook_reward {
 
 message pbrsp_hook_reward {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_test_fight {
-  repeated bytes camp = 1;
+  repeated dr2_comm_pb.pb_unit camp = 1;
 }
 
 message pbrsp_test_fight {
@@ -1230,33 +1232,33 @@ message pbrsp_test_fight {
 }
 
 message pbreq_pve {
-  repeated bytes camp = 1;
+  repeated dr2_comm_pb.pb_unit camp = 1;
   optional int32 tid = 2;
   optional int32 auto = 3;
 }
 
 message pbrsp_pve {
   required int32 status = 1;
-  optional bytes video = 2;
+  optional dr2_comm_pb.pb_evideo video = 2;
 }
 
 message pbreq_st_pve {
-  repeated bytes camp = 1;
+  repeated dr2_comm_pb.pb_unit camp = 1;
   optional sint32 auto = 2;
 }
 
 message pbrsp_st_pve {
   required int32 status = 1;
-  repeated bytes video = 2;
+  repeated dr2_comm_pb.pb_evideo video = 2;
 }
 
 message pbreq_hook_select_item {
-  repeated bytes ids = 1;
+  repeated dr2_comm_pb.pb_item ids = 1;
 }
 
 message pbrsp_hook_select_item {
   required int32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_sync_brave {
@@ -1266,23 +1268,23 @@ message pbrsp_sync_brave {
   required sint32 status = 1;
   optional int32 id = 2;
   optional int32 stage = 3;
-  repeated bytes team = 4;
+  repeated dr2_comm_pb.pb_bunit team = 4;
   optional int32 cd = 5;
-  optional bytes enemy = 6;
+  optional dr2_comm_pb.pb_benemy enemy = 6;
   repeated int32 nodes = 7;
-  repeated bytes boxes = 8;
-  repeated bytes buffs = 9;
+  repeated dr2_comm_pb.pb_brave_box boxes = 8;
+  repeated dr2_comm_pb.pb_brave_buff buffs = 9;
   optional int32 energy = 10;
   repeated int32 times = 11;
   optional int32 spe = 12;
-  repeated bytes enemy_buffs = 13;
+  repeated dr2_comm_pb.pb_brave_buff enemy_buffs = 13;
   optional int32 day_times = 14;
   optional int32 night_times = 15;
   optional int32 sweep_stage = 16;
 }
 
 message pbreq_brave_fight {
-  repeated bytes camp = 1;
+  repeated dr2_comm_pb.pb_unit camp = 1;
 }
 
 message pbrsp_brave_fight {
@@ -1290,15 +1292,15 @@ message pbrsp_brave_fight {
   optional int32 stage = 2;
   optional bool win = 3;
   repeated bytes frames = 4;
-  repeated bytes hurts = 5;
-  optional bytes enemy = 6;
-  repeated bytes mhpp = 7;
-  repeated bytes ehpp = 8;
-  repeated bytes rewards = 9;
+  repeated dr2_comm_pb.pb_hurts hurts = 5;
+  optional dr2_comm_pb.pb_benemy enemy = 6;
+  repeated dr2_comm_pb.pb_bunit mhpp = 7;
+  repeated dr2_comm_pb.pb_bunit ehpp = 8;
+  repeated dr2_comm_pb.pb_bag rewards = 9;
   optional int32 select = 10;
-  repeated bytes boxes = 11;
+  repeated dr2_comm_pb.pb_brave_box boxes = 11;
   optional int32 spe = 12;
-  repeated bytes enemy_buffs = 13;
+  repeated dr2_comm_pb.pb_brave_buff enemy_buffs = 13;
 }
 
 message pbreq_brave_pull {
@@ -1306,9 +1308,9 @@ message pbreq_brave_pull {
 }
 
 message pbrsp_brave_pull {
-  optional bytes enemy = 1;
+  optional dr2_comm_pb.pb_benemy enemy = 1;
   required int32 spe = 2;
-  repeated bytes enemy_buffs = 3;
+  repeated dr2_comm_pb.pb_brave_buff enemy_buffs = 3;
 }
 
 message pbreq_brave_node {
@@ -1317,7 +1319,7 @@ message pbreq_brave_node {
 
 message pbrsp_brave_node {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_iboss_sync1 {
@@ -1326,7 +1328,7 @@ message pbreq_iboss_sync1 {
 message pbrsp_iboss_sync1 {
   required sint32 status = 1;
   repeated uint32 bossids = 2;
-  repeated bytes nodes = 3;
+  repeated dr2_comm_pb.pb_iboss nodes = 3;
 }
 
 message pbreq_iboss_sync2 {
@@ -1335,7 +1337,7 @@ message pbreq_iboss_sync2 {
 
 message pbrsp_iboss_sync2 {
   required sint32 status = 1;
-  repeated bytes nodes = 2;
+  repeated dr2_comm_pb.pb_iboss nodes = 2;
   optional int32 count = 3;
 }
 
@@ -1345,7 +1347,7 @@ message pbreq_iboss_rank {
 
 message pbrsp_iboss_rank {
   required sint32 status = 1;
-  repeated bytes ranklist = 2;
+  repeated dr2_comm_pb.pb_iboss_rank ranklist = 2;
   optional uint32 rank = 3;
   optional int64 score = 4;
   optional int32 rank_cd = 5;
@@ -1362,12 +1364,12 @@ message pbrsp_iboss_start {
 
 message pbreq_iboss_fight {
   optional uint32 bossid = 1;
-  repeated bytes camp = 2;
+  repeated dr2_comm_pb.pb_unit camp = 2;
 }
 
 message pbrsp_iboss_fight {
   required sint32 status = 1;
-  optional bytes video = 2;
+  optional dr2_comm_pb.pb_evideo video = 2;
   optional int32 hp = 3;
   repeated int32 hpps = 4;
   optional int64 score = 5;
@@ -1400,7 +1402,7 @@ message pbreq_gt_sync2 {
 message pbrsp_gt_sync2 {
   required sint32 status = 1;
   optional uint32 lv = 2;
-  repeated bytes gt_nodes = 3;
+  repeated dr2_comm_pb.pb_gt_node gt_nodes = 3;
   optional uint32 prog = 4;
   optional uint32 vit = 5;
   optional uint32 buy = 6;
@@ -1412,7 +1414,7 @@ message pbreq_gt_node {
 
 message pbrsp_gt_node {
   required sint32 status = 1;
-  repeated bytes pbcamp = 2;
+  repeated dr2_comm_pb.pb_unit pbcamp = 2;
   optional int64 msgid = 3;
 }
 
@@ -1421,13 +1423,13 @@ message pbreq_gt_fight {
   optional int64 msgid = 2;
   optional uint32 teamid = 3;
   optional uint32 pitid = 4;
-  repeated bytes pbcamp = 5;
+  repeated dr2_comm_pb.pb_unit pbcamp = 5;
   optional uint32 tid = 6;
 }
 
 message pbrsp_gt_fight {
   required sint32 status = 1;
-  optional bytes video = 2;
+  optional dr2_comm_pb.pb_gvideo video = 2;
 }
 
 message pbreq_gt_logs {
@@ -1435,7 +1437,7 @@ message pbreq_gt_logs {
 
 message pbrsp_gt_logs {
   required sint32 status = 1;
-  repeated bytes logs = 2;
+  repeated dr2_comm_pb.pb_gt_log logs = 2;
 }
 
 message pbreq_gt_video {
@@ -1444,7 +1446,7 @@ message pbreq_gt_video {
 
 message pbrsp_gt_video {
   required sint32 status = 1;
-  optional bytes video = 2;
+  optional dr2_comm_pb.pb_gvideo video = 2;
 }
 
 message pbreq_gt_ask {
@@ -1452,7 +1454,7 @@ message pbreq_gt_ask {
 
 message pbrsp_gt_ask {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
   optional uint32 lv = 3;
   optional uint32 secs = 4;
   optional uint32 mapid = 5;
@@ -1463,7 +1465,7 @@ message pbreq_gt_reward {
 
 message pbrsp_gt_reward {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
   optional bool finish = 3;
 }
 
@@ -1481,7 +1483,7 @@ message pbreq_brave_open {
 
 message pbrsp_brave_open {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_brave_altar {
@@ -1491,7 +1493,7 @@ message pbreq_brave_altar {
 
 message pbrsp_brave_altar {
   required sint32 status = 1;
-  optional bytes buff = 2;
+  optional dr2_comm_pb.pb_brave_buff buff = 2;
 }
 
 message pbreq_brave_buy {
@@ -1507,7 +1509,7 @@ message pbreq_brave_shop {
 
 message pbrsp_brave_shop {
   required sint32 status = 1;
-  repeated bytes goods = 2;
+  repeated dr2_comm_pb.pb_kv goods = 2;
   optional int32 cd = 3;
 }
 
@@ -1524,7 +1526,7 @@ message pbreq_pve_rank {
 }
 
 message pbrsp_pve_rank {
-  repeated bytes mbrs = 1;
+  repeated dr2_comm_pb.pb_trial mbrs = 1;
   required int32 rank = 2;
 }
 
@@ -1540,7 +1542,7 @@ message pbrsp_sealand_sync {
   optional int32 sweep_times = 6;
   repeated int32 stages = 7;
   optional int32 free_sweep = 8;
-  repeated bytes goods = 9;
+  repeated dr2_comm_pb.pb_hmarket goods = 9;
 }
 
 message pbreq_sealand_challenge_buy {
@@ -1553,7 +1555,7 @@ message pbrsp_sealand_challenge_buy {
 
 message pbreq_sealand_fight {
   required int32 id = 1;
-  repeated bytes camp = 2;
+  repeated dr2_comm_pb.pb_unit camp = 2;
 }
 
 message pbrsp_sealand_fight {
@@ -1561,7 +1563,7 @@ message pbrsp_sealand_fight {
   optional int32 stage = 2;
   optional bool win = 3;
   repeated bytes frames = 4;
-  repeated bytes hurts = 5;
+  repeated dr2_comm_pb.pb_hurts hurts = 5;
 }
 
 message pbreq_sealand_reward {
@@ -1595,17 +1597,17 @@ message pbreq_brave_sweep {
 
 message pbrsp_brave_sweep {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_st_hard_fight {
-  repeated bytes camp = 1;
+  repeated dr2_comm_pb.pb_unit camp = 1;
   optional uint32 index = 2;
 }
 
 message pbrsp_st_hard_fight {
   required int32 status = 1;
-  repeated bytes video = 2;
+  repeated dr2_comm_pb.pb_evideo video = 2;
 }
 
 message pbreq_st_hard_ranklist {
@@ -1614,7 +1616,7 @@ message pbreq_st_hard_ranklist {
 
 message pbrsp_st_hard_ranklist {
   required sint32 status = 1;
-  repeated bytes ranklist = 2;
+  repeated dr2_comm_pb.pb_wmbr ranklist = 2;
 }
 
 message pbreq_st_hard_clean {
@@ -1628,11 +1630,11 @@ message pbreq_frd_sync {
 }
 
 message pbrsp_frd_sync {
-  repeated bytes friends = 1;
+  repeated dr2_comm_pb.pb_frd friends = 1;
   required int32 love = 2;
   required int32 cd = 3;
-  repeated bytes apply = 4;
-  repeated bytes recmd = 5;
+  repeated dr2_comm_pb.pb_frd apply = 4;
+  repeated dr2_comm_pb.pb_frd recmd = 5;
 }
 
 message pbreq_frd_op {
@@ -1658,19 +1660,19 @@ message pbrsp_frd_love {
 message pbrsp_frd_notify {
   optional int64 love = 1;
   optional int64 del = 2;
-  optional bytes add = 3;
-  optional bytes apply = 4;
+  optional dr2_comm_pb.pb_frd add = 3;
+  optional dr2_comm_pb.pb_frd apply = 4;
 }
 
 message pbreq_frd_pk {
   required int64 uid = 1;
-  repeated bytes camp = 2;
+  repeated dr2_comm_pb.pb_unit camp = 2;
   optional int32 tid = 3;
 }
 
 message pbrsp_frd_pk {
   required int32 status = 1;
-  optional bytes video = 2;
+  optional dr2_comm_pb.pb_pvideo video = 2;
 }
 
 message pbreq_frd_advise {
@@ -1678,7 +1680,7 @@ message pbreq_frd_advise {
 
 message pbrsp_frd_advise {
   required int32 status = 1;
-  repeated bytes frds = 2;
+  repeated dr2_comm_pb.pb_frd frds = 2;
 }
 
 message pbreq_pull_casino {
@@ -1688,9 +1690,9 @@ message pbreq_pull_casino {
 
 message pbrsp_pull_casino {
   required sint32 status = 1;
-  repeated bytes items = 2;
+  repeated dr2_comm_pb.pb_casino_item items = 2;
   required int32 cd = 3;
-  repeated bytes msgs = 4;
+  repeated dr2_comm_pb.pb_casino_msg msgs = 4;
   optional int32 force_cd = 5;
 }
 
@@ -1701,7 +1703,7 @@ message pbreq_casino_msg {
 
 message pbrsp_casino_msg {
   required sint32 status = 1;
-  repeated bytes msgs = 2;
+  repeated dr2_comm_pb.pb_casino_msg msgs = 2;
 }
 
 message pbreq_casino_draw {
@@ -1712,7 +1714,7 @@ message pbreq_casino_draw {
 message pbrsp_casino_draw {
   required sint32 status = 1;
   repeated int32 ids = 2;
-  optional bytes bag = 3;
+  optional dr2_comm_pb.pb_bag bag = 3;
   optional int32 lucky_coin = 4;
 }
 
@@ -1731,7 +1733,7 @@ message pbreq_lmarket_pull {
 message pbrsp_lmarket_pull {
   required sint32 status = 1;
   required int32 cd = 2;
-  repeated bytes goods = 3;
+  repeated dr2_comm_pb.pb_good goods = 3;
 }
 
 message pbreq_lmarket_buy {
@@ -1740,7 +1742,7 @@ message pbreq_lmarket_buy {
 
 message pbrsp_lmarket_buy {
   required sint32 status = 1;
-  required bytes bag = 2;
+  required dr2_comm_pb.pb_bag bag = 2;
 }
 
 message pbreq_guild_sync {
@@ -1748,8 +1750,8 @@ message pbreq_guild_sync {
 
 message pbrsp_guild_sync {
   required sint32 status = 1;
-  optional bytes guild = 2;
-  repeated bytes members = 3;
+  optional dr2_comm_pb.pb_guild guild = 2;
+  repeated dr2_comm_pb.pb_gmember members = 3;
   optional int32 sign_cd = 4;
   optional int32 appliers_count = 5;
   optional int32 invite = 6;
@@ -1761,7 +1763,7 @@ message pbreq_guild_rank {
 }
 
 message pbrsp_guild_rank {
-  repeated bytes guilds = 1;
+  repeated dr2_comm_pb.pb_guild guilds = 1;
   optional int32 self = 2;
 }
 
@@ -1769,7 +1771,7 @@ message pbreq_glog {
 }
 
 message pbrsp_glog {
-  repeated bytes logs = 1;
+  repeated dr2_comm_pb.pb_glog logs = 1;
 }
 
 message pbreq_guild_create {
@@ -1835,7 +1837,7 @@ message pbreq_guild_sign {
 
 message pbrsp_guild_sign {
   required sint32 status = 1;
-  repeated bytes item = 2;
+  repeated dr2_comm_pb.pb_item item = 2;
   optional int32 cd = 3;
 }
 
@@ -1843,7 +1845,7 @@ message pbreq_guild_recommend {
 }
 
 message pbrsp_guild_recommend {
-  repeated bytes guilds = 1;
+  repeated dr2_comm_pb.pb_guild guilds = 1;
 }
 
 message pbreq_guild_search {
@@ -1851,14 +1853,14 @@ message pbreq_guild_search {
 }
 
 message pbrsp_guild_search {
-  repeated bytes guilds = 1;
+  repeated dr2_comm_pb.pb_guild guilds = 1;
 }
 
 message pbreq_guild_appliers {
 }
 
 message pbrsp_guild_appliers {
-  repeated bytes mems = 1;
+  repeated dr2_comm_pb.pb_gmember mems = 1;
 }
 
 message pbreq_gmember_opt {
@@ -1890,12 +1892,12 @@ message pbreq_gboss_rank {
 }
 
 message pbrsp_gboss_rank {
-  repeated bytes ranks = 1;
+  repeated dr2_comm_pb.pb_gvrank ranks = 1;
 }
 
 message pbreq_gboss_fight {
   required int32 id = 1;
-  repeated bytes camp = 2;
+  repeated dr2_comm_pb.pb_unit camp = 2;
   optional int32 tid = 3;
 }
 
@@ -1903,7 +1905,7 @@ message pbrsp_gboss_fight {
   required sint32 status = 1;
   optional bool win = 2;
   repeated bytes frames = 3;
-  repeated bytes hurts = 4;
+  repeated dr2_comm_pb.pb_hurts hurts = 4;
   repeated int32 hpps = 5;
   optional int32 exp = 6;
 }
@@ -1912,7 +1914,7 @@ message pbreq_gskl_sync {
 }
 
 message pbrsp_gskl_sync {
-  repeated bytes skls = 1;
+  repeated dr2_comm_pb.pb_gskl skls = 1;
 }
 
 message pbreq_gskl_up {
@@ -1929,7 +1931,7 @@ message pbreq_gskl_reset {
 
 message pbrsp_gskl_reset {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_gfire_sync {
@@ -1955,7 +1957,7 @@ message pbrsp_gfire_reg {
 }
 
 message pbreq_gfire_fight {
-  repeated bytes camp = 1;
+  repeated dr2_comm_pb.pb_unit camp = 1;
   optional int32 tid = 2;
 }
 
@@ -1963,7 +1965,7 @@ message pbrsp_gfire_fight {
   required int32 status = 1;
   optional bool win = 2;
   repeated bytes frames = 3;
-  repeated bytes hurts = 4;
+  repeated dr2_comm_pb.pb_hurts hurts = 4;
   repeated int32 hpps = 5;
 }
 
@@ -1971,7 +1973,7 @@ message pbreq_gfire_rank {
 }
 
 message pbrsp_gfire_rank {
-  repeated bytes ranks = 1;
+  repeated dr2_comm_pb.pb_gvrank ranks = 1;
   optional int64 hurts = 2;
 }
 
@@ -1995,7 +1997,7 @@ message pbreq_gve_rank {
 
 message pbrsp_gve_rank {
   required sint32 status = 1;
-  repeated bytes rank = 2;
+  repeated dr2_comm_pb.pb_gve_rank rank = 2;
   repeated int64 maps_exp = 3;
 }
 
@@ -2006,7 +2008,7 @@ message pbreq_gve_fight {
 
 message pbrsp_gve_fight {
   required sint32 status = 1;
-  optional bytes video = 2;
+  optional dr2_comm_pb.pb_evideo video = 2;
 }
 
 message pbreq_gve_task {
@@ -2016,7 +2018,7 @@ message pbreq_gve_task {
 
 message pbrsp_gve_task {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_gve_claim {
@@ -2024,7 +2026,7 @@ message pbreq_gve_claim {
 
 message pbrsp_gve_claim {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_gve_map_claim {
@@ -2044,13 +2046,13 @@ message pbrsp_gvm_sync_world {
   optional int64 gud_score = 2;
   optional int32 gud_rank = 3;
   optional int32 cd = 4;
-  repeated bytes maps_info = 5;
+  repeated dr2_comm_pb.pb_gvm_map maps_info = 5;
   optional int32 xnum = 6;
   optional int32 bt_cd = 7;
   optional int32 bnum = 8;
-  repeated bytes tasks = 9;
-  repeated bytes bag = 10;
-  repeated bytes unselect = 11;
+  repeated dr2_comm_pb.pb_task tasks = 9;
+  repeated dr2_comm_pb.pb_gvm_stone bag = 10;
+  repeated dr2_comm_pb.pb_gvm_stone unselect = 11;
   repeated int32 up_heros = 12;
   repeated int32 pass_id = 13;
   optional int32 map_id = 14;
@@ -2066,7 +2068,7 @@ message pbrsp_gvm_fight_sync {
   required sint32 status = 1;
   optional int64 value1 = 2;
   optional int64 value2 = 3;
-  repeated bytes mbrs = 4;
+  repeated dr2_comm_pb.pb_gvm_mbr mbrs = 4;
   repeated int32 buff_num = 5;
   optional int32 boss_id = 6;
   optional int32 per_hp = 7;
@@ -2075,18 +2077,18 @@ message pbrsp_gvm_fight_sync {
 message pbreq_gvm_fight {
   optional int32 id = 1;
   optional int32 boss = 2;
-  repeated bytes camp = 3;
+  repeated dr2_comm_pb.pb_unit camp = 3;
   optional int32 tid = 4;
 }
 
 message pbrsp_gvm_fight {
   required sint32 status = 1;
-  optional bytes video = 2;
-  repeated bytes stones = 3;
+  optional dr2_comm_pb.pb_evideo video = 2;
+  repeated dr2_comm_pb.pb_gvm_stone stones = 3;
   optional string score = 4;
   optional int32 boss_id = 5;
   repeated int32 per_hp = 6;
-  repeated bytes nodes = 7;
+  repeated dr2_comm_pb.pb_gvm_map_node nodes = 7;
   optional string hurt_boss = 8;
   optional bool sweep = 9;
   optional bool show = 10;
@@ -2107,7 +2109,7 @@ message pbreq_gvm_map_sync {
 
 message pbrsp_gvm_map_sync {
   required sint32 status = 1;
-  repeated bytes node = 2;
+  repeated dr2_comm_pb.pb_gvm_map_node node = 2;
   optional bool sweep = 3;
 }
 
@@ -2149,8 +2151,8 @@ message pbreq_gvm_rank {
 
 message pbrsp_gvm_rank {
   required sint32 status = 1;
-  repeated bytes guds = 2;
-  repeated bytes mbrs = 3;
+  repeated dr2_comm_pb.pb_gvm_rank guds = 2;
+  repeated dr2_comm_pb.pb_gvm_mbr mbrs = 3;
   optional int32 rank_self = 4;
   optional int64 score_self = 5;
 }
@@ -2160,7 +2162,7 @@ message pbreq_gvm_reset_map {
 
 message pbrsp_gvm_reset_map {
   required sint32 status = 1;
-  repeated bytes nodes = 2;
+  repeated dr2_comm_pb.pb_gvm_map_node nodes = 2;
 }
 
 message pbreq_gvm_sweep {
@@ -2170,10 +2172,10 @@ message pbreq_gvm_sweep {
 
 message pbrsp_gvm_sweep {
   required sint32 status = 1;
-  repeated bytes stone = 2;
+  repeated dr2_comm_pb.pb_gvm_stone stone = 2;
   optional sint32 buff = 3;
-  repeated bytes tasks = 4;
-  repeated bytes nodes = 5;
+  repeated dr2_comm_pb.pb_task tasks = 4;
+  repeated dr2_comm_pb.pb_gvm_map_node nodes = 5;
 }
 
 message pbreq_trial {
@@ -2190,17 +2192,17 @@ message pbreq_trial_rank {
 }
 
 message pbrsp_trial_rank {
-  repeated bytes rank = 1;
+  repeated dr2_comm_pb.pb_trial rank = 1;
 }
 
 message pbreq_trial_fight {
-  repeated bytes camp = 1;
+  repeated dr2_comm_pb.pb_unit camp = 1;
   optional int32 tid = 2;
 }
 
 message pbrsp_trial_fight {
   required sint32 status = 1;
-  optional bytes video = 2;
+  optional dr2_comm_pb.pb_evideo video = 2;
 }
 
 message pbreq_trial_video {
@@ -2208,7 +2210,7 @@ message pbreq_trial_video {
 
 message pbrsp_trial_video {
   required sint32 status = 1;
-  repeated bytes videos = 2;
+  repeated dr2_comm_pb.pb_trial videos = 2;
 }
 
 message pbreq_trial_tl {
@@ -2221,13 +2223,13 @@ message pbrsp_trial_tl {
 
 message pbreq_dream_fight {
   required int32 id = 1;
-  repeated bytes camp = 2;
+  repeated dr2_comm_pb.pb_unit camp = 2;
   optional int32 tid = 3;
 }
 
 message pbrsp_dream_fight {
   required sint32 status = 1;
-  optional bytes video = 2;
+  optional dr2_comm_pb.pb_evideo video = 2;
 }
 
 message pbreq_dream_rank {
@@ -2235,7 +2237,7 @@ message pbreq_dream_rank {
 
 message pbrsp_dream_rank {
   required sint32 status = 1;
-  repeated bytes rank = 2;
+  repeated dr2_comm_pb.pb_trial rank = 2;
 }
 
 message pbreq_dream_diff {
@@ -2245,7 +2247,7 @@ message pbreq_dream_diff {
 message pbrsp_dream_diff {
   required sint32 status = 1;
   repeated int32 monsters = 3;
-  repeated bytes bufs = 4;
+  repeated dr2_comm_pb.pb_kv bufs = 4;
 }
 
 message pbreq_dream_reward {
@@ -2253,7 +2255,7 @@ message pbreq_dream_reward {
 
 message pbrsp_dream_reward {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_dream_buy {
@@ -2274,12 +2276,12 @@ message pbrsp_dream_sync {
   repeated int32 ids = 4;
   repeated int32 diff = 5;
   optional int32 reset = 6;
-  optional bytes reward = 7;
+  optional dr2_comm_pb.pb_bag reward = 7;
   required int32 season = 8;
   optional int32 water = 9;
   optional int32 cd = 10;
   repeated int32 monsters = 11;
-  repeated bytes bufs = 12;
+  repeated dr2_comm_pb.pb_kv bufs = 12;
 }
 
 message pbreq_dream_sel_buf {
@@ -2295,13 +2297,13 @@ message pbreq_pvp_sync {
 }
 
 message pbrsp_pvp_sync {
-  repeated bytes infos = 1;
-  optional bytes wpvp = 2;
+  repeated dr2_comm_pb.pb_pvp infos = 1;
+  optional dr2_comm_pb.pb_wpvp wpvp = 2;
 }
 
 message pbreq_pvp_camp {
   optional int32 id = 1;
-  repeated bytes camp = 2;
+  repeated dr2_comm_pb.pb_unit camp = 2;
 }
 
 message pbrsp_pvp_camp {
@@ -2314,21 +2316,21 @@ message pbreq_pvp_refresh {
 
 message pbrsp_pvp_refresh {
   required int32 status = 1;
-  repeated bytes rivals = 2;
+  repeated dr2_comm_pb.pb_pmbr rivals = 2;
 }
 
 message pbreq_pvp_fight {
   required int32 id = 1;
   required int32 uid = 2;
-  repeated bytes camp = 3;
+  repeated dr2_comm_pb.pb_unit camp = 3;
   optional int32 svr_id = 4;
   optional int32 tid = 5;
 }
 
 message pbrsp_pvp_fight {
   required int32 status = 1;
-  optional bytes video = 2;
-  repeated bytes videos = 3;
+  optional dr2_comm_pb.pb_pvideo video = 2;
+  repeated dr2_comm_pb.pb_pvideo videos = 3;
   optional int32 cd = 4;
 }
 
@@ -2338,7 +2340,7 @@ message pbreq_plogs {
 
 message pbrsp_plogs {
   required int32 status = 1;
-  repeated bytes logs = 2;
+  repeated dr2_comm_pb.pb_plog logs = 2;
 }
 
 message pbreq_pvp_rank {
@@ -2347,7 +2349,7 @@ message pbreq_pvp_rank {
 
 message pbrsp_pvp_rank {
   required int32 status = 1;
-  repeated bytes members = 2;
+  repeated dr2_comm_pb.pb_pmbr members = 2;
 }
 
 message pbreq_video {
@@ -2357,7 +2359,7 @@ message pbreq_video {
 
 message pbrsp_video {
   required sint32 status = 1;
-  optional bytes video = 2;
+  optional dr2_comm_pb.pb_pvideo video = 2;
 }
 
 message pbreq_pvp_ticket {
@@ -2373,7 +2375,7 @@ message pbreq_pmarket {
 
 message pbrsp_pmarket {
   required sint32 status = 1;
-  repeated bytes item = 2;
+  repeated dr2_comm_pb.pb_hmarket item = 2;
 }
 
 message pbreq_pmarket_buy {
@@ -2390,7 +2392,7 @@ message pbreq_joinpvp_sync {
 
 message pbrsp_joinpvp_sync {
   required sint32 status = 1;
-  optional bytes self = 2;
+  optional dr2_comm_pb.pb_pmbr self = 2;
 }
 
 message pbreq_p3p_sync {
@@ -2398,13 +2400,13 @@ message pbreq_p3p_sync {
 
 message pbrsp_p3p_sync {
   required sint32 status = 1;
-  optional bytes self = 2;
-  repeated bytes members = 3;
+  optional dr2_comm_pb.pb_p3pmbr self = 2;
+  repeated dr2_comm_pb.pb_p3pmbr members = 3;
   optional int32 wid = 4;
 }
 
 message pbreq_p3p_camp {
-  repeated bytes camp = 1;
+  repeated dr2_comm_pb.pb_unit camp = 1;
 }
 
 message pbrsp_p3p_camp {
@@ -2416,19 +2418,19 @@ message pbreq_p3p_match {
 
 message pbrsp_p3p_match {
   required int32 status = 1;
-  repeated bytes def1 = 2;
-  repeated bytes def2 = 3;
-  repeated bytes def3 = 4;
+  repeated dr2_comm_pb.pb_p3pmbr def1 = 2;
+  repeated dr2_comm_pb.pb_p3pmbr def2 = 3;
+  repeated dr2_comm_pb.pb_p3pmbr def3 = 4;
 }
 
 message pbreq_p3p_fight {
   required int64 uid = 1;
-  repeated bytes camp = 2;
+  repeated dr2_comm_pb.pb_unit camp = 2;
 }
 
 message pbrsp_p3p_fight {
   required int32 status = 1;
-  optional bytes video = 2;
+  optional dr2_comm_pb.pb_p3pvideo video = 2;
 }
 
 message pbreq_p3p_honor {
@@ -2437,7 +2439,7 @@ message pbreq_p3p_honor {
 
 message pbrsp_p3p_honor {
   required int32 status = 1;
-  repeated bytes mbrs = 2;
+  repeated dr2_comm_pb.pb_p3pmbr mbrs = 2;
 }
 
 message pbreq_p3p_logs {
@@ -2445,7 +2447,7 @@ message pbreq_p3p_logs {
 
 message pbrsp_p3p_logs {
   required int32 status = 1;
-  repeated bytes logs = 2;
+  repeated dr2_comm_pb.pb_p3plog logs = 2;
 }
 
 message pbreq_p3p_video {
@@ -2454,7 +2456,7 @@ message pbreq_p3p_video {
 
 message pbrsp_p3p_video {
   required int32 status = 1;
-  optional bytes video = 2;
+  optional dr2_comm_pb.pb_p3pvideo video = 2;
 }
 
 message pbreq_p3p_info {
@@ -2463,11 +2465,11 @@ message pbreq_p3p_info {
 
 message pbrsp_p3p_info {
   required int32 status = 1;
-  repeated bytes unit = 2;
+  repeated dr2_comm_pb.pb_unit unit = 2;
 }
 
 message pbreq_fpk_camp {
-  repeated bytes camp = 1;
+  repeated dr2_comm_pb.pb_unit camp = 1;
   optional int32 tid = 2;
 }
 
@@ -2488,14 +2490,14 @@ message pbrsp_spvp_sync {
   optional sint32 cur_times = 7;
   optional sint32 def_score = 8;
   optional sint32 season = 9;
-  repeated bytes camp = 10;
+  repeated dr2_comm_pb.pb_unit camp = 10;
   optional int64 power = 11;
-  repeated bytes match = 12;
-  repeated bytes h_bag = 13;
+  repeated dr2_comm_pb.pb_match match = 12;
+  repeated dr2_comm_pb.pb_match_hero h_bag = 13;
 }
 
 message pbreq_spvp_camp {
-  repeated bytes camp = 1;
+  repeated dr2_comm_pb.pb_unit camp = 1;
 }
 
 message pbrsp_spvp_camp {
@@ -2507,20 +2509,20 @@ message pbreq_spvp_rank {
 
 message pbrsp_spvp_rank {
   required sint32 status = 1;
-  repeated bytes rank = 2;
-  repeated bytes last_rank = 3;
+  repeated dr2_comm_pb.pb_smbrs rank = 2;
+  repeated dr2_comm_pb.pb_smbrs last_rank = 3;
   optional int32 score = 4;
 }
 
 message pbreq_spvp_fight {
-  repeated bytes camp = 1;
+  repeated dr2_comm_pb.pb_unit camp = 1;
   repeated sint32 pos = 2;
   optional sint32 d_idx = 3;
 }
 
 message pbrsp_spvp_fight {
   required sint32 status = 1;
-  optional bytes video = 2;
+  optional dr2_comm_pb.pb_pvideo video = 2;
 }
 
 message pbreq_spvp_match {
@@ -2528,7 +2530,7 @@ message pbreq_spvp_match {
 
 message pbrsp_spvp_match {
   required sint32 status = 1;
-  repeated bytes match = 2;
+  repeated dr2_comm_pb.pb_match match = 2;
 }
 
 message pbreq_spvp_plunder {
@@ -2538,7 +2540,7 @@ message pbreq_spvp_plunder {
 
 message pbrsp_spvp_plunder {
   required sint32 status = 1;
-  optional bytes accounts = 2;
+  optional dr2_comm_pb.pb_pvp_accounts accounts = 2;
 }
 
 message pbreq_spvp_def {
@@ -2549,7 +2551,7 @@ message pbrsp_spvp_def {
   optional int32 score = 2;
   optional int32 count = 3;
   optional int32 total = 4;
-  repeated bytes def = 5;
+  repeated dr2_comm_pb.pb_match def = 5;
 }
 
 message pbreq_spvp_last_rank {
@@ -2558,7 +2560,7 @@ message pbreq_spvp_last_rank {
 
 message pbrsp_spvp_last_rank {
   required sint32 status = 1;
-  repeated bytes rank = 2;
+  repeated dr2_comm_pb.pb_smbr rank = 2;
 }
 
 message pbreq_spvp_info {
@@ -2567,7 +2569,7 @@ message pbreq_spvp_info {
 
 message pbrsp_spvp_info {
   required int32 status = 1;
-  repeated bytes unit = 2;
+  repeated dr2_comm_pb.pb_unit unit = 2;
   optional int64 power = 3;
 }
 
@@ -2576,9 +2578,9 @@ message pbreq_htask {
 
 message pbrsp_htask {
   required int32 cd = 1;
-  repeated bytes tasks = 2;
+  repeated dr2_comm_pb.pb_htask tasks = 2;
   repeated int32 heads = 3;
-  optional bytes reward = 4;
+  optional dr2_comm_pb.pb_bag reward = 4;
   repeated int32 task_ids = 5;
 }
 
@@ -2598,7 +2600,7 @@ message pbreq_htask_speedup {
 
 message pbrsp_htask_speedup {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_htask_rec {
@@ -2607,7 +2609,7 @@ message pbreq_htask_rec {
 
 message pbrsp_htask_rec {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_htask_gem {
@@ -2617,7 +2619,7 @@ message pbreq_htask_gem {
 
 message pbrsp_htask_gem {
   required sint32 status = 1;
-  repeated bytes tasks = 2;
+  repeated dr2_comm_pb.pb_htask tasks = 2;
 }
 
 message pbreq_htask_add {
@@ -2627,12 +2629,12 @@ message pbreq_htask_add {
 
 message pbrsp_htask_add {
   required sint32 status = 1;
-  optional bytes task = 2;
+  optional dr2_comm_pb.pb_htask task = 2;
 }
 
 message pbreq_htask_auto {
   optional int32 type = 1;
-  repeated bytes info = 2;
+  repeated dr2_comm_pb.pb_htask_info info = 2;
 }
 
 message pbrsp_htask_auto {
@@ -2654,7 +2656,7 @@ message pbreq_achieve_claim {
 
 message pbrsp_achieve_claim {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_achievie_attention {
@@ -2681,7 +2683,7 @@ message pbreq_pay {
 
 message pbrsp_pay {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_fpay {
@@ -2699,7 +2701,7 @@ message pbreq_pay2 {
 
 message pbrsp_pay2 {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_gorder {
@@ -2727,7 +2729,7 @@ message pbreq_gpay {
 
 message pbrsp_gpay {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_chpay {
@@ -2749,17 +2751,17 @@ message pbreq_amznpay {
 
 message pbrsp_amznpay {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
   optional string money = 3;
 }
 
 message pbreq_onepay {
-  repeated bytes items = 1;
+  repeated dr2_comm_pb.pb_onepay items = 1;
 }
 
 message pbrsp_onepay {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
   optional string money = 3;
 }
 
@@ -2768,7 +2770,7 @@ message pbreq_oneforum {
 
 message pbrsp_oneforum {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_gpay2 {
@@ -2781,7 +2783,7 @@ message pbreq_gpay2 {
 
 message pbrsp_gpay2 {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_voucher {
@@ -2791,7 +2793,7 @@ message pbreq_voucher {
 
 message pbrsp_voucher {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_storeinfo {
@@ -2815,7 +2817,7 @@ message pbreq_hmarket_sync {
 
 message pbrsp_hmarket_sync {
   required sint32 status = 1;
-  repeated bytes item = 2;
+  repeated dr2_comm_pb.pb_hmarket item = 2;
 }
 
 message pbreq_brave_market_buy {
@@ -2832,7 +2834,7 @@ message pbreq_brave_market_sync {
 
 message pbrsp_brave_market_sync {
   required sint32 status = 1;
-  repeated bytes item = 2;
+  repeated dr2_comm_pb.pb_hmarket item = 2;
 }
 
 message pbreq_hmarket_refresh {
@@ -2840,7 +2842,7 @@ message pbreq_hmarket_refresh {
 
 message pbrsp_hmarket_refresh {
   required sint32 status = 1;
-  repeated bytes item = 2;
+  repeated dr2_comm_pb.pb_hmarket item = 2;
 }
 
 message pbreq_alogin {
@@ -2849,7 +2851,7 @@ message pbreq_alogin {
 
 message pbrsp_alogin {
   required sint32 status = 1;
-  optional bytes bag = 2;
+  optional dr2_comm_pb.pb_bag bag = 2;
 }
 
 message pbreq_task_claim {
@@ -2866,7 +2868,7 @@ message pbreq_online_claim {
 
 message pbrsp_online_claim {
   required sint32 status = 1;
-  required bytes online = 2;
+  required dr2_comm_pb.pb_online online = 2;
 }
 
 message pbreq_task_convert {
@@ -2874,14 +2876,14 @@ message pbreq_task_convert {
 
 message pbrsp_task_convert {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_fun_info {
 }
 
 message pbrsp_fun_info {
-  repeated bytes infos = 1;
+  repeated dr2_comm_pb.pb_fun infos = 1;
 }
 
 message pbreq_puz_sync {
@@ -2890,8 +2892,8 @@ message pbreq_puz_sync {
 
 message pbrsp_puz_sync {
   required sint32 status = 1;
-  optional bytes puz = 2;
-  repeated bytes mall = 3;
+  optional dr2_comm_pb.pb_puzzle puz = 2;
+  repeated dr2_comm_pb.pb_kv mall = 3;
   optional int32 buy = 4;
   optional bool del = 5;
   optional int32 siz = 6;
@@ -2904,7 +2906,7 @@ message pbreq_puz_buy {
 
 message pbrsp_puz_buy {
   required sint32 status = 1;
-  optional bytes bag = 2;
+  optional dr2_comm_pb.pb_bag bag = 2;
 }
 
 message pbreq_puz_fill {
@@ -2914,8 +2916,8 @@ message pbreq_puz_fill {
 
 message pbrsp_puz_fill {
   required sint32 status = 1;
-  optional bytes puz = 2;
-  repeated bytes pos = 3;
+  optional dr2_comm_pb.pb_puzzle puz = 2;
+  repeated dr2_comm_pb.pb_kv pos = 3;
   optional int32 num = 4;
   optional int32 next = 5;
 }
@@ -2926,7 +2928,7 @@ message pbreq_puz_tear {
 
 message pbrsp_puz_tear {
   required sint32 status = 1;
-  repeated bytes pos = 2;
+  repeated dr2_comm_pb.pb_kv pos = 2;
 }
 
 message pbreq_puz_sure {
@@ -2934,7 +2936,7 @@ message pbreq_puz_sure {
 
 message pbrsp_puz_sure {
   required sint32 status = 1;
-  optional bytes puz = 2;
+  optional dr2_comm_pb.pb_puzzle puz = 2;
   optional int32 num = 3;
 }
 
@@ -2944,7 +2946,7 @@ message pbreq_puz_coin {
 
 message pbrsp_puz_coin {
   required sint32 status = 1;
-  optional bytes bag = 2;
+  optional dr2_comm_pb.pb_bag bag = 2;
   optional int32 next = 3;
 }
 
@@ -2953,8 +2955,8 @@ message pbreq_puz_wipe {
 
 message pbrsp_puz_wipe {
   required sint32 status = 1;
-  optional bytes puz = 2;
-  optional bytes item = 3;
+  optional dr2_comm_pb.pb_puzzle puz = 2;
+  optional dr2_comm_pb.pb_item item = 3;
 }
 
 message pbreq_gmarket_buy {
@@ -2970,7 +2972,7 @@ message pbreq_gmarket_sync {
 
 message pbrsp_gmarket_sync {
   required sint32 status = 1;
-  repeated bytes item = 2;
+  repeated dr2_comm_pb.pb_gmarket item = 2;
   optional int32 cd = 3;
 }
 
@@ -2979,7 +2981,7 @@ message pbreq_gmarket_refresh {
 
 message pbrsp_gmarket_refresh {
   required sint32 status = 1;
-  repeated bytes item = 2;
+  repeated dr2_comm_pb.pb_gmarket item = 2;
 }
 
 message pbreq_gmarket_exchange {
@@ -2996,13 +2998,13 @@ message pbreq_ngw_sync {
 message pbrsp_ngw_sync {
   required sint32 status = 1;
   optional int32 cd = 2;
-  repeated bytes sholds = 3;
+  repeated dr2_comm_pb.pb_ngwshold sholds = 3;
   optional int32 seg = 4;
   optional int32 mid = 5;
   optional int32 aflag = 6;
   repeated int32 hids = 7;
-  repeated bytes rank = 8;
-  repeated bytes defcamp = 9;
+  repeated dr2_comm_pb.pb_ngwrank rank = 8;
+  repeated dr2_comm_pb.pb_unit defcamp = 9;
   optional int32 vary = 10;
 }
 
@@ -3011,18 +3013,18 @@ message pbreq_ngw_rank {
 
 message pbrsp_ngw_rank {
   required sint32 status = 1;
-  repeated bytes grank = 2;
-  repeated bytes prank = 3;
+  repeated dr2_comm_pb.pb_ngwrank grank = 2;
+  repeated dr2_comm_pb.pb_ngwprank prank = 3;
 }
 
 message pbreq_ngw_camp {
   optional int32 id = 1;
-  repeated bytes camp = 2;
+  repeated dr2_comm_pb.pb_unit camp = 2;
 }
 
 message pbrsp_ngw_camp {
   required sint32 status = 1;
-  repeated bytes sholds = 2;
+  repeated dr2_comm_pb.pb_ngwshold sholds = 2;
 }
 
 message pbreq_ngw_shold {
@@ -3031,14 +3033,14 @@ message pbreq_ngw_shold {
 
 message pbrsp_ngw_shold {
   required sint32 status = 1;
-  repeated bytes mbrs = 2;
-  repeated bytes sholds = 3;
+  repeated dr2_comm_pb.pb_ngwmbr mbrs = 2;
+  repeated dr2_comm_pb.pb_ngwshold sholds = 3;
   optional int32 mid = 4;
 }
 
 message pbreq_ngw_fight {
   optional int32 id = 1;
-  repeated bytes camp = 2;
+  repeated dr2_comm_pb.pb_unit camp = 2;
 }
 
 message pbrsp_ngw_fight {
@@ -3071,7 +3073,7 @@ message pbreq_ngw_buy {
 message pbrsp_ngw_buy {
   required sint32 status = 1;
   optional int32 aflag = 2;
-  repeated bytes sholds = 3;
+  repeated dr2_comm_pb.pb_ngwshold sholds = 3;
 }
 
 message pbreq_ngw_info {
@@ -3080,7 +3082,7 @@ message pbreq_ngw_info {
 
 message pbrsp_ngw_info {
   required int32 status = 1;
-  repeated bytes unit = 2;
+  repeated dr2_comm_pb.pb_unit unit = 2;
 }
 
 message pbreq_ngw_video {
@@ -3089,16 +3091,16 @@ message pbreq_ngw_video {
 
 message pbrsp_ngw_video {
   required sint32 status = 1;
-  optional bytes video = 2;
+  optional dr2_comm_pb.pb_pvideo video = 2;
 }
 
 message pbreq_ngw_sweep {
-  repeated bytes camp = 1;
+  repeated dr2_comm_pb.pb_unit camp = 1;
 }
 
 message pbrsp_ngw_sweep {
   required sint32 status = 1;
-  repeated bytes s_info = 2;
+  repeated dr2_comm_pb.pb_ngw_sweep s_info = 2;
 }
 
 message pbreq_cgw_sync {
@@ -3110,14 +3112,14 @@ message pbrsp_cgw_sync {
   optional int32 wid = 3;
   optional int32 pnum = 4;
   optional bool reg = 5;
-  repeated bytes info = 6;
-  repeated bytes camp = 7;
+  repeated dr2_comm_pb.pb_cgw_info info = 6;
+  repeated dr2_comm_pb.pb_unit camp = 7;
   optional string sdate = 8;
   optional int32 flag = 9;
 }
 
 message pbreq_cgw_team {
-  repeated bytes camp = 1;
+  repeated dr2_comm_pb.pb_unit camp = 1;
 }
 
 message pbrsp_cgw_team {
@@ -3137,7 +3139,7 @@ message pbreq_cgw_honor {
 
 message pbrsp_cgw_honor {
   required sint32 status = 1;
-  repeated bytes info = 2;
+  repeated dr2_comm_pb.pb_cgw_info info = 2;
 }
 
 message pbreq_cgw_record {
@@ -3145,7 +3147,7 @@ message pbreq_cgw_record {
 
 message pbrsp_cgw_record {
   required sint32 status = 1;
-  repeated bytes recs = 2;
+  repeated dr2_comm_pb.pb_cgw_record recs = 2;
 }
 
 message pbreq_cgw_race {
@@ -3154,8 +3156,8 @@ message pbreq_cgw_race {
 message pbrsp_cgw_race {
   required int32 status = 1;
   optional int32 flag = 2;
-  repeated bytes mbrs = 3;
-  repeated bytes link = 4;
+  repeated dr2_comm_pb.pb_cgw_info mbrs = 3;
+  repeated dr2_comm_pb.pb_clink link = 4;
 }
 
 message pbreq_cgw_log {
@@ -3164,19 +3166,19 @@ message pbreq_cgw_log {
 
 message pbrsp_cgw_log {
   required int32 status = 1;
-  repeated bytes log = 2;
+  repeated dr2_comm_pb.pb_cgw_log log = 2;
 }
 
 message pbreq_gpvp_sync {
 }
 
 message pbrsp_gpvp_sync {
-  optional bytes team = 1;
-  repeated bytes camp = 2;
+  optional dr2_comm_pb.pb_gpvpteam team = 1;
+  repeated dr2_comm_pb.pb_unit camp = 2;
 }
 
 message pbreq_gpvp_set_camp {
-  repeated bytes camp = 1;
+  repeated dr2_comm_pb.pb_unit camp = 1;
   optional int32 tid = 2;
 }
 
@@ -3205,7 +3207,7 @@ message pbreq_gpvp_match {
 }
 
 message pbrsp_gpvp_match {
-  repeated bytes teams = 1;
+  repeated dr2_comm_pb.pb_gpvpteam teams = 1;
 }
 
 message pbreq_submit_gpvpteam {
@@ -3228,7 +3230,7 @@ message pbreq_gpvp_friendslist {
 }
 
 message pbrsp_gpvp_friendslist {
-  repeated bytes friends = 1;
+  repeated dr2_comm_pb.pb_frd friends = 1;
 }
 
 message pbrsp_gpvpteam_notify {
@@ -3247,14 +3249,14 @@ message pbreq_gpvp_invitelist {
 }
 
 message pbrsp_gpvp_invitelist {
-  repeated bytes team = 1;
+  repeated dr2_comm_pb.pb_gpvpteam team = 1;
 }
 
 message pbreq_gpvp_refresh {
 }
 
 message pbrsp_gpvp_refresh {
-  repeated bytes team = 1;
+  repeated dr2_comm_pb.pb_gpvpteam team = 1;
 }
 
 message pbreq_gpvp_mbrop {
@@ -3271,7 +3273,7 @@ message pbreq_gpvp_ranklist {
 
 message pbrsp_gpvp_ranklist {
   required sint32 status = 1;
-  repeated bytes team = 2;
+  repeated dr2_comm_pb.pb_gpvpteam team = 2;
 }
 
 message pbreq_change_gpvpteam {
@@ -3286,7 +3288,7 @@ message pbreq_gpvp_applylist {
 }
 
 message pbrsp_gpvp_applylist {
-  repeated bytes mbrs = 1;
+  repeated dr2_comm_pb.pb_pmbr mbrs = 1;
 }
 
 message pbreq_gpvp_mbr {
@@ -3295,7 +3297,7 @@ message pbreq_gpvp_mbr {
 
 message pbrsp_gpvp_mbr {
   required sint32 status = 1;
-  optional bytes mbr = 2;
+  optional dr2_comm_pb.pb_pmbr mbr = 2;
 }
 
 message pbreq_gpvp_grp {
@@ -3304,7 +3306,7 @@ message pbreq_gpvp_grp {
 
 message pbrsp_gpvp_grp {
   required sint32 status = 1;
-  optional bytes grp = 2;
+  optional dr2_comm_pb.pb_gpvpteam grp = 2;
 }
 
 message pbreq_gpvp_fight {
@@ -3313,15 +3315,15 @@ message pbreq_gpvp_fight {
 
 message pbrsp_gpvp_fight {
   required sint32 status = 1;
-  optional bytes atk = 2;
-  optional bytes def = 3;
+  optional dr2_comm_pb.pb_gpvpteam atk = 2;
+  optional dr2_comm_pb.pb_gpvpteam def = 3;
   repeated bool wins = 4;
   repeated bytes frames1 = 5;
   repeated bytes frames2 = 6;
   repeated bytes frames3 = 7;
-  repeated bytes hurts1 = 8;
-  repeated bytes hurts2 = 9;
-  repeated bytes hurts3 = 10;
+  repeated dr2_comm_pb.pb_hurts hurts1 = 8;
+  repeated dr2_comm_pb.pb_hurts hurts2 = 9;
+  repeated dr2_comm_pb.pb_hurts hurts3 = 10;
   optional sint32 ascore = 11;
   optional sint32 dscore = 12;
   optional sint32 adelta = 13;
@@ -3332,7 +3334,7 @@ message pbreq_gpvp_logs {
 }
 
 message pbrsp_gpvp_logs {
-  repeated bytes logs = 1;
+  repeated dr2_comm_pb.pb_gpvplog logs = 1;
 }
 
 message pbreq_gpvp_wlog {
@@ -3341,7 +3343,7 @@ message pbreq_gpvp_wlog {
 
 message pbrsp_gpvp_wlog {
   required sint32 status = 1;
-  optional bytes log = 2;
+  optional dr2_comm_pb.pb_gpvp_wlog log = 2;
 }
 
 message pbreq_gpvp_video {
@@ -3351,7 +3353,7 @@ message pbreq_gpvp_video {
 message pbrsp_gpvp_video {
   required sint32 status = 1;
   repeated bytes frames = 2;
-  repeated bytes hurts = 3;
+  repeated dr2_comm_pb.pb_hurts hurts = 3;
 }
 
 message pbreq_pet_op {
@@ -3362,7 +3364,7 @@ message pbreq_pet_op {
 
 message pbrsp_pet_op {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_spk_sync {
@@ -3371,13 +3373,13 @@ message pbreq_spk_sync {
 message pbrsp_spk_sync {
   required int32 status = 1;
   required int32 cd = 2;
-  repeated bytes camp = 3;
+  repeated dr2_comm_pb.pb_spkunit camp = 3;
   optional uint32 estage = 4;
   repeated uint32 ehpp = 5;
   optional int32 seller = 6;
   optional int32 wave = 7;
   repeated int32 sellers = 8;
-  repeated bytes bufs = 9;
+  repeated dr2_comm_pb.pb_item bufs = 9;
   optional bool qlt = 10;
 }
 
@@ -3389,9 +3391,9 @@ message pbrsp_spk_camp {
   required sint32 status = 1;
   optional uint32 nstage = 2;
   optional uint32 wave = 3;
-  repeated bytes bufs = 4;
+  repeated dr2_comm_pb.pb_item bufs = 4;
   repeated int32 sellers = 5;
-  optional bytes reward = 6;
+  optional dr2_comm_pb.pb_bag reward = 6;
 }
 
 message pbreq_spk_fight {
@@ -3405,7 +3407,7 @@ message pbrsp_spk_fight {
   optional int32 mhpp = 4;
   optional int32 menergy = 5;
   repeated int32 ehpp = 6;
-  optional bytes reward = 7;
+  optional dr2_comm_pb.pb_bag reward = 7;
   optional int32 buf = 8;
   optional int32 seller = 9;
   optional int32 nstage = 10;
@@ -3428,7 +3430,7 @@ message pbreq_spk_rank {
 
 message pbrsp_spk_rank {
   required int32 rank = 1;
-  repeated bytes mbr = 2;
+  repeated dr2_comm_pb.pb_spkmbr mbr = 2;
   optional int32 wave = 3;
   optional int32 time = 4;
 }
@@ -3473,7 +3475,7 @@ message pbrsp_bboss_buy {
 }
 
 message pbreq_bboss_fight {
-  repeated bytes camp = 1;
+  repeated dr2_comm_pb.pb_unit camp = 1;
   required int32 id = 2;
   optional int32 tid = 3;
 }
@@ -3483,13 +3485,13 @@ message pbrsp_bboss_fight {
   optional bool win = 2;
   repeated bytes frames = 3;
   repeated int32 hpps = 4;
-  repeated bytes rewards = 5;
-  repeated bytes hurts = 6;
+  repeated dr2_comm_pb.pb_bag rewards = 5;
+  repeated dr2_comm_pb.pb_hurts hurts = 6;
   optional int32 select = 7;
 }
 
 message pbreq_bboss_batch {
-  repeated bytes camp = 1;
+  repeated dr2_comm_pb.pb_unit camp = 1;
   required int32 id = 2;
   required uint32 num = 3;
   optional int32 tid = 4;
@@ -3499,7 +3501,7 @@ message pbrsp_bboss_batch {
   required sint32 status = 1;
   optional bool win = 2;
   repeated int32 hpps = 3;
-  optional bytes reward = 4;
+  optional dr2_comm_pb.pb_bag reward = 4;
   optional int32 num = 5;
 }
 
@@ -3508,18 +3510,18 @@ message pbreq_iboat_sync {
 
 message pbrsp_iboat_sync {
   required int32 status = 1;
-  optional bytes adt = 2;
+  optional dr2_comm_pb.pb_iadt adt = 2;
   repeated int32 rts = 3;
-  optional bytes boat = 4;
-  repeated bytes camp = 5;
-  optional bytes reward = 6;
+  optional dr2_comm_pb.pb_iboat boat = 4;
+  repeated dr2_comm_pb.pb_unit camp = 5;
+  optional dr2_comm_pb.pb_bag reward = 6;
   repeated int32 evtids = 7;
   optional int32 num = 8;
 }
 
 message pbreq_iboat_start {
   optional int32 rt = 1;
-  repeated bytes camp = 2;
+  repeated dr2_comm_pb.pb_unit camp = 2;
 }
 
 message pbrsp_iboat_start {
@@ -3531,21 +3533,21 @@ message pbreq_iboat_xp {
 
 message pbrsp_iboat_xp {
   required int32 status = 1;
-  optional bytes mevt = 2;
+  optional dr2_comm_pb.pb_ievent mevt = 2;
   repeated int32 item = 3;
 }
 
 message pbreq_iboat_xpop {
   optional int32 type = 1;
-  repeated bytes camp = 2;
+  repeated dr2_comm_pb.pb_unit camp = 2;
   optional int32 atkid = 3;
   optional int32 tid = 4;
 }
 
 message pbrsp_iboat_xpop {
   required int32 status = 1;
-  optional bytes reward = 2;
-  optional bytes video = 3;
+  optional dr2_comm_pb.pb_bag reward = 2;
+  optional dr2_comm_pb.pb_pvideo video = 3;
 }
 
 message pbreq_iboat_shop {
@@ -3553,7 +3555,7 @@ message pbreq_iboat_shop {
 
 message pbrsp_iboat_shop {
   required int32 status = 1;
-  repeated bytes good = 2;
+  repeated dr2_comm_pb.pb_good good = 2;
 }
 
 message pbreq_iboat_buy {
@@ -3594,7 +3596,7 @@ message pbreq_iboat_fsync {
 
 message pbrsp_iboat_fsync {
   required int32 status = 1;
-  repeated bytes info = 2;
+  repeated dr2_comm_pb.pb_ipro info = 2;
 }
 
 message pbreq_iboat_fpro {
@@ -3621,18 +3623,18 @@ message pbreq_live_sync {
 message pbrsp_live_sync {
   optional int32 status = 1;
   repeated int32 exps = 2;
-  repeated bytes lands = 3;
-  repeated bytes bag = 4;
+  repeated dr2_comm_pb.pb_home_land lands = 3;
+  repeated dr2_comm_pb.pb_item bag = 4;
 }
 
 message pbreq_op_block {
   optional int32 land_id = 1;
-  repeated bytes operations = 2;
+  repeated dr2_comm_pb.pb_block operations = 2;
 }
 
 message pbrsp_op_block {
   required int32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_op_build {
@@ -3650,7 +3652,7 @@ message pbrsp_op_build {
 
 message pbreq_living {
   optional int32 land_id = 1;
-  repeated bytes live = 2;
+  repeated dr2_comm_pb.pb_living live = 2;
 }
 
 message pbrsp_living {
@@ -3662,26 +3664,26 @@ message pbreq_sync_buildings {
 
 message pbrsp_sync_buildings {
   required int32 status = 1;
-  repeated bytes buildings = 2;
-  repeated bytes skin = 3;
+  repeated dr2_comm_pb.pb_buildings buildings = 2;
+  repeated dr2_comm_pb.pb_item skin = 3;
   repeated int32 skill = 4;
-  repeated bytes stove = 5;
-  repeated bytes coll = 6;
+  repeated dr2_comm_pb.pb_stove stove = 5;
+  repeated dr2_comm_pb.pb_coll coll = 6;
   optional int32 like = 7;
-  repeated bytes tasks = 8;
+  repeated dr2_comm_pb.pb_task tasks = 8;
   optional int32 flag = 9;
   required int32 care = 10;
-  repeated bytes stove_buy = 11;
+  repeated dr2_comm_pb.pb_stove_buy stove_buy = 11;
 }
 
 message pbreq_hland_build {
-  repeated bytes operations = 1;
+  repeated dr2_comm_pb.pb_block operations = 1;
 }
 
 message pbrsp_hland_build {
   required int32 status = 1;
-  optional bytes reward = 2;
-  repeated bytes score = 3;
+  optional dr2_comm_pb.pb_bag reward = 2;
+  repeated dr2_comm_pb.pb_coll score = 3;
 }
 
 message pbreq_building_up {
@@ -3690,11 +3692,11 @@ message pbreq_building_up {
 
 message pbrsp_building_up {
   required int32 status = 1;
-  repeated bytes stove = 2;
+  repeated dr2_comm_pb.pb_stove stove = 2;
 }
 
 message pbreq_building_change_skin {
-  repeated bytes change = 1;
+  repeated dr2_comm_pb.hland_change_skin change = 1;
 }
 
 message pbrsp_building_change_skin {
@@ -3708,7 +3710,7 @@ message pbreq_fun_collect {
 
 message pbrsp_fun_collect {
   required int32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_fun_up_skill {
@@ -3733,11 +3735,11 @@ message pbreq_stove_harvest {
 
 message pbrsp_stove_harvest {
   required int32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbrsp_collect_notify {
-  optional bytes info = 1;
+  optional dr2_comm_pb.pb_coll info = 1;
 }
 
 message pbreq_collect_rank {
@@ -3745,7 +3747,7 @@ message pbreq_collect_rank {
 
 message pbrsp_collect_rank {
   required int32 status = 1;
-  repeated bytes mbrs = 2;
+  repeated dr2_comm_pb.pb_smbrs mbrs = 2;
 }
 
 message pbreq_collect_lv {
@@ -3773,7 +3775,7 @@ message pbreq_reset_skill {
 
 message pbrsp_reset_skill {
   required int32 status = 1;
-  optional bytes rewards = 2;
+  optional dr2_comm_pb.pb_bag rewards = 2;
 }
 
 message pbreq_hland_visit {
@@ -3783,12 +3785,12 @@ message pbreq_hland_visit {
 message pbrsp_hland_visit {
   required int32 status = 1;
   optional int32 flag = 2;
-  repeated bytes buildings = 3;
+  repeated dr2_comm_pb.pb_buildings buildings = 3;
   repeated int32 skill = 4;
-  repeated bytes coll = 5;
-  optional bytes bag = 6;
+  repeated dr2_comm_pb.pb_coll coll = 5;
+  optional dr2_comm_pb.pb_bag bag = 6;
   repeated int32 exps = 7;
-  repeated bytes lands = 8;
+  repeated dr2_comm_pb.pb_home_land lands = 8;
   optional int32 like = 9;
 }
 
@@ -3798,7 +3800,7 @@ message pbreq_hland_search {
 
 message pbrsp_hland_search {
   required int32 status = 1;
-  optional bytes info = 2;
+  optional dr2_comm_pb.pb_smbr info = 2;
 }
 
 message pbreq_hland_rec {
@@ -3807,7 +3809,7 @@ message pbreq_hland_rec {
 
 message pbrsp_hland_rec {
   required int32 status = 1;
-  optional bytes rewards = 2;
+  optional dr2_comm_pb.pb_bag rewards = 2;
 }
 
 message pbreq_hland_like {
@@ -3817,7 +3819,7 @@ message pbreq_hland_like {
 
 message pbrsp_hland_like {
   required int32 status = 1;
-  optional bytes rewards = 2;
+  optional dr2_comm_pb.pb_bag rewards = 2;
 }
 
 message pbreq_hland_rank {
@@ -3825,7 +3827,7 @@ message pbreq_hland_rank {
 
 message pbrsp_hland_rank {
   required int32 status = 1;
-  repeated bytes mbrs = 2;
+  repeated dr2_comm_pb.pb_smbrs mbrs = 2;
 }
 
 message pbreq_hland_log {
@@ -3833,7 +3835,7 @@ message pbreq_hland_log {
 
 message pbrsp_hland_log {
   required int32 status = 1;
-  repeated bytes log = 2;
+  repeated dr2_comm_pb.pb_hland_log log = 2;
 }
 
 message pbreq_hland_template_sync {
@@ -3842,7 +3844,7 @@ message pbreq_hland_template_sync {
 
 message pbrsp_hland_template_sync {
   required int32 status = 1;
-  repeated bytes template = 2;
+  repeated dr2_comm_pb.pb_template template = 2;
 }
 
 message pbreq_hland_template_save {
@@ -3873,9 +3875,9 @@ message pbreq_hland_template_use {
 
 message pbrsp_hland_template_use {
   required int32 status = 1;
-  repeated bytes bag = 2;
+  repeated dr2_comm_pb.pb_item bag = 2;
   repeated int32 exps = 3;
-  repeated bytes lands = 4;
+  repeated dr2_comm_pb.pb_home_land lands = 4;
 }
 
 message pbreq_hland_visible {
@@ -3891,7 +3893,7 @@ message pbreq_hland_recmd {
 
 message pbrsp_hland_recmd {
   required int32 status = 1;
-  repeated bytes recmd = 2;
+  repeated dr2_comm_pb.pb_frd recmd = 2;
 }
 
 message pbreq_hteam_sync {
@@ -3900,10 +3902,10 @@ message pbreq_hteam_sync {
 message pbrsp_hteam_sync {
   required int32 status = 1;
   repeated int32 bag = 2;
-  repeated bytes teams = 3;
-  repeated bytes invite = 4;
-  repeated bytes mbrs = 5;
-  optional bytes reward = 6;
+  repeated dr2_comm_pb.pb_hteam teams = 3;
+  repeated dr2_comm_pb.pb_hteam invite = 4;
+  repeated dr2_comm_pb.pb_hmbr mbrs = 5;
+  optional dr2_comm_pb.pb_bag reward = 6;
 }
 
 message pbreq_refresh_hteam {
@@ -3912,8 +3914,8 @@ message pbreq_refresh_hteam {
 
 message pbrsp_refresh_hteam {
   required int32 status = 1;
-  repeated bytes hteam1 = 2;
-  repeated bytes hteam2 = 3;
+  repeated dr2_comm_pb.pb_hteam hteam1 = 2;
+  repeated dr2_comm_pb.pb_hteam hteam2 = 3;
 }
 
 message pbreq_create_hteam {
@@ -3942,7 +3944,7 @@ message pbreq_join_hteam {
 
 message pbrsp_join_hteam {
   required int32 status = 1;
-  optional bytes hteam = 2;
+  optional dr2_comm_pb.pb_hteam hteam = 2;
 }
 
 message pbreq_bjoin_hteam {
@@ -3953,7 +3955,7 @@ message pbreq_bjoin_hteam {
 
 message pbrsp_bjoin_hteam {
   required int32 status = 1;
-  repeated bytes hteam = 2;
+  repeated dr2_comm_pb.pb_hteam hteam = 2;
 }
 
 message pbreq_quit_hteam {
@@ -3980,7 +3982,7 @@ message pbreq_search_hteam {
 
 message pbrsp_search_hteam {
   required int32 status = 1;
-  repeated bytes hteam = 2;
+  repeated dr2_comm_pb.pb_hteam hteam = 2;
 }
 
 message pbreq_hteam_clear_invite {
@@ -3991,7 +3993,7 @@ message pbrsp_hteam_clear_invite {
 }
 
 message pbreq_home_skin_exchange {
-  required bytes items = 1;
+  required dr2_comm_pb.pb_item items = 1;
 }
 
 message pbrsp_home_skin_exchange {
@@ -4011,7 +4013,7 @@ message pbrsp_home_one_skin {
 message pbrsp_hteam_notify {
   optional sint32 type = 1;
   optional string id = 2;
-  optional bytes mbr = 3;
+  optional dr2_comm_pb.pb_hmbr mbr = 3;
 }
 
 message pbreq_pull_stove {
@@ -4020,8 +4022,8 @@ message pbreq_pull_stove {
 
 message pbrsp_pull_stove {
   required int32 status = 1;
-  repeated bytes stove = 2;
-  repeated bytes stove_buy = 3;
+  repeated dr2_comm_pb.pb_stove stove = 2;
+  repeated dr2_comm_pb.pb_stove_buy stove_buy = 3;
   optional int32 lv = 4;
 }
 
@@ -4032,7 +4034,7 @@ message pbreq_beat_nien {
 
 message pbrsp_beat_nien {
   required int32 status = 1;
-  optional bytes reward = 3;
+  optional dr2_comm_pb.pb_bag reward = 3;
   optional int32 hpp = 2;
 }
 
@@ -4051,7 +4053,7 @@ message pbreq_activity_sign {
 message pbrsp_activity_sign {
   required int32 status = 1;
   optional int32 days = 2;
-  optional bytes reward = 3;
+  optional dr2_comm_pb.pb_bag reward = 3;
 }
 
 message pbreq_fetch_activity {
@@ -4060,7 +4062,7 @@ message pbreq_fetch_activity {
 
 message pbrsp_fetch_activity {
   required sint32 status = 1;
-  optional bytes act = 2;
+  optional dr2_comm_pb.pb_act act = 2;
 }
 
 message pbreq_star_store {
@@ -4080,16 +4082,16 @@ message pbreq_forge_artifact {
 
 message pbrsp_forge_artifact {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_crack_artifact {
-  repeated bytes ids = 1;
+  repeated dr2_comm_pb.pb_equip ids = 1;
 }
 
 message pbrsp_crack_artifact {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_monopoly_dice {
@@ -4099,7 +4101,7 @@ message pbreq_monopoly_dice {
 
 message pbrsp_monopoly_dice {
   required sint32 status = 1;
-  repeated bytes steps = 2;
+  repeated dr2_comm_pb.pb_monopoly_step steps = 2;
   optional int32 num1 = 3;
   optional int32 num2 = 4;
 }
@@ -4110,7 +4112,7 @@ message pbreq_buy_dice {
 
 message pbrsp_buy_dice {
   required sint32 status = 1;
-  optional bytes rewards = 2;
+  optional dr2_comm_pb.pb_bag rewards = 2;
 }
 
 message pbreq_hero_forever {
@@ -4121,8 +4123,8 @@ message pbreq_hero_forever {
 message pbrsp_hero_forever {
   required sint32 status = 1;
   optional sint32 id = 2;
-  repeated bytes heroes = 3;
-  repeated bytes items = 4;
+  repeated dr2_comm_pb.pb_hero heroes = 3;
+  repeated dr2_comm_pb.pb_item items = 4;
 }
 
 message pbreq_dice_sweep {
@@ -4130,7 +4132,7 @@ message pbreq_dice_sweep {
 
 message pbrsp_dice_sweep {
   required sint32 status = 1;
-  repeated bytes ds = 2;
+  repeated dr2_comm_pb.pb_dice_sweep ds = 2;
 }
 
 message pbreq_forge_back {
@@ -4140,7 +4142,7 @@ message pbreq_forge_back {
 
 message pbrsp_forge_back {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_gold_card {
@@ -4149,7 +4151,7 @@ message pbreq_gold_card {
 
 message pbrsp_gold_card {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_limit_gift_activate {
@@ -4166,9 +4168,9 @@ message pbreq_maze_open {
 
 message pbrsp_maze_open {
   required sint32 status = 1;
-  optional bytes maze = 2;
-  optional bytes event = 3;
-  optional bytes reward = 4;
+  optional dr2_comm_pb.pb_act_maze maze = 2;
+  optional dr2_comm_pb.pb_act_block event = 3;
+  optional dr2_comm_pb.pb_bag reward = 4;
 }
 
 message pbreq_maze_change_hero {
@@ -4184,7 +4186,7 @@ message pbreq_maze_open2 {
 
 message pbrsp_maze_open2 {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_maze_buy {
@@ -4201,7 +4203,7 @@ message pbreq_maze_sync {
 
 message pbrsp_maze_sync {
   required sint32 status = 1;
-  optional bytes maze = 2;
+  optional dr2_comm_pb.pb_act_maze maze = 2;
 }
 
 message pbreq_maze_break {
@@ -4211,7 +4213,7 @@ message pbreq_maze_break {
 
 message pbrsp_maze_break {
   required sint32 status = 1;
-  repeated bytes events = 2;
+  repeated dr2_comm_pb.pb_act_block events = 2;
 }
 
 message pbreq_maze_batch {
@@ -4220,8 +4222,8 @@ message pbreq_maze_batch {
 message pbrsp_maze_batch {
   required sint32 status = 1;
   optional int32 num = 2;
-  optional bytes maze = 3;
-  optional bytes rewards_base = 4;
+  optional dr2_comm_pb.pb_act_maze maze = 3;
+  optional dr2_comm_pb.pb_bag rewards_base = 4;
 }
 
 message pbreq_fetch_sact {
@@ -4230,7 +4232,7 @@ message pbreq_fetch_sact {
 
 message pbrsp_fetch_sact {
   required sint32 status = 1;
-  optional bytes sact = 2;
+  optional dr2_comm_pb.pb_sact_item sact = 2;
 }
 
 message pbreq_htask_commit {
@@ -4247,7 +4249,7 @@ message pbreq_birthday_gift {
 
 message pbrsp_birthday_gift {
   required sint32 status = 1;
-  optional bytes rewards = 2;
+  optional dr2_comm_pb.pb_bag rewards = 2;
 }
 
 message pbreq_extra_spring {
@@ -4257,8 +4259,8 @@ message pbreq_extra_spring {
 
 message pbrsp_extra_spring {
   required sint32 status = 1;
-  optional bytes rewards = 2;
-  optional bytes del = 3;
+  optional dr2_comm_pb.pb_bag rewards = 2;
+  optional dr2_comm_pb.pb_bag del = 3;
   optional int32 id = 4;
 }
 
@@ -4311,7 +4313,7 @@ message pbreq_act_reward {
 
 message pbrsp_act_reward {
   required sint32 status = 1;
-  optional bytes bag = 2;
+  optional dr2_comm_pb.pb_bag bag = 2;
 }
 
 message pbreq_act_qstar {
@@ -4320,7 +4322,7 @@ message pbreq_act_qstar {
 
 message pbrsp_act_qstar {
   required sint32 status = 1;
-  repeated bytes rank_list = 2;
+  repeated dr2_comm_pb.pb_qstar rank_list = 2;
   optional int64 uid = 3;
 }
 
@@ -4331,7 +4333,7 @@ message pbreq_act_reward2 {
 
 message pbrsp_act_reward2 {
   required sint32 status = 1;
-  optional bytes bag = 2;
+  optional dr2_comm_pb.pb_bag bag = 2;
 }
 
 message pbreq_art_merge {
@@ -4342,7 +4344,7 @@ message pbreq_art_merge {
 
 message pbrsp_art_merge {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_activity_remove {
@@ -4361,12 +4363,12 @@ message pbrsp_activity_desk_sync {
   required sint32 status = 1;
   optional uint32 id = 2;
   optional sint32 blood = 3;
-  repeated bytes hlist = 4;
+  repeated dr2_comm_pb.pb_desk_hero hlist = 4;
   repeated uint32 flist = 5;
   repeated uint32 cflist = 6;
   optional int32 cd = 7;
   optional int32 demage = 8;
-  repeated bytes chlist = 9;
+  repeated dr2_comm_pb.pb_desk_hero chlist = 9;
   optional int32 act_id = 10;
   repeated int32 get = 11;
 }
@@ -4377,7 +4379,7 @@ message pbreq_activity_desk_draw {
 
 message pbrsp_activity_desk_draw {
   required sint32 status = 1;
-  repeated bytes hero = 3;
+  repeated dr2_comm_pb.pb_kv2 hero = 3;
   repeated uint32 fid = 2;
 }
 
@@ -4389,9 +4391,9 @@ message pbreq_activity_desk_fight {
 message pbrsp_activity_desk_fight {
   required sint32 status = 1;
   optional sint32 blood = 2;
-  repeated bytes hero = 3;
+  repeated dr2_comm_pb.pb_kv2 hero = 3;
   repeated uint32 clist = 4;
-  optional bytes reward = 5;
+  optional dr2_comm_pb.pb_bag reward = 5;
   optional int32 win = 6;
   repeated uint32 get = 7;
 }
@@ -4401,7 +4403,7 @@ message pbreq_activity_desk_rank {
 
 message pbrsp_activity_desk_rank {
   required sint32 status = 1;
-  repeated bytes list = 2;
+  repeated dr2_comm_pb.pb_qstar list = 2;
   optional int64 uid = 3;
   optional int64 score = 4;
 }
@@ -4416,7 +4418,7 @@ message pbreq_activity_desk_fun {
 
 message pbrsp_activity_desk_fun {
   required sint32 status = 1;
-  optional bytes heros = 2;
+  optional dr2_comm_pb.pb_desk_hero heros = 2;
   repeated uint32 card = 3;
 }
 
@@ -4426,11 +4428,11 @@ message pbreq_activity_desk_sweep {
 message pbrsp_activity_desk_sweep {
   required sint32 status = 1;
   optional sint32 blood = 2;
-  repeated bytes hlist = 3;
+  repeated dr2_comm_pb.pb_kv2 hlist = 3;
   repeated uint32 clist = 4;
-  optional bytes reward = 5;
+  optional dr2_comm_pb.pb_bag reward = 5;
   optional uint32 id = 6;
-  optional bytes del = 7;
+  optional dr2_comm_pb.pb_bag del = 7;
 }
 
 message pbreq_monthmarket_buy {
@@ -4446,10 +4448,10 @@ message pbreq_monthmarket_sync {
 
 message pbrsp_monthmarket_sync {
   required sint32 status = 1;
-  repeated bytes mpiece = 2;
-  repeated bytes mequip = 3;
-  repeated bytes mskin = 4;
-  repeated bytes mlimit = 5;
+  repeated dr2_comm_pb.pb_hmarket mpiece = 2;
+  repeated dr2_comm_pb.pb_hmarket mequip = 3;
+  repeated dr2_comm_pb.pb_hmarket mskin = 4;
+  repeated dr2_comm_pb.pb_hmarket mlimit = 5;
 }
 
 message pbreq_re_sync {
@@ -4457,7 +4459,7 @@ message pbreq_re_sync {
 
 message pbrsp_re_sync {
   required sint32 status = 1;
-  optional bytes re_sync = 2;
+  optional dr2_comm_pb.pb_re_sync re_sync = 2;
 }
 
 message pbreq_re_code {
@@ -4494,11 +4496,11 @@ message pbreq_sact_exchange {
 
 message pbrsp_sact_exchange {
   required int32 status = 1;
-  optional bytes rewards = 2;
+  optional dr2_comm_pb.pb_bag rewards = 2;
   optional uint32 bomb = 3;
   repeated int64 ghost = 4;
-  repeated bytes hero = 5;
-  repeated bytes fish = 6;
+  repeated dr2_comm_pb.pb_hero hero = 5;
+  repeated dr2_comm_pb.pb_kv2 fish = 6;
 }
 
 message pbreq_sact_open {
@@ -4543,7 +4545,7 @@ message pbreq_sact_get_reward {
 
 message pbrsp_sact_get_reward {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
   optional uint32 num = 3;
 }
 
@@ -4562,7 +4564,7 @@ message pbreq_sact_hero_star {
 
 message pbrsp_sact_hero_star {
   required sint32 status = 1;
-  repeated bytes rank_list = 2;
+  repeated dr2_comm_pb.pb_hstar rank_list = 2;
   optional int64 uid = 3;
   optional int64 score = 4;
   optional int64 total_score = 5;
@@ -4575,7 +4577,7 @@ message pbreq_sact_plant {
 
 message pbrsp_sact_plant {
   required sint32 status = 1;
-  repeated bytes maze = 2;
+  repeated dr2_comm_pb.pb_sact_maze maze = 2;
 }
 
 message pbreq_hero_log {
@@ -4583,7 +4585,7 @@ message pbreq_hero_log {
 }
 
 message pbrsp_hero_log {
-  repeated bytes items = 1;
+  repeated dr2_comm_pb.pb_casino_item items = 1;
 }
 
 message pbreq_tutorial {
@@ -4601,7 +4603,7 @@ message pbreq_ract_receive {
 
 message pbrsp_ract_receive {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_ract_power {
@@ -4623,13 +4625,13 @@ message pbrsp_wsync {
   optional int32 num = 5;
   optional int32 zid = 6;
   optional int32 top_score = 7;
-  repeated bytes mbr1 = 8;
-  repeated bytes mbr2 = 9;
+  repeated dr2_comm_pb.pb_wmbr mbr1 = 8;
+  repeated dr2_comm_pb.pb_wmbr mbr2 = 9;
   repeated int32 task_nums = 10;
   repeated int32 ids = 11;
-  repeated bytes camp = 12;
-  repeated bytes enemy_unit = 13;
-  optional bytes enemy_def = 14;
+  repeated dr2_comm_pb.pb_unit camp = 12;
+  repeated dr2_comm_pb.pb_unit enemy_unit = 13;
+  optional dr2_comm_pb.pb_wmbr enemy_def = 14;
   optional int32 enemy_cd = 15;
   optional bool king = 16;
   optional bool top_king = 17;
@@ -4645,9 +4647,9 @@ message pbreq_whonor {
 
 message pbrsp_whonor {
   required int32 status = 1;
-  repeated bytes mbrs = 2;
-  repeated bytes camp = 3;
-  repeated bytes link = 4;
+  repeated dr2_comm_pb.pb_wmbr mbrs = 2;
+  repeated dr2_comm_pb.pb_wcamp camp = 3;
+  repeated dr2_comm_pb.pb_link link = 4;
 }
 
 message pbreq_wdaily {
@@ -4663,14 +4665,14 @@ message pbreq_wmatch {
 
 message pbrsp_wmatch {
   required int32 status = 1;
-  repeated bytes unit = 2;
-  optional bytes def = 3;
+  repeated dr2_comm_pb.pb_unit unit = 2;
+  optional dr2_comm_pb.pb_wmbr def = 3;
   optional int32 cd = 4;
   optional int32 num = 5;
 }
 
 message pbreq_wcamp {
-  repeated bytes camp = 1;
+  repeated dr2_comm_pb.pb_unit camp = 1;
 }
 
 message pbrsp_wcamp {
@@ -4682,12 +4684,12 @@ message pbreq_wfight {
 
 message pbrsp_wfight {
   required int32 status = 1;
-  optional bytes mbr = 2;
-  repeated bytes video = 3;
-  optional bytes atk = 4;
+  optional dr2_comm_pb.pb_wmbr mbr = 2;
+  repeated dr2_comm_pb.pb_wvideo video = 3;
+  optional dr2_comm_pb.pb_wscore atk = 4;
   repeated bool wins = 5;
   optional int32 select = 6;
-  repeated bytes rewards = 7;
+  repeated dr2_comm_pb.pb_bag rewards = 7;
 }
 
 message pbreq_wlike {
@@ -4704,7 +4706,7 @@ message pbreq_winfo {
 
 message pbrsp_winfo {
   required int32 status = 1;
-  repeated bytes unit = 2;
+  repeated dr2_comm_pb.pb_unit unit = 2;
 }
 
 message pbreq_wzone {
@@ -4716,8 +4718,8 @@ message pbrsp_wzone {
   required int32 status = 1;
   optional int32 flag = 2;
   optional int32 num = 3;
-  repeated bytes mbrs = 4;
-  repeated bytes link = 5;
+  repeated dr2_comm_pb.pb_wmbr mbrs = 4;
+  repeated dr2_comm_pb.pb_link link = 5;
 }
 
 message pbreq_wloger1 {
@@ -4725,7 +4727,7 @@ message pbreq_wloger1 {
 
 message pbrsp_wloger1 {
   required int32 status = 1;
-  repeated bytes logs = 2;
+  repeated dr2_comm_pb.pb_wloger logs = 2;
 }
 
 message pbreq_wlog1 {
@@ -4734,7 +4736,7 @@ message pbreq_wlog1 {
 
 message pbrsp_wlog1 {
   required int32 status = 1;
-  repeated bytes logs = 2;
+  repeated dr2_comm_pb.pb_wlog logs = 2;
 }
 
 message pbreq_wvideo1 {
@@ -4743,7 +4745,7 @@ message pbreq_wvideo1 {
 
 message pbrsp_wvideo1 {
   required int32 status = 1;
-  optional bytes video = 2;
+  optional dr2_comm_pb.pb_wvideo video = 2;
 }
 
 message pbreq_wlog2 {
@@ -4754,7 +4756,7 @@ message pbrsp_wlog2 {
   required int32 status = 1;
   optional int32 atk = 2;
   optional int32 def = 3;
-  repeated bytes logs = 4;
+  repeated dr2_comm_pb.pb_wlog logs = 4;
 }
 
 message pbreq_wvideo2 {
@@ -4763,7 +4765,7 @@ message pbreq_wvideo2 {
 
 message pbrsp_wvideo2 {
   required int32 status = 1;
-  optional bytes video = 2;
+  optional dr2_comm_pb.pb_wvideo video = 2;
 }
 
 message pbreq_st_sync {
@@ -4783,8 +4785,8 @@ message pbreq_st_summon {
 
 message pbrsp_st_summon {
   required sint32 status = 1;
-  repeated bytes heroes = 2;
-  repeated bytes items = 3;
+  repeated dr2_comm_pb.pb_hero heroes = 2;
+  repeated dr2_comm_pb.pb_item items = 3;
   repeated int32 rates = 4;
   optional int32 times = 5;
 }
@@ -4803,7 +4805,7 @@ message pbreq_st_rank {
 
 message pbrsp_st_rank {
   required sint32 status = 1;
-  repeated bytes mbrs = 2;
+  repeated dr2_comm_pb.pb_smbrs mbrs = 2;
 }
 
 message pbreq_st_hforge {
@@ -4814,7 +4816,7 @@ message pbreq_st_hforge {
 
 message pbrsp_st_hforge {
   required sint32 status = 1;
-  repeated bytes heroes = 2;
+  repeated dr2_comm_pb.pb_hero heroes = 2;
 }
 
 message pbreq_st_hattrup {
@@ -4844,7 +4846,7 @@ message pbreq_st_hattractivate {
 
 message pbrsp_st_hattractivate {
   required sint32 status = 1;
-  optional bytes items = 2;
+  optional dr2_comm_pb.pb_bag items = 2;
 }
 
 message pbreq_st_vsync {
@@ -4855,15 +4857,15 @@ message pbrsp_st_vsync {
   optional sint32 floor = 2;
   optional sint32 dty = 3;
   optional sint32 cd = 4;
-  optional bytes reward1 = 5;
-  repeated bytes buf1 = 6;
-  repeated bytes buf2 = 7;
-  optional bytes reward2 = 8;
+  optional dr2_comm_pb.pb_bag reward1 = 5;
+  repeated dr2_comm_pb.pb_vbuff buf1 = 6;
+  repeated dr2_comm_pb.pb_vbuff buf2 = 7;
+  optional dr2_comm_pb.pb_bag reward2 = 8;
   repeated int32 hids = 9;
-  repeated bytes cells = 10;
+  repeated dr2_comm_pb.pb_scell cells = 10;
   optional sint32 vit = 11;
   optional sint32 mid = 12;
-  repeated bytes old_cells = 13;
+  repeated dr2_comm_pb.pb_scell old_cells = 13;
   repeated int32 jw = 14;
   optional sint32 mdty = 15;
   optional sint32 cd2 = 16;
@@ -4881,23 +4883,23 @@ message pbreq_st_vsync2 {
 message pbrsp_st_vsync2 {
   required sint32 status = 1;
   optional int32 id = 2;
-  repeated bytes events = 3;
-  repeated bytes old_evts = 4;
+  repeated dr2_comm_pb.pb_scell events = 3;
+  repeated dr2_comm_pb.pb_scell old_evts = 4;
 }
 
 message pbreq_st_vevent {
   optional int32 pos = 1;
   repeated int32 ids = 2;
-  repeated bytes camp = 3;
+  repeated dr2_comm_pb.pb_unit camp = 3;
   optional int32 tid = 4;
 }
 
 message pbrsp_st_vevent {
   required sint32 status = 1;
-  optional bytes video = 2;
+  optional dr2_comm_pb.pb_evideo video = 2;
   repeated int32 ids = 3;
   repeated int32 hps = 4;
-  optional bytes new_evt = 5;
+  optional dr2_comm_pb.pb_scell new_evt = 5;
   repeated sint32 flag = 6;
 }
 
@@ -4915,12 +4917,12 @@ message pbreq_st_heartresolve {
 
 message pbrsp_st_heartresolve {
   required sint32 status = 1;
-  repeated bytes items = 2;
+  repeated dr2_comm_pb.pb_item items = 2;
 }
 
 message pbreq_st_vwipe {
   repeated int32 poslist = 1;
-  repeated bytes camp = 2;
+  repeated dr2_comm_pb.pb_unit camp = 2;
   optional int32 tid = 3;
   repeated uint32 hids = 4;
 }
@@ -4929,8 +4931,8 @@ message pbrsp_st_vwipe {
   required sint32 status = 1;
   optional int32 cd = 2;
   optional int32 qtask = 3;
-  optional bytes reward = 4;
-  repeated bytes buf1 = 5;
+  optional dr2_comm_pb.pb_bag reward = 4;
+  repeated dr2_comm_pb.pb_vbuff buf1 = 5;
   optional sint32 svit = 6;
   repeated sint32 flag = 7;
 }
@@ -4950,7 +4952,7 @@ message pbreq_st_esync {
 message pbrsp_st_esync {
   required sint32 status = 1;
   optional int32 cd = 2;
-  repeated bytes dups = 3;
+  repeated dr2_comm_pb.pb_dup dups = 3;
   optional int32 vit = 4;
   optional int32 vit_num = 5;
   optional int32 vit_cd = 6;
@@ -4958,7 +4960,7 @@ message pbrsp_st_esync {
   optional int32 item_bnum = 8;
   optional int32 item_rnum = 9;
   optional int32 red_dot = 10;
-  optional bytes reward = 11;
+  optional dr2_comm_pb.pb_bag reward = 11;
   optional int32 sweep_time = 12;
 }
 
@@ -4981,14 +4983,14 @@ message pbrsp_st_euse {
 }
 
 message pbreq_st_efight {
-  repeated bytes camp = 1;
+  repeated dr2_comm_pb.pb_unit camp = 1;
   optional int32 id = 2;
   optional int32 tid = 3;
 }
 
 message pbrsp_st_efight {
   required sint32 status = 1;
-  optional bytes video = 2;
+  optional dr2_comm_pb.pb_evideo video = 2;
   optional int32 num = 3;
 }
 
@@ -4997,7 +4999,7 @@ message pbreq_st_erank1 {
 
 message pbrsp_st_erank1 {
   required sint32 status = 1;
-  repeated bytes mbrs = 2;
+  repeated dr2_comm_pb.pb_embr mbrs = 2;
 }
 
 message pbreq_st_erank2 {
@@ -5005,7 +5007,7 @@ message pbreq_st_erank2 {
 
 message pbrsp_st_erank2 {
   required sint32 status = 1;
-  optional bytes mbrs = 2;
+  optional dr2_comm_pb.pb_smbrs mbrs = 2;
 }
 
 message pbreq_st_eget {
@@ -5014,7 +5016,7 @@ message pbreq_st_eget {
 
 message pbrsp_st_eget {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_st_eopen {
@@ -5022,7 +5024,7 @@ message pbreq_st_eopen {
 
 message pbrsp_st_eopen {
   required sint32 status = 1;
-  repeated bytes dups = 2;
+  repeated dr2_comm_pb.pb_dup dups = 2;
 }
 
 message pbreq_st_async {
@@ -5043,7 +5045,7 @@ message pbreq_st_erefresh {
 
 message pbrsp_st_erefresh {
   required sint32 status = 1;
-  optional bytes dup = 2;
+  optional dr2_comm_pb.pb_dup dup = 2;
 }
 
 message pbreq_st_hattrreset {
@@ -5052,8 +5054,8 @@ message pbreq_st_hattrreset {
 
 message pbrsp_st_hattrreset {
   required sint32 status = 1;
-  repeated bytes heroes = 2;
-  optional bytes items = 3;
+  repeated dr2_comm_pb.pb_hero heroes = 2;
+  optional dr2_comm_pb.pb_bag items = 3;
 }
 
 message pbreq_st_tback {
@@ -5078,7 +5080,7 @@ message pbreq_st_starresolve {
 
 message pbrsp_st_starresolve {
   required sint32 status = 1;
-  repeated bytes items = 2;
+  repeated dr2_comm_pb.pb_item items = 2;
 }
 
 message pbreq_stower_sync {
@@ -5089,7 +5091,7 @@ message pbrsp_stower_sync {
   optional int32 hatch = 3;
   optional int32 egg_id = 4;
   optional sint32 count = 5;
-  repeated bytes breed = 6;
+  repeated dr2_comm_pb.stower_breed breed = 6;
   optional sint32 pcount = 7;
   repeated sint32 pic = 8;
 }
@@ -5118,7 +5120,7 @@ message pbreq_stower_hover {
 message pbrsp_stower_hover {
   required sint32 status = 1;
   optional sint32 id = 2;
-  optional bytes reward = 3;
+  optional dr2_comm_pb.pb_bag reward = 3;
 }
 
 message pbreq_spet_up {
@@ -5140,9 +5142,9 @@ message pbrsp_st_ssync {
   optional sint32 lv_item = 4;
   optional sint32 map_id = 5;
   optional sint32 map_lv = 6;
-  optional bytes collect = 7;
-  optional bytes vit = 8;
-  repeated bytes skl = 9;
+  optional dr2_comm_pb.pb_sbuilding collect = 7;
+  optional dr2_comm_pb.pb_sbuilding vit = 8;
+  repeated dr2_comm_pb.pb_gskl skl = 9;
   optional sint32 map_cur_lv = 10;
   optional sint32 rank = 11;
   optional bool flag = 12;
@@ -5159,16 +5161,16 @@ message pbrsp_st_slvup {
 }
 
 message pbreq_st_ssweep {
-  repeated bytes list = 1;
-  repeated bytes camp = 2;
+  repeated dr2_comm_pb.pb_sssweep list = 1;
+  repeated dr2_comm_pb.pb_unit camp = 2;
   optional bool flag = 3;
   optional int32 tid = 4;
 }
 
 message pbrsp_st_ssweep {
   required sint32 status = 1;
-  optional bytes reward = 2;
-  repeated bytes event = 3;
+  optional dr2_comm_pb.pb_bag reward = 2;
+  repeated dr2_comm_pb.pb_ssevent event = 3;
 }
 
 message pbreq_st_ssklup {
@@ -5185,7 +5187,7 @@ message pbreq_st_sstore {
 
 message pbrsp_st_sstore {
   required sint32 status = 1;
-  repeated bytes good = 2;
+  repeated dr2_comm_pb.pb_gmarket good = 2;
 }
 
 message pbreq_st_sbuy {
@@ -5214,10 +5216,10 @@ message pbrsp_st_smap_sync {
   optional sint32 line_id = 2;
   optional sint32 lv_item = 3;
   repeated int32 hids = 4;
-  optional bytes reward = 5;
-  repeated bytes cells = 6;
-  repeated bytes team = 7;
-  repeated bytes event = 8;
+  optional dr2_comm_pb.pb_bag reward = 5;
+  repeated dr2_comm_pb.pb_sscell cells = 6;
+  repeated dr2_comm_pb.pb_unit team = 7;
+  repeated dr2_comm_pb.pb_ssevent event = 8;
   optional int32 rob_num = 9;
   optional int32 mcard = 10;
 }
@@ -5229,8 +5231,8 @@ message pbreq_st_scell_unlock {
 message pbrsp_st_scell_unlock {
   required sint32 status = 1;
   optional sint32 lv_item = 2;
-  optional bytes cell = 3;
-  optional bytes reward = 4;
+  optional dr2_comm_pb.pb_sscell cell = 3;
+  optional dr2_comm_pb.pb_bag reward = 4;
 }
 
 message pbreq_st_scell_disp {
@@ -5245,7 +5247,7 @@ message pbrsp_st_scell_disp {
 
 message pbreq_st_scell_fight {
   required int32 id = 1;
-  repeated bytes camp = 2;
+  repeated dr2_comm_pb.pb_unit camp = 2;
   optional int32 tid = 3;
 }
 
@@ -5254,7 +5256,7 @@ message pbrsp_st_scell_fight {
   optional sint32 cd = 2;
   optional sint32 lv_item = 3;
   repeated sint32 boss_hp = 4;
-  optional bytes video = 5;
+  optional dr2_comm_pb.pb_pvideo video = 5;
 }
 
 message pbreq_st_smap_sett {
@@ -5263,12 +5265,12 @@ message pbreq_st_smap_sett {
 
 message pbrsp_st_smap_sett {
   required sint32 status = 1;
-  repeated bytes event = 2;
+  repeated dr2_comm_pb.pb_ssevent event = 2;
   optional int32 sett = 3;
 }
 
 message pbreq_st_smap_team {
-  repeated bytes camp = 1;
+  repeated dr2_comm_pb.pb_unit camp = 1;
   optional int32 tid = 2;
 }
 
@@ -5283,7 +5285,7 @@ message pbrsp_st_smap_rank {
   required int32 status = 1;
   optional int32 rank = 2;
   optional int32 score = 3;
-  repeated bytes members = 4;
+  repeated dr2_comm_pb.pb_p3pmbr members = 4;
 }
 
 message pbreq_st_smap_mbr {
@@ -5292,7 +5294,7 @@ message pbreq_st_smap_mbr {
 
 message pbrsp_st_smap_mbr {
   required sint32 status = 1;
-  optional bytes mbr = 2;
+  optional dr2_comm_pb.pb_pmbr mbr = 2;
 }
 
 message pbreq_st_sclick {
@@ -5309,8 +5311,8 @@ message pbreq_st_hchange {
 
 message pbrsp_st_hchange {
   required sint32 status = 1;
-  repeated bytes heroes = 2;
-  optional bytes items = 3;
+  repeated dr2_comm_pb.pb_hero heroes = 2;
+  optional dr2_comm_pb.pb_bag items = 3;
 }
 
 message pbreq_spet_reset {
@@ -5319,7 +5321,7 @@ message pbreq_spet_reset {
 
 message pbrsp_spet_reset {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_spet_breed {
@@ -5342,7 +5344,7 @@ message pbreq_stower_bover {
 message pbrsp_stower_bover {
   required sint32 status = 1;
   optional sint32 id = 2;
-  optional bytes reward = 3;
+  optional dr2_comm_pb.pb_bag reward = 3;
   optional sint32 pic = 4;
 }
 
@@ -5377,8 +5379,8 @@ message pbreq_ntask_sync {
 
 message pbrsp_ntask_sync {
   required sint32 status = 1;
-  repeated bytes tasks = 2;
-  repeated bytes data = 3;
+  repeated dr2_comm_pb.pb_ntask tasks = 2;
+  repeated dr2_comm_pb.pb_nt_sync data = 3;
 }
 
 message pbreq_ntask_claim {
@@ -5387,7 +5389,7 @@ message pbreq_ntask_claim {
 
 message pbrsp_ntask_claim {
   required sint32 status = 1;
-  optional bytes items = 2;
+  optional dr2_comm_pb.pb_bag items = 2;
 }
 
 message pbreq_ntask_market {
@@ -5395,7 +5397,7 @@ message pbreq_ntask_market {
 
 message pbrsp_ntask_market {
   required sint32 status = 1;
-  repeated bytes kv = 2;
+  repeated dr2_comm_pb.pb_kv kv = 2;
 }
 
 message pbreq_ntask_market_buy {
@@ -5412,7 +5414,7 @@ message pbreq_team_info {
 
 message pbrsp_team_info {
   required sint32 status = 1;
-  repeated bytes infos = 2;
+  repeated dr2_comm_pb.pb_team_info infos = 2;
   optional int32 mid = 3;
 }
 
@@ -5434,7 +5436,7 @@ message pbrsp_team_unlock {
 
 message pbreq_team_save {
   optional sint32 id = 1;
-  repeated bytes heroes = 2;
+  repeated dr2_comm_pb.pb_team_hero heroes = 2;
   optional int32 petid = 3;
 }
 
@@ -5447,10 +5449,10 @@ message pbreq_shop_sync {
 
 message pbrsp_shop_sync {
   required sint32 status = 1;
-  repeated bytes top = 2;
-  repeated bytes join_hot = 3;
-  repeated bytes price_hot = 4;
-  repeated bytes boom = 5;
+  repeated dr2_comm_pb.good top = 2;
+  repeated dr2_comm_pb.good join_hot = 3;
+  repeated dr2_comm_pb.good price_hot = 4;
+  repeated dr2_comm_pb.mall_log boom = 5;
   optional int32 give_cd = 6;
   optional int32 sell_cd = 7;
   optional int32 buy_cd = 8;
@@ -5468,7 +5470,7 @@ message pbreq_shop_show_sync {
 
 message pbrsp_shop_show_sync {
   required sint32 status = 1;
-  repeated bytes goods = 2;
+  repeated dr2_comm_pb.good goods = 2;
   optional int32 booth = 3;
 }
 
@@ -5484,15 +5486,15 @@ message pbreq_shop_update_cart {
 message pbrsp_shop_update_cart {
   required int32 status = 1;
   optional int32 general = 2;
-  repeated bytes hero = 3;
-  optional bytes rewards = 4;
+  repeated dr2_comm_pb.pb_hero hero = 3;
+  optional dr2_comm_pb.pb_bag rewards = 4;
   optional int32 sell_cd = 5;
   optional int32 buy_cd = 6;
 }
 
 message pbreq_shop_get_price {
   required int32 hero_id = 1;
-  optional bytes qlt = 2;
+  optional dr2_comm_pb.pb_hero_qlc qlt = 2;
 }
 
 message pbrsp_shop_get_price {
@@ -5507,7 +5509,7 @@ message pbreq_shop_update_status {
 
 message pbrsp_shop_update_status {
   optional int32 status = 1;
-  repeated bytes good = 2;
+  repeated dr2_comm_pb.good good = 2;
   repeated int32 history = 3;
 }
 
@@ -5516,7 +5518,7 @@ message pbreq_shop_history {
 
 message pbrsp_shop_history {
   required int32 status = 1;
-  repeated bytes log = 2;
+  repeated dr2_comm_pb.mall_log log = 2;
 }
 
 message pbreq_shop_red_dot {
@@ -5524,7 +5526,7 @@ message pbreq_shop_red_dot {
 
 message pbrsp_shop_red_dot {
   optional int32 status = 1;
-  optional bytes log = 2;
+  optional dr2_comm_pb.mall_log log = 2;
 }
 
 message pbreq_shop_finish_good {
@@ -5532,8 +5534,8 @@ message pbreq_shop_finish_good {
 
 message pbrsp_shop_finish_good {
   required int32 status = 1;
-  optional bytes reward = 2;
-  repeated bytes heroreward = 3;
+  optional dr2_comm_pb.pb_bag reward = 2;
+  repeated dr2_comm_pb.pb_hero heroreward = 3;
 }
 
 message pbreq_give_sync {
@@ -5541,7 +5543,7 @@ message pbreq_give_sync {
 
 message pbrsp_give_sync {
   required sint32 status = 1;
-  repeated bytes give = 2;
+  repeated dr2_comm_pb.pb_give_order give = 2;
   optional string channel = 3;
   optional int32 give_cd = 4;
   optional int32 search_cd = 5;
@@ -5554,7 +5556,7 @@ message pbreq_give_search {
 
 message pbrsp_give_search {
   required sint32 status = 1;
-  optional bytes role = 2;
+  optional dr2_comm_pb.pb_give_role role = 2;
 }
 
 message pbreq_give_link {
@@ -5594,8 +5596,8 @@ message pbreq_give_log {
 
 message pbrsp_give_log {
   required sint32 status = 1;
-  repeated bytes give_log = 2;
-  repeated bytes rec_log = 3;
+  repeated dr2_comm_pb.pb_give_log give_log = 2;
+  repeated dr2_comm_pb.pb_give_log rec_log = 3;
 }
 
 message pbreq_qlt_return {
@@ -5604,8 +5606,8 @@ message pbreq_qlt_return {
 
 message pbrsp_qlt_return {
   required sint32 status = 1;
-  repeated bytes items = 2;
-  repeated bytes items2 = 3;
+  repeated dr2_comm_pb.pb_item items = 2;
+  repeated dr2_comm_pb.pb_item items2 = 3;
 }
 
 message pbreq_mall_booth_open {
@@ -5650,15 +5652,15 @@ message pbrsp_mall_exchange {
 }
 
 message pbreq_qlt_pvp_camp {
-  repeated bytes camp = 1;
+  repeated dr2_comm_pb.pb_unit camp = 1;
   repeated sint32 skls = 2;
   repeated sint32 hide = 3;
-  repeated bytes enemy = 4;
+  repeated dr2_comm_pb.pb_qlt_pvp_enemy enemy = 4;
 }
 
 message pbrsp_qlt_pvp_camp {
   required sint32 status = 1;
-  repeated bytes enemy = 2;
+  repeated dr2_comm_pb.pb_qlt_pvp_enemy enemy = 2;
 }
 
 message pbreq_qlt_pvp_sync {
@@ -5667,12 +5669,12 @@ message pbreq_qlt_pvp_sync {
 message pbrsp_qlt_pvp_sync {
   required sint32 status = 1;
   optional sint32 flag = 2;
-  repeated bytes camp = 3;
+  repeated dr2_comm_pb.pb_unit camp = 3;
   repeated sint32 skls = 4;
   repeated sint32 hide = 5;
   optional int32 cd = 6;
-  optional bytes rank = 7;
-  repeated bytes enemy = 8;
+  optional dr2_comm_pb.pb_smbrs rank = 7;
+  repeated dr2_comm_pb.pb_qlt_pvp_enemy enemy = 8;
   optional int32 vit = 9;
   optional int32 vit_cd = 10;
   optional int32 vit_buy = 11;
@@ -5691,7 +5693,7 @@ message pbreq_qlt_pvp_refresh {
 
 message pbrsp_qlt_pvp_refresh {
   required sint32 status = 1;
-  repeated bytes enemy = 2;
+  repeated dr2_comm_pb.pb_qlt_pvp_enemy enemy = 2;
 }
 
 message pbreq_qlt_pvp_select_skill {
@@ -5707,7 +5709,7 @@ message pbreq_qlt_pvp_shop_sync {
 
 message pbrsp_qlt_pvp_shop_sync {
   required sint32 status = 1;
-  repeated bytes goods = 2;
+  repeated dr2_comm_pb.pb_item goods = 2;
   optional int32 cd = 3;
 }
 
@@ -5726,7 +5728,7 @@ message pbreq_qlt_pvp_rank {
 
 message pbrsp_qlt_pvp_rank {
   required sint32 status = 1;
-  optional bytes rank = 2;
+  optional dr2_comm_pb.pb_smbrs rank = 2;
 }
 
 message pbreq_qlt_pvp_vit_buy {
@@ -5738,15 +5740,15 @@ message pbrsp_qlt_pvp_vit_buy {
 }
 
 message pbreq_qlt_pvp_fight {
-  repeated bytes camp = 1;
+  repeated dr2_comm_pb.pb_unit camp = 1;
   required sint32 id = 2;
   repeated sint32 skls = 3;
 }
 
 message pbrsp_qlt_pvp_fight {
   required sint32 status = 1;
-  repeated bytes video = 2;
-  repeated bytes enemy = 3;
+  repeated dr2_comm_pb.pb_wvideo video = 2;
+  repeated dr2_comm_pb.pb_qlt_pvp_enemy enemy = 3;
   optional int32 top_rank = 4;
   optional int32 rank = 5;
 }
@@ -5764,8 +5766,8 @@ message pbreq_qlt_pvp_logs {
 
 message pbrsp_qlt_pvp_logs {
   required sint32 status = 1;
-  repeated bytes fight = 2;
-  repeated bytes defence = 3;
+  repeated dr2_comm_pb.pb_qloger fight = 2;
+  repeated dr2_comm_pb.pb_qloger defence = 3;
 }
 
 message pbreq_qlt_pvp_video {
@@ -5775,7 +5777,7 @@ message pbreq_qlt_pvp_video {
 
 message pbrsp_qlt_pvp_video {
   required int32 status = 1;
-  repeated bytes video = 2;
+  repeated dr2_comm_pb.pb_qvideo video = 2;
 }
 
 message pbreq_power_pve_sync {
@@ -5790,20 +5792,20 @@ message pbrsp_power_pve_sync {
   optional int32 num = 6;
   optional uint32 first = 7;
   optional uint32 id = 8;
-  repeated bytes task = 9;
+  repeated dr2_comm_pb.power_task task = 9;
   optional uint32 source_lv = 10;
-  repeated bytes source = 11;
-  repeated bytes stime = 23;
-  repeated bytes exp = 12;
+  repeated dr2_comm_pb.pb_item source = 11;
+  repeated dr2_comm_pb.pb_item stime = 23;
+  repeated dr2_comm_pb.pb_item exp = 12;
   optional uint32 look_times = 13;
   optional string notice = 14;
   optional int32 look_id = 15;
   optional int32 day_cd = 16;
   optional uint32 job = 17;
-  repeated bytes ranks1 = 18;
-  optional bytes ranks2 = 19;
+  repeated dr2_comm_pb.power_rank ranks1 = 18;
+  optional dr2_comm_pb.pb_smbrs ranks2 = 19;
   optional uint32 reward_flag = 20;
-  optional bytes leader = 21;
+  optional dr2_comm_pb.pb_give_role leader = 21;
   repeated int32 items_num = 22;
   optional int32 vit_cd = 24;
   optional int32 lv_factor = 25;
@@ -5819,8 +5821,8 @@ message pbreq_power_pve_last_rank {
 
 message pbrsp_power_pve_last_rank {
   required int32 status = 1;
-  repeated bytes power_rank = 2;
-  optional bytes role_rank = 3;
+  repeated dr2_comm_pb.power_rank power_rank = 2;
+  optional dr2_comm_pb.pb_smbrs role_rank = 3;
 }
 
 message pbreq_power_pve_role_rank {
@@ -5830,10 +5832,10 @@ message pbreq_power_pve_role_rank {
 
 message pbrsp_power_pve_role_rank {
   required int32 status = 1;
-  optional bytes rank = 2;
-  repeated bytes exp = 3;
-  repeated bytes job_list = 4;
-  repeated bytes rewards = 5;
+  optional dr2_comm_pb.pb_smbrs rank = 2;
+  repeated dr2_comm_pb.pb_item exp = 3;
+  repeated dr2_comm_pb.pb_smbr job_list = 4;
+  repeated dr2_comm_pb.pb_bag rewards = 5;
 }
 
 message pbreq_power_pve_power_rank {
@@ -5841,7 +5843,7 @@ message pbreq_power_pve_power_rank {
 
 message pbrsp_power_pve_power_rank {
   required int32 status = 1;
-  repeated bytes rank = 2;
+  repeated dr2_comm_pb.power_rank rank = 2;
 }
 
 message pbreq_power_pve_sync2 {
@@ -5850,8 +5852,8 @@ message pbreq_power_pve_sync2 {
 
 message pbrsp_power_pve_sync2 {
   required int32 status = 1;
-  repeated bytes dot = 2;
-  repeated bytes buff = 3;
+  repeated dr2_comm_pb.dot_info dot = 2;
+  repeated dr2_comm_pb.pb_item buff = 3;
   optional int32 num = 4;
   optional int32 dot_num = 5;
   optional int32 flag_times = 6;
@@ -5863,13 +5865,13 @@ message pbreq_power_pve_dot_degree_log {
 
 message pbrsp_power_pve_dot_degree_log {
   required int32 status = 1;
-  repeated bytes log = 2;
+  repeated dr2_comm_pb.dot_log log = 2;
 }
 
 message pbreq_power_pve_fight {
   required int32 type = 1;
   optional int32 monster_id = 2;
-  repeated bytes camp = 3;
+  repeated dr2_comm_pb.pb_unit camp = 3;
   repeated int32 buff = 4;
   optional int32 tid = 5;
   optional int32 idx = 6;
@@ -5877,12 +5879,12 @@ message pbreq_power_pve_fight {
 
 message pbrsp_power_pve_fight {
   required int32 status = 1;
-  optional bytes video = 2;
-  optional bytes reward = 3;
+  optional dr2_comm_pb.pb_evideo video = 2;
+  optional dr2_comm_pb.pb_bag reward = 3;
   optional int32 hp = 4;
-  optional bytes enemy = 5;
+  optional dr2_comm_pb.pb_give_role enemy = 5;
   optional int32 monster = 6;
-  repeated bytes reward2 = 7;
+  repeated dr2_comm_pb.pb_item reward2 = 7;
 }
 
 message pbreq_power_pve_buy {
@@ -5910,8 +5912,8 @@ message pbreq_power_pve_look {
 message pbrsp_power_pve_look {
   required int32 status = 1;
   optional int32 id = 2;
-  repeated bytes reward = 3;
-  optional bytes reward2 = 4;
+  repeated dr2_comm_pb.pb_item reward = 3;
+  optional dr2_comm_pb.pb_bag reward2 = 4;
   optional int32 cd = 7;
 }
 
@@ -5921,8 +5923,8 @@ message pbreq_power_pve_donate {
 message pbrsp_power_pve_donate {
   required int32 status = 1;
   optional int32 num = 2;
-  repeated bytes exp = 3;
-  optional bytes reward = 4;
+  repeated dr2_comm_pb.pb_item exp = 3;
+  optional dr2_comm_pb.pb_bag reward = 4;
 }
 
 message pbreq_power_pve_source_lv {
@@ -5937,7 +5939,7 @@ message pbreq_power_pve_source_get {
 
 message pbrsp_power_pve_source_get {
   required int32 status = 1;
-  repeated bytes reward = 2;
+  repeated dr2_comm_pb.pb_kv reward = 2;
 }
 
 message pbreq_power_pve_tmp_save {
@@ -5964,7 +5966,7 @@ message pbreq_power_pve_season_reward {
 
 message pbrsp_power_pve_season_reward {
   required int32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_power_pve_claim {
@@ -5983,8 +5985,8 @@ message pbreq_power_pve_monster {
 
 message pbrsp_power_pve_monster {
   required int32 status = 1;
-  repeated bytes claim = 2;
-  repeated bytes monster = 3;
+  repeated dr2_comm_pb.pb_item claim = 2;
+  repeated dr2_comm_pb.power_monster monster = 3;
   repeated int32 affix = 4;
 }
 
@@ -5994,8 +5996,8 @@ message pbreq_power_pve_dot {
 
 message pbrsp_power_pve_dot {
   required int32 status = 1;
-  repeated bytes rank = 2;
-  optional bytes dot = 3;
+  repeated dr2_comm_pb.power_rank rank = 2;
+  optional dr2_comm_pb.dot_info dot = 3;
 }
 
 message pbreq_power_pve_skill {
@@ -6003,8 +6005,8 @@ message pbreq_power_pve_skill {
 
 message pbrsp_power_pve_skill {
   required int32 status = 1;
-  repeated bytes skill = 2;
-  repeated bytes exp = 3;
+  repeated dr2_comm_pb.power_skill skill = 2;
+  repeated dr2_comm_pb.pb_item exp = 3;
 }
 
 message pbreq_power_pve_look_down {
@@ -6019,7 +6021,7 @@ message pbreq_power_pve_task {
 
 message pbrsp_power_pve_task {
   required int32 status = 1;
-  repeated bytes task = 2;
+  repeated dr2_comm_pb.power_task task = 2;
 }
 
 message pbreq_power_pve_dot_reward {
@@ -6041,7 +6043,7 @@ message pbrsp_power_pve_defence_info {
 
 message pbreq_power_pve_manager {
   required int32 type = 1;
-  repeated bytes manager = 2;
+  repeated dr2_comm_pb.power_manager manager = 2;
 }
 
 message pbrsp_power_pve_manager {
@@ -6053,8 +6055,8 @@ message pbreq_power_pve_power_log {
 
 message pbrsp_power_pve_power_log {
   required int32 status = 1;
-  repeated bytes log = 2;
-  repeated bytes chat = 3;
+  repeated dr2_comm_pb.power_log log = 2;
+  repeated dr2_comm_pb.pb_chat chat = 3;
 }
 
 message pbreq_power_pve_notice {
@@ -6078,7 +6080,7 @@ message pbreq_sgame_sync {
 
 message pbrsp_sgame_sync {
   required sint32 status = 1;
-  repeated bytes items = 2;
+  repeated dr2_comm_pb.pb_kv items = 2;
   repeated sint32 ids = 3;
   optional sint32 num = 4;
   optional int32 cd = 5;
@@ -6108,12 +6110,12 @@ message pbreq_sgame_play_end {
 
 message pbrsp_sgame_play_end {
   required sint32 status = 1;
-  repeated bytes reward = 2;
-  repeated bytes reward2 = 3;
-  repeated bytes reward3 = 4;
-  repeated bytes reward4 = 5;
-  repeated bytes reward5 = 6;
-  repeated bytes reward6 = 7;
+  repeated dr2_comm_pb.pb_item reward = 2;
+  repeated dr2_comm_pb.pb_item reward2 = 3;
+  repeated dr2_comm_pb.pb_kv reward3 = 4;
+  repeated dr2_comm_pb.pb_kv reward4 = 5;
+  repeated dr2_comm_pb.pb_kv reward5 = 6;
+  repeated dr2_comm_pb.pb_kv reward6 = 7;
   optional sint32 star = 8;
 }
 
@@ -6123,7 +6125,7 @@ message pbreq_sgame_reward {
 
 message pbrsp_sgame_reward {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_sgame_rank {
@@ -6133,7 +6135,7 @@ message pbreq_sgame_rank {
 
 message pbrsp_sgame_rank {
   required sint32 status = 1;
-  optional bytes rank = 2;
+  optional dr2_comm_pb.pb_smbrs rank = 2;
 }
 
 message pbreq_sgame_skl {
@@ -6150,8 +6152,8 @@ message pbreq_sgame_skl_reset {
 
 message pbrsp_sgame_skl_reset {
   required sint32 status = 1;
-  repeated bytes items = 2;
-  repeated bytes skills = 3;
+  repeated dr2_comm_pb.pb_kv items = 2;
+  repeated dr2_comm_pb.pb_kv skills = 3;
 }
 
 message pbreq_sgame_defend_sync {
@@ -6159,17 +6161,17 @@ message pbreq_sgame_defend_sync {
 
 message pbrsp_sgame_defend_sync {
   required sint32 status = 1;
-  repeated bytes ids = 2;
-  repeated bytes heroes = 3;
-  repeated bytes skills = 4;
+  repeated dr2_comm_pb.pb_kv2 ids = 2;
+  repeated dr2_comm_pb.pb_kv heroes = 3;
+  repeated dr2_comm_pb.pb_kv skills = 4;
   repeated sint32 free_ids = 5;
-  repeated bytes items = 6;
-  repeated bytes reward = 7;
-  repeated bytes reward2 = 8;
-  repeated bytes reward3 = 9;
-  repeated bytes reward4 = 10;
-  repeated bytes reward5 = 11;
-  repeated bytes reward6 = 12;
+  repeated dr2_comm_pb.pb_kv items = 6;
+  repeated dr2_comm_pb.pb_item reward = 7;
+  repeated dr2_comm_pb.pb_item reward2 = 8;
+  repeated dr2_comm_pb.pb_kv reward3 = 9;
+  repeated dr2_comm_pb.pb_kv reward4 = 10;
+  repeated dr2_comm_pb.pb_kv reward5 = 11;
+  repeated dr2_comm_pb.pb_kv reward6 = 12;
   optional sint32 wave = 13;
   optional sint32 vit = 14;
   optional sint32 type = 15;
@@ -6189,16 +6191,16 @@ message pbreq_mgame_sync {
 
 message pbrsp_mgame_sync {
   required sint32 status = 1;
-  repeated bytes map = 2;
+  repeated dr2_comm_pb.pb_mgame_map map = 2;
   repeated sint32 bag = 3;
-  repeated bytes props = 4;
-  repeated bytes task1 = 5;
+  repeated dr2_comm_pb.pb_mgame_prop props = 4;
+  repeated dr2_comm_pb.pb_kv task1 = 5;
   repeated sint32 task2 = 6;
-  repeated bytes task3 = 7;
+  repeated dr2_comm_pb.pb_kv task3 = 7;
   optional sint32 cd = 8;
-  repeated bytes shop = 9;
+  repeated dr2_comm_pb.pb_kv shop = 9;
   optional sint32 bag_num = 10;
-  repeated bytes item = 11;
+  repeated dr2_comm_pb.pb_kv item = 11;
   optional sint32 love = 12;
   optional sint32 vit_buy = 13;
   optional sint32 house_max = 14;
@@ -6215,7 +6217,7 @@ message pbreq_mgame_move {
 
 message pbrsp_mgame_move {
   required sint32 status = 1;
-  repeated bytes prop = 2;
+  repeated dr2_comm_pb.pb_mgame_prop prop = 2;
 }
 
 message pbreq_mgame_sell {
@@ -6242,9 +6244,9 @@ message pbreq_mgame_use {
 
 message pbrsp_mgame_use {
   required sint32 status = 1;
-  optional bytes new_prop = 2;
-  optional bytes old_prop = 3;
-  repeated bytes reward = 4;
+  optional dr2_comm_pb.pb_mgame_prop new_prop = 2;
+  optional dr2_comm_pb.pb_mgame_prop old_prop = 3;
+  repeated dr2_comm_pb.pb_kv reward = 4;
 }
 
 message pbreq_mgame_vit_buy {
@@ -6285,7 +6287,7 @@ message pbreq_mgame_match {
 message pbrsp_mgame_match {
   required sint32 status = 1;
   optional sint32 house = 2;
-  optional bytes enemy = 3;
+  optional dr2_comm_pb.pb_qlt_pvp_enemy enemy = 3;
 }
 
 message pbreq_mgame_play {
@@ -6296,8 +6298,8 @@ message pbreq_mgame_play {
 
 message pbrsp_mgame_play {
   required sint32 status = 1;
-  repeated bytes prop = 2;
-  repeated bytes add_prop = 3;
+  repeated dr2_comm_pb.pb_mgame_prop prop = 2;
+  repeated dr2_comm_pb.pb_mgame_prop add_prop = 3;
 }
 
 message pbreq_mgame_up {
@@ -6316,7 +6318,7 @@ message pbreq_mgame_thaw {
 
 message pbrsp_mgame_thaw {
   required sint32 status = 1;
-  optional bytes prop = 2;
+  optional dr2_comm_pb.pb_mgame_prop prop = 2;
   optional sint32 money = 3;
   optional sint32 diamond = 4;
 }
@@ -6336,7 +6338,7 @@ message pbreq_mgame_love_out {
 message pbrsp_mgame_love_out {
   required sint32 status = 1;
   optional sint32 num = 2;
-  repeated bytes props = 3;
+  repeated dr2_comm_pb.pb_mgame_prop props = 3;
   repeated sint32 house_out = 4;
 }
 
@@ -6346,7 +6348,7 @@ message pbreq_flora_sync {
 message pbrsp_flora_sync {
   required sint32 status = 1;
   optional sint32 stage = 2;
-  repeated bytes space_num = 3;
+  repeated dr2_comm_pb.pb_kv space_num = 3;
   repeated sint32 reward = 4;
   optional sint32 num = 5;
 }
@@ -6368,8 +6370,8 @@ message pbreq_flora_play {
 
 message pbrsp_flora_play {
   required sint32 status = 1;
-  optional bytes reward = 2;
-  repeated bytes reward2 = 3;
+  optional dr2_comm_pb.pb_bag reward = 2;
+  repeated dr2_comm_pb.pb_kv reward2 = 3;
 }
 
 message pbreq_flora_space_exchange {
@@ -6396,7 +6398,7 @@ message pbreq_flora_reward {
 
 message pbrsp_flora_reward {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
 
 message pbreq_world_sync {
@@ -6404,12 +6406,12 @@ message pbreq_world_sync {
 
 message pbrsp_world_sync {
   required sint32 status = 1;
-  repeated bytes builds = 2;
+  repeated dr2_comm_pb.pb_world_build builds = 2;
   optional int32 job = 3;
   optional int32 cd = 4;
   optional int32 apply = 5;
   optional string udk = 6;
-  optional bytes reward = 7;
+  optional dr2_comm_pb.pb_bag reward = 7;
   optional int32 start_cd = 8;
 }
 
@@ -6436,14 +6438,14 @@ message pbreq_world_collect {
 
 message pbrsp_world_collect {
   required sint32 status = 1;
-  optional bytes reward = 2;
-  repeated bytes adds = 3;
-  repeated bytes res = 4;
+  optional dr2_comm_pb.pb_bag reward = 2;
+  repeated dr2_comm_pb.pb_kv adds = 3;
+  repeated dr2_comm_pb.pb_kv2 res = 4;
 }
 
 message pbreq_world_product {
   optional uint32 id = 1;
-  repeated bytes items = 2;
+  repeated dr2_comm_pb.pb_item items = 2;
   optional uint32 num = 3;
 }
 
@@ -6469,8 +6471,8 @@ message pbreq_world_mall_sync {
 
 message pbrsp_world_mall_sync {
   required sint32 status = 1;
-  repeated bytes my_orders = 2;
-  repeated bytes orders = 3;
+  repeated dr2_comm_pb.pb_world_mall_item my_orders = 2;
+  repeated dr2_comm_pb.pb_world_mall_item orders = 3;
   optional uint32 publish = 4;
   optional uint32 accepted = 5;
   optional uint32 buy = 6;
@@ -6478,8 +6480,8 @@ message pbrsp_world_mall_sync {
 
 message pbreq_world_mall_up {
   optional uint32 id = 1;
-  optional bytes cost = 2;
-  optional bytes reward = 3;
+  optional dr2_comm_pb.pb_item cost = 2;
+  optional dr2_comm_pb.pb_item reward = 3;
 }
 
 message pbrsp_world_mall_up {
@@ -6511,19 +6513,19 @@ message pbreq_world_pk_match {
 
 message pbrsp_world_pk_match {
   required sint32 status = 1;
-  optional bytes enemy = 2;
+  optional dr2_comm_pb.pb_smbr enemy = 2;
 }
 
 message pbreq_world_pk {
   optional string udk = 1;
   optional uint32 type = 2;
-  repeated bytes camp = 3;
+  repeated dr2_comm_pb.pb_unit camp = 3;
   optional int32 tid = 4;
 }
 
 message pbrsp_world_pk {
   required sint32 status = 1;
-  optional bytes log = 2;
+  optional dr2_comm_pb.pb_qlog log = 2;
 }
 
 message pbreq_world_pk_log {
@@ -6532,7 +6534,7 @@ message pbreq_world_pk_log {
 
 message pbrsp_world_pk_log {
   required sint32 status = 1;
-  repeated bytes log = 2;
+  repeated dr2_comm_pb.pb_qlog log = 2;
 }
 
 message pbreq_world_pk_rank {
@@ -6541,8 +6543,8 @@ message pbreq_world_pk_rank {
 
 message pbrsp_world_pk_rank {
   required sint32 status = 1;
-  optional bytes rank = 2;
-  repeated bytes camp = 3;
+  optional dr2_comm_pb.pb_smbrs rank = 2;
+  repeated dr2_comm_pb.pb_unit camp = 3;
   optional int64 power = 4;
   optional bool bomb = 5;
 }
@@ -6552,8 +6554,8 @@ message pbreq_world_cele_sync {
 
 message pbrsp_world_cele_sync {
   required sint32 status = 1;
-  repeated bytes reward = 2;
-  repeated bytes cele = 3;
+  repeated dr2_comm_pb.pb_item reward = 2;
+  repeated dr2_comm_pb.pb_cele cele = 3;
 }
 
 message pbreq_world_cele_op {
@@ -6564,8 +6566,8 @@ message pbreq_world_cele_op {
 
 message pbrsp_world_cele_op {
   required sint32 status = 1;
-  optional bytes reward = 2;
-  optional bytes cele = 3;
+  optional dr2_comm_pb.pb_bag reward = 2;
+  optional dr2_comm_pb.pb_cele cele = 3;
 }
 
 message pbreq_bworld_sync {
@@ -6576,9 +6578,9 @@ message pbreq_bworld_sync {
 
 message pbrsp_bworld_sync {
   required sint32 status = 1;
-  optional bytes bworld = 2;
-  repeated bytes teams = 3;
-  repeated bytes hps = 4;
+  optional dr2_comm_pb.pb_bworld bworld = 2;
+  repeated dr2_comm_pb.pb_bworld_team teams = 3;
+  repeated dr2_comm_pb.pb_kv2 hps = 4;
   optional int32 cd = 5;
   optional int64 group_id = 6;
   optional string udk = 7;
@@ -6586,13 +6588,13 @@ message pbrsp_bworld_sync {
   repeated int32 vits = 9;
   optional int32 day_cd = 10;
   optional uint32 color = 11;
-  repeated bytes samples = 12;
-  repeated bytes skill_count = 13;
+  repeated dr2_comm_pb.pb_kv2 samples = 12;
+  repeated dr2_comm_pb.pb_kv2 skill_count = 13;
 }
 
 message pbreq_bworld_set_team {
   optional sint32 teamid = 1;
-  repeated bytes camp = 2;
+  repeated dr2_comm_pb.pb_unit camp = 2;
   optional sint32 type = 3;
   repeated uint32 soldiers = 4;
 }
@@ -6607,14 +6609,14 @@ message pbreq_bworld_build_op {
   optional uint64 world_id = 2;
   optional uint32 key = 3;
   optional uint32 ship_key = 4;
-  repeated bytes material = 5;
+  repeated dr2_comm_pb.pb_item material = 5;
   optional uint32 id_cfg = 6;
 }
 
 message pbrsp_bworld_build_op {
   required sint32 status = 1;
-  optional bytes moudle = 2;
-  repeated bytes reward = 3;
+  optional dr2_comm_pb.pb_bworld_moudle moudle = 2;
+  repeated dr2_comm_pb.pb_item reward = 3;
 }
 
 message pbreq_bworld_build_move {
@@ -6635,7 +6637,7 @@ message pbreq_bworld_resource {
 
 message pbrsp_bworld_resource {
   required sint32 status = 1;
-  repeated bytes reward = 2;
+  repeated dr2_comm_pb.pb_item reward = 2;
 }
 
 message pbreq_bworld_op {
@@ -6660,8 +6662,8 @@ message pbrsp_bworld_small_sync {
   required sint32 status = 1;
   optional int32 cd = 2;
   optional int32 fog = 3;
-  repeated bytes existing = 4;
-  repeated bytes worlds = 5;
+  repeated dr2_comm_pb.pb_kv2 existing = 4;
+  repeated dr2_comm_pb.pb_kv2 worlds = 5;
 }
 
 message pbreq_bworld_video {
@@ -6671,8 +6673,8 @@ message pbreq_bworld_video {
 
 message pbrsp_bworld_video {
   required sint32 status = 1;
-  optional bytes v1 = 2;
-  optional bytes v2 = 3;
+  optional dr2_comm_pb.pb_qlog v1 = 2;
+  optional dr2_comm_pb.pb_bworld_video v2 = 3;
 }
 
 message pbreq_bworld_station {
@@ -6701,7 +6703,7 @@ message pbreq_bworld_chat_log {
 
 message pbrsp_bworld_chat_log {
   required sint32 status = 1;
-  repeated bytes chat = 2;
+  repeated dr2_comm_pb.pb_chat chat = 2;
 }
 
 message pbreq_bworld_walk {
@@ -6715,9 +6717,9 @@ message pbreq_bworld_walk {
 
 message pbrsp_bworld_walk {
   required sint32 status = 1;
-  optional bytes video = 2;
-  optional bytes team = 3;
-  optional bytes reward = 4;
+  optional dr2_comm_pb.pb_bworld_video video = 2;
+  optional dr2_comm_pb.pb_bworld_team team = 3;
+  optional dr2_comm_pb.pb_bag reward = 4;
 }
 
 message pbreq_bworld_pinfo {
@@ -6727,11 +6729,11 @@ message pbreq_bworld_pinfo {
 
 message pbrsp_bworld_pinfo {
   required sint32 status = 1;
-  optional bytes ship = 2;
-  optional bytes build = 3;
-  optional bytes monster = 4;
-  repeated bytes moudle = 5;
-  repeated bytes station = 6;
+  optional dr2_comm_pb.pb_smbr ship = 2;
+  optional dr2_comm_pb.pb_bworld_build build = 3;
+  optional dr2_comm_pb.pb_bworld_monster monster = 4;
+  repeated dr2_comm_pb.pb_bworld_moudle moudle = 5;
+  repeated dr2_comm_pb.pb_kv station = 6;
 }
 
 message pbreq_bworld_ship_back {
@@ -6757,9 +6759,9 @@ message pbreq_bworld_member {
 
 message pbrsp_bworld_member {
   required sint32 status = 1;
-  repeated bytes members = 2;
+  repeated dr2_comm_pb.pb_smbr members = 2;
   optional sint32 flag = 3;
-  repeated bytes invite = 4;
+  repeated dr2_comm_pb.pb_smbr invite = 4;
   optional sint32 state = 5;
 }
 
@@ -6771,13 +6773,13 @@ message pbrsp_bworld_exit {
 }
 
 message pbreq_bworld_use_item {
-  optional bytes item = 1;
+  optional dr2_comm_pb.pb_item item = 1;
   repeated int32 hids = 2;
 }
 
 message pbrsp_bworld_use_item {
   required sint32 status = 1;
-  repeated bytes hps = 2;
+  repeated dr2_comm_pb.pb_kv2 hps = 2;
 }
 
 message pbreq_bworld_sinfo {
@@ -6787,7 +6789,7 @@ message pbreq_bworld_sinfo {
 
 message pbrsp_bworld_sinfo {
   required sint32 status = 1;
-  repeated bytes ships = 2;
+  repeated dr2_comm_pb.pb_smbr ships = 2;
 }
 
 message pbreq_bworld_chat_sync {
@@ -6796,10 +6798,10 @@ message pbreq_bworld_chat_sync {
 message pbrsp_bworld_chat_sync {
   required sint32 status = 1;
   optional uint32 show = 2;
-  repeated bytes world_id = 3;
-  repeated bytes chat = 4;
-  repeated bytes recruit = 5;
-  repeated bytes log = 6;
+  repeated dr2_comm_pb.pb_kv world_id = 3;
+  repeated dr2_comm_pb.pb_chat chat = 4;
+  repeated dr2_comm_pb.pb_chat recruit = 5;
+  repeated dr2_comm_pb.pb_bworld_log log = 6;
 }
 
 message pbreq_bworld_hps {
@@ -6807,7 +6809,7 @@ message pbreq_bworld_hps {
 
 message pbrsp_bworld_hps {
   required sint32 status = 1;
-  repeated bytes hps = 2;
+  repeated dr2_comm_pb.pb_kv2 hps = 2;
 }
 
 message pbreq_bworld_skill {
@@ -6821,5 +6823,5 @@ message pbreq_bworld_skill {
 
 message pbrsp_bworld_skill {
   required sint32 status = 1;
-  optional bytes reward = 2;
+  optional dr2_comm_pb.pb_bag reward = 2;
 }
