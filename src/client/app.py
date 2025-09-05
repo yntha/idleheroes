@@ -1,8 +1,12 @@
 import asyncio
 import os.path
+import sys
 
 from typing import Any
 from argparse import ArgumentParser
+from http import HTTPStatus
+
+import aiohttp
 
 from google.protobuf.json_format import MessageToJson
 from client.ihnet import IHNetClient
@@ -27,6 +31,54 @@ def print_result(message: Any):
 def _check_dev_file() -> bool:
     dev_file = os.path.join(ROOT_DIR, ".dev")
     return os.path.exists(dev_file)
+
+
+def _get_human_readable_size(size: int) -> str:
+    if size == 0:
+        return "0B"
+
+    units = ["B", "KB", "MB", "GB"]
+    unit_idx = 0
+    size_f = float(size)
+
+    while size_f >= 1024.0 and unit_idx < len(units) - 1:
+        size_f /= 1024.0
+        unit_idx += 1
+
+    return f"{size_f:.2f}{units[unit_idx]}"
+
+
+# fetch update file from GitHub releases
+async def download_update(url: str) -> int:
+    timeout_cfg = aiohttp.ClientTimeout(sock_connect=10.0, sock_read=10.0)
+
+    async with aiohttp.ClientSession(timeout=timeout_cfg) as session:
+        async with session.get(url, allow_redirects=True) as resp:
+            if resp.status != HTTPStatus.OK:
+                return resp.status
+
+            total_size = int(resp.headers.get("Content-Length", "0"))
+            dest_path = os.path.join(ROOT_DIR, "updates", f"ihres_{os.path.basename(url)}")
+
+            # download to root/updates/ihres_<version>.zip
+            os.makedirs(os.path.dirname(dest_path), exist_ok=True)
+
+            print(f"Downloading {url} ({_get_human_readable_size(total_size)})", end="")
+
+            downloaded = 0
+            dots = 0
+            with open(dest_path, "wb") as f:
+                async for chunk in resp.content.iter_chunked(1024 * 32):  # 32KB
+                    f.write(chunk)
+                    downloaded += len(chunk)
+
+                    dots = (dots + 1) % 3
+                    sys.stdout.write("\r" + "." * (dots + 1) + "   ")
+                    sys.stdout.flush()
+
+    print(f"\nDownload complete: {dest_path}")
+    return HTTPStatus.OK
+
 
 async def main():
     is_developer = _check_dev_file()
@@ -99,10 +151,13 @@ async def main():
 
         if config.version != up.vsn:
             print(f"New version available: {config.version} -> {up.vsn}")
-            print(f"Download the latest resources from GitHub: https://github.com/yntha/idleheroes/releases/download/{up.vsn}/ihres_{up.vsn}.zip")
-            print("If the new version is not yet available on GitHub, please be patient and check back later.")
 
-            if is_developer:
+            if not is_developer:
+                status = await download_update(f"https://github.com/yntha/idleheroes/releases/download/{up.vsn}/ihres_{up.vsn}.zip")
+
+                if status == HTTPStatus.NOT_FOUND:
+                    print("Resource update not released yet. Please try again later.")
+            else:
                 update_file = os.path.join(ROOT_DIR, ".update")
 
                 with open(update_file, "w", encoding="utf-8") as f:
