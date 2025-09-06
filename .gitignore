@@ -220,3 +220,5 @@ tools/asset_updater.py
 .update
 update/
 temp/
+res/
+ihres_*.zip
