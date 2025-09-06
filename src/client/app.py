@@ -104,7 +104,7 @@ async def download_update(config: ClientConfig, for_version: str) -> int:
         zip_ref.extractall(ROOT_DIR)
 
     # get update info file
-    update_info_path = res_dir / "ihres_update.json"
+    update_info_path = ROOT_DIR / "ihres_update.json"
     if update_info_path.exists():
         with update_info_path.open("r", encoding="utf-8") as f:
             update_info = json.load(f)
