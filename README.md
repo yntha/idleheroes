@@ -16,7 +16,10 @@ Requesting salt... Success!
 Logging in... Success!
 Authenticating... Success!
 Checking for updates... Success!
-Updating version 1.34.0 -> 1.34.115
+New version available: 1.34.0 -> 1.34.115
+[\] Downloading https://github.com/yntha/idleheroes/releases/download/1.34.115/ihres_1.34.115.zip (136.42MB)/136.42MB
+Download complete. Extracting...
+Synchronizing game state... Success!
 
 # debug output
 $ ih-client --debug
@@ -55,7 +58,7 @@ Sending 82 bytes:
 - Game state synchronization
 
 ## Assets
-The official Idle Heroes assets are encrypted and include the source code for the game client. This client distributes only the decrypted resource assets to provide a better experience, but not the decrypted game client code due to ethical and legal considerations. The decrypted assets are provided as a downloadable zip file in the [Releases](https://github.com/yntha/idleheroes/releases) section and are updated with each new game version.
+The official Idle Heroes assets are encrypted and include the source code for the game client. This client distributes only the decrypted resource assets to provide a better experience, but not the decrypted game client code due to ethical and legal considerations. The decrypted assets are provided as a downloadable zip file in the [Releases](https://github.com/yntha/idleheroes/releases) section and are updated with each new game version. If the client detects that the local assets are outdated or missing, it will download and extract the latest/base assets automatically. <b>The base assets are 642 MB in size.</b>
 
 ## Contact
 For questions or support, please open an [issue](https://github.com/yntha/idleheroes/issues). For direct contact, you can reach me on Discord `@kilozz` or Telegram `@neosophaux`.
