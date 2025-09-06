@@ -1,11 +1,11 @@
 from enum import IntEnum, StrEnum
-import os.path
+from pathlib import Path
 
 
 ADVERTISING_ID = "4f1d752c-e7ab-4d5c-b028-4a3b5a416246"
 MD5_SECRET = "rwmkxhgi6;578i650"
 PACKAGE_NAME = "hdad_google"
-ROOT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..")
+ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 
 GAME_CD = "1001"
 APP_CHANNEL = "GOOGLEPLAY"

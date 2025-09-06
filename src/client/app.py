@@ -1,16 +1,20 @@
 import asyncio
-import os.path
-import sys
+from pathlib import Path
+import json
+import zipfile
+import shutil
 
 from typing import Any
 from argparse import ArgumentParser
 from http import HTTPStatus
 
 import aiohttp
+from urllib.parse import urlsplit
 
 from google.protobuf.json_format import MessageToJson
 from client.ihnet import IHNetClient
 from client.constants import ROOT_DIR
+from client.config import ClientConfig
 
 
 # enable debug output
@@ -29,8 +33,8 @@ def print_result(message: Any):
 
 
 def _check_dev_file() -> bool:
-    dev_file = os.path.join(ROOT_DIR, ".dev")
-    return os.path.exists(dev_file)
+    dev_file = Path(ROOT_DIR) / ".dev"
+    return dev_file.exists()
 
 
 def _get_human_readable_size(size: int) -> str:
@@ -49,7 +53,7 @@ def _get_human_readable_size(size: int) -> str:
 
 
 # fetch update file from GitHub releases
-async def download_update(url: str) -> int:
+async def download_update_file(url: str) -> int:
     timeout_cfg = aiohttp.ClientTimeout(sock_connect=10.0, sock_read=10.0)
 
     async with aiohttp.ClientSession(timeout=timeout_cfg) as session:
@@ -58,35 +62,110 @@ async def download_update(url: str) -> int:
                 return resp.status
 
             total_size = int(resp.headers.get("Content-Length", "0"))
-            dest_path = os.path.join(ROOT_DIR, "updates", f"ihres_{os.path.basename(url)}")
+            filename = Path(urlsplit(url).path).name
+            dest_path = Path(ROOT_DIR) / "update" / filename
 
-            # download to root/updates/ihres_<version>.zip
-            os.makedirs(os.path.dirname(dest_path), exist_ok=True)
+            # download to root/update/ihres_<version>.zip
+            dest_path.parent.mkdir(parents=True, exist_ok=True)
 
             print(f"Downloading {url} ({_get_human_readable_size(total_size)})", end="")
 
             downloaded = 0
-            dots = 0
-            with open(dest_path, "wb") as f:
+            progress_states = ["-", "\\", "|", "/"]
+            terminal_width = shutil.get_terminal_size((80, 20)).columns
+            with dest_path.open("wb") as f:
                 async for chunk in resp.content.iter_chunked(1024 * 32):  # 32KB
                     f.write(chunk)
                     downloaded += len(chunk)
 
-                    dots = (dots + 1) % 3
-                    sys.stdout.write("\r" + "." * (dots + 1) + "   ")
-                    sys.stdout.flush()
+                    state = progress_states[(downloaded // (1024 * 32)) % len(progress_states)]
+                    download_msg = (
+                        f"\r[{state}] "
+                        f"Downloading {url} ({_get_human_readable_size(total_size)})/{_get_human_readable_size(downloaded)}"
+                    )
+                    download_msg = download_msg.ljust(terminal_width - 1)
+                    print(download_msg,end="", flush=True)
 
-    print(f"\nDownload complete: {dest_path}")
     return HTTPStatus.OK
+
+
+async def download_update(config: ClientConfig, for_version: str) -> int:
+    res_dir = Path(ROOT_DIR) / "res"
+    status = await download_update_file(f"https://github.com/yntha/idleheroes/releases/download/{for_version}/ihres_{for_version}.zip")
+
+    if status != HTTPStatus.OK:
+        return status
+
+    print("\nDownload complete. Extracting...")
+
+    # extract to root
+    zip_path = Path(ROOT_DIR) / "update" / f"ihres_{for_version}.zip"
+    with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+        zip_ref.extractall(ROOT_DIR)
+
+    # get update info file
+    update_info_path = res_dir / "ihres_update.json"
+    if update_info_path.exists():
+        with update_info_path.open("r", encoding="utf-8") as f:
+            update_info = json.load(f)
+
+            config.version = update_info["version"]
+            config.save()
+
+    # clean up
+    try:
+        zip_path.unlink()
+    except FileNotFoundError:
+        pass
+    try:
+        update_info_path.unlink()
+    except FileNotFoundError:
+        pass
+    try:
+        (Path(ROOT_DIR) / ".update").unlink()
+    except FileNotFoundError:
+        pass
+
+    # delete the update folder
+    try:
+        (Path(ROOT_DIR) / "update").rmdir()
+    except OSError:
+        pass
+
+    # delete the temp folder
+    try:
+        (Path(ROOT_DIR) / "temp").rmdir()
+    except OSError:
+        pass
+
+    return status
+
+
+async def check_resources(config: ClientConfig):
+    res_dir = Path(ROOT_DIR) / "res"
+
+    # if the res folder doesn't exist, that means the base resources are missing.
+    # an update check comes after this, so resource download will be triggered twice
+    # on first run.
+    if not res_dir.exists():
+        print("Missing resources. Downloading now...")
+        status = await download_update(config, config.version)
+        if status != HTTPStatus.OK:
+            raise ClientAppError(f"Failed to download resources: HTTP {status}")
+
+        print("Resources downloaded.")
 
 
 async def main():
     is_developer = _check_dev_file()
-    client = await IHNetClient.create_from_config()
+    client = IHNetClient()
     account = client.get_account()
     config = client.client_config
 
     config.debug = DEBUG
+
+    await check_resources(config)
+    await client.init()
 
     if not account.account or not account.password:
         print("Account details are incomplete or missing. Please set up your account:")
@@ -153,15 +232,14 @@ async def main():
             print(f"New version available: {config.version} -> {up.vsn}")
 
             if not is_developer:
-                status = await download_update(f"https://github.com/yntha/idleheroes/releases/download/{up.vsn}/ihres_{up.vsn}.zip")
+                status = await download_update(config, up.vsn)
 
                 if status == HTTPStatus.NOT_FOUND:
                     print("Resource update not released yet. Please try again later.")
             else:
-                update_file = os.path.join(ROOT_DIR, ".update")
+                update_file = Path(ROOT_DIR) / ".update"
 
-                with open(update_file, "w", encoding="utf-8") as f:
-                    f.write(MessageToJson(up))
+                update_file.write_text(MessageToJson(up), encoding="utf-8")
 
                 print(f"Wrote update info to {update_file}")
 

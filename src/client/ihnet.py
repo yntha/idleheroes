@@ -37,13 +37,21 @@ class IHNetClient:
         self._router_started = asyncio.Event()
         self._latest_version: str = self.client_config.version
 
+    async def init(self):
+        await self.connect(self.client_config.gateway_host, self.client_config.gateway_port)
+        await self.launch_router()
+
+    async def launch_router(self):
+        if self._router_task is None:
+            self._router_task = asyncio.create_task(self._router_loop())
+            await self._router_started.wait()
+
     @classmethod
-    async def create(cls, host: str, port: int, timeout: float = 10.0) -> IHNetClient:
+    async def create(cls, host: str, port: int) -> IHNetClient:
         self = cls()
 
         await self.connect(host, port)
-        self._router_task = asyncio.create_task(self._router_loop())
-        await self._router_started.wait()
+        await self.launch_router()
 
         return self
 
@@ -52,8 +60,7 @@ class IHNetClient:
         self = cls()
 
         await self.connect(self.client_config.gateway_host, self.client_config.gateway_port)
-        self._router_task = asyncio.create_task(self._router_loop())
-        await self._router_started.wait()
+        await self.launch_router()
 
         return self
 
