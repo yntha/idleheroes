@@ -34,7 +34,7 @@ $ ih-client
 Logged in as UID --------, session --------------------------------, SID ----
 ```
 
-On first launch, the client will ask you for your credentials (email and password) to log in. It will then save your session data to `config/config.json` for future use.
+On first launch, the client will ask you for your credentials (email and password) to log in. It will then save your credentials to `config/config.json` for future use.
 
 ## Features
 - Email & password login
