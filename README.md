@@ -12,41 +12,26 @@ $ python -m pip install --user -e .
 
 # run
 $ ih-client
-Requesting salt... Success!
-Logging in... Success!
-Authenticating... Success!
-Checking for updates... Success!
-New version available: 1.34.0 -> 1.34.115
-[\] Downloading https://github.com/yntha/idleheroes/releases/download/1.34.115/ihres_1.34.115.zip (136.42MB)/136.42MB
-Download complete. Extracting...
-Synchronizing game state... Success!
-
-# debug output
-$ ih-client --debug
-Requesting salt...
-Sending 30 bytes:
-====   0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F
-0000  00 1c 02 02 00 00 0a 16 78 78 78 78 78 78 78 78    ........xxxxxxxx
-0010  78 78 78 78 78 78 78 78 78 78 78 78 78 78          xxxxxxxxxxxxxx
-
-
-Received 49 bytes:
-====   0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F
-0000  00 2f 02 02 08 00 12 20 78 78 78 78 78 78 78 78    ./..... xxxxxxxx
-0010  78 78 78 78 78 78 78 78 78 78 78 78 78 78 78 78    xxxxxxxxxxxxxxxx
-0020  78 78 78 78 78 78 78 78 18 ff ff ff ff 20 00 28    xxxxxxxx...." .(
-0030  00                                                 .
-
-
-Salt response: {
-  "status": 0,
-  "salt": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-  "uid": xxxxxxxx,
-  "flag": 0,
-  "cd": 0
-}
-Logging in...
-Sending 82 bytes:
+[IHNetClient] Logging in...
+[IHNetClient] Logged in as UID --------.
+[Updater] Base resources directory does not exist! Downloading base resources (1.34)...
+[Updater] Found 1.34.0 update package.
+[Updater] Downloading: https://github.com/yntha/idleheroes/releases/download/1.34.0/ihres_1.34.x_base.zip...
+[Updater] Downloaded 642.07MB.
+[Updater] Extracting resources...
+[Updater] Resources updated in C:\Users\anthy\Documents\dev\py\ih\client\res
+[IHNetClient] Checking for updates...
+[IHNetClient] New version available: 1.34.118 (current: 1.34.0)
+[Updater] Found 1.34.118 update package.
+[IHNetClient] Installing update to version 1.34.118...
+[Updater] Downloading: https://github.com/yntha/idleheroes/releases/download/1.34.118/ihres_1.34.118.zip...
+[Updater] Downloaded 139.40MB.
+[Updater] Extracting resources...
+[Updater] Resources updated in C:\Users\anthy\Documents\dev\py\ih\client\res
+[IHNetClient] Update to version 1.34.118 installed successfully.
+[IHNetClient] Checking for updates...
+[IHNetClient] Client is up-to-date (version: 1.34.118)
+Logged in as UID --------, session --------------------------------, SID ----
 ```
 
 ## Features
