@@ -44,6 +44,9 @@ class TCPClient:
         self._rx = bytearray()
         self.message_queue: asyncio.Queue[Frame] = asyncio.Queue()
 
+    def is_connected(self) -> bool:
+        return self._is_connected.is_set()
+
     async def connect(self, host: str, port: int, timeout: float = 10.0):
         self.host = host
         self.port = port

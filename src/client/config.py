@@ -18,6 +18,8 @@ class ClientConfig:
     conn_timeout: float
     debug: bool
     version: str
+    update_url: str
+    resources_dir: str
 
     @classmethod
     def get(cls) -> ClientConfig:
@@ -41,6 +43,8 @@ class ClientConfig:
             conn_timeout=10.0,
             debug=False,
             version="1.34.0",
+            update_url="https://github.com/yntha/idleheroes/releases/download",
+            resources_dir="res/"
         )
 
     def save(self):

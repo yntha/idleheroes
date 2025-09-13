@@ -8,6 +8,7 @@ import json
 
 from hashlib import md5
 from pathlib import Path
+from packaging import version
 
 from client.constants import (
     CONFIG_PROTOCOL_HEADER_EXCEPT_FIRST_LEN,
@@ -19,6 +20,12 @@ from client.events import EventManager, Event
 from client.protobuf import dr2_login_pb_pb2 as login_pb, dr2_logic_pb_pb2 as logic_pb
 from client.net.tcpclient import TCPClient, Frame
 from client.config import ClientConfig, AccountConfig, CONFIG_DIR
+from client.models.player import LocalPlayer
+from client.updater import Updater, UpdateType
+
+
+class IHNetError(Exception):
+    pass
 
 
 class IHNetClient:
@@ -28,41 +35,102 @@ class IHNetClient:
         self.account_config = AccountConfig.get()
         self.client_config = ClientConfig.get()
         self.tcp_client = TCPClient(self.client_config)
+        self.updater = Updater(self.client_config)
 
         self.sid = 0
         self.echo_count = 1
+        self.local_player: LocalPlayer = LocalPlayer()
         self._waiters: dict[tuple[int, int], asyncio.Future[bytes]] = {}
         self._streams: dict[tuple[int, int], asyncio.Queue[Frame]] = {}
         self._router_task: asyncio.Task | None = None
         self._router_started = asyncio.Event()
-        self._latest_version: str = self.client_config.version
 
-    async def init(self):
-        await self.connect(self.client_config.gateway_host, self.client_config.gateway_port)
-        await self.launch_router()
+    def check_account(self) -> bool:
+        if self.account_config.account == "" or self.account_config.password == "":
+            return False
+        return True
+
+    async def check_update(self) -> bool:
+        await self.updater.ensure_resources_dir()
+
+        print("[IHNetClient] Checking for updates...")
+        up_rsp = await self.up()
+        if up_rsp.status != 0:
+            raise IHNetError(f"Failed to check version: status={up_rsp.status}")
+
+        if up_rsp.vsn != self.client_config.version:
+            print(f"[IHNetClient] New version available: {up_rsp.vsn} (current: {self.client_config.version})")
+
+            new_version = version.parse(up_rsp.vsn)
+            result = await self.updater.check_for_update(new_version)
+            if result != UpdateType.NONE:
+                print(f"[IHNetClient] Installing update to version {new_version}...")
+
+                if result == UpdateType.MAJOR:
+                    await self.updater.install_major_update(new_version)
+                elif result == UpdateType.MINOR:
+                    await self.updater.install_minor_update(new_version)
+                else:
+                    await self.updater.install_patch_update(new_version)
+
+                self.client_config.version = str(new_version)
+                self.client_config.save()
+
+                print(f"[IHNetClient] Update to version {new_version} installed successfully.")
+                return True
+        else:
+            print(f"[IHNetClient] Client is up-to-date (version: {self.client_config.version})")
+        return False
+
+    async def init(self, no_login: bool = False) -> IHNetClient | None:
+        if not self.tcp_client.is_connected():
+            await self.connect(self.client_config.gateway_host, self.client_config.gateway_port)
+            await self.launch_router()
+
+        if no_login:
+            return None
+
+        if not self.check_account():
+            print("[IHNetClient] No account configured, please register or set account first.")
+
+            self.account_config.account = input("[IHNetClient] Account Email: ").strip()
+            self.account_config.password = input("[IHNetClient] Account Password: ").strip()
+            self.account_config.save()
+            if not self.check_account():
+                raise IHNetError("Account details are incomplete.")
+
+            print("[IHNetClient] Account details saved.")
+
+        print("[IHNetClient] Logging in...")
+        salt_rsp = await self.salt()
+        if salt_rsp.status != 0:
+            raise IHNetError(f"Failed to get salt: status={salt_rsp.status}")
+
+        self.local_player.uid = salt_rsp.uid
+        acct_salt = salt_rsp.salt
+
+        login_rsp = await self.login(acct_salt)
+        if login_rsp.status != 0:
+            raise IHNetError(f"Failed to login: status={login_rsp.status}")
+
+        self.local_player.session = login_rsp.session
+        self.local_player.sid = login_rsp.sid
+
+        auth_rsp = await self.auth(self.local_player.uid, self.local_player.session)
+        if auth_rsp.status != 0:
+            raise IHNetError(f"Failed to authenticate: status={auth_rsp.status}")
+
+        print(f"[IHNetClient] Logged in as UID {self.local_player.uid}.")
+
+        while await self.check_update():
+            pass
+
+        return self
 
     async def launch_router(self):
         if self._router_task is None:
             self._router_task = asyncio.create_task(self._router_loop())
             await self._router_started.wait()
-
-    @classmethod
-    async def create(cls, host: str, port: int) -> IHNetClient:
-        self = cls()
-
-        await self.connect(host, port)
-        await self.launch_router()
-
-        return self
-
-    @classmethod
-    async def create_from_config(cls) -> IHNetClient:
-        self = cls()
-
-        await self.connect(self.client_config.gateway_host, self.client_config.gateway_port)
-        await self.launch_router()
-
-        return self
 
     def get_account(self) -> AccountConfig:
         return self.account_config
@@ -214,11 +282,6 @@ class IHNetClient:
 
         return rsp
 
-    async def update_version(self):
-        if self._latest_version != self.client_config.version:
-            self.client_config.version = self._latest_version
-            self.client_config.save()
-
     async def up(self) -> logic_pb.pbrsp_up:
         event = self.event_manager.get_event("EVENT_CMD_3_3")
         payload = logic_pb.pbreq_up(
@@ -229,9 +292,6 @@ class IHNetClient:
         rsp_data = await self.submit(event, payload.SerializeToString())
         rsp = logic_pb.pbrsp_up()
         rsp.ParseFromString(rsp_data)
-
-        if rsp.status == 0:
-            self._latest_version = rsp.vsn
 
         return rsp
 
