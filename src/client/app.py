@@ -36,7 +36,7 @@ async def main():
         player = client.local_player
 
         if player is not None:
-            print(f"Logged in as UID {player.uid}, session {player.session}, SID {player.sid}")
+            print(f"Logged in as: {player.get_player().name} (UID: {client.local_player.get_uid()})")
 
     except IHNetError as e:
         print(f"Error: {e}")

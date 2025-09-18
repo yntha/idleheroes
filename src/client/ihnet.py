@@ -10,10 +10,13 @@ from hashlib import md5
 from pathlib import Path
 from packaging import version
 
+from google.protobuf.json_format import MessageToJson
+
 from client.constants import (
     CONFIG_PROTOCOL_HEADER_EXCEPT_FIRST_LEN,
     ADVERTISING_ID,
     MD5_SECRET,
+    ROOT_DIR,
     PACKAGE_NAME
 )
 from client.events import EventManager, Event
@@ -106,24 +109,41 @@ class IHNetClient:
         if salt_rsp.status != 0:
             raise IHNetError(f"Failed to get salt: status={salt_rsp.status}")
 
-        self.local_player.uid = salt_rsp.uid
+        self.local_player.set_uid(salt_rsp.uid)
         acct_salt = salt_rsp.salt
 
         login_rsp = await self.login(acct_salt)
         if login_rsp.status != 0:
             raise IHNetError(f"Failed to login: status={login_rsp.status}")
 
-        self.local_player.session = login_rsp.session
-        self.local_player.sid = login_rsp.sid
+        self.local_player.set_session(login_rsp.session)
+        self.local_player.set_sid(login_rsp.sid)
 
-        auth_rsp = await self.auth(self.local_player.uid, self.local_player.session)
+        auth_rsp = await self.auth(self.local_player.get_uid(), self.local_player.get_session())
         if auth_rsp.status != 0:
             raise IHNetError(f"Failed to authenticate: status={auth_rsp.status}")
 
-        print(f"[IHNetClient] Logged in as UID {self.local_player.uid}.")
+        print("[IHNetClient] Logged in.")
 
         while await self.check_update():
             pass
+
+        print("[IHNetClient] Syncing game state...")
+
+        sync_rsp = await self.sync()
+        if sync_rsp.status != 0:
+            raise IHNetError(f"Failed to sync: status={sync_rsp.status}")
+
+        if self.client_config.debug:
+            json_str = MessageToJson(sync_rsp)
+            debug_path = os.path.join(ROOT_DIR, "debug")
+
+            os.makedirs(debug_path, exist_ok=True)
+            Path(os.path.join(debug_path, "sync.json")).write_text(json_str)
+
+            print(f"[IHNetClient] Sync response saved to {os.path.join(debug_path, 'sync.json')}")
+
+        self.local_player.set_player_from_sync(sync_rsp)
 
         return self
 
