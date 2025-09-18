@@ -225,3 +225,4 @@ ihres_*.zip
 tools/test.py
 decompiled_lua/
 lua_diff_*.diff
+debug/
