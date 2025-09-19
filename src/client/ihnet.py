@@ -157,6 +157,7 @@ class IHNetClient:
             print(f"[IHNetClient] Sync response saved to {os.path.join(debug_path, 'sync.json')}")
 
         self.local_player.set_player_from_sync(sync_rsp)
+        self.local_player.set_bag_from_sync(sync_rsp)
 
         return self
 

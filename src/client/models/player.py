@@ -75,3 +75,6 @@ class LocalPlayer:
 
     def set_player_from_sync(self, sync_rsp: pbrsp_sync):
         self.player = IHPlayer.from_sync(sync_rsp)
+
+    def set_bag_from_sync(self, sync_rsp: pbrsp_sync):
+        self.bag = IHPlayerBag.from_sync(sync_rsp)
