@@ -3,6 +3,8 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import TYPE_CHECKING
 
+from client.models.bag import IHPlayerBag
+
 if TYPE_CHECKING:
     from client.protobuf.dr2_logic_pb_pb2 import pbrsp_sync
 
@@ -40,6 +42,7 @@ class LocalPlayer:
         self._session: str = ""
         self._sid: int = 0
         self.player: IHPlayer | None = None
+        self.bag: IHPlayerBag | None = None
 
     def get_uid(self) -> int:
         return self._uid
@@ -55,6 +58,11 @@ class LocalPlayer:
             raise ValueError("Player is not set")
 
         return self.player
+
+    def get_bag(self) -> IHPlayerBag:
+        if self.bag is None:
+            raise ValueError("Bag is not set")
+        return self.bag
 
     def set_uid(self, uid: int):
         self._uid = uid

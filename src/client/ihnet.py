@@ -9,6 +9,7 @@ import json
 from hashlib import md5
 from pathlib import Path
 from packaging import version
+from enum import Enum
 
 from google.protobuf.json_format import MessageToJson
 
@@ -31,6 +32,11 @@ class IHNetError(Exception):
     pass
 
 
+class NetClientStatus(Enum):
+    UPDATE_NOT_READY = 0
+    CONNECTED = 1
+
+
 class IHNetClient:
     def __init__(self):
         _client_src_dir = os.path.dirname(os.path.abspath(__file__))
@@ -47,6 +53,7 @@ class IHNetClient:
         self._streams: dict[tuple[int, int], asyncio.Queue[Frame]] = {}
         self._router_task: asyncio.Task | None = None
         self._router_started = asyncio.Event()
+        self._update_not_ready = asyncio.Event()
 
     def check_account(self) -> bool:
         if self.account_config.account == "" or self.account_config.password == "":
@@ -80,18 +87,21 @@ class IHNetClient:
                 self.client_config.save()
 
                 print(f"[IHNetClient] Update to version {new_version} installed successfully.")
+
                 return True
+            else:
+                self._update_not_ready.set()
         else:
             print(f"[IHNetClient] Client is up-to-date (version: {self.client_config.version})")
         return False
 
-    async def init(self, no_login: bool = False) -> IHNetClient | None:
+    async def init(self, no_login: bool = False) -> IHNetClient | NetClientStatus:
         if not self.tcp_client.is_connected():
             await self.connect(self.client_config.gateway_host, self.client_config.gateway_port)
             await self.launch_router()
 
         if no_login:
-            return None
+            return NetClientStatus.CONNECTED
 
         if not self.check_account():
             print("[IHNetClient] No account configured, please register or set account first.")
@@ -127,6 +137,9 @@ class IHNetClient:
 
         while await self.check_update():
             pass
+
+        if self._update_not_ready.is_set():
+            return NetClientStatus.UPDATE_NOT_READY
 
         print("[IHNetClient] Syncing game state...")
 

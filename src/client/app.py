@@ -1,11 +1,8 @@
 import asyncio
-from pathlib import Path
 
-from typing import Any
 from argparse import ArgumentParser
 
-from client.ihnet import IHNetClient, IHNetError
-from client.constants import ROOT_DIR
+from client.ihnet import IHNetClient, IHNetError, NetClientStatus
 
 
 # enable debug output
@@ -16,27 +13,23 @@ class ClientAppError(Exception):
     pass
 
 
-def print_result(message: Any):
-    if message.status == 0:
-        print(" Success!")
-    else:
-        print(f" Failed! (status={message.status})")
-
-
-def _check_dev_file() -> bool:
-    dev_file = Path(ROOT_DIR) / ".dev"
-    return dev_file.exists()
-
-
 async def main():
     client = IHNetClient()
+    client.client_config.debug = DEBUG
 
     try:
-        await client.init()
+        result = await client.init()
+
+        if result == NetClientStatus.UPDATE_NOT_READY:
+            await client.disconnect()
+            return
+
         player = client.local_player
+        player_bag = player.get_bag()
 
         if player is not None:
             print(f"Logged in as: {player.get_player().name} (UID: {client.local_player.get_uid()})")
+            print(f"Gold: {player_bag.get_gold()} | Gems: {player_bag.get_gems()} | XP: {player_bag.get_player_xp()}")
 
     except IHNetError as e:
         print(f"Error: {e}")
