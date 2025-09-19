@@ -226,3 +226,6 @@ tools/test.py
 decompiled_lua/
 lua_diff_*.diff
 debug/
+tools/build_itemtype_enum.py
+tools/conv_itemmap.py
+tools/item.json
