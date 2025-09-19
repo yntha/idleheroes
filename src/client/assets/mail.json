@@ -1,0 +1,3242 @@
+{
+    "1": {
+        "content": "Well done on getting No.#rank# in #id# game during #time#. Rewards are in the attachment.",
+        "from": "Arena Email",
+        "name": "Daily Arena Reward"
+    },
+    "10": {
+        "content": "#content#",
+        "from": "GM Email",
+        "name": "GM Feedback"
+    },
+    "100": {
+        "content": "The team leadership of Free Team-up Arena has been transferred to you, you can perform your team leader's duties now.",
+        "from": "System Email",
+        "name": "Transfer team leadership"
+    },
+    "101": {
+        "content": "Dear players, we have put a new adjustment to the guild Mill, the original order will be canceled, please accept the following compensation.",
+        "from": "System Email",
+        "name": "Guild mill compensation mail"
+    },
+    "102": {
+        "content": "Dear players, we feel very sorry for the loading problem on our Servers which is caused by some technical failure. Now we have fixed the issue and we would like to send you all Prophet Orb x 1 and 500 free gems for apologizing the frustrations, thank you for all your support on helping us fix this problem.",
+        "from": "System Email",
+        "name": "Compensation mail"
+    },
+    "103": {
+        "content": "Dear players, Brand new Aspen Dungeon is about to open, please accept these materials, enjoy participating!",
+        "from": "System Email",
+        "name": "Aspen Dungeon opens"
+    },
+    "104": {
+        "content": "Dear player, the following is your reward for redeeming in Halloween event.",
+        "from": "System Email",
+        "name": "Halloween event rewards"
+    },
+    "105": {
+        "content": "Celestial island Boss has been slain by you, congratulations you get the following reward.",
+        "from": "System Email",
+        "name": "BOSS killing rewards"
+    },
+    "106": {
+        "content": "Dear players, we are sorry that the items you purchased didn't arrive to your account in time due to network issue. We now resent them to your account by in-game email.",
+        "from": "System Email",
+        "name": "Compensation mail"
+    },
+    "107": {
+        "content": "During the event, login every day and you will get Black treasure chest x 5. Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "108": {
+        "content": "You are #level# level VIP #number# user, get the following rewards today, and your Premium Black Gold Card expires in #day# day(s).",
+        "from": "System Email",
+        "name": "Premium Black Gold Card reward"
+    },
+    "109": {
+        "content": "Dear player, we have adjusted the refreshing mechanics in Celestial Island, please claim the following compensation in attachment.",
+        "from": "System Email",
+        "name": "Compensation mail"
+    },
+    "11": {
+        "content": "#content#",
+        "from": "GM Email",
+        "name": "GM Feedback"
+    },
+    "110": {
+        "content": "こんにちは。Twitter公式アカウントを準備完了いたしました。ゲームの最新情報や、最新イベント内容は今発信中！Twitterで＠IdleHeroesJP公式アカウントをフォロワーしてお願いいたします。URL：https://twitter.com/IdleHeroesJPどうもありがとうございます。これからも、どうぞよろしくお願いいたします。",
+        "from": "システムメール",
+        "name": "プレーヤーの皆様"
+    },
+    "111": {
+        "content": "During the event, login to get daily reward: gem and tiny snowman, quantity equals to your current level.",
+        "from": "System Email",
+        "name": "Christmas gift"
+    },
+    "112": {
+        "content": "아이들 히어로즈 카페에 가입해주셔서 진심으로 감사드립니다!",
+        "from": "시스템 우편",
+        "name": "GM우편"
+    },
+    "113": {
+        "content": "During the event, login every day and you will get Heroic Summon Scroll x 2. Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "114": {
+        "content": "Congratulations, the Vicious Kroos has been defeated, now you can claim the loot, 450 gems for everyone!",
+        "from": "System Email",
+        "name": "FB like challenge reward"
+    },
+    "115": {
+        "content": "Thanks for your 'like' to our facebook like challenge post, here is your reward. Stay tuned with us on facebook or twitter, there will be more awesome events which grant generous reward, thanks!",
+        "from": "System Email",
+        "name": "Like reward"
+    },
+    "116": {
+        "content": "親愛的兵粉，邀請您關注我們的官方微信公眾號與微博（搜索：放置奇兵或者點擊以下官網連結掃描二維碼），我們會不定時的舉行各種福利活動以及爆料放置新旅程春節系列（重磅消息），趕緊來關注吧！|||http://ih.dhgames.cn|||http://ih.dhgames.cn|||",
+        "from": "系統郵件",
+        "name": "GM來信"
+    },
+    "117": {
+        "content": "안녕하세요, 여러분.  최신 게임 정보와 이벤트 활동 소식 등 우리 게임 Twitter를 통해서 전달 드리겠습니다.  아래 링크를 클릭해서 팔로우하세요~여러분의 응원 많이 부탁드려요. 감사합니다.|||https://twitter.com/IdleheroesKr|||https://twitter.com/IdleheroesKr|||",
+        "from": "시스템 우편",
+        "name": "고객님들께"
+    },
+    "118": {
+        "content": "Dear players, we adjusted the content of the packs you purchased recently. Sorry for the inconvenience, please take the following compensation, items are attached.",
+        "from": "System Email",
+        "name": "Compensation mail"
+    },
+    "119": {
+        "content": "During Spring Festival Event, daily login will award you Magic Lantern x8, Sweetheart Chocolate x 6, rewards see attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "12": {
+        "content": "You are a Senior Privilege Card user now. The system will send #gems# gems at 00:00 am (UTC/GMT+0) to you daily since #date#. Day 1 gems are offered on the day of purchase.",
+        "from": "Senior Privilege Card",
+        "name": "Becoming a Senior Privilege Card User"
+    },
+    "120": {
+        "content": "You are #level# level VIP #number# user, get the following rewards today, and your New year Fortune Card expires in #day# day(s).",
+        "from": "System Email",
+        "name": "New year Fortune Card"
+    },
+    "121": {
+        "content": "During the event, login every day and you will get Prophet Orb x 1 , Heroic Summon Scroll x 1 , Challenge Badge x 8. Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "122": {
+        "content": "亲爱的兵粉，华为《放置奇兵》论坛现在正在举行专区特享故事编纂活动，最高能得到2018钻石和万能英雄碎片奖励，赶紧动动手指来参与吧！活动传送门：|||http://cn.club.vmall.com/thread-15343426-1-1.html|||http://cn.club.vmall.com/thread-15343426-1-1.html|||",
+        "from": "系统邮件",
+        "name": "华为论坛专属活动"
+    },
+    "123": {
+        "content": "Dear player, Flame Shrine challenges is over. Please claim the below reward:",
+        "from": "System Email",
+        "name": "Flame Shrine Ranking Reward"
+    },
+    "124": {
+        "content": "During the event, login every day and you will get Prophet Orb x 1 , Ancient Statue x 50 . Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "125": {
+        "content": "During the event, login every day and you will get Arena Ticket x 2 , Gems x 100. Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "126": {
+        "content": "During the event, login every day and you will get Super Wishing Coin x 1 , Challenge Badge x 4 . Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "127": {
+        "content": "During the event, login every day and you will get Gems x 200. Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "128": {
+        "content": "Dear Player: Server merging has been successfully completed. Thank you for your support. Please claim the rewards: Gem*2000, Universal skin shards*10.",
+        "from": "System Email",
+        "name": "Server merging rewards"
+    },
+    "129": {
+        "content": "During the event, login every day and you will get Prophet Orb x 1 ,Challenge Badge x 4. Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "13": {
+        "content": "Dear VIP#number# player, please take the following rewards in time. Your Senior Privilege Card will expire in #day# days.",
+        "from": "Senior Privilege Card",
+        "name": "Senior Privilege Card Reward for Today"
+    },
+    "130": {
+        "content": "Dear players,we will merge our servers on #content# at 10:00 am. It will last about 2 to 4 hours, during the time period, players are unable to login our game. To avoid unnecessary loss, please prepare in advance for offline. After the merging is completed, we will send you Gems*2000, Universe Skin Shards*10. Sorry for the inconvenience it may cause you and thanks for your support to our game!",
+        "from": "GM Email",
+        "name": "GM Feedback"
+    },
+    "131": {
+        "content": "During the event, login every day and you will get Prophet Orb x 1 , Super Wishing Coin x 1. Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "132": {
+        "content": "During the event, login every day and you will get Super Wishing Coin x 1 . Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "133": {
+        "content": "Daily log-in Bonus during the event time: Lucky Commemorative Coins of current player levelx1, Gems of current player levelx1. Rewards are in the attachment.",
+        "from": "System Email",
+        "name": "2nd Anniversary Celebration"
+    },
+    "134": {
+        "content": "You are a #level# VIP #number# user, today you can get the following rewards and your Anniversary Celebration Card will expire after #day# days.",
+        "from": "System Email",
+        "name": "Rewards of Anniversary Celebration Card"
+    },
+    "135": {
+        "content": "During the event, login every day and you will get Prophet Orb x 1 ,Lucky Commemorative Coin x 100. Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "136": {
+        "content": "Dear player, the Broken Space has already opened, we present you with Challenge Badge x 5 , go and prepare for battle!",
+        "from": "System Email",
+        "name": "Broken Space"
+    },
+    "137": {
+        "content": "During the event, login every day and you will get Heroic Summon Scroll x 2, Super Wishing Coin x 1. Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "138": {
+        "content": "During the event, login every day and you will get Prophet Orb x 1 . Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "139": {
+        "content": "During the event, login every day and you will get Super Wishing Coin x 1, Gems x 50 . Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "14": {
+        "content": "Your Senior Privilege Card has expired. Please renew it in the Store for 12000 Gems in total!",
+        "from": "Senior Privilege Card",
+        "name": "Senior Privilege Card Has Expired"
+    },
+    "143": {
+        "content": "Congratulations! You have completed all the tasks in Tavern Quest Event, please take following rewards.",
+        "from": "System Email",
+        "name": "Tavern Quest Event Rewards"
+    },
+    "144": {
+        "content": "Congrats for your successful fusion of 9-star #ID# in the event time, please claim your rewards:",
+        "from": "System Email",
+        "name": "Fusion Event"
+    },
+    "145": {
+        "content": "Congrats for your successful fusion of 10-star #ID# in the event time, please claim your rewards:",
+        "from": "System Email",
+        "name": "Fusion Event"
+    },
+    "146": {
+        "content": "During the event, login every day and you will get Devil Ice-cream x 100 . Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "147": {
+        "content": "During the event, login every day and you will get Heroic Summon Scroll x 3. Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "148": {
+        "content": "Congratulations on reaching a cumulative login for #day# days and getting the following rewards",
+        "from": "System Email",
+        "name": "The rewards of cumulative login"
+    },
+    "149": {
+        "content": "Get the following rewards today, your Mid-autumn Coupon has #day# days due.",
+        "from": "System Email",
+        "name": "The rewards of Mid-autumn Coupon"
+    },
+    "15": {
+        "content": "Well done on reaching #level#. Please take #gems# gems and #gold# gold in the attachment",
+        "from": "System Email",
+        "name": "Level Up Reward"
+    },
+    "150": {
+        "content": "Congratulations to you for reaching the conditions of the accumulated recharge during the event and getting the following rewards",
+        "from": "System Email",
+        "name": "The rewards of Recharge reach the specified amount"
+    },
+    "151": {
+        "content": "During the event, login every day and you will get Flower Cake x 100 . Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "152": {
+        "content": "During the event, login every day and you will get Prophet Orb x 1 ,Halloween Candy x 10. Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "153": {
+        "content": "Thanks for purchasing Senior Privilege Card! You have received Senior Privilege Card bonus today. Your Senior Privilege Card will be expired in #day# days.",
+        "from": "Senior Privilege Card",
+        "name": "Senior Privilege Card"
+    },
+    "154": {
+        "content": "Thanks for purchasing Privilege Card! You have received Privilege Card bonus today. Your Privilege Card will be expired in #day# days.",
+        "from": "Privilege Card",
+        "name": "Privilege Card"
+    },
+    "155": {
+        "content": "During the event, login every day and you will get Maple Leaf x 100 . Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "156": {
+        "content": "During the event, login every day and you will get Pumpkin Pie x 15,Heroic Summon Scroll x 3, Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "157": {
+        "content": "You are a #level# level user, today you can get the following rewards and your Supreme Black Gold Card will expire after #day# days.",
+        "from": "System Email",
+        "name": "Supreme Black Gold Card 2.0 Rewards"
+    },
+    "158": {
+        "content": "Congratulations on reaching #number# points during Black Friday Carnival Event, please take the following rewards",
+        "from": "System Email",
+        "name": "Black Friday Carnival Rewards"
+    },
+    "159": {
+        "content": "During the event, login every day and you will get Aspen Crystal x 100 . Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "16": {
+        "content": "Well done on getting #ID# hero in the event. Please claim it in the attachment",
+        "from": "System Email",
+        "name": "Crazy summon event"
+    },
+    "160": {
+        "content": "Since your tavern quests have accumulated more than 200,system has automatically completed the exceeded tavern quests for you.Please take the quest rewards.(Priority to complete low-star quests)",
+        "from": "System Email",
+        "name": "Tavern quests beyond the limit"
+    },
+    "161": {
+        "content": "Congratulations on reaching level #level# during the event time of Leveling Rewards Achievements. Rewards are attached as following.",
+        "from": "System Email",
+        "name": "Leveling Rewards Achievements"
+    },
+    "162": {
+        "content": "Congratulations on reaching level #level#, you are awarded for Diamond Fund. Rewards are attached as following.",
+        "from": "System Email",
+        "name": "Diamond Fund Rewards"
+    },
+    "163": {
+        "content": "Now Foolish has put on a brand new Christmas suit under your efforts, please accept the gift from Foolish:",
+        "from": "System Email",
+        "name": "Foolish make-up accomplished"
+    },
+    "164": {
+        "content": "Thank you for decorating the Christmas Wreath, please accept the gift from Foolish:",
+        "from": "System Email",
+        "name": "Wreath decorated"
+    },
+    "165": {
+        "content": "Thank you for letting Foolish have a perfect Christmas tree, please accept the gift from Foolish:",
+        "from": "System Email",
+        "name": "Christmas tree decorated"
+    },
+    "166": {
+        "content": "Now you've finished all Christmas decoration, thank you for your kindness, Foolish would be very happy to send you a present:",
+        "from": "System Email",
+        "name": "Christmas version make-up accomplished"
+    },
+    "167": {
+        "content": "Congratulations! You have successfully summoned a 5-star #ID# hero during the event time and got 10 snowflakes. The maximum limit of snowflakes in this event is 200. ",
+        "from": "System Email",
+        "name": "Obtain snowflake"
+    },
+    "168": {
+        "content": "During the event, login every day and you will get Snowflakes x 10,Heroic Summon Scroll x 3, Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "169": {
+        "content": "During the event, login every day and you will get Helm x 100 . Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "17": {
+        "content": "You have downloaded the recommended app. Please take #gems# gems in the attachment",
+        "from": "System Email",
+        "name": "Download for Rewards"
+    },
+    "170": {
+        "content": "Dear Players: We've adjusted the rewards for Senior Privilege Card. Since you have purchased the Senior Privilege Card within the last six months, you will now be compensated for the changed number of gems. The gems is attached down below.",
+        "from": "System Email",
+        "name": "Senior Privilege Card reward adjustment"
+    },
+    "171": {
+        "content": "Dear Players: We've adjusted the rewards for Privilege Card. Since you have purchased the Privilege Card within the last six months, you will now be compensated for the changed number of gems. The gems is attached down below.",
+        "from": "System Email",
+        "name": "Privilege Card reward adjustment"
+    },
+    "172": {
+        "content": "恭喜您获得华为平台专属礼包，奖励见附件",
+        "from": "系统邮件",
+        "name": "华为平台礼包"
+    },
+    "173": {
+        "content": "Dear player, the Blessing Gift Delivering event has now ended. Below are your rewards to be claimed:",
+        "from": "System Email",
+        "name": "Event Rewards of Blessing Gift Delivering"
+    },
+    "174": {
+        "content": "Dear player, a level #level# player as you are, you have obtained the following rewards. Besides, your Prosperity Card will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "Event Rewards of Prosperity Card"
+    },
+    "175": {
+        "content": "During the event, login every day and you will get Blessing Bag x 10,Heroic Summon Scroll x 3, Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "176": {
+        "content": "During the event, login every day and you will get Helm x 100 . Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "177": {
+        "content": "Dear player, the report you submitted (reported player name: #name#; UID: #uid#) on #date# has been accepted and we have made proper decisions on this account. Thank you very much for your contributions on maintaining the gaming environment. Happy gaming!",
+        "from": "System Email",
+        "name": "Report Feedback"
+    },
+    "178": {
+        "content": "During the event, login every day and you will get Lucky Clover x 100 . Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "179": {
+        "content": "恭喜您获得oppo平台专属礼包，奖励见附件",
+        "from": "系统邮件",
+        "name": "oppo平台礼包"
+    },
+    "18": {
+        "content": "You have taken part in a battle in the guild raid at #date#. Please take the rewards in the attachment",
+        "from": "Guild Email",
+        "name": "Guild Raid Battle"
+    },
+    "180": {
+        "content": "During the event, log in every day to get Prophet Orb ×1, Golden Hammer ×10, and March Hare ×2. Claim rewards in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "181": {
+        "content": "During the event, log in every day to get Music Box ×100. Claim rewards in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "182": {
+        "content": "Dear player, here comes our brand new Brave Trial! Claim the below gifts, and go break a leg!",
+        "from": "System Email",
+        "name": "Brave Trial V2.0"
+    },
+    "183": {
+        "content": "During May 3rd - May 9th, log in every day to claim [Gem ×188, 4-Star Hero Shard ×30] as Labor Day gift! Please claim in the attachment.",
+        "from": "System Email",
+        "name": "Labor Day Gift"
+    },
+    "184": {
+        "content": "During the event, log in every day to get Lutzie Lollipop ×100. Claim rewards in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "185": {
+        "content": "Dear Idlers,Thank you very much for following us on Idle Heroes fan page. Now the number of followers has reached event requirement. Please claim your rewards below!We're looking forward to your continous following on the page, where Lutz will update you with the latest events and (grapevine) news from DEVers!Love,Lutz",
+        "from": "System Email",
+        "name": "Invitation Letter"
+    },
+    "186": {
+        "content": "Idle Heroes is celebrating its third anniversary! Here's a gift from us for your support.",
+        "from": "System Email",
+        "name": "Anniversary Gift"
+    },
+    "187": {
+        "content": "Dear player! You're now at Lv.#level#, and that means you get the following rewards. Your 3rd Anniversary Card will remain valid for #day# more day(s).",
+        "from": "System Email",
+        "name": "3rd Anniversary Gift Card"
+    },
+    "188": {
+        "content": "During the event, log in every day to get Chocolate Shake ×100. Claim rewards in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "189": {
+        "content": "During the event, log in every day to get Treasure Map *100. Claim rewards in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "19": {
+        "content": "Thanks for your support. Please take the rewards in the attachment",
+        "from": "System Email",
+        "name": "Rating Reward"
+    },
+    "190": {
+        "content": "Congratulations on completing all quests in Fusion and Awaken event! Please claim the below reward in the attachment.",
+        "from": "System Email",
+        "name": "Fusion and Awaken Event Reward"
+    },
+    "191": {
+        "content": "Congratulations on completing all quests in Broken Space event! Please claim the below reward in the attachment.",
+        "from": "System Email",
+        "name": "Broken Space Clearance Reward"
+    },
+    "192": {
+        "content": "Congratulations on completing specified quests in Brave Trial event! Please claim the below reward in the attachment.",
+        "from": "System Email",
+        "name": "Brave Trial Event Reward"
+    },
+    "193": {
+        "content": "Congratulations on completing all quests in Brave Trial event! Please claim the below reward in the attachment.",
+        "from": "System Email",
+        "name": "Brave Trial Event Completion Reward"
+    },
+    "194": {
+        "content": "Congratulations on clearing stage #level# in the Broken Space event. Please claim your below rewards in the attachment.",
+        "from": "System Email",
+        "name": "Broken Space Event Reward"
+    },
+    "195": {
+        "content": "A couple shines and glows together: #ID1# and #ID2#! Claim your reward:",
+        "from": "System Email",
+        "name": "Matchmaker Campaign Completion Reward"
+    },
+    "196": {
+        "content": "Splendid! You've recharged enough funds to your account during the Valentine's Day event! Claim your reward:",
+        "from": "System Email",
+        "name": "Dreamy Wedding Reward"
+    },
+    "197": {
+        "content": "Dear player, we have lowered the difficulty of Broken Space while increased rewards. Please take the below compensation.",
+        "from": "System Email",
+        "name": "Compensation on Broken Space Adjustment"
+    },
+    "198": {
+        "content": "Dear player, we have reworked gameplay of Pray for Fire to Flame Shrine. Please take the below items as the compensation:",
+        "from": "System Email",
+        "name": "Compensation on Pray for Fire"
+    },
+    "199": {
+        "content": "Dear player, you have reached the killing limit of friend Marauders (20) and cannot get more Gems as the reward. Below is the reward for the part that exceeds the limit.",
+        "from": "System Email",
+        "name": "Help-fight Marauder Limit Exceeded Reward"
+    },
+    "2": {
+        "content": "I,  as the envoy of the king of Kingdom Apuding,  congratulate you on ranking #rank# in #id# game. Your excellent skills and bravery has won you the following rewards",
+        "from": "Arena Email",
+        "name": "Season Reward"
+    },
+    "20": {
+        "content": "Thanks for your support. Please take the rewards in the attachment",
+        "from": "System Email",
+        "name": "Movie Reward"
+    },
+    "200": {
+        "content": "During the event, log in every day to get Malt Beer ×100. Claim the reward in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "201": {
+        "content": "Congrats on completing the Fighters' Competition event in the Monthly Carnival. A Monthly Carnival Card user as you are, you have obtained the below extra reward:",
+        "from": "System Email",
+        "name": "Monthly Privilege Rewards - Fighters' Competition"
+    },
+    "202": {
+        "content": "Congrats on completing the Tavern Quests Event in the Monthly Carnival. A Monthly Carnival Card user as you are, you have obtained the below extra reward:",
+        "from": "System Email",
+        "name": "Monthly Privilege Rewards - Tavern Quests Event"
+    },
+    "203": {
+        "content": "Congrats on completing the Fusion and Awaken event in the Monthly Carnival. A Monthly Carnival Card user as you are, you have obtained the below extra reward:",
+        "from": "System Email",
+        "name": "Monthly Privilege Rewards - Fusion and Awaken"
+    },
+    "204": {
+        "content": "Congrats on completing the Broken Spaces Clearance event in the Monthly Carnival. A Monthly Carnival Card user as you are, you have obtained the below extra reward:",
+        "from": "System Email",
+        "name": "Monthly Privilege Rewards - Broken Spaces Clearance"
+    },
+    "205": {
+        "content": "Congrats on completing the Brave Trial Event in the Monthly Carnival. A Monthly Carnival Card user as you are, you have obtained the below extra reward:",
+        "from": "System Email",
+        "name": "Monthly Privilege Rewards - Brave Trial Event"
+    },
+    "206": {
+        "content": "Dear player, we have remade Help Fight function. Now it is called [Lost Underground]. Please accept the below compensation:",
+        "from": "System Email",
+        "name": "Compensation on Help Fight Remake"
+    },
+    "207": {
+        "content": "Dear player, you are ranking No.#rank# in Flame Shrine challenges. Please claim the below reward:",
+        "from": "System Email",
+        "name": "Flame Shrine Ranking Reward"
+    },
+    "208": {
+        "content": "During the event, log in every day to get Skull Coin *100. Claim the reward in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "209": {
+        "content": "Dear players, on the occasion of Mid-Autumn Festival, Lutz wishes you all a happy reunion with family and greater RNG! Please accept our gift below:",
+        "from": "System Email",
+        "name": "Happy Mid-Autumn Festival"
+    },
+    "21": {
+        "content": "Your guild has signed up at #stage# stronghold. Please go to the guild war and get ready",
+        "from": "Guild War",
+        "name": "Guild War Sign-up Notice"
+    },
+    "210": {
+        "content": "During the event, log in every day to get Prophet Orb *1, Glory Chest *5, and Carnival Box*1. Claim rewards in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "211": {
+        "content": "During the event, log in every day to claim Torn Page *100. Claim the reward in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "212": {
+        "content": "During the event, log in every day to claim Super Wishing Coin* 1, Gems* 150. Claim the reward in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "213": {
+        "content": "The #storeid# you purchased on #date# has successfully hit your account. You got the following items:",
+        "from": "System Email",
+        "name": "Payment Successful Message"
+    },
+    "214": {
+        "content": "During the event, login every day to get Heroic Summon Scroll *3, Caramel Apple *2. Please take rewards in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "215": {
+        "content": "Trick or treat! Lutz is going to Emily for candies! Wish you all a happy Halloween night. Please accept these gifts from Lutz in the attachment:",
+        "from": "System Email",
+        "name": "Halloween Present"
+    },
+    "216": {
+        "content": "During the event, login every day to get Prophet Orb *1, Caramel Apple *2. Please take rewards in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "217": {
+        "content": "During the event, log in every day to claim Freddy Bear *100. Claim rewards in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "218": {
+        "content": "Congrats on completing quests of Lucky Wishing Fountain event. Please claim the below reward:",
+        "from": "System Email",
+        "name": "Lucky Wishing Fountain Reward"
+    },
+    "219": {
+        "content": "Congrats on completing Harvest Day quests. Please claim the below reward:",
+        "from": "System Email",
+        "name": "Harvest Day Reward"
+    },
+    "22": {
+        "content": "You have taken #stage# stronghold in round #number# of the guild war. Please take the following rewards:",
+        "from": "Guild War",
+        "name": "Guild War Reward"
+    },
+    "220": {
+        "content": "It's a day of expressing thanks. Thank you so much for your enduring support and love for Idle Heroes. Please accept our gift below:",
+        "from": "System Email",
+        "name": "Thanksgiving Day Gift"
+    },
+    "221": {
+        "content": "The schedule of Inter-Dimensional Arena in this season has ended. Congrats on reaching the #number# tier and receiving the below reward:",
+        "from": "System Email",
+        "name": "Inter-Dimensional Arena Rewards"
+    },
+    "222": {
+        "content": "The schedule of Inter-Dimensional Arena in this season has ended. Congrats on ranking the Top 32 in your group and receiving the below bonus reward:",
+        "from": "System Email",
+        "name": "Inter-Dimensional Arena Top 32 Reward"
+    },
+    "223": {
+        "content": "The schedule of Inter-Dimensional Arena in this season has ended. Congrats on ranking the Top 8 in your group and receiving the below bonus reward:",
+        "from": "System Email",
+        "name": "Inter-Dimensional Arena Top 8 Reward"
+    },
+    "224": {
+        "content": "The schedule of Inter-Dimensional Arena in this season has ended. Congrats on ranking the 2nd Place in your group and receiving the below bonus reward:",
+        "from": "System Email",
+        "name": "Inter-Dimensional Arena 2nd Place Reward"
+    },
+    "225": {
+        "content": "The schedule of Inter-Dimensional Arena in this season has ended. Congrats on winning the Championship in your group! Please receive the below bonus reward:",
+        "from": "System Email",
+        "name": "Inter-Dimensional Arena Champion Reward"
+    },
+    "226": {
+        "content": "Congrats on making it to Battle of the Best stage! Please head to the Inter-Dimensional Arena and set your lineups!",
+        "from": "System Email",
+        "name": "The Battle of the Best"
+    },
+    "227": {
+        "content": "During the event, log in every day to get Heroic Summon Scroll *3, Pumpkin Pie *100 Claim rewards in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "228": {
+        "content": "Congratulations! You have obtained the required number of Shopping Points in the Shopping Manual event. Please take the below reward:",
+        "from": "System Email",
+        "name": "Shopping Manual Event Reward"
+    },
+    "229": {
+        "content": "As a Lv.#level# player, and you can get the following reward. Your Glamor Golden Card will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "Glamor Golden Card Reward"
+    },
+    "23": {
+        "content": "To reward your brave performance in this guild war, please take the following rewards",
+        "from": "Guild War",
+        "name": "Guild War 2nd-Round Reward"
+    },
+    "230": {
+        "content": "During the event, log in every day to get Donut *100. Claim the reward in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "231": {
+        "content": "Congrats on completing quests of Lucky Wishing Fountain event. As you have purchased the Lucky Package, you can get the following bonus rewards:",
+        "from": "System Email",
+        "name": "[Lucky Wishing Fountain] Double Rewards"
+    },
+    "232": {
+        "content": "Congrats on passing Santa's Tests. Please claim the below reward",
+        "from": "System Email",
+        "name": "Santa's Tests"
+    },
+    "233": {
+        "content": "Jingle Bell, Jingle Bell, Jingle all the way~~ Reindeer Belrain has brought you with Christmas gifts! Merry Christmas!",
+        "from": "System Email",
+        "name": "Merry Christmas"
+    },
+    "234": {
+        "content": "During the event, log in every day to get Heroic Summon Scroll *3, Gingerbread Snowman *1. Claim rewards in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "235": {
+        "content": "Dear player, please find your package items from App Store recharging event in the attachment.",
+        "from": "System Email",
+        "name": "App Store Event Package"
+    },
+    "236": {
+        "content": "Dear player, the bug that making Gingerbread Snowflakes would yield additional materials has been fixed. Now dissembling 3-, 4-, and 5-star heroes for making Gingerbread Snowflakes at Gingerbread Puppet House won't return Spirit and Hero Promotion Stone. We're terribly sorry for any inconvenience this has caused you. Please take the below compensation by way of our apology.",
+        "from": "System Email",
+        "name": "Gingerbread Puppet House Bug Fixed"
+    },
+    "237": {
+        "content": "On the very first day of year 2020, Lutz wish you out with the old, in with the new. May you be happy and lucky on RNG the whole year through. Happy New Year!",
+        "from": "System Email",
+        "name": "Happy New Year"
+    },
+    "238": {
+        "content": "During the event, log in every day to claim Prophet Orb *1, 2020 Happiness Box *1, and 2020 Wealth Box *10.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "239": {
+        "content": "During the event, log in every day to get Gearwheel *100. Claim the reward in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "24": {
+        "content": "You are the champion of this guild war. Please take the following rewards",
+        "from": "Guild War",
+        "name": "Guild War Champion Reward"
+    },
+    "240": {
+        "content": "Congratulations! You have collected quite a number of Chun Stickers. Since you have bought the Spring Festival Card, you can get the following bonus reward:",
+        "from": "System Email",
+        "name": "Chun Sticker Collection Reward"
+    },
+    "241": {
+        "content": "Congratulations! You have obtained enough growth points at the New Year Growth Plan. Check the attachment.",
+        "from": "System Email",
+        "name": "Basic Rewards of New Year Growth Plan"
+    },
+    "242": {
+        "content": "Congratulations! You have obtained enough growth points at the New Year Growth Plan. As you have activated the Bonus Plan, you can get the below bonus rewards.",
+        "from": "System Email",
+        "name": "Bonus Rewards of New Year Growth Plan"
+    },
+    "243": {
+        "content": "The Chinese Spring Festival is approaching with happiness permeating everywhere. On behalf of all the residents in the Idle Continent, Lutz appreciates your company and support over the past year, and wishes you a great Tiger Year ahead!",
+        "from": "System Email",
+        "name": "Spring Festival Wishes"
+    },
+    "244": {
+        "content": "During the event, log in every day to claim Heroic Summon Scroll *3, Fireworks *35. Check rewards in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "245": {
+        "content": "During the event, log in every day to claim Key *100.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "246": {
+        "content": "Dear Idlers, happy Lantern Festival! This fest traditionally marks the end of the Spring Festival period. However, joy and our best wishes never end. On this special moment, wish you good health all the time~",
+        "from": "System Email",
+        "name": "Happy Lantern Festival"
+    },
+    "247": {
+        "content": "Happy Valentine's Day! May the auspicious occasion of Valentine's day shower endless love, wealth, and benevolence on all of you.   Yours, Lutz & Emily",
+        "from": "System Email",
+        "name": "Valentine's Day Gift"
+    },
+    "248": {
+        "content": "Congratulations! You have successfully paired off heroes at the Flipped event. Below are the rewards you have obtained.",
+        "from": "System Email",
+        "name": "Pairing Reward of Flipped Event"
+    },
+    "249": {
+        "content": "During the event, log in every day to get Super Wishing Coin *1, Gems *150, and Rose *50. Please claim them in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "25": {
+        "content": "Congrats for beating the Guild Boss, you've earned the following rewards:",
+        "from": "Guild Email",
+        "name": "Guild Raid Rewards"
+    },
+    "250": {
+        "content": "Congratulations! You have reached designated points in the Priests' Blessing event. Please take the following reward.",
+        "from": "System Email",
+        "name": "Reward of Priests' Blessing Goals"
+    },
+    "251": {
+        "content": "During the event, log in every day to claim Wildflower *100 and Super Wishing Coin *1 in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "252": {
+        "content": "Dear Idler, we have demolished your buildings on the Celestial Island for a reconstruction. Here we return all your materials consumed by a ratio of 1:1. Please claim them in the attachment.",
+        "from": "System Email",
+        "name": "Resource Return for Celestial Island Demolition"
+    },
+    "253": {
+        "content": "Dear player, congrats on achieving Green Leaf goals in the Spring of the Forest event. You have obtained the following rewards:",
+        "from": "System Email",
+        "name": "Spring of the Forest Goal Rewards"
+    },
+    "254": {
+        "content": "Dear Idler,Thank you for taking part in the localization quality survey and sharing with us your valued opinions. Please accept the following rewards.",
+        "from": "System Email",
+        "name": "Localization Quality Survey Reward"
+    },
+    "255": {
+        "content": "Dear player, we have fixed the issue that you may have obtained excessive low points when matched with players without tiers in the Inter-Dimensional Arena. We're sorry for any inconvenience this issue has caused. Please accept the following compensation by way of our apology.",
+        "from": "System Email",
+        "name": "Inter-Dimensional Arena Compensation"
+    },
+    "256": {
+        "content": "We're terribly sorry that a text mistake was made in the English Summon Prizes event on March 20th. Please take the following compensation by way of our apology.",
+        "from": "System Email",
+        "name": "Compensation on Text Mistake"
+    },
+    "257": {
+        "content": "Congrats on completing specified quests in Calling of Prophet Tree event, and you have obtained the following rewards:",
+        "from": "System Email",
+        "name": "Calling of Prophet Tree Goal Rewards"
+    },
+    "258": {
+        "content": "Congrats on completing specified quests in Magic Circus Show event, and you have obtained the following rewards:",
+        "from": "System Email",
+        "name": "Magic Circus Show Goal Rewards"
+    },
+    "259": {
+        "content": "Congratulations! You have completed a bond quest from the Comeback Radio. Here are your rewards.",
+        "from": "System Email",
+        "name": "Bond Quest Reward"
+    },
+    "26": {
+        "content": "You have got #number# points in the Summon Prize event. Please get the following rewards.",
+        "from": "System Email",
+        "name": "Summon Prize Rewards"
+    },
+    "260": {
+        "content": "You have collected enough stars in the Imp's Adventure event. Here's a gift for you! Enjoy the game!",
+        "from": "System Email",
+        "name": "Imp's Adventure Star Collection Reward"
+    },
+    "261": {
+        "content": "Dear player, your bond partner has made in-game purchases. Here is a gift from the Mysterious Radio for you. We wish you a pleasant experience in this game.",
+        "from": "System Email",
+        "name": "A Gift from the Mysterious Radio"
+    },
+    "262": {
+        "content": "During the event, log in every day to get Ordinary Dice *4, Gems *150, and Wooden Hammer *5 in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "263": {
+        "content": "You have smashed enough Easter eggs. Here are the rewards from the party holder Lutz for you! You're indeed an egg smashing virtuoso!",
+        "from": "System Email",
+        "name": "Dancing Party Egg Smashing Reward"
+    },
+    "264": {
+        "content": "You have gathered enough heroes for this Spring Outing event, and brought joy and vigor back to the Idle Continent. Here are the thanking rewards from the event holder Lutz for you!",
+        "from": "System Email",
+        "name": "Spring Outing Reward"
+    },
+    "265": {
+        "content": "Guys, have you enjoyed yourself at the Easter Dancing Party? Anyway, Lutz the host hope you did have a great time. Here are some gifts from him~ Happy Easter to you and your lovely family.",
+        "from": "System Email",
+        "name": "Easter Gifts"
+    },
+    "266": {
+        "content": "During the event, upgrade Ithaqua to the designated levels and get rewards.",
+        "from": "System Email",
+        "name": "Rewards of The birth of Ithaqua"
+    },
+    "267": {
+        "content": "Congratulations! You have completed a solo quest from the Comeback Radio. Here are your rewards.",
+        "from": "System Email",
+        "name": "Solo Quest Reward"
+    },
+    "268": {
+        "content": "Dear Idler, welcome back to the Idle Continent. Here is the gift from Vesa. Have fun in the game!",
+        "from": "System Email",
+        "name": "Returning Gift from Vesa"
+    },
+    "269": {
+        "content": "Some players might have trouble logging in the game because of the compatibility issue with some Android devices. Now this issue has been fixed. We're sorry for any inconvenience this may have caused. Please accept the following compensation. ",
+        "from": "System Email",
+        "name": "Compensation Mail"
+    },
+    "27": {
+        "content": "During the event, login every day and you will get #gems# gems, #chip# Wishing Coin. Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Thanksgiving Reward"
+    },
+    "270": {
+        "content": "Dear player, to bring you with better gaming experience, we have optimized the gameplay of Celestial Island in this update. Please take the following compensation. Have fun!",
+        "from": "System Email",
+        "name": "Compensation Mail"
+    },
+    "271": {
+        "content": "Log in every day to get Quill *100 and Super Wishing Coin *1 during the event. Claim the reward in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "272": {
+        "content": "During the event, log in every day to get Ordinary Dice *4 and Gem *150. Please claim the rewards in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "273": {
+        "content": "Congratulations! You have achieved specific requirements at the Palace of Crystal and obtained the following rewards. Please claim them in time.",
+        "from": "System Email",
+        "name": "Palace of Crystal Rewards"
+    },
+    "274": {
+        "content": "Congratulations! You have obtained the bonus rewards from the Palace of Crystal. Please claim your rewards in the attachment.",
+        "from": "System Email",
+        "name": "Palace of Crystal Unlocking Rewards"
+    },
+    "275": {
+        "content": "Dear player, we have adjusted some features of Ormus's Workshop. Now the exceeded part of Artifact Essence during artifacts disassembling will be converted into [Afterglow] instead of [Unstable Essence]. The [Unstable Essence] that you own will be exchanged into [Afterglow] at a ratio of 1:1. We're sorry for any inconvenience this may cause. Please claim the exchanged Afterglow in the attachment:",
+        "from": "System Email",
+        "name": "Adjustment on Ormus's Workshop"
+    },
+    "276": {
+        "content": "Dear player, we have optimized Ormus's Workshop in the current version: The exceeded part of Artifact Essence during artifacts disassembling will be converted into [Afterglow] instead of [Unstable Essence]. Please take the following compensation.",
+        "from": "System Email",
+        "name": "Compensation Mail"
+    },
+    "277": {
+        "content": "Log in every day to get Pearl Shell *100 and Super Wishing Coin *1 during the event. Claim the reward in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "278": {
+        "content": "Dear player, the Guild War has ended. Your guild's tier is: #number#. You have earned #point# individual points, and your final ranking is: #rank#. Here are the rewards for you:",
+        "from": "System Email",
+        "name": "Guild War Rewards"
+    },
+    "279": {
+        "content": "During the event, log in to claim Heroic Summon Scroll *3 and Magic Silver Coin *5 (sent via mail) every day.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "28": {
+        "content": "During the event, login every day and you will get 50 gems, 2 Wishing Coin, 2 wonder puppets. Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Christmas Reward"
+    },
+    "280": {
+        "content": "Dear player, a level #level# player as you are, you have obtained the following rewards for today. Besides, your 4th Anniversary Card will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "Rewards of 4th Anniversary Card"
+    },
+    "281": {
+        "content": "Congratulations! You have completed the quest of BE WITH US event and obtained the following rewards.",
+        "from": "System Email",
+        "name": "Rewards of BE WITH US Event"
+    },
+    "282": {
+        "content": "Congratulations! You have achieved specific requirements at the Lucky 4th Anniversary event, and obtained the following rewards.",
+        "from": "System Email",
+        "name": "Lucky 4th Anniversary Goal Rewards"
+    },
+    "283": {
+        "content": "Congratulations! You have achieved specific requirements at the Anniversary Promise event and obtained the following rewards.",
+        "from": "System Email",
+        "name": "Rewards of Anniversary Promise Event"
+    },
+    "284": {
+        "content": "It has been 4 years since the birth of Idle Heroes. On this special occasion of the anniversary, we'd like to thank all of you, for your persistent support and affection! We will keep working hard to present better gaming experience to you! Please accept the gift—the redemption code [4THANNIV] and enter it in [Cool Events] - [Exchange Gifts] to claim Gem *2020 and Heroic Summon Scroll *40. Remember to claim them by June 26, 2020!",
+        "from": "System Email",
+        "name": "4th Anniversary Gift"
+    },
+    "285": {
+        "content": "At this heartwarming festival when the fragrance of Zongzi lingers everywhere, welcome to enjoy the double pleasure from the Dragon Boat Festival plus the Celebration! I, Lutz, wish you have a wonderful day on the Idle Continent~",
+        "from": "System Email",
+        "name": "Blessing at Dragon Boat Festival"
+    },
+    "286": {
+        "content": "Congratulations! You have reached the designated Affection level at the Wine-Cooking on Raft event and obtained the following rewards.",
+        "from": "System Email",
+        "name": "Wine-Cooking Rewards"
+    },
+    "287": {
+        "content": "During the event, log in every day to get Prophet Orb *1, Magic Silver Coin *5, and Zongzi *10.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "288": {
+        "content": "Log in every day to get Hourglass *100 and Super Wishing Coin *1 during the event. Claim the reward in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "289": {
+        "content": "Congratulations! You have obtained enough growth points at the July Growth Plan. Check the attachment for rewards.",
+        "from": "System Email",
+        "name": "Basic Rewards of July Growth Plan"
+    },
+    "29": {
+        "content": "You have got #number# points in the Wishing Coin Rewards event. Please get the following rewards",
+        "from": "System Email",
+        "name": "Wishing Coin Reward"
+    },
+    "290": {
+        "content": "Congratulations! You have obtained enough growth points at the July Growth Plan. As you have activated the Bonus Plan, you can get the below bonus rewards.",
+        "from": "System Email",
+        "name": "Bonus Rewards of July Growth Plan"
+    },
+    "291": {
+        "content": "Dear player, we have adjusted battle rules of Guild War for better gaming experience. For details, please go to the Guild War interface. Here is the compensation, please claim in time.",
+        "from": "System Email",
+        "name": "Guild War Compensation"
+    },
+    "292": {
+        "content": "Congratulations! You have achieved specific requirements at the Summer Heartbeat event and obtained the following gifts. Please claim them in time.",
+        "from": "System Email",
+        "name": "Summer Heartbeat Gifts"
+    },
+    "293": {
+        "content": "Dear Idlers, thank you for participating in the questionnaire survey. Your heartfelt suggestions and feedback are well received and we will keep our effort in providing you with better gaming experience. We decide to send the questionnaire reward of 300 Gems to players of all servers in appreciation of your enduring support on Idle Heroes. Please claim it in the attachment.",
+        "from": "System Email",
+        "name": "Questionnaire Reward"
+    },
+    "294": {
+        "content": "恭喜你们队伍获得胜利，奖励见附件",
+        "from": "系统邮件",
+        "name": "对战胜利队伍奖励"
+    },
+    "295": {
+        "content": "非常感谢您的参与，很遗憾没有获得胜利，请收下以下奖励。",
+        "from": "系统邮件",
+        "name": "对战战败队伍奖励"
+    },
+    "296": {
+        "content": "Log in every day to get Compass *100 and Super Wishing Coin *1 during the event. Claim the reward in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "297": {
+        "content": "Dear players, due to data error, some of you received the delayed Guild War settlement rewards. In this way, the Guild War registration update, which was scheduled for yesterday, will be released today to ensure all players receive their rewards. Thank you for your understanding and enduring support. Please take the following compensation.",
+        "from": "System Email",
+        "name": "Compensation Mail"
+    },
+    "298": {
+        "content": "Dear player, you have ascended Ignis to the designated star level and obtained the following rewards.",
+        "from": "System Email",
+        "name": "The Arrival of Ignis Event Reward"
+    },
+    "299": {
+        "content": "Dear player, thank you for participating in the survey. Please accept the following reward.",
+        "from": "System Email",
+        "name": "Questionnaire Reward"
+    },
+    "3": {
+        "content": "#member1# is no longer a guild leader. #member2# is our new leader",
+        "from": "Guild Email",
+        "name": "Appoint Leader"
+    },
+    "30": {
+        "content": "During the event, login every day and you will get 50 gems, 2 HEROIC SUMMON SCROLL. Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Winter Reward"
+    },
+    "300": {
+        "content": "Dear player, thank you for purchasing the Replenishing Supplies. Please claim the below reward for today. Your Replenishing Supplies will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "Replenishing Supplies Reward"
+    },
+    "301": {
+        "content": "Dear player, thank you for purchasing the Refreshing Supplies. Please claim the below reward for today. Your Refreshing Supplies will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "Refreshing Supplies Reward"
+    },
+    "302": {
+        "content": "Dear player, the issues that iOS players cannot make in-game purchases and Idle Heroes cannot be found in the App Store have been fixed. We are sorry for all the unexpected inconvenience. Please take the following compensation by way of our apology.",
+        "from": "System Email",
+        "name": "Compensation on App Store Background System Anomaly"
+    },
+    "303": {
+        "content": "During the event, log in every day to get Qixi Biscuit *100 and Super Wishing Coin *1. Claim the reward in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "304": {
+        "content": "Chance of the year: you can hear whispers of Weaving Maid and Cowherd at Qixi night through the grapevine, literally. Here are some Qixi gifts from Lutz. May you have a happy and lucky Qixi festival.",
+        "from": "System Email",
+        "name": "Qixi Blessings"
+    },
+    "305": {
+        "content": "Dear player, we have adjusted the summoning rules of Compass of the Transcended. Now summoning at Compass of the Transcended won't get you [Transcending Heart], however, each summoning will get you a certain amount of [Crystal of Transcendence]. The 300th summoning will earn you a guaranteed Transcending Heart. Below is how we will compensate: Before you update the version, each time you summon at the Compass of the Transcended, you will obtain a [Transcendence Material Selection Chest]. We're sorry for any inconvenience this may have caused. Thank you for your understanding!",
+        "from": "System Email",
+        "name": "Compensation on Compass of the Transcended Gameplay"
+    },
+    "306": {
+        "content": "Dear player, we have adjusted the summoning rules of Compass of the Transcended, and optimized the material output of Realms Gate at the early stage. Sorry for any inconvenience this caused. Please take the following compensation.",
+        "from": "System Email",
+        "name": "Compensation on Functional Adjustment"
+    },
+    "307": {
+        "content": "Dear player, you have unlocked the Autumn Sachet of Gold during the event. Below are the sachet rewards you forgot to claim in time.",
+        "from": "System Email",
+        "name": "Rewards on Autumn Sachet of Gold"
+    },
+    "308": {
+        "content": "Dear player, you have unlocked the Autumn Sachet of Gem during the event. Below are the sachet rewards you forgot to claim in time.",
+        "from": "System Email",
+        "name": "Rewards on Autumn Sachet of Gem"
+    },
+    "309": {
+        "content": "Dear player, you have unlocked the Autumn Sachet of Key during the event. Below are the sachet rewards you forgot to claim in time.",
+        "from": "System Email",
+        "name": "Rewards on Autumn Sachet of Key"
+    },
+    "31": {
+        "content": "During the event, login every day and you will get 50 gems, 2 wonder puppets. Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Winter Reward"
+    },
+    "310": {
+        "content": "Dear player, you have earned the title of #rank# in this Void Vortex. Please take your reward below:",
+        "from": "System Email",
+        "name": "Title Reward of Void Vortex"
+    },
+    "311": {
+        "content": "Dear player, we have adjusted the amount of Transcending Hearts in the Transcendence Package. For players who have bought the pack, we'll make up to you the part of Transcending Hearts adjusted. Sorry for any inconvenience this may have caused.",
+        "from": "System Email",
+        "name": "Compensation on Transcendence Package"
+    },
+    "312": {
+        "content": "Dear player, we have adjusted the amount of Stellar Shards disassembled from a Transcending Heart from 3M to 5M. For players who have disassembled Transcending Hearts before the update, with every 1 Transcending Heart disassembled, you will be made up with 2M Stellar Shards. Sorry for any inconvenience this may have caused.",
+        "from": "System Email",
+        "name": "Compensation on Functional Adjustment"
+    },
+    "313": {
+        "content": "Dear player, we have made adjustments to the following features for a better gaming experience: 1) the amount of Transcending Hearts in the Transcendence Package; 2) the amount of Stellar Shards that can be disassembled from a Transcending Heart. Sorry for any inconvenience this may have caused. Please take the below compensation by way of our apology.",
+        "from": "System Email",
+        "name": "Compensation on Functional Adjustment"
+    },
+    "314": {
+        "content": "Dear player, we have adjusted the amount of Stellar Shards in a Transcendence Material Selection Chest from 10,000 to 16,667. We will make up to players who have open the selection chest and chosen Stellar Shards. For every selection chest is opened, they will be compensated with Stellar Shard *6,667. We're sorry for any inconvenience this may have caused. Thank you for your enduring support! ",
+        "from": "System Email",
+        "name": "Adjustment on Transcendence Material Selection Chest"
+    },
+    "315": {
+        "content": "During the event, log in every day to claim Cupcake *100 and Super Wishing Coin *1. Claim the rewards in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "316": {
+        "content": "Dear player, the Mid-Autumn Festival is here. Lutz wishes you have a happy festival and enjoy the celebration! Please take the following gift from us!",
+        "from": "System Email",
+        "name": "Mid-Autumn Blessings"
+    },
+    "317": {
+        "content": "Dear player, we have converted your remaining #number# Ordinary Dice into Starlight Orbs in the ratio of 1:5. Have fun in the Mid-Autumn Celebration! (During the Mid-Autumn Celebration, you can get a max of 2000 Starlight Orbs converted from Ordinary Dice, exceeding which, you won't get the chance for conversion.)",
+        "from": "System Email",
+        "name": "Starlight Orb Giveback"
+    },
+    "318": {
+        "content": "During the event, log in every day to get Heroic Summon Scroll *3 and Celebration Treasure Box *10. Claim the rewards in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "319": {
+        "content": "During the event, log in every day to get Mushroom *100 and Super Wishing Coin *1. Claim the reward in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "32": {
+        "content": "You rank NO.#rank# in this Death Rift Challenge. Please take the rewards in the attachment.",
+        "from": "System Email",
+        "name": "Death Rift Challenge Reward"
+    },
+    "320": {
+        "content": "During the event, log in every day to get Heroic Summon Scroll *3 and Halloween Candy *1. Claim rewards in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "321": {
+        "content": "Congratulations! You have met requirements at the Trick or Treat event and obtained the following rewards:",
+        "from": "System Email",
+        "name": "Trick or Treat Event Bonus Rewards"
+    },
+    "322": {
+        "content": "Congratulations! You have lit up the avatar of a specific hero at the Halloween Gathering event and obtained the following rewards:",
+        "from": "System Email",
+        "name": "Halloween Gathering Rewards"
+    },
+    "323": {
+        "content": "Dear player, to provide you with better gaming experience, we have adjusted the amount of materials required for Void Imprint enhancement. All imprints of your relevant heroes have been reset, and materials consumed have been returned to you in the attachment.",
+        "from": "System Email",
+        "name": "Void Imprint Material Return"
+    },
+    "324": {
+        "content": "Dear player, the payment method associated with your subscription account failed to make the payment, which will affect your subscription status. Please tap the below link to fix your relevant subscription settings: |||https://play.google.com/store/account/subscriptions?package=com.droidhang.ad|||https://play.google.com/store/account/subscriptions?package=com.droidhang.ad|||",
+        "from": "System Email",
+        "name": "Notice on Subscription Anomaly"
+    },
+    "325": {
+        "content": "Dear player, you have successfully fixed the settings on your subscription account. Now your subscription has been automatically recovered.",
+        "from": "System Email",
+        "name": "Notice on Subscription Recovery"
+    },
+    "326": {
+        "content": "Dear player, as your subscription account hasn't been fixed or you have got it manually cancelled, your subscription is invalidated on #time#. You can subscribe again if needed. Thank you.",
+        "from": "System Email",
+        "name": "Notice on Unsubscription"
+    },
+    "327": {
+        "content": "Dear player, we have reduced the amount of materials required for enhancing Void Imprints, reset the Imprints of all your heroes, and returned all materials you have consumed for the enhancement. Sorry for the inconvenience this may have caused. Please take the following gifts as compensation by way of our apology.",
+        "from": "System Email",
+        "name": "Compensation of Void Imprint Adjustment"
+    },
+    "328": {
+        "content": "Knock knock! It's Lutz coming with his jack-o'-lantern and inviting you to join the grand Halloween party! He has also prepared gifts for you. Have a good Halloween time with the troublemakers!",
+        "from": "System Email",
+        "name": "Happy Halloween"
+    },
+    "329": {
+        "content": "Congratulations! You have completed the quests in the Thanksgiving Turkey event. Here are the rewards for you:",
+        "from": "System Email",
+        "name": "Thanksgiving Turkey Quest Reward"
+    },
+    "33": {
+        "content": "During the event, login every day and you will get 100 gems, 1 HEROIC SUMMON SCROLL. Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "330": {
+        "content": "Congratulations! You have earned enough points in the Shopping Carnival event. Here are the rewards for you.",
+        "from": "System Email",
+        "name": "Shopping Carnival Rewards"
+    },
+    "331": {
+        "content": "A yummy roast turkey for the grand Thanksgiving feast! Here are great Thanksgiving gifts from Lutz! We wish you a happy Thanksgiving Day!",
+        "from": "System Email",
+        "name": "Thanksgiving Blessing"
+    },
+    "332": {
+        "content": "Dear player, You're now at level #level#. Here are the daily rewards for you. Your Black Friday Golden Card will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "Black Friday Golden Card Reward"
+    },
+    "333": {
+        "content": "During the event, log in every day to get Broomstick *100 and Super Wishing Coin *1. Claim the reward in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "334": {
+        "content": "Congratulations! You have earned enough points in the Thanksgiving Growth event. Here are the rewards for you:",
+        "from": "System Email",
+        "name": "Thanksgiving Growth - Basic Rewards"
+    },
+    "335": {
+        "content": "Congratulations! You have earned enough points in the Thanksgiving Growth event. Since you have activated bonus rewards, here are the rewards for you:",
+        "from": "System Email",
+        "name": "Thanksgiving Growth  - Bonus Rewards"
+    },
+    "336": {
+        "content": "Dear Players, we have edited the summoning rules in the Compass of the Transcended. Now, your summoning progress is recorded in the [Compass of the Transcended - Guidance], and for every 15 summonings that you have conducted, you will get a [Transcending Sphere]. Please find your rewards attached. We wish you an enjoyable gaming experience!",
+        "from": "System Email",
+        "name": "Compass of the Transcended: Guaranteed Rewards"
+    },
+    "337": {
+        "content": "Dear player, we have made modifications in the Compass of the Transcended. Now there are two summoning methods in the Compass of the Transcended. We apologize for any inconvenience that we might have brought to you. Here is the compensation for you.",
+        "from": "System Email",
+        "name": "Compensation for Changes in the Compass of the Transcended"
+    },
+    "338": {
+        "content": "Dear player, we have changed the rewards from the Senior Privilege Card. Here is the compensation for you based on your claimed rewards from the Senior Privilege Card. We sincerely wish you a pleasant gaming experience!",
+        "from": "System Email",
+        "name": "Compensation for Changes in Senior Privilege Card"
+    },
+    "339": {
+        "content": "Dear player, we have changed the rewards from the Privilege Card. Here is the compensation for you based on your claimed rewards from the Privilege Card. We sincerely wish you a pleasant gaming experience!",
+        "from": "System Email",
+        "name": "Compensation for Changes in Privilege Card"
+    },
+    "34": {
+        "content": "During the event, login every day and you will get 50 gems, 2 HEROIC SUMMON SCROLL. Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Easter Reward"
+    },
+    "340": {
+        "content": "Dear player, we have changed the rewards from the Diamond Fund. Here is the compensation for you based on your previous progress in the Diamond Fund. We sincerely wish you a pleasant gaming experience!",
+        "from": "System Email",
+        "name": "Compensation for Changes in Diamond Fund"
+    },
+    "341": {
+        "content": "Dear player, we have adjusted the rewards for the Monthly Carnival Card. Since you have purchased the Monthly Carnival Card, please refer to the attachment for the compensations based on your completed quests this month. We sincerely wish you a pleasant gaming experience!",
+        "from": "System Email",
+        "name": "Compensation for Monthly Carnival Card"
+    },
+    "342": {
+        "content": "Congratulations! You have achieved specific requirements at the Moonlight Gift event and obtained the following gifts. Please claim them in time.",
+        "from": "System Email",
+        "name": "Moonlight Gift Rewards"
+    },
+    "343": {
+        "content": "Dear player, we have adjusted the unlocking requirements for some features: they used to be unlocked when the player reaches a certain level, and now will be unlocked after the player clears a certain stage in Campaign. Since you have already unlocked some of these features but haven’t cleared the required stages yet, these stages have been automatically cleared. Here are the rewards from these cleared stages. We wish you a pleasant gaming experience!",
+        "from": "System Email",
+        "name": "Rewards from Auto Cleared Campaign Stages"
+    },
+    "345": {
+        "content": "Dear player, as you have paid ￥#price# to make a purchase (ID: #order_id#) at #platform#, please find the items in the attachment.",
+        "from": "GM Email",
+        "name": "GM Feedback"
+    },
+    "346": {
+        "content": "During the event, log in every day to claim Blueberry Macaroon *100 and Super Wishing Coin *1. Claim the rewards in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "347": {
+        "content": "Dear player, here are your unclaimed rewards from the Christmas Stockings. Please claim the attachment.",
+        "from": "System Email",
+        "name": "Christmas Stockings Rewards"
+    },
+    "348": {
+        "content": "親愛的兵粉，非常感謝您一直以來對“放置奇兵”的支持和喜愛，我們為您準備了年末福利，希望您能抽出1分鐘時間完成年終調查問卷（遊戲主介面左下角）。您的意見和建議一直以來都是我們不斷前進的動力。我們會從中抽取部分“幸運兵粉”獲得2021限定周邊禮盒，問卷截止回收時間為12月17日24：00。兵粉記得及時填寫。與此同時，我們將通過問卷填寫的聯繫郵箱在12月30日對幸運兵粉進行通知。再次感謝兵粉們的陪伴與包容，同時也希望新的一年您能與我們繼續結伴前行！",
+        "from": "系統郵件",
+        "name": "年終調查問卷"
+    },
+    "349": {
+        "content": "Dear player, thank you for purchasing the Warming Supplies. Please claim the below reward for today. Your Warming Supplies will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "Warming Supplies Reward"
+    },
+    "35": {
+        "content": "During the event, login every day and you will get 50 gems, 2 wonder puppets. Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "350": {
+        "content": "Dear player, thank you for purchasing the Passionate Supplies. Please claim the below reward for today. Your Passionate Supplies will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "Passionate Supplies Reward"
+    },
+    "351": {
+        "content": "Hey, everyone, it’s me, Lutz! How are you feeling in this heart-warming Christmas? Wish you a pleasant Christmas! Here are some gifts for you:",
+        "from": "System Email",
+        "name": "Merry Christmas"
+    },
+    "352": {
+        "content": "Dear player, You're now at level #level#. Here are the daily rewards for you. Your New Year Card will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "New Year Card Rewards"
+    },
+    "353": {
+        "content": "Happy New Year! I wish you a pleasant and prosperous new year! Here are great new year gifts from Lutz for you!",
+        "from": "System Email",
+        "name": "New Year Wishes"
+    },
+    "354": {
+        "content": "Congratulations, you’ve fulfilled the requirements for the New Year Party event. Please find your rewards attached.",
+        "from": "System Email",
+        "name": "New Year Party Rewards"
+    },
+    "355": {
+        "content": "Dear player, your exploration session has ended. Here are the rewards from the explored sectors. Please refer to the attachment for your rewards.",
+        "from": "System Email",
+        "name": "Exploration Rewards"
+    },
+    "356": {
+        "content": "Dear player, your ranking for the last Void Ark Exploration is No.#rank#. Please find your ranking rewards attached.",
+        "from": "System Email",
+        "name": "Exploration Point Ranking Rewards"
+    },
+    "357": {
+        "content": "Dear players, we’ve been collecting data and analyzing how Snow Heart actually works since its release, and found that it’s not as powerful as we believed. Moreover, we have received feedback from players as well. Therefore, we have adjusted its skill effects. Please find more details on our Facebook official page. Here are compensations for you. Thank you for your understanding!",
+        "from": "System Email",
+        "name": "Compensation Mail"
+    },
+    "358": {
+        "content": "During the event, log in every day to claim Cherry Pudding *100 and Super Wishing Coin *1. Claim the rewards in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "359": {
+        "content": "Congratulations, you fulfilled the requirements for the Bosom Friends event. Please find your rewards attached.",
+        "from": "System Email",
+        "name": "Bosom Friends Event Rewards"
+    },
+    "36": {
+        "content": "Well done! You have completed the requirements for the Legendary Summons. Please take rewards in the attachment.",
+        "from": "System Email",
+        "name": "Legendary Summon Reward"
+    },
+    "360": {
+        "content": "Happy Lunar New Year! Lutz wishes everyone a wonderful new year! And lots of 5-star heroes, too!",
+        "from": "System Email",
+        "name": "Happy Spring Festival"
+    },
+    "361": {
+        "content": "Today is Valentine's Day, which is a day filled with delightful fragrant flowers! It's time to spend this sweet holiday with the one you love! If you are single, don't feel discouraged. Have this gift from Lutz and go for it! Happy Valentine's Day to everyone!",
+        "from": "System Email",
+        "name": "Gifts on Valentine's Day"
+    },
+    "362": {
+        "content": "Dear player, in order to bring more pleasant gaming experiences to our players, we have made some adjustments in the Void Ark and Galactic Tree (for more details, pleaser refer to our official announcement). We have adjusted the rules in planet exploration, early return, spawning of Void Lords, rules and rewards of Crystal Raid, and incubation of Starspawns. We apologize for any inconvenience that we have brought to you. Here are compensations for you, and thank you very much for your understanding. We sincerely with you a pleasant gaming experience. Please refer to the attachment for compensations (The compensation will also include 8000 Void Ingots, which will be automatically obtained when entering the Void Ark):",
+        "from": "System Email",
+        "name": "Compensations for Adjustments in the Void Ark"
+    },
+    "363": {
+        "content": "感謝您分享放置奇兵年度戰報，這是給您的獎勵，祝您遊戲愉快！",
+        "from": "系統郵件",
+        "name": "放置奇兵年度戰報分享"
+    },
+    "364": {
+        "content": "亲爱的兵粉， 您好，恭喜您被选为“幸运兵粉”，您将获得【2021新春限定周边礼盒】。 为了确保【2021新春限定周边礼盒】能够平安到达您手中，请于1月10日前通过问卷调查时预留的邮箱，核对收货地址哦~。  如有问卷预留邮箱填写错误的情况，请联系游戏内的在线客服进行修改。  感谢您的陪伴与包容，新的一年也希望能与您继续结伴前行！",
+        "from": "系统邮件",
+        "name": "幸运兵粉"
+    },
+    "365": {
+        "content": "During the event, log in every day to get Bamboo Liquor *100 and Super Wishing Coin *1. Claim the reward in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "366": {
+        "content": "Dear player, we have adjusted the guild raid rules. Now players can no longer gain Guild Exp by challenging guild bosses (obtained Guild Exp is not affected). Instead, players will gain a huge amount of Guild Exp by defeating guild bosses. Your guild has gained an amount of Guild Exp based on the number of guild bosses you have defeated. We sincerely apologize for any inconvenience that we might have brought to you, and we wish you a pleasant gaming experience.",
+        "from": "System Email",
+        "name": "Adjustments in Guild Raid Rules"
+    },
+    "367": {
+        "content": "Dear player, we have adjusted the rules of Starspawn cultivation and reset all Starspawns to level 1. The materials that you have invested on your Starspawns have been refunded to you. Please find them in the attachment.",
+        "from": "System Email",
+        "name": "Refunded Materials"
+    },
+    "368": {
+        "content": "Dear player, in order to optimize your gaming experience, we have adjusted the rules of Starspawn cultivation. Instead of evolved once every 20 levels, now Starspawns can be evolved once every 10 levels from level 20 to 100, and once every 5 levels after level 100 (the total amount of materials for evolution remains the same). After the update, all of your Starspawns will be reset to level 1, and the materials that you have invested on your Starspawns will be refunded to you via mail. We sincerely apologize for any inconvenience that you have brought to you. Here is the compensation for you. We wish you a pleasant gaming experience!",
+        "from": "System Email",
+        "name": "Compensation for Adjustments in Starspawn Cultivation"
+    },
+    "369": {
+        "content": "Dear player, the original Guild Mill has been replaced by the new Guild Settlement. Your original orders have been canceled, and the order rewards have been delivered to your mailbox.",
+        "from": "System Email",
+        "name": "Rewards from Guild Mill Orders"
+    },
+    "37": {
+        "content": "During the event, login every day and you will get 100 gems, 2 HEROIC SUMMON SCROLL. Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "370": {
+        "content": "Dear player, Gold donation in the Guild Mill is unavailable now, as the Guild Mill feature has been replaced by the brand new Guild Settlement. Your Guild Settlement generates a steady flow of Guild Coins, and you can assign heroes to raise the settlement’s reputation level and get more coins. We sincerely apologize for any inconveniences that we have brought. Please refer to the attachment for compensations for you. We sincerely wish you a pleasant gaming experience.",
+        "from": "System Email",
+        "name": "Guild Mill Replaced"
+    },
+    "371": {
+        "content": "During the event, log in every day to get Steamed Bun *100 and Super Wishing Coin *1. Claim the reward in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "372": {
+        "content": "Congratulations! Your guild has won the championship in the Ace Championship! Here are the rewards for you:",
+        "from": "System Email",
+        "name": "Ace Championship Rewards (Championship)"
+    },
+    "373": {
+        "content": "Dear player, thank you for purchasing the Spring Supplies II. Please claim the below reward for today. Your Spring Supplies II will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "Reward of Spring Supplies II"
+    },
+    "374": {
+        "content": "Dear player, thank you for purchasing the Spring Supplies I with gems. Please claim the below reward for today. Your Spring Supplies I will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "Reward of Spring Supplies I"
+    },
+    "375": {
+        "content": "Dear player, thank you for purchasing the Spring Supplies II. Please claim your extra perk on day 7 in the attachment. Enjoy the game!",
+        "from": "System Email",
+        "name": "Extra Reward of Spring Supplies II"
+    },
+    "376": {
+        "content": "Congratulations! Your guild was runner-up in the Ace Championship! Here are the rewards for you:",
+        "from": "System Email",
+        "name": "Ace Championship Rewards (Runner-Up)"
+    },
+    "377": {
+        "content": "Congratulations! Your guild's ranking in the Ace Championship is No.#rank#. Here are the rewards for you:",
+        "from": "System Email",
+        "name": "Ace Championship Rewards"
+    },
+    "378": {
+        "content": "Happy Easter Day! The naughty bunnies starts hiding eggs again. Lutz helped you find some, and the rest leaves to you. Have fun~~~",
+        "from": "System Email",
+        "name": "Easter Gifts"
+    },
+    "379": {
+        "content": "Congratulations on reaching the specified conditions in the Playful Princess event and getting the following rewards, which are attached.",
+        "from": "System Email",
+        "name": "Easter Elfin Goal Rewards"
+    },
+    "38": {
+        "content": "You have got #number# points in the Crazy Pack event. Please get the following rewards",
+        "from": "System Email",
+        "name": "Crazy Pack Reward"
+    },
+    "380": {
+        "content": "Congratulations! You've completed the quest in Newbie Challenge. Here are your rewards:",
+        "from": "System Email",
+        "name": "Newbie Challenge Rewards"
+    },
+    "381": {
+        "content": "Congratulations! You've completed the quest in Journey to Glory. Here are your rewards:",
+        "from": "System Email",
+        "name": "Journey to Glory Rewards"
+    },
+    "382": {
+        "content": "During the event, log in every day to get Tanghulu *100 and Super Wishing Coin *1. Claim the reward in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "383": {
+        "content": "Thank you for following Idle Heroes and thank you for your love and support! We will continue to be devoted to Idle Heroes. Here's a gift from us specially for you.",
+        "from": "System Email",
+        "name": "Follower Gift"
+    },
+    "384": {
+        "content": "During the event, log in every day to get Mithril Pickaxe *15. Claim the rewards in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "385": {
+        "content": "Dear player, we have collected all your Tavern quests rewards that you haven't claimed for you, and send them all via this mail. Please claim in time.",
+        "from": "System Email",
+        "name": "Tavern Quest Rewards"
+    },
+    "386": {
+        "content": "Dear player, we have removed 3 features in the game (Event Raid, Lost Underground, and Daily Gem Gift) and revamped the corresponding rewards to Tavern Quests. Now Tavern is featured with new functions. Hope you enjoy the update!",
+        "from": "System Email",
+        "name": "Tavern Revamp"
+    },
+    "387": {
+        "content": "Dear player, your unused summoning chances in Jahra’s Invitation have been automatically used. Here are the heroes that you have summoned.",
+        "from": "System Email",
+        "name": "Unused Summon Chances"
+    },
+    "388": {
+        "content": "Dear player, here is the Star Store Rewards Bonus after exchanging all items at Star Store.",
+        "from": "System Email",
+        "name": "Star Store Rewards Bonus"
+    },
+    "389": {
+        "content": "Congratulations! You've completed a Transcendence Fight quest. Here are the rewards:",
+        "from": "System Email",
+        "name": "Transcendence Fight Rewards"
+    },
+    "39": {
+        "content": "Congrats for beating Boss Marauder, please claim the following rewards:",
+        "from": "System Email",
+        "name": "Help-fight Marauder Rewards"
+    },
+    "390": {
+        "content": "Congratulations on completing assigned quests at the Mermaid Wishing Fountain event. Please find your rewards attached.",
+        "from": "System Email",
+        "name": "Mermaid Wishing Fountain Goal Rewards"
+    },
+    "391": {
+        "content": "Dear player, thank you for your purchase. The 5th Anniversary Card will expire in #day# day(s). Since your player level is #level#, here are the rewards for today.",
+        "from": "System Email",
+        "name": "5th Anniversary Card Rewards"
+    },
+    "392": {
+        "content": "Dear players, thank you for participating in this carnival. Here are your rewards:",
+        "from": "System Email",
+        "name": "Idle Carnival Rewards"
+    },
+    "393": {
+        "content": "During the event, log in every day to get Doggy*100 and Super Wishing Coin *1. Claim the rewards in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "394": {
+        "content": "It's the Dragon Boat Festival and it's time to have Zongzi! Have you eaten one yet? Lutz is here with the Blessings of Dragon Boat Festival, wishing you all a good time!",
+        "from": "System Email",
+        "name": "Blessings of Dragon Boat Festival"
+    },
+    "395": {
+        "content": "Dear Idler, we are sorry to inform you that due to the temporary functional maintenance in the game, the chat system will be closed from Jun. 3, 23:59 (UTC/GMT+8) to Jun. 4, 23:59 (UTC/GMT+8). During this period, you will not be able to send messages in the chat system, change your character name and guild name, or check player mails and guild mails, etc. If you change your character name during this period, the name will be automatically changed to your ID. You can change your character name once the maintenance is completed. The above mentioned features will be available once the maintenance is completed. We sincerely apologize for any inconvenience this may have caused. Please take the below compensation by way of our apology. Thank you for your understanding and support, and we wish you have fun in the game!",
+        "from": "System Email",
+        "name": "Maintenance Notice"
+    },
+    "396": {
+        "content": "Dear player, we have increased the reward for completing Chapter 35 in Newbie Growth Plan, Clear stage 2 in Broken Spaces. Since you have completed this task, the increased reward is sent to you attached. Have fun in the game!",
+        "from": "System Email",
+        "name": "Newbie Growth Plan Reward Adjustment"
+    },
+    "397": {
+        "content": "Dear players, we have made the following adjustments in Arena: Increased rewards at Inter-Dimensional Arena; Crystal Crown League will permanently close after season 10 ends at server time; revised the Arena-related daily quest and the point rules in Fighters’ Competition. Here is the compensation. Hope you have great fun in the game!",
+        "from": "System Email",
+        "name": "Functional Adjustments in Arena"
+    },
+    "398": {
+        "content": "During the event, log in every day to get Masquerade Mask *100 and Prophet Orb *1. Claim the rewards in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "399": {
+        "content": "Dear player, thank you for purchasing Refreshing Supplies. Please claim the below reward for today. Your Refreshing Supplies will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "Refreshing Supplies Rewards"
+    },
+    "4": {
+        "content": "You are appointed as #guildname#'s official",
+        "from": "Guild Email",
+        "name": "Appoint Officials"
+    },
+    "40": {
+        "content": "Congrats for ranking NO.#rank# in Help-fight, please claim your rewards:",
+        "from": "System Email",
+        "name": "Help-fight Ranking Rewards"
+    },
+    "400": {
+        "content": "Dear player, thank you for purchasing Coolness Supplies. Please claim the below reward for today. Your Coolness Supplies will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "Coolness Supplies Rewards"
+    },
+    "401": {
+        "content": "Dear player, thank you for purchasing Refreshing Supplies. Please claim your extra perk on day 7 in the attachment. Enjoy the game!",
+        "from": "System Email",
+        "name": "Extra Reward of Refreshing Supplies"
+    },
+    "402": {
+        "content": "Dear player, your unclaimed rewards in the Tower of Dream are as follows:",
+        "from": "System Email",
+        "name": "Rewards in the Tower of Dream"
+    },
+    "403": {
+        "content": "During the event, log in every day to get Mithril Pickaxe *15 and Super Wishing Coin *1. Claim the rewards in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "404": {
+        "content": "Dear players, thank you for purchasing the Summer Package. The Extra Rewards in it are as follows:",
+        "from": "System Email",
+        "name": "Summer Joy Extra Rewards"
+    },
+    "405": {
+        "content": "Dear players, thank you for purchasing the Seaside Package. The Extra Rewards in it are as follows:",
+        "from": "System Email",
+        "name": "Seaside Joy Extra Rewards"
+    },
+    "406": {
+        "content": "Congratulations! You’ve reached the goal in the Drift Bottle. Here are your rewards:",
+        "from": "System Email",
+        "name": "Drift Bottle Goal Rewards"
+    },
+    "407": {
+        "content": "Dear player, since you've unlocked the Gate of the Void and you may be affected by the adjustment, we sincerely apologize for any inconvenience caused. Please take the compensation below by way of our apology. Hope you have fun in the game.",
+        "from": "System Email",
+        "name": "Additional Compensation for the Gate of the Void"
+    },
+    "408": {
+        "content": "Dear player, we've adjusted the Max. corruption of Realms Gate in the Gate of the Void, added a new area in the Void Vortex, adjusted the skill effects of pink Magic Stone Swords and the effects of Shield in heroes' skills. We sincerely apologize for any inconvenience caused. Please take the compensation below by way of our apology. Hope you have fun in the game.",
+        "from": "System Email",
+        "name": "Feature Adjustment Compensation"
+    },
+    "409": {
+        "content": "During the event, log in every day to get Inflatable Unicorn *100 and Prophet Orb *1. Claim the rewards in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "41": {
+        "content": "You are a Privilege Card user now. The system will send #gems# gems at 00:00 am (UTC/GMT+0) to you daily since #date#. Day 1 gems are offered on the day of purchase.",
+        "from": "Privilege Card",
+        "name": "Privilege Card"
+    },
+    "410": {
+        "content": "Congratulations on completing assigned quests in the Matchmaking Day event. Please find your rewards attached.",
+        "from": "System Email",
+        "name": "Matchmaking Day Goal Rewards"
+    },
+    "411": {
+        "content": "Dear Idler, we have fully upgraded Celestial Island in the following aspects: Added a resource building, Stone of Void Mine, to the Main Island; added Cloud Island where you can build the residence for heroes; removed the Expedition feature; increased the output of some rewards in Adventure; and added Universal Skin Shards as one of the rewards in Adventure. We apologize for any inconvenience this may have caused. Please accept the following compensation by way of our apology. Hope you enjoy the new Celestial Island!",
+        "from": "System Email",
+        "name": "Compensation Mail"
+    },
+    "412": {
+        "content": "Dear Idler, we have demolished your statues on Celestial Island for a functional adjustment. Here, we are returning all of your building materials consumed by a ratio of 1:1. Please claim them in the attachment.",
+        "from": "System Email",
+        "name": "Statue Materials Return"
+    },
+    "413": {
+        "content": "During the event, log in every day to get Ordinary Dice *4, Gem *150, and Cloud-weaving Lantern *5 in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "414": {
+        "content": "It’s the annual Qixi Festival again! This is a festival full of romance. Lutz hopes that everyone can encounter the one you love~ Also, don’t forget to make wishes to the moon. Maybe something good will happen! Hope you all enjoy the game! Please accept our gifts below:",
+        "from": "System Email",
+        "name": "Qixi Blessings"
+    },
+    "415": {
+        "content": "During the event, log in every day and you will get Paper Kite *100 and Prophet Orb *1 . Please claim your rewards attached.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "416": {
+        "content": "Dear player, your unused summoning chances in Fairy Queen‘s Blessings have been automatically used. Here are the heroes that you have summoned.",
+        "from": "System Email",
+        "name": "Unused Summon Chances"
+    },
+    "417": {
+        "content": "Dear player, here is the Woodland Store Rewards Bonus after exchanging all items at Woodland Store.",
+        "from": "System Email",
+        "name": "Woodland Store Rewards Bonus"
+    },
+    "418": {
+        "content": "Congratulations! You've completed a Transcendence Fight quest. Here are the rewards:",
+        "from": "System Email",
+        "name": "Transcendence Fight Rewards"
+    },
+    "419": {
+        "content": "Hello, dear players, we have fixed the problem that the number of items produced during the level sweep of the 21st floor and above in Sealed Land is abnormal. Sorry for the inconvenience. Please accept our compensation and wish you a happy game.",
+        "from": "System mail",
+        "name": "Compensation Mail"
+    },
+    "42": {
+        "content": "Dear player, please take the following rewards for today in time. Your Privilege Card will expire in #day# day(s).",
+        "from": "Privilege Card",
+        "name": "Privilege Card Reward for Today"
+    },
+    "420": {
+        "content": "Hello, dear players, we have optimized the heroic bond in Yunshu Island. We need you to re-enter the tenants in Yunshu Island residential area. We are very sorry for the inconvenience. Please accept our compensation. I wish you a happy game. .",
+        "from": "System mail",
+        "name": "Compensation Mail"
+    },
+    "421": {
+        "content": "Hello, dear players, we have corrected the consumption of building upgrade materials for the 'market shops', 'tables' and 'wells' in the residential area of Yunshu Island, and refunded all the consumption for the players who upgraded this building Round wood, see the attachment for details, I wish you a happy game!",
+        "from": "System mail",
+        "name": "Compensation mail"
+    },
+    "422": {
+        "content": "Hello, dear players, we have reset the VIP achievement rewards, and now we will reissue the VIP achievement rewards that have not been received before the update. See the attachment for details. I wish you a happy game!",
+        "from": "System Email",
+        "name": "VIP achievement reward re-send email"
+    },
+    "423": {
+        "content": "Congratulations! You have obtained enough growth points in the Growth Plan of September. Check the attachment for rewards.",
+        "from": "System Email",
+        "name": "Basic Rewards of Growth Plan of September"
+    },
+    "424": {
+        "content": "Congratulations! You have obtained enough growth points in the Growth Plan of September. As you have activated the Bonus Plan, you can get the below bonus rewards.",
+        "from": "System Email",
+        "name": "Bonus Rewards of Growth Plan of September"
+    },
+    "425": {
+        "content": "Congratulations! You’ve reached the goal in the Moon’s Ritual event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Mid-Autumn Festival Rewards"
+    },
+    "426": {
+        "content": "Dear Idler, Mid-Autumn Festival is here! Make wishes over the round moon tonight and you may get blessings from the Moon Goddess! Lutz wish you all a happy Mid-Autumn Festival and all your wishes come true! Hope you have fun in the game!",
+        "from": "System Email",
+        "name": "Mid-Autumn Blessings"
+    },
+    "427": {
+        "content": "During the event, log in every day and you will get Rose Bouquet *100 and Prophet Orb *1 . Please claim your rewards attached.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "428": {
+        "content": "Congratulations, your performance is brilliant in Season #season# of the Star Arena. You have earned #score# points, and your final ranking is #rank#. Here are the season rewards for you!",
+        "from": "System Email",
+        "name": "Star Arena Season Reward"
+    },
+    "429": {
+        "content": "Congratulations! You’ve reached the goal in the Vacation Party event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Vacation Party Goal Rewards"
+    },
+    "43": {
+        "content": "Your Privilege Card has expired. Please renew it in the Store for 2800 Gems in total!",
+        "from": "Privilege Card",
+        "name": "Privilege Card Has Expired"
+    },
+    "430": {
+        "content": "Dear Idler, thank you for your purchase. You are now a level #level# player. Your Happy Vacation Card will expire in #day# day(s) and here are the rewards of today.",
+        "from": "System Email",
+        "name": "Happy Vacation Card Rewards"
+    },
+    "431": {
+        "content": "Dear Idler, we’ve made the following adjustments: Adjusted the types of items for sale, and lowered the prices of some items at both Soul Stone Store and Arena Store. Adjusted hero shard rewards in the chest of Brave Trial. Added 2 Boss stages in Broken Spaces. Raised the quest cap and adjusted the rewards of Fusion and Awaken in the Monthly Events. We apologize for any inconvenience caused, and please take the below compensation by way of apology. Hope you have fun in the game!",
+        "from": "System Email",
+        "name": "Compensation on Functional Adjustment"
+    },
+    "432": {
+        "content": "Dear Idler, we’ve made the following adjustments: Adjusted the types of items for sale, and lowered the prices of some items at both Soul Stone Store and Arena Store. Adjusted hero shard rewards in the chest of Brave Trial. Added 2 Boss stages in Broken Spaces. Raised the quest cap and adjusted the rewards of Fusion and Awaken in the Monthly Events. Since you’ve purchased the Monthly Carnival, we’ve made the following compensation as attached. We apologize for any inconvenience caused. Hope you have fun in the game!",
+        "from": "System Email",
+        "name": "Compensation on Functional Adjustment"
+    },
+    "433": {
+        "content": "Dear player, thank you for purchasing the supplies. Please claim the below reward for today. Your supplies will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "Supplies' Rewards"
+    },
+    "434": {
+        "content": "Dear player, thank you for purchasing Value Supplies. Please claim the below reward for today. Your supplies will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "Value Supplies Rewards"
+    },
+    "435": {
+        "content": "Dear player, thank you for your purchase. Please claim your extra perk on day 7 in the attachment. Enjoy the game!",
+        "from": "System Email",
+        "name": "Supplies' Bonus Rewards"
+    },
+    "436": {
+        "content": "During the event, log in every day and you will get Gorgeous Disguise *100 and Prophet Orb *1. Please claim your rewards attached.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "437": {
+        "content": "Dear Idler, you still have unused attempts of opening gift boxes in the Banquet Preparation. They’ve been used for opening gift boxes automatically. Please accept your rewards:",
+        "from": "System Email",
+        "name": "Banquet Preparation Reissue Mail"
+    },
+    "438": {
+        "content": "Congratulations! You completed the specified missions in the Mission Pumpkin event. Please accept your rewards:",
+        "from": "System Email",
+        "name": "Mission Pumpkin Event Rewards"
+    },
+    "439": {
+        "content": "Congratulations! Your guild has performed outstandingly in this season of Star Expedition. Your guild has earned #score# points and ranked No.#rank#. Here are the rewards!",
+        "from": "System Email",
+        "name": "Star Expedition Season Rewards"
+    },
+    "44": {
+        "content": "During the event, you will get the daily login rewards including 5 Wishing Coin. ",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "440": {
+        "content": "Congratulations! You have achieved specific requirements at the Recharge Gifts event and obtained the following rewards. Please claim them in time.",
+        "from": "System Email",
+        "name": "Recharge Gifts Rewards"
+    },
+    "441": {
+        "content": "Your guild has dealt considerable damage to Abyss Catastrophe, the threat from the Void, during this season of Star Expedition, which has made significant contributions to resisting the corruption. Here are your rewards!",
+        "from": "System Email",
+        "name": "Star Expedition Boss Challenge Rewards"
+    },
+    "442": {
+        "content": "This season of Star Expedition has ended. All the Star Imprints you have obtained throughout the season have been automatically sold and converted to the following items. Here are your items:",
+        "from": "System Email",
+        "name": "Star Expedition Star Imprint Return"
+    },
+    "443": {
+        "content": "During the event, log in every day to get Bamboo Dragonfly *100 and Prophet Orb *1 . Please claim your rewards attached.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "444": {
+        "content": "Congratulations! You've reached the milestone in the Point Milestone event! Here are the rewards:",
+        "from": "System Email",
+        "name": "Point Milestone Rewards"
+    },
+    "445": {
+        "content": "Congratulations! You've reached the milestone in the Point Milestone event! Since you’ve obtained Black Gold Avatar Frame, here are the rewards:",
+        "from": "System Email",
+        "name": "Point Milestone Rewards"
+    },
+    "446": {
+        "content": "Congratulations! You've reached the milestone in the Point Milestone event! Since you’ve obtained Black Diamond Avatar Frame, here are the rewards:",
+        "from": "System Email",
+        "name": "Point Milestone Rewards"
+    },
+    "447": {
+        "content": "Dear Idler, since you’ve obtained Obsidian Privilege, here are the rewards:",
+        "from": "System Email",
+        "name": "Gold Mall Extra Rewards"
+    },
+    "448": {
+        "content": "The crunch of the turkey sizzling makes the banquet more lively. It's Thanksgiving Day again, Lutze is here to wish you all a happy Thanksgiving Day with gifts. Hope you have fun in the game! Here are the gifts:",
+        "from": "System Email",
+        "name": "Thanksgiving Blessing"
+    },
+    "449": {
+        "content": "Dear Idler, the Sky Labyrinth will be closed at the end of Thursday from this week onwards. Please pay attention to the time change and have fun!",
+        "from": "System Email",
+        "name": "Sky Labyrinth Time Adjustment"
+    },
+    "45": {
+        "content": "Congrats for your successful fusion of 5-star #ID# in the event time, please claim your rewards:",
+        "from": "System Email",
+        "name": "Fusion Event"
+    },
+    "450": {
+        "content": "Dear player, You're now at level #level#. Here are the daily rewards for you. Your Splendid Gold Card will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "Splendid Gold Card Rewards"
+    },
+    "452": {
+        "content": "Dear Idler, we have adjusted Star Arena for your better gaming experience. We apologize for any inconvenience this may have caused. Please accept the following compensation. Hope you have fun in the game!",
+        "from": "System Email",
+        "name": "Compensation on Functional Adjustment"
+    },
+    "453": {
+        "content": "Dear player, your unused Transcendence’s Blessings have been automatically used. Here are the summoned heroes accordingly.",
+        "from": "System Email",
+        "name": "Transcendence’s Blessing Reissue Mail"
+    },
+    "454": {
+        "content": "Dear player, here is the Star Store Rewards Bonus after exchanging all items at Star Store.",
+        "from": "System Email",
+        "name": "Star Store Rewards Bonus"
+    },
+    "457": {
+        "content": "During the event, log in every day to get Scythe Hairband *100 and Prophet Orb *1 . Please claim your rewards attached.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "458": {
+        "content": "Congratulations! You have shared your Idle Log of 2021. Here are your rewards:",
+        "from": "System Email",
+        "name": "Sharing Rewards of Idle Log of 2021"
+    },
+    "459": {
+        "content": "Congratulations! You have shared the mini game. Here are your rewards:",
+        "from": "System Email",
+        "name": "Sharing Rewards of H5 Mini Game"
+    },
+    "46": {
+        "content": "During the event, you will get the daily login rewards including 4 STAR HERO SHARD x 30,Wishing Coin x 3.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "460": {
+        "content": "Congratulations! You have completed the mini game. Here are your rewards:",
+        "from": "System Email",
+        "name": "Completion Rewards of H5 Mini Game"
+    },
+    "461": {
+        "content": "Dear player, you're now at level #level#. Here are the daily rewards for you. Your Blessing Card will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "Blessing Card Rewards"
+    },
+    "462": {
+        "content": "Dear player, here are your daily rewards of the New Year Card. Your New Year Card will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "New Year Card Rewards"
+    },
+    "463": {
+        "content": "It's time to welcome the new year! Are you looking forward to the New Year? Lutze wishes you all a pleasant and prosperous new year! Here are great new year gifts from Lutz for you!",
+        "from": "System Email",
+        "name": "New Year Wishes"
+    },
+    "464": {
+        "content": "During the event, log in every day to get Gummy Star *100 and Prophet Orb *1. Please claim your rewards attached.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "465": {
+        "content": "Dear player, since you’ve purchased New Year Adventure Gifts, your unclaimed double chest rewards of the floor in Sky Labyrinth will be mailed to you. Here are your rewards:",
+        "from": "System Email",
+        "name": "Unclaimed Double Rewards"
+    },
+    "466": {
+        "content": "Congratulations! You have met the specific requirements in the New Year VIP Special Offers event and obtained the following gifts. Please claim them in the attachment.",
+        "from": "System Email",
+        "name": "New Year VIP Special Offers Rewards"
+    },
+    "467": {
+        "content": "Congratulations! You have collected the specified number of items in the New Year Sticker Collection event. Here are your rewards:",
+        "from": "System Email",
+        "name": "New Year Sticker Collection Rewards"
+    },
+    "468": {
+        "content": "Congratulations! You have collected enough items in the New Year Sticker Collection event! Since you have unlocked the Extra Rewards, now please claim them in the attachment.",
+        "from": "System Email",
+        "name": "New Year Sticker Collection Extra Rewards"
+    },
+    "469": {
+        "content": "Dear player, since you’ve purchased the corresponding privileges, your unclaimed rewards will be mailed to you. Here are your rewards:",
+        "from": "System Email",
+        "name": "Unclaimed Bonus Rewards"
+    },
+    "47": {
+        "content": "Congratulations! You have met the requirement of Fighters' Competition. You can get the rich rewards now! Details please see the attachment.",
+        "from": "System Email",
+        "name": "Fighters' Competition Rewards"
+    },
+    "470": {
+        "content": "Dear player, thank you for purchasing Wintertime Mall Privilege. The Extra Rewards in it are as follows:",
+        "from": "System Email",
+        "name": "Wintertime Mall Extra Rewards"
+    },
+    "471": {
+        "content": "Dear player, thank you for purchasing Vacation Mall Privilege. The Extra Rewards in it are as follows:",
+        "from": "System Email",
+        "name": "Vacation Mall Extra Rewards"
+    },
+    "472": {
+        "content": "Congratulations! You've achieved one of the quests in the Confession Balloons event. Please claim your rewards as attached.",
+        "from": "System Email",
+        "name": "Confession Balloons Quest Rewards"
+    },
+    "473": {
+        "content": "During the event, log in every day to get Bunny Toy *100 and Prophet Orb *1. Please claim your rewards attached.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "474": {
+        "content": "Congratulations! You've reached the specified goal in the Holiday Tea Gift event. Please claim your rewards as attached.",
+        "from": "System Email",
+        "name": "Holiday Tea Gift Rewards"
+    },
+    "475": {
+        "content": "The Lantern Festival is approaching! Lutz wishes you all a happy Lantern Festival and a reunion with your families on this day. Here are the gifts we prepared:",
+        "from": "System Email",
+        "name": "Lantern Festival Wishes"
+    },
+    "476": {
+        "content": "Dear player, since you’ve purchased Double Privileges, your unclaimed double chest rewards of the floor in Sky Labyrinth will be mailed to you. Here are your rewards:",
+        "from": "System Email",
+        "name": "Unclaimed Double Rewards"
+    },
+    "477": {
+        "content": "Congratulations! You've reached the goal of the Joyful Summoning. Here are your rewards:",
+        "from": "System Email",
+        "name": "Joyful Summoning Rewards"
+    },
+    "478": {
+        "content": "Dear player, thank you for purchasing Inn Privilege. The Extra Rewards in it are as follows:",
+        "from": "System Email",
+        "name": "Inn Privilege Extra Rewards"
+    },
+    "479": {
+        "content": "Dear player, thank you for purchasing Holiday Privilege. The Extra Rewards in it are as follows:",
+        "from": "System Email",
+        "name": "Holiday Privilege Extra Rewards"
+    },
+    "48": {
+        "content": "Daily login in the event time to gain a purple 3-star artifact and 500 Magic Dusts sent by in game mail.",
+        "from": "System Email",
+        "name": "Artifact Gifts"
+    },
+    "480": {
+        "content": "Congratulations! You've completed the specified quests in the Sheriff's Commission event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Sheriff's Commission Rewards"
+    },
+    "481": {
+        "content": "During the event, log in every day to get Colorful Balloons *100 and Prophet Orb *1 . Please claim your rewards attached.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "482": {
+        "content": "Dear Idler, since you’ve unlocked the Extra Rewards of Sky Mall, here are the unclaimed rewards:",
+        "from": "System Email",
+        "name": "Unclaimed Extra Rewards of Sky Mall"
+    },
+    "483": {
+        "content": "Dear players, we have adjusted the number of star diamonds for some products in [Star Diamond Purchase], please accept our compensation and apologize for the inconvenience caused to you.",
+        "from": "System mail",
+        "name": "Compensation mail"
+    },
+    "484": {
+        "content": "During the event, log in every day to get Sweet Lollipop *5 and Prophet Orb *1. Please claim your rewards attached.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "485": {
+        "content": "During the event, log in every day to get Dancing Note *100 and Prophet Orb *1 . Please claim your rewards attached.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "486": {
+        "content": "Did everyone have a good time at the party? Well... Where did the rabbit go? Never mind. Get in the spirit of all good vibes going around and enjoy Easter! Here's a little something from Lutz. Happy Easter!",
+        "from": "System Email",
+        "name": "Easter Gifts"
+    },
+    "487": {
+        "content": "Congratulations! You’ve reached the goal in the Soul-Awakening Offers event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Soul-Awakening Offers Goal Rewards"
+    },
+    "488": {
+        "content": "Congratulations! You’ve reached the goal in the Spring Summoning event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Spring Summoning Goal Rewards"
+    },
+    "489": {
+        "content": "During the event, log in every day to get Croissant *100 and Ordinary Dice *4. Please claim your rewards attached.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "49": {
+        "content": "During the event, login every day and you will get Prophet Orb x 1 , 5 STAR HERO SHARD x 10. Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Thanksgiving Reward"
+    },
+    "490": {
+        "content": "Congratulations! You’ve reached the goal in the Viking’s Adventure event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Viking’s Adventure Goal Rewards"
+    },
+    "491": {
+        "content": "Wow, it's the smell of lollipops! The Fantasy Factory is now open with surprises awaiting! The Imp also brought some gifts for you. Please find them in the attachment.",
+        "from": "System Email",
+        "name": "Fantasy Factory Opening Gifts"
+    },
+    "492": {
+        "content": "During the event, log in every day and you will get Gem *150, Heroic Summon Scroll *3. Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "493": {
+        "content": "Dear player, here are your daily rewards of Awakening Booster Card. Your Awakening Booster Card will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "Awakening Booster Card Rewards"
+    },
+    "494": {
+        "content": "During the event, log in every day to get Lucky Coin*100 and Ordinary Dice*4 in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "495": {
+        "content": "Congratulations! You’ve reached the goal in the Soul-Awakening Gala event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Soul-Awakening Gala Goal Rewards"
+    },
+    "496": {
+        "content": "Congrats! You have dealt considerable damage to Abyss Disaster, the threat from the Void, during this Star Expedition, which has made significant contributions to resisting the corruption. Here are your rewards!",
+        "from": "System Email",
+        "name": "Star Expedition BOSS Killing Rewards"
+    },
+    "497": {
+        "content": "Dear Idler, thank you for your purchase! A level #level# player as you are, here are the rewards of today. Your 6th Anniversary Card will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "6th Anniversary Card Rewards"
+    },
+    "498": {
+        "content": "Dear Idler, thank you for your purchase! Here are the rewards of today. Your Starlight Anniversary Card will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "Starlight Anniversary Card Rewards"
+    },
+    "499": {
+        "content": "Congratulations! You have obtained enough growth points at the Growth Plan. Check the attachment for rewards.",
+        "from": "System Email",
+        "name": "Comeback Growth Plan Rewards"
+    },
+    "5": {
+        "content": "You are no longer an official of #guildname#",
+        "from": "Guild Email",
+        "name": "Recall"
+    },
+    "50": {
+        "content": "Congrats for getting #rank# in Guild War Qualifying Round, here are the rewards:",
+        "from": "System Email",
+        "name": "Guild War Qualifying Round Rewards"
+    },
+    "500": {
+        "content": "Congratulations! You have obtained enough growth points at the Growth Plan. Check the attachment for rewards.",
+        "from": "System Email",
+        "name": "Comeback Growth Plan II Rewards"
+    },
+    "501": {
+        "content": "Congratulations, you’ve fulfilled the designated requirements for the Shiny Memory event. Please find your rewards attached.",
+        "from": "System Email",
+        "name": "Shiny Memory Rewards"
+    },
+    "503": {
+        "content": "Thank you for your support and company along the way! Let’s enjoy our time together and immerse ourselves in the concert of the 6th Anniversary Celebration. Also, here are some gifts for you!",
+        "from": "System Email",
+        "name": "6th Anniversary Celebration"
+    },
+    "504": {
+        "content": "During the event, log in every day to get Plain Noodles *100 and Ordinary Dice *4 in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "505": {
+        "content": "Congratulations! You’ve reached the goal of the Sky Mall. Here are your rewards:",
+        "from": "System Email",
+        "name": "Sky Mall Goal Rewards"
+    },
+    "506": {
+        "content": "Starland Arena has ended. Congrats on ranking No.#number# and here are your rewards:",
+        "from": "System Email",
+        "name": "Starland Arena Season Rewards"
+    },
+    "507": {
+        "content": "Starland Arena has ended. Congrats on reaching #number# points and here are your rewards:",
+        "from": "System Email",
+        "name": "Starland Arena Season Rewards"
+    },
+    "508": {
+        "content": "Congrats on signing up for the Starland Arena. Please claim your Sign-up Rewards!",
+        "from": "System Email",
+        "name": "Starland Arena Sign-up Rewards"
+    },
+    "509": {
+        "content": "Based on your points in the Starland Arena, please claim the following rewards:",
+        "from": "System Email",
+        "name": "Starland Arena Daily Point Rewards"
+    },
+    "51": {
+        "content": "Congrats for getting #rank# in Guild War Finals, here are the rewards:",
+        "from": "System Email",
+        "name": "Guild war final rewards"
+    },
+    "510": {
+        "content": "During the event, log in every day to get Voodoo Doll *100 and Ordinary Dice *4 in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "511": {
+        "content": "Congratulations! You've reached the goal in the Romance Riddles event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Romance Riddles Goal Rewards"
+    },
+    "512": {
+        "content": "Congratulations! You've reached the goal of the Pink Ocean event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Pink Ocean Goal Rewards"
+    },
+    "513": {
+        "content": "During the event, log in every day to get Blueberry Cheesecake *100 and Ordinary Dice *4 in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "514": {
+        "content": "Congratulations! You've ranked No.#rank# in the Soul-Awakening Session event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Soul-Awakening Session Rewards"
+    },
+    "515": {
+        "content": "恭喜您，获得了手艺大比拼的胜利，请收下您的奖励：",
+        "from": "系统邮件",
+        "name": "手艺大比拼胜出奖励"
+    },
+    "516": {
+        "content": "感谢您在手艺大比拼活动中的积极表现，请收下您的奖励：",
+        "from": "系统邮件",
+        "name": "手艺大比拼活动奖励"
+    },
+    "517": {
+        "content": "During the event, log in every day to get Dongpo Pork *100 and Ordinary Dice *4 in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "518": {
+        "content": "Dear idler, adjustments and optimizations have been recently made to certain gameplays as follows: Each season of Guild War, Star Expedition and Star Arena now lasts 4 weeks with more rewards available, which takes effect after this update is complete. We sincerely wish you a pleasant gaming experience! Please accept the following compensation:",
+        "from": "System Email",
+        "name": "Adjustment Compensation"
+    },
+    "519": {
+        "content": "Dear idler, thank you for your purchase! A level #level# player as you are, here are the rewards of today. Your Merry Carnival Card will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "Merry Carnival Card Rewards"
+    },
+    "52": {
+        "content": "Congrats for winning the second place in Guild War Final,here are the rewards:",
+        "from": "System Email",
+        "name": "Guild war final rewards"
+    },
+    "520": {
+        "content": "Dear idler, thank you for your purchase! A level #level# player as you are, here are the rewards of today. Your Holiday Spree Card will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "Holiday Spree Card Rewards"
+    },
+    "521": {
+        "content": "Dear idler, we have fixed the data anomaly that some idlers might have experienced in one or certain seasonal settlements of Guild War, Star Expedition and Star Arena. We are sincerely sorry for any inconvenience caused. Please accept the following compensation:",
+        "from": "System Email",
+        "name": "Compensation Mail"
+    },
+    "522": {
+        "content": "During the event, log in every day to get Pineapple Cake *100 and Ordinary Dice *4 in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "523": {
+        "content": "Congratulations! You've reached the goal of the Starlight Gift. Here are your rewards:",
+        "from": "System Email",
+        "name": "Starlight Gift Rewards"
+    },
+    "524": {
+        "content": "Dear player, as you have made a purchase (ID: #order_id#) at #platform#, please see the items in the attachment.",
+        "from": "GM Email",
+        "name": "GM Feedback"
+    },
+    "525": {
+        "content": "Congratulations, your Force level has been upgraded. Please claim the following rewards.",
+        "from": "System Email",
+        "name": "Force Level-Up Rewards"
+    },
+    "526": {
+        "content": "The Force War has ended. Congratulations, your Force is ranked No.#number# in this season. Please claim your rewards:",
+        "from": "System Email",
+        "name": "Force War Settlement Rewards"
+    },
+    "527": {
+        "content": "The Force War has ended. Congratulations, you are ranked No.#number# in this season and have obtained #point# points. Please claim your rewards:",
+        "from": "System Email",
+        "name": "Force War Individual Settlement Rewards"
+    },
+    "528": {
+        "content": "During the event, log in every day to get Delicate Picnic Basket *100 and Ordinary Dice *4 in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "529": {
+        "content": "Congratulations! You've reached the goal of the Maple Leaf Ballad event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Maple Leaf Ballad Goal Rewards"
+    },
+    "53": {
+        "content": "Congrats for winning the champion in Guild War Final,here are the rewards:",
+        "from": "System Email",
+        "name": "Guild war final rewards"
+    },
+    "530": {
+        "content": "Congratulations! You've reached the goal in the Summon Spree event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Summon Spree Goal Rewards"
+    },
+    "531": {
+        "content": "During the event, log in every day to get Chocolate Bread *100 and Ordinary Dice *4 in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "532": {
+        "content": "During the event, log in every day to get Hearty Apple Pizza *100 and Ordinary Dice *4 in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "533": {
+        "content": "Dear idler, thank you for purchasing the package. Please claim your bonus Contract Starry Gems in the attachment.",
+        "from": "System Email",
+        "name": "Unclaimed Double-Up Privilege Rewards"
+    },
+    "534": {
+        "content": "Congratulations! Please accept your New Year Fortune bonus rewards in the attachment:",
+        "from": "System Email",
+        "name": "Jade Rabbit Bag Bonus Rewards"
+    },
+    "535": {
+        "content": "During the event, log in every day to get Mushroom Elf *100 and Ordinary Dice *4 in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "536": {
+        "content": "Congratulations! You've reached the goal of the event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Romance Quest Rewards"
+    },
+    "537": {
+        "content": "Congratulations! You've reached the goal of the event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Love Diary Rewards"
+    },
+    "538": {
+        "content": "Congratulations! You’ve reached the goal in the Viking’s Adventure event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Viking’s Adventure Goal Rewards"
+    },
+    "539": {
+        "content": "Dear idler, congrats on clearing the Brave Trial! It will be closed from now on. Instead, [Dragon Scale Store] will become available in the Marketplace. You can obtain Dragon Scales later via Auto-Battle Drop in the Campaign and Void Campaign.",
+        "from": "System Email",
+        "name": "Brave Trial Clearance"
+    },
+    "54": {
+        "content": "Congrats for completing 4-star quests in Tavern Quest Event, here are the rewards:  ",
+        "from": "System Email",
+        "name": "Tavern 4-star quest event rewards"
+    },
+    "540": {
+        "content": "Congrats on completing the goals of the Super Wishing Fountain Event. Please claim the following rewards:",
+        "from": "System Email",
+        "name": "Super Wishing Fountain Event Rewards"
+    },
+    "541": {
+        "content": "Congrats on completing the Super Wishing Fountain Event in the Monthly Carnival. A Monthly Carnival Card user as you are, you have obtained the following extra rewards:",
+        "from": "System Email",
+        "name": "Monthly Privilege Rewards - Super Wishing Fountain Event"
+    },
+    "542": {
+        "content": "Congratulations! You've reached the goal of the event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Command Center Rewards"
+    },
+    "543": {
+        "content": "Congratulations! You've reached the goal of the event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Logistical Support Goal Rewards"
+    },
+    "544": {
+        "content": "Congratulations! You completed the Super Wishing Fountain goals in the Monthly Carnival. Please accept your rewards:",
+        "from": "System Email",
+        "name": "Super Wishing Fountain Event Rewards"
+    },
+    "545": {
+        "content": "During the event, log in every day to get Blue Hat Jellyfish x100 and Ordinary Dice x4 in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "546": {
+        "content": "Congratulations! You've reached the goal of the event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Series Collection Rewards"
+    },
+    "547": {
+        "content": "Congratulations! You've reached the goal of the event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Carrot Harvest Rewards"
+    },
+    "548": {
+        "content": "Congratulations on getting harvest bonus in the event! Please find your unclaimed rewards in the attachment:",
+        "from": "System Email",
+        "name": "Unclaimed Carrot Harvest Rewards"
+    },
+    "549": {
+        "content": "Dear Idler, congratulations on reaching the designated VIP Privilege achievements. Your unclaimed rewards are attached. Have fun in the Idle Continent!",
+        "from": "System Email",
+        "name": "VIP achievement reward re-send email"
+    },
+    "55": {
+        "content": "Congrats for completing 5-star quests in Tavern Quest Event, here are the rewards:  ",
+        "from": "System Email",
+        "name": "Tavern 5-star quest event rewards"
+    },
+    "550": {
+        "content": "During the event, log in every day to get Jade Talisman x100 and Ordinary Dice x4 in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "551": {
+        "content": "Congratulations! You've reached the goal of the event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Spring Garden Party Rewards"
+    },
+    "552": {
+        "content": "Thank you for your participation! Here are your rewards:",
+        "from": "System Email",
+        "name": "Fishing Tournament Rewards"
+    },
+    "553": {
+        "content": "Congratulations! You are ranked among the Top 100 in Fishing Tournament. Here are your special rewards for your outstanding performance:",
+        "from": "System Email",
+        "name": "Fishing Tournament Honor Rewards"
+    },
+    "554": {
+        "content": "Congratulations, you have unlocked the last place. Here are your rewards:",
+        "from": "System Email",
+        "name": "Fishing Places Unlock Rewards"
+    },
+    "555": {
+        "content": "Successfully signed up for the Force War! Thanks for your active participation. Here are your rewards:",
+        "from": "System Email",
+        "name": "Force War Sign-up Rewards"
+    },
+    "556": {
+        "content": "Congratulations! You've reached the goal of the event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Island Carnival Rewards"
+    },
+    "557": {
+        "content": "During the event, log in every day to get Umbrella Flower x100 and Ordinary Dice x4 in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "558": {
+        "content": "Congratulations! Please accept your Lucky Zongzi bonus rewards in the attachment:",
+        "from": "System Email",
+        "name": "Delicious Zongzi Bonus Rewards"
+    },
+    "559": {
+        "content": "Congratulations! You've reached the goal of the event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Series Collection Rewards"
+    },
+    "56": {
+        "content": "Congratulations, you have joined #guildname# Guild, remember to sign-in everyday!",
+        "from": "Guild Email",
+        "name": "Join Guild"
+    },
+    "560": {
+        "content": "Congratulations, you’ve fulfilled the designated requirements for the Shiny Memory event. Please find your rewards attached.",
+        "from": "System Email",
+        "name": "Shiny Memory Rewards"
+    },
+    "561": {
+        "content": "Congratulations! You've reached the goal of the Normal Search. Here are your rewards:",
+        "from": "System Email",
+        "name": "Treasure Train Rewards"
+    },
+    "562": {
+        "content": "Congratulations! You have caught the largest fish of designated fish species in Fishing Tournament. Here are your special rewards for your outstanding performance:",
+        "from": "System Email",
+        "name": "Fishing Tournament Honor Rewards"
+    },
+    "563": {
+        "content": "Here are your daily rewards of Treasure Crystal Card. Please claim them in time. Your Treasure Crystal Card will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "Treasure Crystal Card Rewards"
+    },
+    "564": {
+        "content": "During the event, log in every day to get Secret Hamburger x100 and Ordinary Dice x4 in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "565": {
+        "content": "Congratulations! You've reached the goal of the event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Conductor's Offers Rewards"
+    },
+    "566": {
+        "content": "Dear idler, thank you for your purchase! A level #level# player as you are, here are the rewards of today. Your Celebration Gem Card will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "Celebration Gem Card Rewards"
+    },
+    "567": {
+        "content": "Dear idler, thank you for your purchase! A level #level# player as you are, here are the rewards of today. Your Celebration Starry Gem Card will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "Celebration Starry Gem Card Rewards"
+    },
+    "568": {
+        "content": "Dear idler, thank you for your purchase! Here are the rewards of today. Your 7th Anniversary Celebration Card will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "The 7th Anniversary Celebration Card Rewards"
+    },
+    "569": {
+        "content": "It's time for the annual celebration again! We've had so much joy and fun along the journey. Thank you so much for your support and company. We sincerely wish you all the best in the future. Let's celebrate our 7th anniversary together on the Dragon Boat Festival! Here are the gifts for you:",
+        "from": "System Email",
+        "name": "7th Anniversary Celebration"
+    },
+    "57": {
+        "content": "During the event, login every day and you will HEROIC SUMMON SCROLL x 2 , Snow Doll x 50. Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Christmas Prize"
+    },
+    "570": {
+        "content": "Dear players, to offer you a better game experience, we made some adjustments to the Wave Rewards in Fort Defense under Trial Mode. We apologize for any inconvenience caused. Please accept the following compensation:",
+        "from": "System Email",
+        "name": "Compensation Mail"
+    },
+    "571": {
+        "content": "Dear player, we adjusted the rewards for this part. Here are your unclaimed rewards for the adjusted part.",
+        "from": "System Email",
+        "name": "Unclaimed Login Bonus"
+    },
+    "572": {
+        "content": "Dear player, we adjusted the rewards for this part. Here are your unclaimed rewards for the adjusted part.",
+        "from": "System Email",
+        "name": "Unclaimed Online Rewards"
+    },
+    "573": {
+        "content": "Dear player, we made some adjustments to the Wave Rewards in Fort Defense under Trial Mode. The rewards of the adjusted part will be mailed to you based on your cleared stages. Here are your rewards:",
+        "from": "System Email",
+        "name": "Feature Adjustment Compensation"
+    },
+    "574": {
+        "content": "During the event, log in every day to get Colorful Pinewheel x100 and Ordinary Dice x4 in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "575": {
+        "content": "Congratulations! You've reached the goal of the event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Dim Sum Restaurant Goal Rewards"
+    },
+    "576": {
+        "content": "During the event, log in every day to get Fortune Orb x100 and Ordinary Dice x4 in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "577": {
+        "content": "Congratulations! You've reached the goal of the event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Warped Carnival Event Rewards"
+    },
+    "578": {
+        "content": "Dear idler, adjustments have been made to the content of some packages in the game. Due to the fact that you have purchased the relevant packages before the update today, your unclaimed adjusted rewards are attached.",
+        "from": "System Email",
+        "name": "Birthday Package Compensation"
+    },
+    "579": {
+        "content": "Dear idler, adjustments have been made to the content of some packages in the game. Due to the fact that you have purchased the relevant packages before the update today, your unclaimed adjusted rewards are attached.",
+        "from": "System Email",
+        "name": "Boost Packages Compensation"
+    },
+    "58": {
+        "content": "During the event, login every day and you will GEMS x 200 , 5 Star Hero Shard x 15. Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "New Year Gift"
+    },
+    "580": {
+        "content": "During the event, log in every day to get Magic Quill x100 and Ordinary Dice x4 in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "581": {
+        "content": "Congratulations! You've reached the goal of the event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Affection Resonance Rewards"
+    },
+    "582": {
+        "content": "Congratulations! Your Force has successfully knocked out another Force. Here are the rewards for you:",
+        "from": "System Email",
+        "name": "Force Victory Rewards"
+    },
+    "583": {
+        "content": "During the event, log in every day to get Wool Ball x100 and Ordinary Dice x4 in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "584": {
+        "content": "Congratulations! Designated slash times are reached in the Moon Palace Longing event. Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Moon Palace Longing Rewards"
+    },
+    "585": {
+        "content": "During the event, log in every day to get Bone Hook x100 and Ordinary Dice x4 in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "586": {
+        "content": "During the event, log in every day to get Violet Conch x100 and Ordinary Dice x4 in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "587": {
+        "content": "Dear Idler, due to the interruption of the challenge, your settlement rewards are sent via mail. Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Unclaimed Turkey Foodie Rewards"
+    },
+    "588": {
+        "content": "During the event, log in every day to get Orange Marmalade x100 and Ordinary Dice x4 in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "589": {
+        "content": "Congratulations, you have won the Dream Competition! Here are your rewards:",
+        "from": "System Email",
+        "name": "Dream Competition Winner Rewards"
+    },
+    "59": {
+        "content": "Dear player, the Trial of the Champion has already opened, we present you with Arena Tickets x 5, go and prepare for battle!",
+        "from": "System Email",
+        "name": "Trial Of The Champion"
+    },
+    "590": {
+        "content": "Congratulations, you have performed wonderfully in the Dream Competition! Here are your rewards:",
+        "from": "System Email",
+        "name": "Dream Competition Event Rewards"
+    },
+    "591": {
+        "content": "Congratulations! Please accept your Gingerbread Man's Blessing bonus rewards in the attachment:",
+        "from": "System Email",
+        "name": "Christmas Gingerbread House Bonus Rewards"
+    },
+    "592": {
+        "content": "Congratulations, you’ve fulfilled the requirements for the New Year Party event. Please find your rewards attached.",
+        "from": "System Email",
+        "name": "New Year Party Rewards"
+    },
+    "593": {
+        "content": "During the event, log in every day to get Secret Pumpkin Soup*100 and Ordinary Dice*4 in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "594": {
+        "content": "Dear idler, a level #level# player as you are, here are the rewards of today. Your Adventure Booster will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "Adventure Booster Reward"
+    },
+    "595": {
+        "content": "Dear idler, here are your daily rewards of Adventure Blessing. Your Adventure Blessing will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "Adventure Blessing Reward"
+    },
+    "596": {
+        "content": "Congratulations! You've reached the goal of the event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Patricia's Traces Sever Goal Rewards"
+    },
+    "597": {
+        "content": "Congratulations! You've reached the goal of the event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Patricia's Traces Individual Goal Rewards"
+    },
+    "598": {
+        "content": "Congratulations! You've reached the goal of the event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Phantasm Summoning Rewards"
+    },
+    "599": {
+        "content": "During the event, log in every day to get Lucky Starfish x100 and Ordinary Dice x4 in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "6": {
+        "content": "You have been kicked out of #guildname#",
+        "from": "Guild Email",
+        "name": "Kicked out of the guild"
+    },
+    "60": {
+        "content": "#content1# #link_text# #link_url# #content2#",
+        "from": "GM Email",
+        "name": "GM Feedback"
+    },
+    "600": {
+        "content": "Congratulations! Please accept your New Year Fortune bonus rewards in the attachment:",
+        "from": "System Email",
+        "name": "Flying Dragon Bonus Rewards"
+    },
+    "601": {
+        "content": "During the event, log in every day to get Mushroom Bomb x100 and Ordinary Dice x4 in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "602": {
+        "content": "Congratulations! You've reached the goal of the event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Tourney Heroes Goal Rewards"
+    },
+    "603": {
+        "content": "Congratulations! You've reached the goal of the event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Enthusiastic Cheering Goal Rewards"
+    },
+    "604": {
+        "content": "Congratulations! You've reached the goal of the event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Letter from Spring Rewards"
+    },
+    "605": {
+        "content": "During the event, log in every day to get Creamy Avocado x100 and Ordinary Dice x4 in the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "606": {
+        "content": "Congratulations! You've reached the goal of the event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Sacred Shrine Event Rewards"
+    },
+    "607": {
+        "content": "Congratulations! You've reached the goal of the event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Points Goal Rewards"
+    },
+    "608": {
+        "content": "During the event, log in every day to claim the following rewards in the attachment:",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "609": {
+        "content": "Congratulations! You've reached the goal of the event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Loop Protocol Goal Rewards"
+    },
+    "61": {
+        "content": "During the event, login every day and you will Prophet Orb x 1 , Snow Doll x 50. Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Spring Festival Gift"
+    },
+    "610": {
+        "content": "Congratulations! Please accept your Overrun Analyzing bonus rewards in the attachment:",
+        "from": "System Email",
+        "name": "Overrun Analyzing Bonus Rewards"
+    },
+    "611": {
+        "content": "Congratulations, you’ve fulfilled the designated requirements for the Shiny Memory event. Please find your rewards attached.",
+        "from": "System Email",
+        "name": "Shiny Memory Rewards"
+    },
+    "612": {
+        "content": "Dear idler, thank you for your purchase! A level #level# player as you are, here are the rewards of today. Your Neon Gem Card will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "Neon Gem Card Rewards"
+    },
+    "613": {
+        "content": "Dear idler, thank you for your purchase! A level #level# player as you are, here are the rewards of today. Your Neon Starry Gem Card will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "Neon Starry Gem Card Rewards"
+    },
+    "614": {
+        "content": "Dear idler, thank you for your purchase! Here are the rewards of today. Your 8th Anniversary Celebration Card will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "8th Anniversary Celebration Card Rewards"
+    },
+    "615": {
+        "content": "This joyful moment goes way beyond language and no matter how resounding the music is, it is hard to express our excitement. It is because of your continuous support and love that this celebration can be so dazzling. Let's infuse this anniversary celebration with our passion and illuminate the neon sky together! Please allow us to thank you all again for your constant support and company. Here's our gift for you!",
+        "from": "System Email",
+        "name": "8th Anniversary Celebration Blessing"
+    },
+    "616": {
+        "content": "Thank you for following Idle Heroes and thank you for your love and support! We will continue to be devoted to Idle Heroes. Here's a gift from us specially for you.",
+        "from": "System Email",
+        "name": "Community Sharing Gift"
+    },
+    "617": {
+        "content": "Congratulations! You've reached the goal of the event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Bright Moon Gift Goal Rewards"
+    },
+    "618": {
+        "content": "Dear player, your unclaimed rewards in the Blossom Tale event are now sent by mail. Please check your rewards in the attachment.",
+        "from": "System Email",
+        "name": "Blossom Tale Rewards Compensation"
+    },
+    "619": {
+        "content": "Congratulations! You've reached the goal of the event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Multihued Manor Gift Rewards"
+    },
+    "62": {
+        "content": "Congrats for completing 6-star quests in Tavern Quest Event, here are the rewards:  ",
+        "from": "System Email",
+        "name": "Tavern 6-star Quest Event Rewards"
+    },
+    "620": {
+        "content": "Dear player, we have modified the skill description of [Infinite Era - Alikita]'s passive skill, [Cataclysm Reshaping]. The actual effect won't be affected. We are sorry for any inconvenience caused. Please accept the following compensation:",
+        "from": "System Email",
+        "name": "Compensation Mail"
+    },
+    "621": {
+        "content": "Congratulations on clearing the designated stage in the event. Here are your rewards: ",
+        "from": "System Email",
+        "name": "Card Clash of Illusion Clearance Rewards"
+    },
+    "622": {
+        "content": "Congratulations on ranking No.#number# on the Illusion Leaderboard. Here are your rewards: ",
+        "from": "System Email",
+        "name": "Illusion Ranking Rewards"
+    },
+    "623": {
+        "content": "Congratulations! You've reached the goal of the event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Fragrant Garden Party Goal Rewards"
+    },
+    "624": {
+        "content": "Congratulations, you have reached #rank# in this Blade Arena Battle Period, please accept your reward:",
+        "from": "System Email",
+        "name": "Blade Arena Battle Period Settlement Rewards"
+    },
+    "625": {
+        "content": "Congratulations, you have obtained #score# Arena points in this Blade Arena Arena Competition, please accept your reward:",
+        "from": "System Email",
+        "name": "Blade Arena Arena Arena Competition Settlement Rewards"
+    },
+    "626": {
+        "content": "Thanks for your active participation in the event! Here are your rewards based on the result of the faction duel:",
+        "from": "System Email",
+        "name": "Duel of Fate Victory Rewards"
+    },
+    "627": {
+        "content": "Thanks for your active participation in the event! Here are your rewards based on the result of the faction duel:",
+        "from": "System Email",
+        "name": "Duel of Fate Defeat Rewards"
+    },
+    "628": {
+        "content": "Congratulations! You've reached the goal of the event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Scarlet Gift Goal Rewards"
+    },
+    "629": {
+        "content": "Congratulations! You've reached the goal of the event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Plentiful Gifts Goal Rewards"
+    },
+    "63": {
+        "content": "Congrats for completing 7-star quests in Tavern Quest Event, here are the rewards:  ",
+        "from": "System Email",
+        "name": "Tavern 7-star quest event rewards"
+    },
+    "630": {
+        "content": "Thanks for your active participation in the event! Here are your rewards based on the result of the faction duel:",
+        "from": "System Email",
+        "name": "Duel of Snowland Victory Rewards"
+    },
+    "631": {
+        "content": "Thanks for your active participation in the event! Here are your rewards based on the result of the faction duel:",
+        "from": "System Email",
+        "name": "Duel of Snowland Defeat Rewards"
+    },
+    "632": {
+        "content": "Congratulations! You've reached the goal of the event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Lucky Festival Bonus Rewards"
+    },
+    "633": {
+        "content": "\nCongrats! In this session of Realm Clash, your team #color# was ranked at No. #idx# on the Returning Rankings and your Activeness is #degree#.\nHere are your rewards based on the Activeness: Gold Expanse Chest *#res1#, Silver Expanse Chest *#res2#\nHere are your Contribution Goal Rewards based on your Activeness of this session: Gold Expanse Chest *#res3#, Silver Expanse Chest *#res4#\nHere are your chest rewards:",
+        "from": "System Email",
+        "name": "Realm Clash Settlement Rewards"
+    },
+    "634": {
+        "content": "Congratulations! You've reached the goal of the event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Eight Trigrams Furnace Bonus Rewards"
+    },
+    "635": {
+        "content": "Dear Idlers, We added 300 [Lucky Fulu] to the [Eight Trigrams Furnace] event. Please check the adjustment in the event. We appreciate your support and wish you all the best for the New Year!",
+        "from": "System Email",
+        "name": "New Adjustment in the Eight Trigrams Furnace Event"
+    },
+    "636": {
+        "content": "Congratulations, you have reached the specified requirements for Pioneer Points. Please accept your reward.",
+        "from": "System Email",
+        "name": "Pioneer Points Reward Email"
+    },
+    "637": {
+        "content": "Congratulations on being ranked at No. #number# in the leaderboard, here are your rewards:",
+        "from": "System Email",
+        "name": "Pioneers' Race Ranking Rewards"
+    },
+    "638": {
+        "content": "Congratulations! You've reached the goal of the event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Superior Soul Boost Rewards"
+    },
+    "639": {
+        "content": "Congratulations on completing designated Collaborative Quests! Please accept the following rewards:",
+        "from": "System Email",
+        "name": "Collaborative Quest Rewards"
+    },
+    "64": {
+        "content": "During the event, login every day and you will Heart x 10, Gems x 100, 5-star Sierra shard x 10. Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Valentine's Day Gift"
+    },
+    "641": {
+        "content": "Congratulations on completing the Collaborative Journey! The corresponding rewards are sent based on the completion progress of Striver Growth Plan. Please accept the following rewards:",
+        "from": "System Email",
+        "name": "Striver Growth Plan Rewards"
+    },
+    "642": {
+        "content": "Dear Idler, Your collaborative partner has purchased the Connection Package. Please accept the corresponding rewards:",
+        "from": "System Email",
+        "name": "Connection Package Rewards"
+    },
+    "643": {
+        "content": "Dear Idler, We've adjusted the unlocking requirements for some features. Since you had already unlocked some of these features, the relevant stages have been automatically cleared. Here are the rewards from these cleared stages. We wish you a pleasant gaming experience!",
+        "from": "System Email",
+        "name": "Feature Unlocking Adjustment"
+    },
+    "644": {
+        "content": "Congratulations! Your supported dragon boat is ranked at No. #rank#. Here are your rewards:",
+        "from": "System Email",
+        "name": "Dragon Boat Race Ranking Rewards"
+    },
+    "645": {
+        "content": "Dear Idlers, Another Dragon Boat Festival has come. Lutz wishes all of you to have sticky-sweet zongzi in your hands and may the festival bring you good fortune in all adventures and endless laughter with every quest.",
+        "from": "System Email",
+        "name": "Blessings of Dragon Boat Festival"
+    },
+    "646": {
+        "content": "Dear player, as you have made a purchase (ID: #order_id#) at #platform#, please see the extra gifts we provided in the attachment.",
+        "from": "GM Email",
+        "name": "GM Feedback"
+    },
+    "647": {
+        "content": "亲爱的玩家，您通过#platform#支付#price#元购买了的订单编号为#order_id#所的物品，这是您获得的额外赠送内容，物品见附件",
+        "from": "GM Email",
+        "name": "GM Feedback"
+    },
+    "648": {
+        "content": "Dear idler, thank you for your purchase! A level #level# player as you are, here are the rewards of today. Your Celebration Gem Card will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "Celebration Gem Card Rewards"
+    },
+    "649": {
+        "content": "Dear idler, thank you for your purchase! A level #level# player as you are, here are the rewards of today. Your Celebration Starry Gem Card will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "Celebration Starry Gem Card Rewards"
+    },
+    "65": {
+        "content": "Congrats for your successful fusion of 6-star #ID# in the event time, please claim your rewards:",
+        "from": "System Email",
+        "name": "Fusion Event"
+    },
+    "650": {
+        "content": "Dear idler, thank you for your purchase! Here are the rewards of today. Your 9th Anniversary Celebration Card will expire in #day# day(s).",
+        "from": "System Email",
+        "name": "The 9th Anniversary Celebration Card Rewards"
+    },
+    "651": {
+        "content": "Time passes by quickly and in the blink of an eye, we have reached another day worth celebrating. The sparkling fireworks in the sky are a testament to the warmth gathered from everyone's fingertips, while the scene of this celebration shows our full enthusiasm. Thank you all for your continuous love and support! Let's sing this song of celebration as melodious as the soul-stirring poem in our memory! Please have fun in the game and accept our gift!",
+        "from": "System Email",
+        "name": "9th Anniversary Celebration Blessing"
+    },
+    "652": {
+        "content": "Congratulations! You've reached the goal of the event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Aurora Stone Refining Bonus Rewards"
+    },
+    "653": {
+        "content": "Congratulations, you’ve fulfilled the designated requirements for the Shiny Memory event. Please find your rewards attached.",
+        "from": "System Email",
+        "name": "Shiny Memory Rewards"
+    },
+    "654": {
+        "content": "Congratulations! You've reached the goal of the event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Chant of Destiny Goal Rewards"
+    },
+    "655": {
+        "content": "Congratulations! You've reached the goal of the event. Here are your rewards:",
+        "from": "System Email",
+        "name": "Artisan's Assembly Goal Rewards"
+    },
+    "66": {
+        "content": "Congratulation! You have joined the team successfully.",
+        "from": "Arena Email",
+        "name": "Free Team-up Arena"
+    },
+    "67": {
+        "content": "You can't obtain the rewards again as you have killed the Boss for several times.",
+        "from": "Guild Email",
+        "name": "Guild Boss"
+    },
+    "672": {
+        "content": "Dear player, your unused summoning chances in Fairy Queen‘s Blessings have been automatically used. Here are the heroes that you have summoned.",
+        "from": "System Email",
+        "name": "Unused Summon Chances"
+    },
+    "673": {
+        "content": "Dear player, here is the Woodland Store Rewards Bonus after exchanging all items at Woodland Store.",
+        "from": "System Email",
+        "name": "Woodland Store Rewards Bonus"
+    },
+    "674": {
+        "content": "Congratulations! You've completed a Transcendence Fight quest. Here are the rewards:",
+        "from": "System Email",
+        "name": "Transcendence Fight Rewards"
+    },
+    "68": {
+        "content": "During the event, login every day and you will get Prophet Orb x 1 , Gems x 100. Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "69": {
+        "content": "You have got #number# points in the Summon Points event. Please get the following rewards",
+        "from": "System Email",
+        "name": "Summon Point Reward"
+    },
+    "7": {
+        "content": "#guildname# has been disbanded. You have no guild now",
+        "from": "Guild Email",
+        "name": "Dismiss Guild"
+    },
+    "70": {
+        "content": "During the event, login every day and you will Prophet Orb x 1 , Gold Statue x 50. Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "God's blessing"
+    },
+    "71": {
+        "content": "#content#",
+        "from": "Guild Email",
+        "name": "Guild Email"
+    },
+    "72": {
+        "content": "Dear player, we are sorry for that due to network issue, you haven't received your purchased items with order_id# through #platform# payed #price#, we will resend the items to you by your in-game mail, detailed please check the attachment",
+        "from": "GM Email",
+        "name": "GM Feedback"
+    },
+    "73": {
+        "content": "During the event, login every day and you will get Gems x 100 , Heroic Summon Scroll x 2. Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "74": {
+        "content": "Congratulations! You have killed The Marauder Boss, you are rewarded with below rewards",
+        "from": "System Email",
+        "name": "BOSS Killing Reward"
+    },
+    "75": {
+        "content": "Congratulations! You delivered the last blow to a Guild Boss and killed it. You got the below rewards.",
+        "from": "System Email",
+        "name": "Guild Boss Final Blow Rewards"
+    },
+    "76": {
+        "content": "During the event, login every day and you will get Gems x 200 , Wishing Coin x 5. Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "77": {
+        "content": "Dear player, the Broken Space has already opened, we present you with Challenge Badge x 4 , go and prepare for battle!",
+        "from": "System Email",
+        "name": "Broken Space"
+    },
+    "78": {
+        "content": "Congratulations! You have killed The Human-Ghost United of Broken Space Boss, you are rewarded with below rewards",
+        "from": "System Email",
+        "name": "Human-Ghost United BOSS killing rewards"
+    },
+    "79": {
+        "content": "Congratulations! You have killed The Hell Strike of Broken Space Boss, you are rewarded with below rewards",
+        "from": "System Email",
+        "name": "Hell Strike BOSS killing rewards"
+    },
+    "8": {
+        "content": "To reward your achievement in the guild Boss battle,  please take rewards in the attachment.",
+        "from": "Guild Email",
+        "name": "Guild Boss Reward"
+    },
+    "80": {
+        "content": "Congratulations! You have killed The Light Dark Union of Broken Space Boss, you are rewarded with below rewards",
+        "from": "System Email",
+        "name": "Light Dark Union BOSS killing rewards"
+    },
+    "81": {
+        "content": "Well done on getting No. #rank# in the Human-Ghost United of Broken Space. Rewards are in the attachment.",
+        "from": "System Email",
+        "name": "Human-Ghost United Settlement Reward"
+    },
+    "82": {
+        "content": "Well done on getting No. #rank# in the Broken Space. Rewards are in the attachment.",
+        "from": "System Email",
+        "name": "Broken Spaces Reward"
+    },
+    "83": {
+        "content": "Well done on getting No. #rank# in the Light Dark Union of Broken Space. Rewards are in the attachment.",
+        "from": "System Email",
+        "name": "Light Dark Union Settlement Reward"
+    },
+    "84": {
+        "content": "Well done on killing the boss in the Human-Ghost United of Broken Space. Rewards are in the attachment.",
+        "from": "System Email",
+        "name": "Human-Ghost United Killing Welfare"
+    },
+    "85": {
+        "content": "Well done on killing the boss in the Hell Strike of Broken Space. Rewards are in the attachment.",
+        "from": "System Email",
+        "name": "Hell Strike Killing Welfare"
+    },
+    "86": {
+        "content": "Well done on killing the boss in the Light Dark Union of Broken Space. Rewards are in the attachment.",
+        "from": "System Email",
+        "name": "Light Dark Union Killing Welfare"
+    },
+    "87": {
+        "content": "During Event time, daily login will reward you Lucky Fishbones and gems with equal current level quantity. Rewards are in the attachment.",
+        "from": "System Email",
+        "name": "1st Anniversary"
+    },
+    "88": {
+        "content": "Congratulations on the successful use of the redeem code #key# for the following rewards. Details please see the attachment.",
+        "from": "System Email",
+        "name": "Novice Package"
+    },
+    "89": {
+        "content": "Congratulations on the successful use of the redeem code #key# for the following rewards. Details please see the attachment.",
+        "from": "System Email",
+        "name": "Privilege Package"
+    },
+    "9": {
+        "content": "Welcome! The pleasure is all mine to enjoy the new server opening event with you. The event lasts for 7 days, during which you will claim abundant rewards by logging in every day. The rewards are sent to you attached.",
+        "from": "System Email",
+        "name": "New Server Bonus"
+    },
+    "91": {
+        "content": "Greetings hero, thanks to your help, the Vicious Das Moge has been defeated, you saved our FB fan page! Please collect the loot which is 300 gems. ",
+        "from": "System Email",
+        "name": "FB Like event reward"
+    },
+    "92": {
+        "content": "Heroes! Thanks for your following to our Sina Weibo webpage. Now our Sina Weibo fans have exceeded 15,000 people. Please claim the rewards of 400 gems.",
+        "from": "System Email",
+        "name": "Sina Weibo Following Reward"
+    },
+    "93": {
+        "content": "During the event, login every day and you will get 3 Wishing Coin, 1 Super Wishing Coin. Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "94": {
+        "content": "During the event, login every day and you will get 5 STAR HERO SHARD x 10. Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "95": {
+        "content": "Congratulations on your achievement in the Awakening Glory Event, please get the following rewards",
+        "from": "System Email",
+        "name": "Awakening Glory Reward"
+    },
+    "96": {
+        "content": "Congratulations on your achievement in the Heroic Miracle Event, please get the following rewards",
+        "from": "System Email",
+        "name": "Heroic Miracle Reward"
+    },
+    "97": {
+        "content": "Thanks to the efforts of our heroes, now vicious Malassa has been defeated, please claim your 400 gems as reward!",
+        "from": "System Email",
+        "name": "FB Fan Page Like Challenge"
+    },
+    "98": {
+        "content": "During the event, login every day and you will get Heroic Summon Scroll x 5, 5 Star Hero Shard x 15. Please get your rewards from the attachment.",
+        "from": "System Email",
+        "name": "Daily Reward"
+    },
+    "99": {
+        "content": "All the monsters have been reset, all the materials consumed including gold have been sent to your mailbox, please claim them from the following attachment.",
+        "from": "System Email",
+        "name": "Monster reset"
+    }
+}
