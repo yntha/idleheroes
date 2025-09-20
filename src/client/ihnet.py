@@ -55,8 +55,10 @@ class IHNetClient:
         self._waiters: dict[tuple[int, int], asyncio.Future[bytes]] = {}
         self._streams: dict[tuple[int, int], asyncio.Queue[Frame]] = {}
         self._router_task: asyncio.Task | None = None
+        self._heartbeat_task: asyncio.Task | None = None
         self._router_started = asyncio.Event()
         self._update_not_ready = asyncio.Event()
+        self._initialized = asyncio.Event()
         self._push_event_handlers = {
             event_name.cmd: getattr(self, f"_on_{event_name.cmd.lower()}", None)
             for event_name in self.event_manager.push_events
@@ -118,6 +120,9 @@ class IHNetClient:
         if not self.tcp_client.is_connected():
             await self.connect(self.client_config.gateway_host, self.client_config.gateway_port)
             await self.launch_router()
+
+        if self._heartbeat_task is None:
+            self._heartbeat_task = asyncio.create_task(self._heartbeat_loop())
 
         if no_login:
             return NetClientStatus.CONNECTED
@@ -190,7 +195,19 @@ class IHNetClient:
         else:
             print("[IHNetClient] No new mail.")
 
+        self._initialized.set()
+
         return self
+
+    async def run_forever(self):
+        if not self._initialized.is_set():
+            raise IHNetError("Client not initialized. Call init() first.")
+
+        while True:
+            try:
+                await asyncio.sleep(1)
+            except asyncio.CancelledError:
+                break
 
     async def launch_router(self):
         if self._router_task is None:
@@ -257,6 +274,19 @@ class IHNetClient:
             if self.client_config.debug:
                 print(f"[IHNetClient] Unhandled push event: cmd_type={frame.cmd_type} cmd_id={frame.cmd_id}")
 
+    async def _heartbeat_loop(self):
+        heartbeat_data = 12344321
+        heartbeat_interval = 60  # seconds
+
+        while True:
+            try:
+                await self.echo(heartbeat_data)
+            except Exception as e:
+                print(f"[IHNetClient] Heartbeat failed: {e}")
+                await self.disconnect()
+                break
+            await asyncio.sleep(heartbeat_interval)
+
     async def _router_loop(self):
         self._router_started.set()
         while True:
@@ -295,19 +325,13 @@ class IHNetClient:
             self._waiters.pop(key, None)
 
     # commands
-    async def echo(self) -> login_pb.pbrsp_echo:
-        _sid = self.sid
-        self.sid = 0
-
+    async def echo(self, echo_count: int = 1) -> login_pb.pbrsp_echo:
         event = self.event_manager.get_event("EVENT_CMD_1_1")
-        payload = login_pb.pbreq_echo(echo=self.echo_count)
+        payload = login_pb.pbreq_echo(echo=echo_count)
 
         rsp_data = await self.submit(event, payload.SerializeToString())
         rsp = login_pb.pbrsp_echo()
         rsp.ParseFromString(rsp_data)
-
-        self.echo_count += 1
-        self.sid = _sid
 
         return rsp
 
