@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from enum import Enum
 from dataclasses import dataclass
 from typing import TYPE_CHECKING
 
@@ -12,6 +13,12 @@ from client.models.bag import IHBag
 if TYPE_CHECKING:
     from client.protobuf.dr2_logic_pb_pb2 import pbrsp_sync
 
+
+class MailOpType(Enum):
+    DELETE = 1
+    READ = 2
+    CLAIM = 3
+    BLOCK = 4
 
 @dataclass
 class IHMail:
