@@ -2,6 +2,10 @@ from __future__ import annotations
 
 class Utils:
     @staticmethod
+    def get_cmd_name(cmd_group: int, cmd_type: int) -> str:
+        return f"EVENT_CMD_{cmd_group}_{cmd_type}"
+
+    @staticmethod
     def hexdump(data: bytes,
                 formatted: bool = True,
                 col_len: int = 1,

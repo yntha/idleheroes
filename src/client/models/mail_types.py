@@ -46,3 +46,5 @@ class MailTypeManager:
     def get_mail_sender(self, mail_id: int) -> str:
         mail = self[mail_id]
         return mail.sender if mail else "Unknown Sender"
+
+MailTypeManagerInstance = MailTypeManager()

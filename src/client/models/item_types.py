@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import json
 
 from dataclasses import dataclass
@@ -52,3 +54,6 @@ class ItemTypeManager:
     def get_item_short_desc(self, item_id: int) -> str:
         item = self[item_id]
         return item.brief if item else "No short description available."
+
+
+ItemTypeManagerInstance = ItemTypeManager()

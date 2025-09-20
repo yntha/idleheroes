@@ -69,6 +69,10 @@ class LocalPlayer:
     def get_mails(self) -> list[IHMail]:
         return self.mails
 
+    def add_mail(self, mail: IHMail):
+        self.mails.append(mail)
+        self.mails.sort(key=lambda m: m.send_time, reverse=True)
+
     def set_uid(self, uid: int):
         self._uid = uid
 

@@ -15,6 +15,9 @@ class EventManager:
     def __init__(self, event_file: str):
         self.events: dict[str, Event] = {}
         self.load_events(event_file)
+        self.push_events = [
+            self.get_event("EVENT_CMD_5_0"),  # push_mail
+        ]
 
     def load_events(self, event_file: str):
         with open(event_file, "r", encoding="utf-8") as f:

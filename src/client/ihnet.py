@@ -8,7 +8,6 @@ import json
 
 from hashlib import md5
 from pathlib import Path
-from client.models import mail
 from packaging import version
 from enum import Enum
 
@@ -23,11 +22,13 @@ from client.constants import (
 )
 from client.events import EventManager, Event
 from client.protobuf import dr2_login_pb_pb2 as login_pb, dr2_logic_pb_pb2 as logic_pb
+from client.protobuf import dr2_comm_pb_pb2 as comm_pb
 from client.net.tcpclient import TCPClient, Frame
 from client.config import ClientConfig, AccountConfig, CONFIG_DIR
 from client.models.player import LocalPlayer
 from client.models.mail import MailOpType, IHMail
 from client.updater import Updater, UpdateType
+from client.utils import Utils
 
 
 class IHNetError(Exception):
@@ -56,6 +57,10 @@ class IHNetClient:
         self._router_task: asyncio.Task | None = None
         self._router_started = asyncio.Event()
         self._update_not_ready = asyncio.Event()
+        self._push_event_handlers = {
+            event_name.cmd: getattr(self, f"_on_{event_name.cmd.lower()}", None)
+            for event_name in self.event_manager.push_events
+        }
 
     def check_account(self) -> bool:
         if self.account_config.account == "" or self.account_config.password == "":
@@ -101,11 +106,11 @@ class IHNetClient:
         mails = self.local_player.get_mails()
         claimed_mails = []
 
-        for mail in mails:
-            if mail.flag == 0 and mail.affix is not None:
-                rsp = await self.op_mail(mail.mail_id, MailOpType.CLAIM)
+        for mail_item in mails:
+            if mail_item.flag == 0 and mail_item.affix is not None:
+                rsp = await self.op_mail(mail_item.mail_id, MailOpType.CLAIM)
                 if rsp.status == 0:
-                    claimed_mails.append(mail)
+                    claimed_mails.append(mail_item)
 
         return claimed_mails
 
@@ -225,11 +230,42 @@ class IHNetClient:
         after_len = CONFIG_PROTOCOL_HEADER_EXCEPT_FIRST_LEN + len(payload)
         return struct.pack(">HBBH", after_len, group & 0xFF, cmd & 0xFF, sid & 0xFFFF) + payload
 
+    # mail push event
+    async def _on_event_cmd_5_0(self, frame: Frame):
+        pb_mail_obj = comm_pb.pb_mail()
+        pb_mail_obj.ParseFromString(frame.payload)
+
+        mail = IHMail.from_pb(pb_mail_obj)
+
+        if mail is None:
+            print(f"[IHNetClient] Received unknown mail. ID: {pb_mail_obj.id}")
+            return
+
+        print(f"[IHNetClient] New mail received: {mail}")
+
+        self.local_player.add_mail(mail)
+
+        if mail.affix is not None:
+            await self.op_mail(mail.mail_id, MailOpType.CLAIM)
+            print(f"[IHNetClient] Mail {mail.mail_id} rewards claimed.")
+
+    async def _handle_push_event(self, frame: Frame):
+        handler = self._push_event_handlers.get(Utils.get_cmd_name(frame.cmd_type, frame.cmd_id), None)
+        if handler is not None:
+            await handler(frame)
+        else:
+            if self.client_config.debug:
+                print(f"[IHNetClient] Unhandled push event: cmd_type={frame.cmd_type} cmd_id={frame.cmd_id}")
+
     async def _router_loop(self):
         self._router_started.set()
         while True:
             frame = await self.tcp_client.message_queue.get()
             key_waiter = (frame.cmd_type, frame.cmd_id)
+
+            if Utils.get_cmd_name(frame.cmd_type, frame.cmd_id) in self.event_manager.push_events:
+                await self._handle_push_event(frame)
+
             fut = self._waiters.pop(key_waiter, None)
 
             if fut is not None and not fut.done():

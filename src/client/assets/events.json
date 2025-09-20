@@ -540,6 +540,12 @@
     "cmd_name": "EVENT_CMD_4_63"
   },
   {
+    "cmd": "push_mail",
+    "cmd_group": 5,
+    "cmd_type": 0,
+    "cmd_name": "EVENT_CMD_5_0"
+  },
+  {
     "cmd": "op_mail",
     "cmd_group": 5,
     "cmd_type": 1,

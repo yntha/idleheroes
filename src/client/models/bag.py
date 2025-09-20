@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import TYPE_CHECKING
 
-from client.models.item_types import ItemTypeManager
+from client.models.item_types import ItemTypeManagerInstance
 
 if TYPE_CHECKING:
     from client.protobuf.dr2_logic_pb_pb2 import pbrsp_sync
@@ -43,7 +43,7 @@ class IHBag:
         return cls(items=items, equipment=equipment)
 
     def __repr__(self) -> str:
-        item_type_manager = ItemTypeManager()
+        item_type_manager = ItemTypeManagerInstance
         item_strs = []
         for item in self.items:
             item_type = item_type_manager[item.item_id]
