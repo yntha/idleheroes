@@ -2,7 +2,11 @@ import asyncio
 
 from argparse import ArgumentParser
 
+from google.protobuf.json_format import MessageToDict
+
 from client.ihnet import IHNetClient, IHNetError, NetClientStatus
+from client.models.mail import MailOpType
+from client.protobuf.dr2_logic_pb_pb2 import pbrsp_op_mail
 
 
 # enable debug output
@@ -30,11 +34,6 @@ async def main():
         if player is not None:
             print(f"Logged in as: {player.get_player().name} (UID: {client.local_player.get_uid()})")
             print(f"Gold: {player_bag.get_gold()} | Gems: {player_bag.get_gems()} | XP: {player_bag.get_player_xp()}")
-
-            mails = player.get_mails()
-            print(f"You have {len(mails)} mails:")
-            for mail in mails:
-                print(mail)
 
     except IHNetError as e:
         print(f"Error: {e}")

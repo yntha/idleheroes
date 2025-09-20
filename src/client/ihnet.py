@@ -8,6 +8,7 @@ import json
 
 from hashlib import md5
 from pathlib import Path
+from client.models import mail
 from packaging import version
 from enum import Enum
 
@@ -25,6 +26,7 @@ from client.protobuf import dr2_login_pb_pb2 as login_pb, dr2_logic_pb_pb2 as lo
 from client.net.tcpclient import TCPClient, Frame
 from client.config import ClientConfig, AccountConfig, CONFIG_DIR
 from client.models.player import LocalPlayer
+from client.models.mail import MailOpType, IHMail
 from client.updater import Updater, UpdateType
 
 
@@ -95,6 +97,18 @@ class IHNetClient:
             print(f"[IHNetClient] Client is up-to-date (version: {self.client_config.version})")
         return False
 
+    async def claim_all_mail(self) -> list[IHMail]:
+        mails = self.local_player.get_mails()
+        claimed_mails = []
+
+        for mail in mails:
+            if mail.flag == 0 and mail.affix is not None:
+                rsp = await self.op_mail(mail.mail_id, MailOpType.CLAIM)
+                if rsp.status == 0:
+                    claimed_mails.append(mail)
+
+        return claimed_mails
+
     async def init(self, no_login: bool = False) -> IHNetClient | NetClientStatus:
         if not self.tcp_client.is_connected():
             await self.connect(self.client_config.gateway_host, self.client_config.gateway_port)
@@ -159,6 +173,17 @@ class IHNetClient:
         self.local_player.set_player_from_sync(sync_rsp)
         self.local_player.set_bag_from_sync(sync_rsp)
         self.local_player.set_mails_from_sync(sync_rsp)
+
+        print("[IHNetClient] Game state synced.")
+        print("[IHNetClient] Checking mail...")
+
+        mails = await self.claim_all_mail()
+        if len(mails) > 0:
+            print(f"[IHNetClient] Claimed {len(mails)} mails:")
+            for mail in mails:
+                print(f"[IHNetClient]   {mail}")
+        else:
+            print("[IHNetClient] No new mail.")
 
         return self
 
@@ -340,6 +365,21 @@ class IHNetClient:
 
         rsp_data = await self.submit(event, payload.SerializeToString())
         rsp = logic_pb.pbrsp_sync()
+        rsp.ParseFromString(rsp_data)
+
+        return rsp
+
+    async def op_mail(self, mid: int, op_type: MailOpType) -> logic_pb.pbrsp_op_mail:
+        event = self.event_manager.get_event("EVENT_CMD_5_1")
+        payload = logic_pb.pbreq_op_mail(
+            reads=[mid] if op_type == MailOpType.READ else None,
+            deletes=[mid] if op_type == MailOpType.DELETE else None,
+            affixs=[mid] if op_type == MailOpType.CLAIM else None,
+            blocks=[mid] if op_type == MailOpType.BLOCK else None,
+        )
+
+        rsp_data = await self.submit(event, payload.SerializeToString())
+        rsp = logic_pb.pbrsp_op_mail()
         rsp.ParseFromString(rsp_data)
 
         return rsp

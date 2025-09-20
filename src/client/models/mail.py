@@ -60,6 +60,8 @@ class IHMail:
 
     def __repr__(self) -> str:
         affix_str = ""
+        from_str = self.sender if self.sender else self.mail_object.sender
+
         if self.affix:
             affix_items = []
             for item in self.affix.items:
@@ -70,4 +72,4 @@ class IHMail:
                     affix_items.append(f"Unknown Item (ID: {item.item_id}) x{item.count}")
             affix_str = f", Affix: [{', '.join(affix_items)}]"
         claimed = " (Claimed)" if self.flag != 0 else ""
-        return f"Mail(ID: {self.mail_id}, Name: {self.mail_object.name}, From: {self.sender}{affix_str}{claimed})"
+        return f"Mail(ID: {self.mail_id}, Name: {self.mail_object.name}, From: {from_str}{affix_str}{claimed})"
