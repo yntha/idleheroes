@@ -20,14 +20,16 @@ class MailTypeManager:
         self._mail_type_map: dict[str, Mail] = self._load_mail_types()
 
     def _load_mail_types(self):
-        with open(ROOT_DIR / "client" / "assets" / self._JSON_FILE) as f:
+        with open(ROOT_DIR / "src" / "client" / "assets" / self._JSON_FILE, encoding="utf-8") as f:
+            mail_data = json.load(f)
+
             return {
-                item["id"]: Mail(
-                    id=item["id"],
-                    name=item["name"],
-                    content=item["content"],
-                    sender=item["from"]
-                ) for item in json.load(f)
+                mail_entry: Mail(
+                    id=int(mail_entry),
+                    name=mail_data[mail_entry]["name"],
+                    content=mail_data[mail_entry]["content"],
+                    sender=mail_data[mail_entry]["from"]
+                ) for mail_entry in mail_data
             }
 
     def __getitem__(self, mail_id: int) -> Mail | None:

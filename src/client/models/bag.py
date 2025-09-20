@@ -3,8 +3,11 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import TYPE_CHECKING
 
+from client.models.item_types import ItemTypeManager
+
 if TYPE_CHECKING:
     from client.protobuf.dr2_logic_pb_pb2 import pbrsp_sync
+    from client.protobuf.dr2_comm_pb_pb2 import pb_bag
 
 
 GOLD_ITEM_ID = 1
@@ -25,15 +28,38 @@ class IHBagEquipment:
 
 
 @dataclass
-class IHPlayerBag:
+class IHBag:
     items: list[IHBagItem]
     equipment: list[IHBagEquipment]
 
     @classmethod
-    def from_sync(cls, sync: pbrsp_sync) -> IHPlayerBag:
-        items = [IHBagItem(item_id=it.id, count=it.num) for it in sync.bag.items]
-        equipment = [IHBagEquipment(item_id=eq.id, num=eq.num) for eq in sync.bag.equips]
+    def from_sync(cls, sync: pbrsp_sync) -> IHBag:
+        return cls.from_pb(sync.bag)
+
+    @classmethod
+    def from_pb(cls, pb_bag: pb_bag) -> IHBag:
+        items = [IHBagItem(item_id=it.id, count=it.num) for it in pb_bag.items]
+        equipment = [IHBagEquipment(item_id=eq.id, num=eq.num) for eq in pb_bag.equips]
         return cls(items=items, equipment=equipment)
+
+    def __repr__(self) -> str:
+        item_type_manager = ItemTypeManager()
+        item_strs = []
+        for item in self.items:
+            item_type = item_type_manager[item.item_id]
+            if item_type:
+                item_strs.append(f"{item_type.name} x{item.count}")
+            else:
+                item_strs.append(f"Unknown Item (ID: {item.item_id}) x{item.count}")
+
+        return f"Bag(Items: [{', '.join(item_strs)}])"
+
+
+@dataclass
+class IHPlayerBag(IHBag):
+    @classmethod
+    def from_sync(cls, sync: pbrsp_sync) -> IHPlayerBag:
+        return cls.from_pb(sync.bag)
 
     def get_item_by_type(self, item_type: int) -> IHBagItem | None:
         for item in self.items:

@@ -158,6 +158,7 @@ class IHNetClient:
 
         self.local_player.set_player_from_sync(sync_rsp)
         self.local_player.set_bag_from_sync(sync_rsp)
+        self.local_player.set_mails_from_sync(sync_rsp)
 
         return self
 

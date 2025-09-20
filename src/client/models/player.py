@@ -4,6 +4,7 @@ from dataclasses import dataclass
 from typing import TYPE_CHECKING
 
 from client.models.bag import IHPlayerBag
+from client.models.mail import IHMail
 
 if TYPE_CHECKING:
     from client.protobuf.dr2_logic_pb_pb2 import pbrsp_sync
@@ -43,6 +44,7 @@ class LocalPlayer:
         self._sid: int = 0
         self.player: IHPlayer | None = None
         self.bag: IHPlayerBag | None = None
+        self.mails: list[IHMail] = []
 
     def get_uid(self) -> int:
         return self._uid
@@ -64,6 +66,9 @@ class LocalPlayer:
             raise ValueError("Bag is not set")
         return self.bag
 
+    def get_mails(self) -> list[IHMail]:
+        return self.mails
+
     def set_uid(self, uid: int):
         self._uid = uid
 
@@ -78,3 +83,6 @@ class LocalPlayer:
 
     def set_bag_from_sync(self, sync_rsp: pbrsp_sync):
         self.bag = IHPlayerBag.from_sync(sync_rsp)
+
+    def set_mails_from_sync(self, sync_rsp: pbrsp_sync):
+        self.mails = IHMail.from_sync(sync_rsp)

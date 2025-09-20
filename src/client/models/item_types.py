@@ -10,7 +10,7 @@ class Item:
     id: int
     name: str
     brief: str
-    explain: str
+    explain: str | None = None
 
 
 class ItemTypeManager:
@@ -20,15 +20,19 @@ class ItemTypeManager:
         self._item_type_map: dict[str, Item] = self._load_item_types()
 
     def _load_item_types(self):
-        with open(ROOT_DIR / "client" / "assets" / self._JSON_FILE) as f:
-            return {
-                item["id"]: Item(
-                    id=item["id"],
-                    name=item["name"],
-                    brief=item["brief"],
-                    explain=item["explain"]
-                ) for item in json.load(f)
-            }
+        with open(ROOT_DIR / "src" / "client" / "assets" / self._JSON_FILE) as f:
+            item_data = json.load(f)
+            item_type_map = {}
+
+            for item_entry in item_data:
+                item_type_map[item_entry] = Item(
+                    id=int(item_entry),
+                    name=item_data[item_entry]["name"],
+                    brief=item_data[item_entry]["brief"],
+                    explain=item_data[item_entry].get("explain")
+                )
+
+            return item_type_map
 
     def __getitem__(self, item_id: int) -> Item | None:
         return self._item_type_map.get(str(item_id), None)
@@ -39,7 +43,11 @@ class ItemTypeManager:
 
     def get_item_description(self, item_id: int) -> str:
         item = self[item_id]
-        return item.explain if item else "No description available."
+
+        if item is None:
+            return "No description available."
+
+        return item.explain if item.explain else "No description available."
 
     def get_item_short_desc(self, item_id: int) -> str:
         item = self[item_id]
