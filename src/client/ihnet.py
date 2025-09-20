@@ -24,9 +24,10 @@ from client.events import EventManager, Event
 from client.protobuf import dr2_login_pb_pb2 as login_pb, dr2_logic_pb_pb2 as logic_pb
 from client.protobuf import dr2_comm_pb_pb2 as comm_pb
 from client.net.tcpclient import TCPClient, Frame
-from client.config import ClientConfig, AccountConfig, CONFIG_DIR
+from client.config import ClientConfig, AccountConfig, CONFIG_DIR, FarmConfig
 from client.models.player import LocalPlayer
 from client.models.mail import MailOpType, IHMail
+from client.models.bag import IHBag
 from client.updater import Updater, UpdateType
 from client.utils import Utils
 
@@ -46,6 +47,7 @@ class IHNetClient:
         self.event_manager = EventManager(os.path.join(_client_src_dir, "assets", "events.json"))
         self.account_config = AccountConfig.get()
         self.client_config = ClientConfig.get()
+        self.farm_config = FarmConfig.get()
         self.tcp_client = TCPClient(self.client_config)
         self.updater = Updater(self.client_config)
 
@@ -56,6 +58,7 @@ class IHNetClient:
         self._streams: dict[tuple[int, int], asyncio.Queue[Frame]] = {}
         self._router_task: asyncio.Task | None = None
         self._heartbeat_task: asyncio.Task | None = None
+        self._farming_task: asyncio.Task | None = None
         self._router_started = asyncio.Event()
         self._update_not_ready = asyncio.Event()
         self._initialized = asyncio.Event()
@@ -115,6 +118,21 @@ class IHNetClient:
                     claimed_mails.append(mail_item)
 
         return claimed_mails
+
+    async def claim_autobattle_rewards(self) -> IHBag:
+        print("[IHNetClient] Claiming autobattle rewards...")
+
+        rsp = await self.hook_reward(1)
+        if rsp.status != 0:
+            raise IHNetError(f"Failed to claim autobattle rewards: status={rsp.status}")
+
+        bag = IHBag.from_pb(rsp.reward)
+
+        print(f"[IHNetClient] Claimed autobattle rewards: {bag}")
+
+        await asyncio.sleep(self.farm_config.autobattle_interval)
+
+        return bag
 
     async def init(self, no_login: bool = False) -> IHNetClient | NetClientStatus:
         if not self.tcp_client.is_connected():
@@ -199,9 +217,23 @@ class IHNetClient:
 
         return self
 
+    async def _farming_loop(self):
+        print("[IHNetClient] Starting farming loop...")
+        print(f"[IHNetClient] Autobattle interval: {self.farm_config.get_autobattle_interval_str()}")
+
+        while True:
+            try:
+                await self.claim_autobattle_rewards()
+            except Exception as e:
+                print(f"[IHNetClient] Farming loop error: {e}")
+            await asyncio.sleep(5)
+
     async def run_forever(self):
         if not self._initialized.is_set():
             raise IHNetError("Client not initialized. Call init() first.")
+
+        if self._farming_task is None:
+            self._farming_task = asyncio.create_task(self._farming_loop())
 
         while True:
             try:
@@ -440,6 +472,26 @@ class IHNetClient:
 
         rsp_data = await self.submit(event, payload.SerializeToString())
         rsp = logic_pb.pbrsp_op_mail()
+        rsp.ParseFromString(rsp_data)
+
+        return rsp
+
+    async def hook_ask(self) -> logic_pb.pbrsp_hook_ask:
+        event = self.event_manager.get_event("EVENT_CMD_9_3")
+        payload = logic_pb.pbreq_hook_ask()
+
+        rsp_data = await self.submit(event, payload.SerializeToString())
+        rsp = logic_pb.pbrsp_hook_ask()
+        rsp.ParseFromString(rsp_data)
+
+        return rsp
+
+    async def hook_reward(self, type: int) -> logic_pb.pbrsp_hook_reward:
+        event = self.event_manager.get_event("EVENT_CMD_9_4")
+        payload = logic_pb.pbreq_hook_reward(type=type)
+
+        rsp_data = await self.submit(event, payload.SerializeToString())
+        rsp = logic_pb.pbrsp_hook_reward()
         rsp.ParseFromString(rsp_data)
 
         return rsp

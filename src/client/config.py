@@ -3,12 +3,19 @@ from __future__ import annotations
 import json
 import os
 
+from enum import StrEnum
 from dataclasses import dataclass, asdict
 from client.constants import ROOT_DIR
 
 
 # ../../config
 CONFIG_DIR = os.path.join(ROOT_DIR, "config")
+
+
+class TimeUnit(StrEnum):
+    SECONDS = "seconds"
+    MINUTES = "minutes"
+    HOURS = "hours"
 
 
 @dataclass
@@ -89,3 +96,57 @@ class AccountConfig:
 
         with open(config_path, "w", encoding="utf-8") as f:
             json.dump(asdict(self), f, indent=4)
+
+
+@dataclass
+class FarmConfig:
+    autobattle_interval: float
+    autobattle_interval_timeunit: TimeUnit
+
+    @classmethod
+    def _get_seconds_multiplier(cls, timeunit: TimeUnit) -> float:
+        if timeunit == TimeUnit.SECONDS:
+            return 1.0
+        elif timeunit == TimeUnit.MINUTES:
+            return 60.0
+        elif timeunit == TimeUnit.HOURS:
+            return 3600.0
+        else:
+            raise ValueError(f"Invalid TimeUnit: {timeunit}")
+
+    @classmethod
+    def get(cls) -> FarmConfig:
+        config_path = os.path.join(CONFIG_DIR, "farm.json")
+
+        if not os.path.exists(config_path):
+            config = cls.get_default()
+            config.save()
+
+            return config
+
+        with open(config_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            data["autobattle_interval_timeunit"] = TimeUnit(data["autobattle_interval_timeunit"])
+            data["autobattle_interval"] = float(data["autobattle_interval"]) * cls._get_seconds_multiplier(data["autobattle_interval_timeunit"])
+        return cls(**data)
+
+    @classmethod
+    def get_default(cls) -> FarmConfig:
+        return cls(
+            autobattle_interval=5.0,
+            autobattle_interval_timeunit=TimeUnit.MINUTES,
+        )
+
+    def save(self):
+        config_path = os.path.join(CONFIG_DIR, "farm.json")
+
+        os.makedirs(CONFIG_DIR, exist_ok=True)
+
+        with open(config_path, "w", encoding="utf-8") as f:
+            data = asdict(self)
+            data["autobattle_interval_timeunit"] = self.autobattle_interval_timeunit.value
+            data["autobattle_interval"] = self.autobattle_interval / self._get_seconds_multiplier(self.autobattle_interval_timeunit)
+            json.dump(data, f, indent=4)
+
+    def get_autobattle_interval_str(self) -> str:
+        return f"{self.autobattle_interval / self._get_seconds_multiplier(self.autobattle_interval_timeunit):.2f} {self.autobattle_interval_timeunit.value.lower()}"
