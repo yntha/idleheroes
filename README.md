@@ -12,7 +12,6 @@ $ python -m pip install --user -e .
 
 # run
 $ ih-client
-$ ih-client
 [IHNetClient] Logging in...
 [IHNetClient] Logged in.
 [IHNetClient] Checking for updates...
@@ -22,8 +21,13 @@ $ ih-client
 [IHNetClient] Checking mail...
 [IHNetClient] Claimed 1 mails:
 [IHNetClient]   Mail(ID: 357, Name: Pioneer Points Reward Email, From: System Email, Affix: [Treasure Coupon x3, Magic Dust x3000, Gem x1500, Gold x3000000])
-Logged in as: ----- (UID: ----------)
-Gold: 702960346 | Gems: 16658 | XP: 69747312
+[App] Logged in as: ----- (UID: -----------)
+[App] Gold: 708273426 | Gems: 18158 | XP: 71983507
+[IHNetClient] Starting farming loop...
+[IHNetClient] Autobattle interval: 5.00 minutes
+[IHNetClient] Claiming autobattle rewards...
+[IHNetClient] Claimed autobattle rewards: Bag(Items: [Spirit x5216, Exp x2816, Gold x2912])
+[IHNetClient] Claimed autobattle rewards: Bag(Items: [Spirit x15908, Exp x8588, Gold x8881])
 ```
 
 On first launch, the client will ask you for your credentials (email and password) to log in. It will then save your credentials to `config/account.json` for future use.
@@ -37,6 +41,7 @@ On first launch, the client will ask you for your credentials (email and passwor
 - Game state synchronization
 - Player bag information retrieval
 - Mail operations (read, claim, delete, block)
+- Autobattle reward claiming (configurable interval)
 
 ## Assets
 The official Idle Heroes assets are encrypted and include the source code for the game client. This client distributes only the decrypted resource assets to provide a better experience, but not the decrypted game client code due to ethical and legal considerations. The decrypted assets are provided as a downloadable zip file in the [Releases](https://github.com/yntha/idleheroes/releases) section and are updated with each new game version. If the client detects that the local assets are outdated or missing, it will download and extract the latest/base assets automatically. <b>The base assets are 642 MB in size.</b>
