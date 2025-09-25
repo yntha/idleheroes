@@ -63,7 +63,7 @@ class IHNetClient:
         self._update_not_ready = asyncio.Event()
         self._initialized = asyncio.Event()
         self._push_event_handlers = {
-            event_name.cmd: getattr(self, f"_on_{event_name.cmd.lower()}", None)
+            event_name.cmd_name: getattr(self, f"_on_{event_name.cmd_name.lower()}", None)
             for event_name in self.event_manager.push_events
         }
 
@@ -303,8 +303,8 @@ class IHNetClient:
         if handler is not None:
             await handler(frame)
         else:
-            if self.client_config.debug:
-                print(f"[IHNetClient] Unhandled push event: cmd_type={frame.cmd_type} cmd_id={frame.cmd_id}")
+            # if self.client_config.debug:
+            print(f"[IHNetClient] Unhandled push event: cmd_type={frame.cmd_type} cmd_id={frame.cmd_id}")
 
     async def _heartbeat_loop(self):
         heartbeat_data = 12344321
