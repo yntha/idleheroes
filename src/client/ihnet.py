@@ -264,6 +264,22 @@ class IHNetClient:
 
             self._router_task = None
 
+        if self._heartbeat_task is not None:
+            self._heartbeat_task.cancel()
+
+            with contextlib.suppress(asyncio.CancelledError):
+                await self._heartbeat_task
+
+            self._heartbeat_task = None
+
+        if self._farming_task is not None:
+            self._farming_task.cancel()
+
+            with contextlib.suppress(asyncio.CancelledError):
+                await self._farming_task
+
+            self._farming_task = None
+
         for fut in self._waiters.values():
             if not fut.done():
                 fut.set_exception(ConnectionError("Disconnected"))
