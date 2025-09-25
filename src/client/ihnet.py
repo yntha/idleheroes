@@ -10,6 +10,7 @@ from hashlib import md5
 from pathlib import Path
 from packaging import version
 from enum import Enum
+from datetime import datetime, timedelta, timezone
 
 from google.protobuf.json_format import MessageToJson
 
@@ -237,7 +238,15 @@ class IHNetClient:
 
         while True:
             try:
-                await asyncio.sleep(1)
+                utcnow = datetime.now(timezone.utc)
+                tomorrow = (utcnow + timedelta(days=1)).replace(hour=0, minute=0, second=0, microsecond=0)
+                wait_seconds = (tomorrow - utcnow).total_seconds()
+                wait_time_str = str(timedelta(seconds=wait_seconds))
+
+                print(f"[IHNetClient] Next login refresh in {wait_time_str}.")
+
+                await asyncio.sleep(wait_seconds)
+                await self.reconnect(init=True)
             except asyncio.CancelledError:
                 break
 
@@ -254,6 +263,24 @@ class IHNetClient:
 
     async def connect(self, host: str, port: int):
         await self.tcp_client.connect(host, port, self.client_config.conn_timeout)
+
+    async def reconnect(self, init: bool = False, run_forever: bool = False):
+        print("[IHNetClient] Reconnecting...")
+        await self.disconnect()
+        print("[IHNetClient] Waiting 5 minutes before reconnecting...")
+        await asyncio.sleep(300)  # wait 5 minutes to allow the server to close old session
+        await self.connect(self.client_config.gateway_host, self.client_config.gateway_port)
+        await self.launch_router()
+
+        print("[IHNetClient] Reconnected.")
+
+        if init:
+            await self.init()
+
+        if init and run_forever:
+            await self.run_forever()
+        elif run_forever:
+            raise IHNetError("Client not initialized. Call init() first.")
 
     async def disconnect(self):
         if self._router_task is not None:
