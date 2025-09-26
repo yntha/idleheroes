@@ -59,16 +59,21 @@ class TCPClient:
 
     async def disconnect(self):
         if self.read_task is not None:
+            current = asyncio.current_task()
             self.read_task.cancel()
 
-            with contextlib.suppress(asyncio.CancelledError):
-                await self.read_task
+            if current is not self.read_task:
+                with contextlib.suppress(asyncio.CancelledError):
+                    await self.read_task
 
             self.read_task = None
 
         if self.writer is not None:
             self.writer.close()
-            await self.writer.wait_closed()
+
+            with contextlib.suppress(Exception):
+                await self.writer.wait_closed()
+
             self.writer = None
             self.reader = None
 
@@ -85,8 +90,8 @@ class TCPClient:
         await self.writer.drain()
 
     async def _read_loop(self):
-        while True:
-            try:
+        try:
+            while True:
                 if not self._is_connected.is_set() or self.reader is None:
                     raise ConnectionError("Not connected to server.")
 
@@ -96,15 +101,27 @@ class TCPClient:
                     print(f"\nReceived {len(chunk)} bytes:\n{Utils.hexdump(chunk)}\n")
 
                 if len(chunk) == 0:
-                    raise ConnectionError("Connection unexpectedly closed by server.")
+                    break  # connection closed by server
 
                 self._rx.extend(chunk)
 
                 # _process_rx will yield an empty list if no complete frames are available yet
                 for frame in self._process_rx():
                     await self.message_queue.put(frame)
-            except Exception as e:
-                break
+        except asyncio.CancelledError:
+            pass
+        except Exception:
+            pass
+        finally:
+            if self.writer is not None:
+                self.writer.close()
+
+                with contextlib.suppress(Exception):
+                    await self.writer.wait_closed()
+
+            self.writer = None
+            self.reader = None
+            self._is_connected.clear()
 
         if self._is_connected.is_set():
             await self.disconnect()

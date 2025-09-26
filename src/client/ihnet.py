@@ -233,11 +233,11 @@ class IHNetClient:
         if not self._initialized.is_set():
             raise IHNetError("Client not initialized. Call init() first.")
 
-        if self._farming_task is None:
-            self._farming_task = asyncio.create_task(self._farming_loop())
-
         while True:
             try:
+                if self._farming_task is None:
+                    self._farming_task = asyncio.create_task(self._farming_loop())
+
                 utcnow = datetime.now(timezone.utc)
                 tomorrow = (utcnow + timedelta(days=1)).replace(hour=0, minute=0, second=0, microsecond=0)
                 wait_seconds = (tomorrow - utcnow).total_seconds()
@@ -267,8 +267,9 @@ class IHNetClient:
     async def reconnect(self, init: bool = False, run_forever: bool = False):
         print("[IHNetClient] Reconnecting...")
         await self.disconnect()
-        print("[IHNetClient] Waiting 5 minutes before reconnecting...")
-        await asyncio.sleep(300)  # wait 5 minutes to allow the server to close old session
+        print("[IHNetClient] Waiting 10 seconds before reconnecting...")
+        await asyncio.sleep(10)
+        self.tcp_client = TCPClient(self.client_config)  # reset tcp client
         await self.connect(self.client_config.gateway_host, self.client_config.gateway_port)
         await self.launch_router()
 
@@ -314,6 +315,8 @@ class IHNetClient:
 
         await self.tcp_client.disconnect()
 
+        self.sid = 0
+
         # save configs
         self.account_config.save()
         self.client_config.save()
@@ -358,7 +361,7 @@ class IHNetClient:
                 await self.echo(heartbeat_data)
             except Exception as e:
                 print(f"[IHNetClient] Heartbeat failed: {e}")
-                await self.disconnect()
+                asyncio.create_task(self.disconnect())
                 break
             await asyncio.sleep(heartbeat_interval)
 
