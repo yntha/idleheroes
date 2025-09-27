@@ -75,6 +75,6 @@ class IHPlayerBag(IHBag):
         gem_item = self.get_item_by_type(GEM_ITEM_ID)
         return gem_item.count if gem_item else 0
 
-    def get_player_xp(self) -> int:
+    def get_xp(self) -> int:
         xp_item = self.get_item_by_type(EXP_ITEM_ID)
         return xp_item.count if xp_item else 0
