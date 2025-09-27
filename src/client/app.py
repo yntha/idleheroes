@@ -29,7 +29,7 @@ async def main():
 
         if player is not None:
             print(f"[App] Logged in as: {player.get_player().name} (UID: {client.local_player.get_uid()})")
-            print(f"[App] Gold: {player_bag.get_gold()} | Gems: {player_bag.get_gems()} | XP: {player_bag.get_player_xp()}")
+            print(f"[App] Gold: {player_bag.get_gold()} | Gems: {player_bag.get_gems()} | XP: {player_bag.get_xp()}")
 
         await client.run_forever()
     except IHNetError as e:
