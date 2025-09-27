@@ -230,3 +230,4 @@ tools/build_itemtype_enum.py
 tools/conv_itemmap.py
 tools/item.json
 tools/ihproxy.py
+tools/plistviewer.py
