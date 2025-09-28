@@ -131,6 +131,13 @@ class IHNetClient:
 
         print(f"[IHNetClient] Claimed autobattle rewards: {bag}")
 
+        # small hotfix to claim equipment
+        rsp2 = await self.hook_reward(2)
+        if rsp2.status != 0:
+            raise IHNetError(f"Failed to claim equipment rewards: status={rsp2.status}")
+
+        print("[IHNetClient] Claimed equipment rewards.")
+
         await asyncio.sleep(self.farm_config.autobattle_interval)
 
         return bag
