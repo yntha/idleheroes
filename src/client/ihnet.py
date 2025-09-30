@@ -113,7 +113,7 @@ class IHNetClient:
         claimed_mails = []
 
         for mail_item in mails:
-            if mail_item.flag == 0 and mail_item.affix is not None:
+            if mail_item.affix is not None:
                 rsp = await self.op_mail(mail_item.mail_id, MailOpType.CLAIM)
                 if rsp.status == 0:
                     claimed_mails.append(mail_item)
