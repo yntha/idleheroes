@@ -112,11 +112,26 @@ class IHNetClient:
         mails = self.local_player.get_mails()
         claimed_mails = []
 
+        # small hotfix to log all claimed mails preventing double claiming
+        claimed_mail_ids = Path(os.path.join(ROOT_DIR, "claimed_mails_ids.txt"))
+
+        if not claimed_mail_ids.exists():
+            claimed_mail_ids.touch()
+        else:
+            claimed_ids = claimed_mail_ids.read_text().splitlines()
+            claimed_mail_ids_set = set(int(cid) for cid in claimed_ids)
+            mails = [m for m in mails if m.mail_id not in claimed_mail_ids_set]
+
         for mail_item in mails:
             if mail_item.affix is not None:
                 rsp = await self.op_mail(mail_item.mail_id, MailOpType.CLAIM)
                 if rsp.status == 0:
                     claimed_mails.append(mail_item)
+
+
+        mail_ids = claimed_mail_ids.read_text().splitlines() + [str(mail.mail_id) for mail in claimed_mails]
+        mail_ids = list(set(mail_ids))  # remove duplicates
+        claimed_mail_ids.write_text("\n".join(mail_ids))
 
         return claimed_mails
 

@@ -231,3 +231,4 @@ tools/conv_itemmap.py
 tools/item.json
 tools/ihproxy.py
 tools/plistviewer.py
+claimed_mails_ids.txt
