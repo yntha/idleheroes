@@ -26,7 +26,7 @@ class IHMail:
     mail_id: int
     flag: int
     send_time: int
-    mail_object: Mail
+    mail_object: Mail | None = None
     affix: IHBag | None = None
     sender: str = ""
 
@@ -37,8 +37,6 @@ class IHMail:
 
         for mail in sync.mails:
             mail_object = mail_type_manager[mail.id]
-            if mail_object is None:
-                continue
 
             affix = None
             if mail.affix:
@@ -63,8 +61,6 @@ class IHMail:
     def from_pb(cls, pb_mail: pb_mail) -> IHMail | None:
         mail_type_manager = MailTypeManagerInstance
         mail_object = mail_type_manager[pb_mail.id]
-        if mail_object is None:
-            return None
 
         affix = None
         if pb_mail.affix:
@@ -86,7 +82,7 @@ class IHMail:
 
     def __repr__(self) -> str:
         affix_str = ""
-        from_str = self.sender if self.sender else self.mail_object.sender
+        from_str = self.sender if self.sender else self.mail_object.sender if self.mail_object else "Unknown"
 
         if self.affix:
             affix_items = []
@@ -98,4 +94,4 @@ class IHMail:
                     affix_items.append(f"Unknown Item (ID: {item.item_id}) x{item.count}")
             affix_str = f", Affix: [{', '.join(affix_items)}]"
         claimed = " (Claimed)" if self.flag != 0 else ""
-        return f"Mail(ID: {self.mail_id}, Name: {self.mail_object.name}, From: {from_str}{affix_str}{claimed})"
+        return f"Mail(ID: {self.mail_id}, Name: {self.mail_object.name if self.mail_object else 'Unknown'}, From: {from_str}{affix_str}{claimed})"

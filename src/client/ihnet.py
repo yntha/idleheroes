@@ -127,6 +127,8 @@ class IHNetClient:
                 rsp = await self.op_mail(mail_item.mail_id, MailOpType.CLAIM)
                 if rsp.status == 0:
                     claimed_mails.append(mail_item)
+                else:
+                    print(f"[IHNetClient] Failed to claim mail {mail_item.mail_id}: status={rsp.status}")
 
 
         mail_ids = claimed_mail_ids.read_text().splitlines() + [str(mail.mail_id) for mail in claimed_mails]
